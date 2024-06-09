@@ -1,0 +1,170 @@
+<!DOCTYPE html><!-- The new doctype -->
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>'Mono' single page layout | Script tutorials demo</title>
+    <meta charset="utf-8">
+
+    <!-- Linking styles -->
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen">
+
+    <!-- Linking scripts -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/jquery.nivo.slider.pack.js" type="text/javascript"></script>   
+    <script src="js/main.js" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="container">
+    <div class="subcontainer">
+
+        <header><!-- Defining the header section of the page -->
+
+            <div class="logo"><!-- Defining the logo element -->
+                <a href="#/">
+                    <img src="images/logo.png" title="Mono template" alt="Mono template" />
+                </a>
+            </div>
+
+            <nav><!-- Defining the navigation menu -->
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#/creating-new-html5css3-single-page-layout-mono/">To Tutorial</a></li>
+                </ul>
+            </nav>
+
+            <section id="search"><!-- Search form -->
+                <form action="#" onSubmit="return false;" method="get">
+                    <input type="text" onFocus="if (this.value =='Search..' ) this.value=''" onBlur="if (this.value=='') this.value='Search..'" value="Search.." name="q">
+                    <input type="submit" value="">
+                </form>
+            </section>
+
+        </header>
+		<div class="copyrights">Collect from <a href="http://sc.chinaz.com/moban/" >Website Template</a></div>
+        
+        <div id="main"><!-- Defining the main content section -->
+
+            <section id="slider-wrapper"><!-- Promo slider -->
+                <div id="slider" class="nivoSlider">
+                    <img style="display: none;" src="images/promo1.jpg" alt="" title="#htmlcaption-1">
+                    <img style="display: none;" src="images/promo2.jpg" alt="" title="#htmlcaption-2">
+                    <img style="display: none;" src="images/promo3.jpg" alt="" title="#htmlcaption-3">
+                </div>
+                <div id="htmlcaption-1" class="nivo-html-caption">
+                    <h5 class="p2">Your promo text 1</h5>
+                    <p>Promo text description here</p> 
+                </div>
+                <div id="htmlcaption-1" class="nivo-html-caption">
+                    <h5 class="p2">Your promo text 2</h5>
+                    <p>Promo text description here</p> 
+                </div>
+                <div id="htmlcaption-2" class="nivo-html-caption">
+                    <h5 class="p2">Your promo text 3</h5>
+                    <p>Promo text description here</p> 
+                </div>
+                <div id="htmlcaption-3" class="nivo-html-caption">
+                    <h5 class="p2">Your promo text 4</h5>
+                    <p>Promo text description here</p> 
+                </div>
+            </section>
+
+            <section id="promo"><!-- Defining the promo section -->
+                <img alt="" src="images/promo.jpg"> Welcome to test our 'Mono' templates. We making best templates for you.
+            </section>
+
+            <section id="content"><!-- Defining the featured content section -->
+                <ul>
+                    <li>
+                        <h1>APC caching</h1>
+                        <p>Today I have another interesting article for PHP. We will talking about caching, and practice of using caching in php. I will make review of APC caching and will show you how you can use APC in PHP.</p>
+                        <a class="more" href="#/how-to-use-apc-caching-with-php/">Continue +</a>
+                    </li>
+                    <li>
+                        <h1>3D WebGL</h1>
+                        <p>Today we continue HTML5 canvas examples. And today we will try to begin learning WebGL. In my demonstration I will show you how to initialize WebGL and draw simple 3D object. Also we will animate this object too.</p>
+                        <a class="more" href="#/making-3d-webgl-demonstration/">Continue +</a>
+                    </li>
+                    <li>
+                        <h1>Watermark</h1>
+                        <p>Today is interesting tutorial for PHP. I will show you how to use GD library. And, main task today is adding watermark to image and generate result as PNG image into browser. We will using PHP and GD library.</p>
+                        <a class="more" href="#/watermark-processing-on-images-using-php-and-gd/">Continue +</a>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
+        <div id="submain"><!-- Defining submain content section -->
+            <section id="subcontent"><!-- Defining the content section #2 -->
+                <div id="left">
+                    <ul>
+                        <li>
+                            <h3>HTML5&CSS3 single page layout – Art theme</h3>
+                            <img alt="" src="images/post.jpg">
+                            <p>Today I will like to product new great masterpiece – new template with codename: ‘Art theme’. This will nice HTML5 template with nice gray colors. Hope that you will like new styles and you will learn some new coding lessons.</p>
+                            <a class="more" href="#/creating-new-html5css3-single-page-layout-art-theme/">Continue +</a>
+                        </li>
+                        <li>
+                            <h3>HTML CSS Anime Theme Website Layout</h3>
+                            <img alt="" src="images/post.jpg">
+                            <p>Today I will like to product new masterpiece – new template with codename: ‘Anime theme’. This will nice HTML5 template with good colors. Hope that you can learn some new coding lessons and download our result and use it at your own site.</p>
+                            <a class="more" href="#/creating-new-html-css-website-layout-5-anime-theme/">Continue +</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="right">
+                    <dl id="acc">
+                        <dt class="active">
+                            <a href="#">Short reviews</a>
+                        </dt>
+                        <dd class="active" style="display: block;">
+                            <p>Here are text of short review of something ...</p>
+                            <a class="more" href="#">Continue +</a>
+                        </dd>
+                        <dt class="">
+                            <a href="#">Short reviews #1</a>
+                        </dt>
+                        <dd style="display: none;">
+                            <p>Here are text of short review of something ...</p>
+                            <a class="more" href="#">Continue +</a>
+                        </dd>
+                        <dt>
+                            <a href="#">Short reviews #3</a>
+                        </dt>
+                        <dd>
+                            <p>Here are text of short review of something ...</p>
+                            <a class="more" href="#">Continue +</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="clear"></div>
+            </section>
+        </div>
+
+    </div>
+
+    <footer><!-- Defining the footer section of the page -->
+        <ul id="social"><!-- Social profiles links -->
+            <li><a href="#" title="facebook" rel="external nofollow"><img alt="" src="images/facebook.png"></a></li>
+            <li><a href="#" title="twitter" rel="external nofollow"><img alt="" src="images/twitter.png"></a></li>
+            <li><a href="#" title="linkedin" rel="external nofollow"><img alt="" src="images/linkedin.png"></a></li>
+            <li><a href="#" title="rss" rel="external nofollow"><img alt="" src="images/rss.png"></a></li>
+        </ul>
+        <div id="privacy">
+            Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+        </div>
+    </footer>
+
+</div>
+
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>

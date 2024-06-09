@@ -1,0 +1,114 @@
+
+
+/* ios slider details */
+.fluidHeight {
+	position: relative;
+	width: 100%;
+	height: 354px;
+}
+
+.sliderContainer {
+	height: 100%;
+	max-height: 354px;
+	padding: 0 0;
+}
+
+.iosSlider {
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 354px;
+}
+
+.iosSlider .slider { 
+	width: 100%; 
+	height: 100%; 
+}
+
+.iosSlider .slider .item { 
+	width: 100%; 
+	height: 100%;
+}
+
+.iosSlider .slider .item .inner {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 940px;
+	margin: 0 auto;
+	height: 100%;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+}
+
+.iosSlider .slider .item .inner .text1 {
+  background: none repeat scroll 0 0 #000;
+  opacity: 0;
+  width: 420px;
+  filter: alpha(opacity=0);
+  position: absolute;
+  right: 0px !important;
+  top: 138px;
+  padding: 9px 0 13px 53px ;
+}
+
+.iosSlider .slider .item .inner .text1 span { 
+	color: #fff; 
+	font-size: 16px;
+	line-height: 36px;
+}
+
+
+.iosSlider .slider .item .inner .text2 span { 
+	color: #fff; 
+}
+
+.iosSlider .slider .item1 .inner { background-image: url('../images/slide.jpg'); }
+
+.iosSlider .slider .item2 .inner { background-image: url('../images/slide1.jpg'); }
+
+.iosSlider .slider .item3 .inner { background-image: url('../images/slide2.jpg'); }
+
+.sliderContainer .slideSelectors {
+	position: absolute;
+	bottom: 0px;
+	left: 178px;
+	z-index: 1;
+	width: auto !important;
+	height: 11px;
+}
+
+.sliderContainer .slideSelectors .item {
+	float: left;
+	width: 9px;
+	height: 9px;
+	border: 1px solid #4b4b4b;
+	background: #787878;
+}
+
+.sliderContainer .slideSelectors .item+.item {
+	margin-left: 3px;
+}
+
+.sliderContainer .slideSelectors .selected {
+	background: #000;
+	border-color: #000;
+}
+
+
+@media screen and (max-width: 1105px) {
+	.iosSlider .slider .item .inner { width: 92%;	margin: 0 4%; background-position: 80% 0; }
+	
+	.sliderContainer .slideSelectors {	width: 92%;	margin: 0 4%; }
+	
+}
+
+@media screen and (max-width: 768px) {
+	.iosSlider .slider .item .inner .text1 span { font: 40px/50px Norican; }
+	
+	.iosSlider .slider .item .inner .text2 { top: 85px; }
+	
+	.iosSlider .slider .item .inner .text2 span { font: 12px/18px "Helvetica Neue",Helvetica,Arial,sans-serif; }
+}

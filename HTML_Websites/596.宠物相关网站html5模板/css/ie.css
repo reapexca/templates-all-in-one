@@ -1,0 +1,12 @@
+.slides h3 {
+    background-image: url('../images/40percent.png');
+}
+#search input[type="text"] {
+    padding:10px;
+    height:16px;
+    border-color:#333;
+}
+#footer #contact input[type="text"], #footer #contact textarea {
+    width:160px;
+    border-color:#333;
+}

@@ -1,0 +1,504 @@
+@font-face { 
+  font-family: Yanone Kaffeesatz; 
+    src: url('../fonts/YanoneKaffeesatz-Regular.eot'); 
+    src: local("Yanone Kaffeesatz"), url('../fonts/YanoneKaffeesatz-Regular.ttf'); 
+} 
+
+html { 
+  height: 100%;
+}
+
+* { 
+  padding: 0;
+  margin: 0;
+}
+  
+/* tell the browser to render HTML 5 elements as block */
+article, aside, figure, footer, header, hgroup, nav, section { 
+  display:block;
+}
+
+body { 
+  font: normal .8em arial, sans-serif;
+  background: #C4E9E8 url(../images/back.png) repeat-x;
+  color: #555;
+}
+
+p { 
+  padding: 0 0 16px 0;
+  line-height: 1.7em;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  color: #555;
+  padding: 0 0 5px 0;
+}
+
+h1, h2, h4 {  
+  font: normal 200% arial, sans-serif;
+  text-shadow: 1px 1px #FFF;
+  margin: 0 0 15px 0;
+  padding: 15px 20px 5px 0;
+  color: #E5017D;
+}
+
+h2 {  
+  font: normal 150% arial, sans-serif;
+}
+
+h4 {  
+  font: normal 170% "Yanone Kaffeesatz", arial, sans-serif;
+  padding: 5px 20px 5px 0;
+  margin: 0;
+  color: #80E804;
+}
+
+h3 {  
+  color: #444;
+  padding: 10px 0 5px 0;
+  font: normal 170% arial;
+}
+
+h5 {  
+  color: #888;
+  font: italic 95% arial;
+  letter-spacing: normal;
+  padding: 0 0 15px 0;
+}
+
+h6 {  
+  padding: 5px 0 25px 0;
+}
+
+img { 
+  border: 0;
+}
+
+a, a:hover { 
+  outline: none;
+  color: #20BFD4;
+  text-decoration: underline;
+}
+
+a:hover { 
+  text-decoration: none;}
+  
+blockquote { 
+  margin: 20px 0 20px 0; 
+  padding: 10px 20px 0 20px;
+  border: 1px solid #E5E5DB;
+  background: #F5F5F1;
+}
+
+ul { 
+  margin: 2px 0 17px 16px;
+}
+
+ul li { 
+  list-style-type: square;
+  margin: 0 0 6px 0; 
+  padding: 0 0 0 8px;
+}
+
+ol { 
+  margin: 2px 0 0 24px;
+}
+
+ol li { 
+  margin: 0 0 6px 0;
+}
+
+.left { 
+  float: left;
+  width: auto;
+  margin-right: 10px;
+}
+
+.right { 
+  float: right; 
+  width: auto;
+  margin-left: 10px;
+}
+
+.center { 
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+}
+
+#main, header, #logo, nav, #site_content, footer { 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+#container { 
+  background: transparent url(../images/grass.png) repeat-x bottom;
+}
+
+#sun { 
+  margin-top: -40px;
+  height: 200px;
+  width: 200px;
+  float: left;
+  position: relative;
+  z-index: 5;
+}
+
+#main { 
+  margin-top: -140px;
+  width: 863px;
+  padding: 10px 20px 30px 20px;
+  border-radius: 15px 15px 15px 15px;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border: 15px 15px 15px 15px;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+header { 
+  width: 847px;
+  background: #FFF;
+  color: #FFF;}
+
+#logo { 
+  width: 847px;
+  height: 150px;
+  position: relative;
+  background: #FFF url(../images/logo.png) no-repeat;
+} 
+  
+#logo_text { 
+  float: left;
+  width: 550px;
+  padding: 5px 0 0 0;
+}
+
+#logo_text h1 { 
+  font: 500% 'Yanone Kaffeesatz', arial, sans-serif;
+  margin: 0; 
+  padding: 0;
+  color: #009CE4;
+}
+
+#logo_text h1 a { 
+  text-decoration: none;
+  color: #009CE4;
+}
+
+#logo_text h1 a .logo_colour { 
+  color: #E5017D;
+  text-shadow: 0;
+}
+
+#logo_text a:hover .logo_colour { 
+  color: #009CE4;
+}
+
+#logo_text h2 { 
+  margin: 0;
+  padding: 0;
+  font: normal 140% arial, sans-serif;
+  color: #80E804;
+}
+
+#logo_text2 { 
+  float: right;
+  width: 170px;
+  text-align: center;
+  padding: 55px 37px 0 0px;
+}
+
+#logo_text2 h3, #logo_text2 h4 { 
+  text-align: center;
+  padding: 0;
+  margin: 0;  
+  font: normal 150% arial, sans-serif;
+  color: #009CE4;
+}
+
+#logo_text2 h4 { 
+  color: #C6006B;
+}
+
+nav { 
+  width: 846px;
+  height: 45px;
+  border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -webkit-border: 10px 10px 0 0;
+  background: #53C7FD;
+} 
+
+#site_content { 
+  width: 847px;
+  background: #FFF;
+  color: #555;
+  overflow: hidden;
+  padding: 0px 0 0px 0;
+} 
+
+#sidebar_container {  
+  float: right;
+  width: 202px;
+}
+
+.sidebar { 
+  margin: 10px 0;
+  width: 178px;
+  padding: 10px;
+  border: 1px solid #C9E5E9;
+  border-radius: 15px 15px 15px 15px;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border: 15px 15px 15px 15px;
+  background: #F5FEFF;
+}
+
+#content { 
+  text-align: left;
+  width: 620px;
+  padding: 10px 0 25px 0px;
+}
+
+footer { 
+  width: 806px;
+  height: 75px;
+  padding: 25px 20px 25px 20px;
+  text-align: center; 
+  background: #53C7FD;
+  border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  -webkit-border: 0 0 10px 10px;
+  color: #fff;
+  font: 150% 'Yanone Kaffeesatz', arial, sans-serif;
+  text-decoration: none;
+  color:#FFF;
+  text-shadow: 1px 1px #0BA0E5;
+}
+  
+footer p { 
+  line-height: 1.7em;
+  padding: 0 0 4px 0;
+}
+  
+footer a { 
+  color: #FFF;
+}
+
+footer a:hover { 
+  color: #E5017D;
+  text-shadow: none;
+}
+
+#grass {
+  background: #64BF38; 
+  width: 100%;
+  height: 100px;
+  margin-top: -0px;
+  position: relative; 
+  z-index: 1;
+}
+
+.form_settings { 
+  margin: 15px 0 0 0;
+}
+
+.form_settings p { 
+  padding: 0 0 4px 0;
+}
+
+.form_settings span { 
+  float: left; 
+  width: 200px; 
+  text-align: left;
+}
+  
+.form_settings input, .form_settings textarea { 
+  padding: 5px; 
+  width: 299px; 
+  font: 100% arial; 
+  border: 1px solid #E5E5DB; 
+  background: #FFF; 
+  color: #47433F;
+  border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border: 7px 7px 7px 7px;  
+}
+  
+.form_settings .submit { 
+  font: 150% 'Yanone Kaffeesatz', arial, sans-serif; 
+  border: 0; 
+  width: 99px; 
+  margin: 0 0 0 212px; 
+  height: 33px;
+  padding: 0 0 3px 0;
+  cursor: pointer; 
+  background: #53C7FD; 
+  color: #FFF;
+  text-shadow: 1px 1px #0BA0E5;
+  border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border: 7px 7px 7px 7px;  
+}
+
+.form_settings textarea, .form_settings select { 
+  font: 100% arial; 
+  width: 299px;
+}
+
+.form_settings select { 
+  width: 310px;
+}
+
+.form_settings .checkbox { 
+  margin: 4px 0; 
+  padding: 0; 
+  width: 14px;
+  border: 0;
+  background: none;
+}
+
+.separator { 
+  width: 100%;
+  height: 0;
+  border-top: 1px solid #D9D5CF;
+  border-bottom: 1px solid #FFF;
+  margin: 0 0 20px 0;
+}
+  
+table { 
+  margin: 10px 0 30px 0;
+}
+
+table tr th, table tr td { 
+  background: #96D7E8;
+  color: #FFF;
+  padding: 7px 4px;
+  text-align: left;
+}
+  
+table tr td { 
+  background: #C8EAE9;
+  color: #47433F;
+  border-top: 1px solid #FFF;
+}
+
+/**
+Stylesheet for SooperFish by www.SooperThemes.com
+Author: Jurriaan Roelofs
+**/
+
+/* Configuration of menu width */
+html body ul.sf-menu ul,html body ul.sf-menu ul li { 
+  width: 200px;
+}
+
+html body ul.sf-menu ul ul { 
+  margin: 0 0 0 200px;
+}
+
+/* Framework for proper showing/hiding/positioning */
+ul.sf-menu,ul.sf-menu * { 
+  margin: 0;
+  padding: 0;
+}
+
+ul.sf-menu { 
+  display: block;
+  position: relative;
+}
+  
+ul.sf-menu li { 
+  display: block;
+  list-style: none;
+  float: left;
+  position: relative;
+}
+  
+ul.sf-menu li:hover { 
+  visibility: inherit; /* fixes IE7 'sticky bug' */ 
+}
+
+ul.sf-menu a { 
+  display: block;
+  position: relative;
+}
+  
+ul.sf-menu ul { 
+  position: absolute;
+  left: 0;
+  width: 150px; 
+  top: auto;
+  left: -999999px;
+}
+  
+ul.sf-menu ul a { 
+  zoom: 1; /* IE6/7 fix */ 
+}
+
+ul.sf-menu ul li { 
+  float: left; /* Must always be floated otherwise there will be a rogue 1px margin-bottom in IE6/7 */
+  width: 150px;
+}
+  
+ul.sf-menu ul ul { 
+  top: 0;
+  margin: 0 0 0 150px;
+}
+
+ul.sf-menu li:hover ul,ul.sf-menu li:focus ul,ul.sf-menu li.sf-hover ul, 
+ul.sf-menu ul li:hover ul,ul.sf-menu ul li:focus ul,ul.sf-menu ul li.sf-hover ul,
+ul.sf-menu ul ul li:hover ul,ul.sf-menu ul ul li:focus ul,ul.sf-menu ul ul li.sf-hover ul,
+ul.sf-menu ul ul ul li:hover ul,ul.sf-menu ul ul ul li:focus ul,ul.sf-menu ul ul ul li.sf-hover ul { 
+  left: auto;
+}
+  
+ul.sf-menu li:hover ul ul,ul.sf-menu li:focus ul ul,ul.sf-menu li.sf-hover ul ul,
+ul.sf-menu ul li:hover ul ul,ul.sf-menu ul li:focus ul ul,ul.sf-menu ul li.sf-hover ul ul,
+ul.sf-menu ul ul li:hover ul ul,ul.sf-menu ul ul li:focus ul ul,ul.sf-menu ul ul li.sf-hover ul ul,
+ul.sf-menu ul ul ul li:hover ul ul,ul.sf-menu ul ul ul li:focus ul ul,ul.sf-menu ul ul ul li.sf-hover ul ul { 
+  left: -999999px;
+}
+
+/* autoArrows CSS */
+span.sf-arrow { 
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  display: block;
+  background: url(../images/arrows-white.png) no-repeat 0 0;
+  overflow: hidden; /* making sure IE6 doesn't overflow and expand the box */
+  font-size: 1px;
+}
+
+ul ul span.sf-arrow { 
+  right: 10;
+  top: 20px;
+  background-position: 0 100%;
+}
+
+/* Theming the menu */
+ul#nav { 
+  float: left;
+}
+
+ul#nav ul { 
+  background: #53C7FD;
+  margin-top: 0;
+  padding-bottom: 15px;
+}
+
+ul#nav li a { 
+  padding:9px 25px 10px 15px;
+  font: 170% 'Yanone Kaffeesatz',helvetica,arial,verdana,sans;
+  color: #FFF;
+  text-shadow: 1px 1px #0BA0E5;
+  text-decoration: none;
+}
+
+ul#nav li a:hover { 
+  color: #E5017D;
+  text-shadow: none;
+}

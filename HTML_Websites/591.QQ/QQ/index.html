@@ -1,0 +1,692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="QQ,手机QQ,MacQQ,QQ2015,QQ2014,QQ2013,空间,Qzone,语音通话,QQ钱包,设备锁,电话,聊天,交友,社交,群,传文件,语音,视频,照片,图片,附近,通话,chat,tencent,腾讯" />
+<meta itemprop="name" content="I'm QQ - 每一天，乐在沟通"/>
+<meta name="description" itemprop="description" content="灵动界面，轻简架构，多人音视频，QQ5.0玩到根本停不下来！" />
+<meta itemprop="image" content="http://im-img.qq.com/mobileqq/touch/img/v5/rich.png" />
+<title>I'm QQ - 每一天，乐在沟通</title>
+<style type="text/css">
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-family:"microsoft yahei", "宋体", Tahoma, Verdana, Arial, Helvetica, sans-serif; font-size:100%;}
+html,body{ width: 100%; min-width: 1003px; overflow: hidden; color:#333}
+ul,ol,li{ list-style:none;}
+a:link, a:visited{ color:#333; text-decoration:none;}
+img{ border:none;}
+em{ font-style:normal;}
+h1,h2,h3,h4,h5{ font-weight:normal;}
+.initbody{ position: fixed; top: 0;}
+.w960{ width:960px; margin:0 auto;}
+.topic{ position: absolute; left: 0; top: 0; width:100%; min-width:1003px; height:64px; background:#cbedf9; z-index: 10000;}
+.topBar{ float:left; width:236;}
+.topBar a{ display:block; width:246px; height:0px; overflow:hidden; padding-top:64px; font-size:0; background:transparent url(mobileqq/img/v50/logo.png) no-repeat 0 6px;}
+
+.topTool{ float:right; width:500px; overflow:hidden; font-size:0.75em;}
+.topTool div{ width:100%; text-align:right;}
+.topTool .login{ height:39px; line-height:39px;}
+.topTool .login span{ padding:0 12px; color:#cecece;}
+.topTool a:link, .topTool a:visited{ color:#666;}
+.topTool a:hover{ color:#333;}
+.topTool .flashData{ line-height:17px;}
+.flashData a{ padding-left:25px; background:transparent url(home/img/q2013/xymap.png) no-repeat left center;}
+.flashData a:hover{ text-decoration:underline;}
+
+.bgscroll{ width: 100%; position: absolute; left: 0; top: 0; z-index: -1;}
+.mbbg{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; font-size: 0; line-height: 0; z-index: -1;}
+.mbbg img{ width: 100%; height: 100%; min-width: 1003px;}
+
+.sdnav{ position: absolute; right: 0; top: 50%; width: 225px; height: 156px; margin-top: -78px; z-index: 9000;}
+.sdnav ul{ float: right; width: 125px; padding-right: 100px;}
+.sdnav li{ float: right; width: 100px; height: 39px; padding-right: 18px; background:transparent url(mobileqq/img/v50/n_normal.png) no-repeat right center; cursor: pointer; font-size: 16px; color: #fff; line-height: 39px; text-align: right;}
+.sdnav li.current{background:transparent url(mobileqq/img/v50/n_selected.png) no-repeat right center;}
+
+/* main css */
+
+.maincon{ width: 100%; height: 100%;}
+.fixrelative{ position: absolute; left: 0; top: 0; width: 100%; -webkit-transition : -webkit-transform 1s ease; -moz-transition : -moz-transform 1s ease; -o-transition : -o-transform 1s ease; transition : transform 1s ease;}
+.mbwrap{ position: relative; width: 878px; height: 100%; margin: 0 auto;}
+.figure{ position: relative; width: 100%; height: 100%; background-repeat: no-repeat; background-position:  top center; z-index: 1000;}
+
+.downInfo{ position: absolute; width: 100%; left: 0; top: 0; z-index: 9000;}
+.vers{ position: relative; width: 274px; margin: 0 auto; padding-top: 100px;}
+.vers h2{ width: 144px; height: 0px; margin: 0 auto; padding-top: 106px; overflow: hidden; font-size: 0; line-height: 0; background:transparent url(mobileqq/img/v50/s_mb5.png) no-repeat -65px 0;}
+.vers sup{ position: absolute; right: -39px; top: 100px; width: 90px; height: 0px; padding-top: 33px; overflow: hidden; font-size: 0; line-height: 0; background:transparent url(mobileqq/img/v50/s_mb5.png) no-repeat right top;}
+.vers p{ width: 100%; height: 0; padding-top: 48px; overflow: hidden; font-size: 0; line-height: 0; background:transparent url(mobileqq/img/v50/s_mb5.png) no-repeat 0 -106px; text-indent: -9999px;}
+.vers a.downtouch{ display: block; width: 184px; height: 55px; margin: 0 auto 15px; overflow: hidden;text-indent: -500px; background:transparent url(mobileqq/img/v50/mb5.png) no-repeat -69px -187px;}
+.vers a.downtouch:hover{background:transparent url(mobileqq/img/v50/hover.png) no-repeat 0 -1px;}
+
+.vers a.vediotouch{ display: block; width: 155px; height: 26px; margin: 0 auto; overflow: hidden; text-indent: -500px; background:transparent url(mobileqq/img/v50/vedio.png) no-repeat 0 0;}
+.vers a.vediotouch:hover{background-image: url(mobileqq/img/v50/vedio_hover.png);}
+
+.fpic{ position: absolute; width: 100%; top: 407px;}
+.ph1{ width: 217px; height: 458px; margin: 0 auto;}
+.ph1 img{ width: 100%;}
+
+
+.ph2txt, .ph3txt, .ph4txt,.ph2img, .ph3img, .ph4img{ position: absolute; left: 0; top: 50%;}
+.ph2txt{ width: 310px; margin-top: -167px;}
+.ph2txt h2{ background:transparent url(mobileqq/img/v50/ph2txt_s.png) no-repeat 0 0;}
+.ph2txt p{ background:transparent url(mobileqq/img/v50/ph2txt_s.png) no-repeat 0 -55px;}
+.ph2txt span{ margin-left: -44px;}
+.ph2img{ left: 345px; margin-top: -163px;}
+.ph2ani{position: relative; width: 491px; height:325px;}
+.ph2ani div{position: absolute; left: 0; top: 0; width: 398px; height: 246px; }
+.ph2ani img{ width: 100%; height: 100%;}
+.ph2ani div.ph2-0{ width: 491px; height:325px; z-index: 0;}
+.ph2ani .ph2-1{ left: 49px; top: 26px; z-index: 1;}
+.ph2ani .ph2-2{ left: 49px; top: 26px; z-index: 2}
+.ph2ani .ph2-3{ left: 49px; top: 26px; z-index: 3;}
+.ph2ani .ph2-4{ left: 284px; top: 32px; z-index: 4; width: 33px; height: 23px; opacity: 0;}
+.ph2ani .ph2-4 img{ width: auto; height: auto;}
+.ph2ani .ph2-5{ left: 49px; top: 26px; z-index: 5;}
+.ltie .ph2ani .ph2-2{top:-5px;}
+.ltie .ph2ani .ph2-3{ top: -30px;}
+.ltie .ph2ani .ph2-4, .ltie .ph2ani .ph2-5{ display: none;}
+
+.ph3txt{ width: 308px; margin-top: -97px;}
+.ph3txt h2{ background:transparent url(mobileqq/img/v50/ph3txt_s.png) no-repeat 0 0;}
+.ph3txt p{ background:transparent url(mobileqq/img/v50/ph3txt_s.png) no-repeat 0 -55px;}
+.ph3txt img{ margin-top: 20px;}
+.ph3img{ left: 337px; width: 217px; height: 458px; margin-top: -229px;}
+.ph3img img{ width: 100%;}
+.ph3ani{ position: absolute; left: 610px; top: 50%; margin: -92px 0 0 0; width: 196px; height: 184px;z-index: 6;}
+.ph3ani div{position: absolute; left: 0; top: 0; width: 196px; height: 184px; background-repeat: no-repeat;}
+.ph3-ani img{ width: 100%; height: 100%;}
+.ph3ani .ph3-1{ background-image:url(mobileqq/img/v50/ph3-1_s.png); background-position: center center; z-index: 10}
+.ph3ani .ph3-2{ z-index: 2}
+.ph3ani div.ph3-3{ left: 80px; top: 65px; width: 45px; height: 39px; z-index: 7;}
+.ph3ani div.ph3-4{ left: 80px; top: 65px; width: 36px; height: 43px; z-index: 8;}
+.ph3ani div.ph3-5{ left: 76px; top: 69px; width: 46px; height: 43px; z-index: 9;}
+/* .ph3ani div.ph3-3{ left: 103px; top: 163px; width: 45px; height: 39px; z-index: 7;}
+.ph3ani div.ph3-4{ left: 168px; top: 37px; width: 36px; height: 43px; z-index: 8;}
+.ph3ani div.ph3-5{ left: -10px; top: 26px; width: 46px; height: 43px; z-index: 9;} */
+.ph3ani img{ width: 100%; margin: 0;}
+
+.ph4txt{ width: 289px; margin-top: -116px;}
+.ph4txt img{ margin-top: 25px;}
+.ph4txt h2{ background:transparent url(mobileqq/img/v50/ph4txt_s.png) no-repeat 0 0;}
+.ph4txt p{ background:transparent url(mobileqq/img/v50/ph4txt_s.png) no-repeat 0 -55px;}
+.ph4img{ left: 349px; margin-top: -254px;}
+.ph4ani{position: relative; width: 192px; height:507px;}
+.ph4ani div{position: absolute; left: 0; top: 0; width: 164px; height: 385px; background-repeat: no-repeat; }
+.ph4ani img{ width: 100%;}
+.ph4ani .ph4-0{ width: 192px; height: 507px; z-index: 1;}
+.ph4ani .ph4-1{ left: 142px; top: 335px; width: 33px; height: 44px; z-index: 1;}
+.ph4ani .ph4-2{ left: 23px; top: 57px; z-index: 2}
+.ph4ani .ph4-3{ left: 23px; top: 60px; z-index: 3;}
+.ph4ani div.ph4-4{ width: 192px; height: 507px; left: 266px; z-index: 3;}
+.ph4ani .ph4-5{ left: 123px; top: 238px; width: 38px; height: 81px;  z-index: 4;}
+
+.phfg h2{ width: 310px; height: 0; overflow: hidden; padding-top: 55px; font-size: 0; line-height: 0; text-indent: -9999px;}
+.phfg p{ width: 310px; height: 0; overflow: hidden; padding-top: 64px; font-size: 0; line-height: 0; text-indent: -9999px;}
+
+.downfloor{ display: none; position: absolute; left: 50%; top:50%;  width: 700px; height: 420px; margin: -210px 0 0 -350px; z-index: 9999;}
+.msgbox{ width: 700px; height: 420px; margin: 0 auto; background: #fff; border-radius: 3px;}
+.msgclose{ float: right; width: 36px; height: 36px; overflow: hidden; margin: 15px 15px 54px 0; text-indent: -999px; background:transparent url(mobileqq/img/v50/close.png) no-repeat 0 0;}
+.msgbody{ clear: both; width: 400px; margin: 0 auto;}
+.msgdesc{ height: 38px; color: #111; font-size: 16px;}
+.msgcode{ float: left; width: 130px; height: 130px; overflow: hidden; border: 1px solid #e8e8e8;}
+.msgcode img{ width: 100%; height: 100%;}
+.msgbtns{ float: right; width: 238px;}
+.msgbtns a{ display: block; width: 224px; height: 54px; overflow: hidden; text-indent: -999px; background:transparent url(mobileqq/img/v50/downbtns.png) no-repeat 0 0;}
+.msgbtns a.iph{ margin-bottom: 23px; background-position: 0 0;}
+.msgbtns a.iph:hover{ background-position: 0 -55px;}
+.msgbtns a.and{ background-position: 0 -110px;}
+.msgbtns a.and:hover{ background-position: 0 -165px;}
+.msgmore{clear: both; padding: 25px 10px 0 0; text-align: right;}
+.msgmore a:link, .msgmore a:visited{ color: #00a4e3;}
+.hide{ display: none;}
+.show{ display: block;}
+.footfg{ position: relative; height: 126px;}
+.ftbg{ position: absolute; left: 0; top: 0; width: 100%; height: 126px; background: #00aef3; opacity: 0.2; z-index: 100; filter:alpha(opacity=20);}
+.footer{ position: absolute; left: 0; top: 0; width: 100%; height: 80px; padding-top:45px; text-align:center; line-height:23px; color:#fff; font-size:0.75em; z-index: 99999;}
+
+.flashBox{background:url(online/images/loading.gif) no-repeat 50% 40%;width:910px;height:auto;}
+.overlay{ display:none; position:absolute; left:0; top:0; z-index:99990; width:100%; height:100%; background-color:#000; opacity:0.9;}
+#flashDiv{ position:absolute; left:50%; top:50%; width:978px; height:700px; margin:-350px 0 0 -489px; display:none; z-index:99999;}
+.flashBar{ float:right; width:67px;}
+.flashBar a{ display:block; width:67px; height:0; overflow:hidden; padding-top:67px; background:#000 url(home/img/q2013/flahicons.png) no-repeat 0 0; border-bottom:1px solid #333;}
+.flashBar a.close{ background-position:14px 14px;}
+.flashBar a.sharetozone{ background-position:14px -52px;}
+.flashBar a.sharetoweibo{ background-position:14px -120px;}
+.flashBar a.close:hover{ background-position:-52px 14px;}
+.flashBar a.sharetozone:hover{ background-position:-52px -52px;}
+.flashBar a.sharetoweibo:hover{ background-position:-52px -120px;}
+.login_div { display: none; position: fixed; left: 50%; top: 50%; width: 622px; height: 368px; margin: -184px 0 0 -311px; z-index: 99999;}
+
+#myVideo{ width: 700px; height: 434px; overflow: hidden;}
+.videoArea{ display: none; position: fixed; left: 50%; top: 50%; width: 700px; height: 434px; margin:-217px 0 0 -350px; border:1px solid #000; box-shadow: 0 16px 25px rgba(0, 0, 0, 0.5); z-index: 100000;}
+.videoArea .close{ position: absolute; right: -30px; top: -30px; width: 60px; height: 60px; background:transparent url(mobileqq/img/v50/cancle.png) no-repeat 0 0; z-index: 100002;}
+
+/*#figph1 .mbwrap, #page1 #figph2 .mbwrap, #page2 #figph3 .mbwrap, #page3 #figph4 .mbwrap, #page4 #figph4 .mbwrap{ display: block;}*/
+
+#page1 .trans1 .ph2-4, .sc_2_fi{
+    -webkit-animation: fadeInOut 1s ease 2s;
+    -moz-animation: fadeInOut 1s ease 2s;
+    -o-animation: fadeInOut 1s ease 2s;
+    animation: fadeInOut 1s ease 2s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+#page1 .trans1 .ph2-2 ,.secAni{
+    -webkit-animation: secAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -moz-animation: secAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -o-animation: secAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    animation: secAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+#page1 .trans1 .ph2-3, .thiAni{
+    -webkit-animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -moz-animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -o-animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+#page2 .trans1 .ph3-ani,.toscale{
+    -webkit-animation: toscale 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -moz-animation: toscale 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -o-animation: toscale 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    animation: toscale 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+#page3 .trans1 .ph4-1,.pop1{
+    -webkit-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1s;
+    -moz-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1s;
+    -o-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1s;
+    animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+#page3 .trans1 .ph4-2, .pop2{
+    -webkit-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1.5s;
+    -moz-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1.5s;
+    -o-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1.5s;
+    animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 1.5s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+#page3 .trans1 .ph4-3, .pop3{
+    -webkit-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 2.5s;
+    -moz-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 2.5s;
+    -o-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 2.5s;
+    animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 2.5s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+#page3 .trans1 .ph4-5, .pop5{
+    -webkit-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 3.5s;
+    -moz-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 3.5s;
+    -o-animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 3.5s;
+    animation: fadeIn 0.8s cubic-bezier(0, .25, .08, 1) 3.5s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+#page1 .trans1 .ph2-5, .pop6{
+    -webkit-animation: slidepop 0.8s cubic-bezier(0, .25, .08, 1) 3s;
+    -moz-animation: slidepop 0.8s cubic-bezier(0, .25, .08, 1) 3s;
+    -o-animation: slidepop 0.8s cubic-bezier(0, .25, .08, 1) 3s;
+    animation: slidepop 0.8s cubic-bezier(0, .25, .08, 1) 3s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+#page3 .trans1 .ph4-4, .moveInLeft {
+    -webkit-animation: moveInLeft 0.4s cubic-bezier(0, .25, .08, 1) 3s;
+    -moz-animation: moveInLeft 0.4s cubic-bezier(0, .25, .08, 1) 3s;
+    -o-animation: moveInLeft 0.4s cubic-bezier(0, .25, .08, 1) 3s;
+    animation: moveInLeft 0.4s cubic-bezier(0, .25, .08, 1) 3s;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+#page1 .trans1 .ph2txt, #page2 .trans1 .ph3txt, #page3 .trans1 .ph4txt, .txtLeft {
+    -webkit-animation: moveInLeft 0.5s cubic-bezier(0, .25, .08, 1);
+    -moz-animation: moveInLeft 0.5s cubic-bezier(0, .25, .08, 1);
+    -o-animation: moveInLeft 0.5s cubic-bezier(0, .25, .08, 1);
+    animation: moveInLeft 0.5s cubic-bezier(0, .25, .08, 1);
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+    0% {opacity: 0; }
+    100% {opacity: 1; }
+}
+@-o-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@-ms-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+@keyframes fadeInOut {
+    0%,100% { opacity: 0;}
+    50% { opacity: 1;}
+}
+@-moz-keyframes fadeInOut {
+    0%,100% {opacity: 0; }
+    50% {opacity: 1; }
+}
+@-webkit-keyframes fadeInOut {
+    0%,100% {opacity: 0;}
+    50% {opacity: 1; }
+}
+@-o-keyframes fadeInOut {
+    0%,100% { opacity: 0;}
+    50% { opacity: 1;}
+}
+@-ms-keyframes fadeInOut{
+    0%,100%{ opacity: 0;}
+    50% { opacity: 1;}
+}
+
+@keyframes toscale {
+    0%{ transform: scale(0);}
+    100% { transform: scale(1);}
+}
+@-moz-keyframes toscale {
+    0%{ transform: scale(0);}
+    100% { transform: scale(1);}
+}
+@-webkit-keyframes toscale {
+    0%{ -webkit-transform: scale(0);}
+    100% { -webkit-transform: scale(1);}
+}
+@-o-keyframes toscale {
+    0%{ -o-transform: scale(0);}
+    100% { -o-transform: scale(1);}
+}
+@-ms-keyframes toscale{
+    0%{ -ms-transform: scale(0);}
+    100% { -ms-transform: scale(1);}
+}
+
+@keyframes secAni{
+0%,100%{transform:translateY(0);opacity: 0;}
+25%,50%{transform:translateY(-30px);opacity: 1;}
+}
+
+@-moz-keyframes secAni{
+0%,100%{transform:translateY(0);opacity: 0;}
+25%,50%{transform:translateY(-30px);opacity: 1;}
+}
+
+@-webkit-keyframes secAni{
+0%,100%{-webkit-transform:translateY(0);opacity: 0;}
+25%,50%{-webkit-transform:translateY(-30px);opacity: 1;}
+}
+
+@-o-keyframes secAni{
+0%,100%{-o-transform:translateY(0);opacity: 0;}
+25%,50%{-o-transform:translateY(-30px);opacity: 1;}
+}
+@-ms-keyframes secAni{
+0%,100%{-ms-transform:translateY(0);opacity: 0;}
+25%,50%{-ms-transform:translateY(-30px);opacity: 1;}
+}
+
+@keyframes thiAni{
+0%,100%{transform:translateY(0);opacity: 0;}
+25%{transform:translateY(-60px);opacity: 1;}
+50%{transform:translateY(-30px);opacity: 1;}
+}
+
+@-moz-keyframes thiAni{
+0%,100%{transform:translateY(0);opacity: 0;}
+25%{transform:translateY(-60px);opacity: 1;}
+50%{transform:translateY(-30px);opacity: 1;}
+}
+
+@-webkit-keyframes thiAni{
+0%,100%{-webkit-transform:translateY(0);opacity: 0;}
+25%{-webkit-transform:translateY(-60px);opacity: 1;}
+50%{-webkit-transform:translateY(-30px);opacity: 1;}
+}
+
+@-o-keyframes thiAni{
+0%,100%{-o-transform:translateY(0);opacity: 0;}
+25%{-o-transform:translateY(-60px);opacity: 1;}
+50%{-o-transform:translateY(-30px);opacity: 1;}
+}
+@-ms-keyframes thiAni{
+0%,100%{-ms-transform:translateY(0);opacity: 0;}
+25%{-ms-transform:translateY(-60px);opacity: 1;}
+50%{-ms-transform:translateY(-30px);opacity: 1;}
+}
+
+@keyframes slidepop{
+0%{transform:translateY(-30px) translateX(-30px);opacity: 0;}
+100%{transform:translateY(0) translateY(0);opacity: 1;}
+}
+
+@-moz-keyframes slidepop{
+0%{-moz-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+100%{-moz-transform:translateY(0) translateY(0);opacity: 1;}
+}
+
+@-webkit-keyframes slidepop{
+0%{-webkit-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+100%{-webkit-transform:translateY(0) translateY(0);opacity: 1;}
+}
+
+@-o-keyframes slidepop{
+0%{-o-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+100%{-o-transform:translateY(0) translateY(0);opacity: 1;}
+}
+@-ms-keyframes slidepop{
+0%{-ms-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+100%{-ms-transform:translateY(0) translateY(0);opacity: 1;}
+}
+
+@keyframes moveInLeft {
+    0% { transform:translateX(-127px); opacity: 0;}
+    100% {transform:translateX(0px); opacity: 1;}
+}
+@-moz-keyframes moveInLeft {
+    0% {transform:translateX(-127px); opacity: 0; }
+    100% {transform:translateX(0px); opacity: 1; }
+}
+@-webkit-keyframes moveInLeft {
+    0% {-webkit-transform:translateX(-127px); opacity: 0;}
+    100% { -webkit-transform:translateX(0px); opacity: 1; }
+}
+@-o-keyframes moveInLeft {
+    0% {-o-transform:translateX(-127px); opacity: 0;}
+    100% {-o-transform:translateX(0px); opacity: 1;}
+}
+@-ms-keyframes moveInLeft {
+    0% { -ms-transform:translateX(-127px); opacity: 0;}
+    100% {-ms-transform:translateX(0px); opacity: 1;}
+}
+
+
+@media screen and (min-width:1700px) {
+    .mbwrap{ width: 1218px;}
+    .vers{ width: 314px; padding-top: 100px;}
+    .vers h2{ width: 192px; padding-top: 135px; background:transparent url(mobileqq/img/v50/mb5.png) no-repeat -61px 0;}
+    .vers sup{ right: -63px; top: 100px; width: 110px; height: 0px; padding-top: 39px; background:transparent url(mobileqq/img/v50/mb5.png) no-repeat right top;}
+    .vers p{  padding-top: 52px; background:transparent url(mobileqq/img/v50/mb5.png) no-repeat 0 -135px;}
+    .fpic{top: 506px;}
+    .ph1{ width: 294px; height: 621px;}
+
+    .ph2txt{ width: 365px; margin-top: -183px;}
+    .ph2txt h2{ background:transparent url(mobileqq/img/v50/ph2txt.png) no-repeat 0 0;}
+    .ph2txt p{ background:transparent url(mobileqq/img/v50/ph2txt.png) no-repeat 0 -71px;}
+    .ph2txt span{ margin-left: -44px;}
+
+    .ph2img{ left: 400px; margin-top: -224px;}
+    .ph2ani{ width: 680px; height:448px;}
+    .ph2ani div{position: absolute; left: 0; top: 0; width: 564px; height: 347px; }
+    .ph2ani div.ph2-0{ width: 680px; height: 448px;}
+    .ph2ani .ph2-1{ left: 63px; top: 33px; z-index: 1;}
+    .ph2ani .ph2-2{ left: 63px; top: 33px; z-index: 2}
+    .ph2ani .ph2-3{ left: 63px; top: 33px; z-index: 3;}
+    .ph2ani .ph2-4{ left: 405px; top: 45px; z-index: 4;}
+    .ph2ani .ph2-5{ left: 63px; top: 33px; z-index: 5;}
+
+
+    .ph3txt{ width: 365px; margin-top: -112px;}
+    .ph3txt h2{ background:transparent url(mobileqq/img/v50/ph3txt.png) no-repeat 0 0;}
+    .ph3txt p{ background:transparent url(mobileqq/img/v50/ph3txt.png) no-repeat 0 -71px;}
+    .ph3img{ left: 465px; width: 294px; height: 621px; margin-top: -311px;}
+    .ph3ani{ left: 869px; margin: -144px 0 0 0; width: 308px; height: 288px;}
+    .ph3ani div{position: absolute; left: 0; top: 0; width: 308px; height: 288px; background-repeat: no-repeat; }
+    .ph3ani .ph3-1{background-image:url(mobileqq/img/v50/ph3-1.png);}
+    .ph3ani div.ph3-3{ left: 118px; top: 108px; width: 71px; height: 62px;}
+    .ph3ani div.ph3-4{ left: 122px; top: 110px; width: 57px; height: 68px;}
+    .ph3ani div.ph3-5{ left: 116px; top: 108px; width: 73px; height: 67px;}
+    .ph3ani img{ margin: 0;}
+
+    .ph4txt{ width: 365px; margin-top: -131px;}
+    .ph4txt img{ margin-top: 25px;}
+    .ph4txt h2{ background:transparent url(mobileqq/img/v50/ph4txt.png) no-repeat 0 0;}
+    .ph4txt p{ background:transparent url(mobileqq/img/v50/ph4txt.png) no-repeat 0 -71px;}
+    .ph4img{ left: 425px; margin-top: -317px;}
+
+    .ph4ani{width: 240px; height:634px;}
+    .ph4ani div{position: absolute; left: 0; top: 0; width: 200px; height: 478px;}
+    .ph4ani img{ height: 100%;}
+    .ph4ani .ph4-0{ width: 240px; height: 634px;}
+    .ph4ani .ph4-1{ left: 177px; top: 420px; width: 42px; height: 55px;}
+    .ph4ani .ph4-2{ left: 32px; top: 82px;}
+    .ph4ani .ph4-3{ left: 32px; top: 82px;}
+    .ph4ani div.ph4-4{ width: 240px; height: 634px; left: 366px; }
+    .ph4ani .ph4-5{ left: 170px; top: 318px; width: 40px; height: 94px;}
+
+    .phfg h2{ width: 365px; padding-top: 71px; }
+    .phfg p{ width: 365px; padding-top: 78px; }
+
+}
+
+
+
+</style>
+<script type="text/javascript">
+document.domain = "qq.com";
+var t0 = new Date();
+var os = function() {
+     var ua = navigator.userAgent,
+     isWindowsPhone = /(?:Windows Phone)/.test(ua),
+     isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone, 
+     isAndroid = /(?:Android)/.test(ua), 
+     isFireFox = /(?:Firefox)/.test(ua), 
+     isChrome = /(?:Chrome|CriOS)/.test(ua),
+     isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+     isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+     isPc = !isPhone && !isAndroid && !isSymbian;
+     return {
+          isTablet: isTablet,
+          isPhone: isPhone,
+          isAndroid : isAndroid,
+          isPc : isPc
+     };
+}();
+if(os.isAndroid || os.isPhone || os.isTablet){
+location.href = 'http://im.qq.com/mobileqq/touch/index.html';
+}
+</script>
+
+</head>
+
+<body>
+
+
+<div id="maincon" class="maincon">
+    <div id="fixrelative" class="fixrelative">
+        <div id="figph1" class="figure trans1">
+            <!--S header-->
+            <div class="topic">
+                <div class="w960">
+                    <div class="topBar">
+                        <h1><a href="http://im.qq.com/" class="pngFix" tabindex="1">im.qq.com</a></h1>
+                    </div>
+                    <div class="topTool">
+                        <div class="login"><em id="loginInfo"></em><a class="forTcss" name="im.mb5_0.login" id="login" tabindex="2" href="#">登录</a> <a id="regit" class="forTcss" name="im.mb5_0.reg" href="http://zc.qq.com" target="_blank"><span>|</span> 注册</a><span>|</span><a class="forTcss" name="im.mb5_0.feature"  href="http://im.qq.com/mobileqq/update/" target="_blank">功能介绍</a><span>|</span><a class="forTcss" name="im.mb5_0.help"  href="http://kf.qq.com/product/mobile.html" target="_blank">帮助与反馈</a><span>|</span><a class="forTcss" name="im.mb5_0.home"  href="http://im.qq.com/" target="_blank">IM官网首页</a></div>
+                        <div class="flashData"><a class="forTcss" name="im.mb5_0.viewonlinedata" id="viewOnline" href="#">当前在线用户：<em id="cur_online">210,700,415</em> 最高在线用户：<em id="max_online">216,503,993
+</em></a></div>
+                    </div>
+                </div>
+            </div>
+            <!--E header-->
+
+            <!--S main-->
+            <div class="downInfo">
+                <div class="vers">
+                    <h2>5.0</h2>
+                    <sup>QQ手机版</sup>
+                    <p>全然一新，灵动呈现</p>
+                    <a id="downtouch" class="downtouch forTcss" href="javascript:;" name="im.mb5_0.openDown">立即下载</a>
+                    <a id="vediotouch" class="vediotouch forTcss" href="javascript:;" name="im.mb5_0.openvideo">功能展示视频</a>
+                </div>
+            </div>
+            <div id="ph1" class="fpic">
+                <div class="ph1"><img src="mobileqq/img/v50/ph1.png" alt="" /></div>
+            </div>
+            
+            <div class="mbbg"><img id="firstbg" src="mobileqq/img/v50/bg1.jpg" alt="" /></div>
+
+        </div>
+        <div id="figph2" class="figure phfg"></div>
+        <div id="figph3" class="figure phfg"></div>
+        <div id="figph4" class="figure phfg"></div>
+        <div id="figph5" class="footfg"></div>
+    </div>    
+</div>   
+
+<!--E main-->
+
+<!--S sidebar nav-->
+<div class="sdnav">
+    <ul id="sdnav">
+        <li tabid="0" class="current">首页</li>
+        <li tabid="1">全新界面</li>
+        <li tabid="2">精彩动态</li>
+        <li tabid="3">多人视频</li>
+    </ul>
+</div>
+<!--E sidebar nav-->
+
+<!--S down msgbox-->
+<div id="downfloor" class="downfloor">
+    <div class="msgbox">
+        <a id="msgclose" href="javascript:;" class="msgclose">x</a>
+        <div class="msgbody">
+            <p class="msgdesc">用手机扫描左侧二维码，或选择合适你的手机系统下载。</p>
+            <div class="msgcode"><img src="mobileqq/img/v50/code.png" alt="" /></div>
+            <div class="msgbtns">
+                <a href="http://itunes.apple.com/cn/app/qq-2011/id444934666?mt=8" target="_blank" class="iph forTcss" name="im.mb5_0.downIphone">iPhone</a>
+                <a href="http://down.myapp.com/myapp/qqteam/AndroidQQ/mobileqq_android.apk" class="and forTcss" name="im.mb5_0.downAndroid">Android</a>
+            </div>
+            <p class="msgmore"><a href="http://im.qq.com/download/mobile.shtml" target="_blank">更多手机系统版本&gt;</a></p>
+        </div>
+    </div>
+    
+</div>
+<!--E down msgbox-->
+
+<!--S flash object-->
+<div id="flashDiv">
+    <div class="flashBar"><a id="flashClose" href="#" class="close">关闭</a><a id="flashZone" href="javascript:;" class="sharetozone">分享到空间</a><a id="flashWeibo" href="javascript:;" class="sharetoweibo">分享到微博</a></div>
+    <div class="flashBox">
+        <div id="flashBox"><p><a href="http://www.adobe.com/go/getflashplayer"><img src="images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p></div>
+    </div>
+    <p class="togame"><a href="http://qqgame.qq.com/online.shtml" target="_blank">查看QQ游戏在线人数&gt;&gt;</a></p>
+</div>
+<div id="overlay" class="overlay"></div>
+<!--E flash object-->
+
+<div id="videoArea" class="videoArea"><div id="myVideo"></div><a href="#" id="close_x" class="close"></a></div>
+
+<script type="text/x-template" id="ph2temp">
+    <div class="mbwrap">
+        <div id="ph2txt" class="ph2txt txtLeft">
+            <h2>全新界面</h2>
+            <p>冰川蓝带来灵动清爽的视觉体验<br />化繁为简的架构，更加轻便自如</p>
+            <span><img src="mobileqq/img/v50/ph2sd.png" alt="" /></span>
+        </div>
+        <div id="ph2img" class="ph2img">
+            <div id="ph2ani" class="ph2ani">
+                <div class="ph2-0"><img src="mobileqq/img/v50/ph2-0.png" alt="" /></div>
+                <div class="ph2-1"><img src="mobileqq/img/v50/ph2-1.png" alt="" /></div>
+                <div id="ph2-2" class="ph2-2"><img src="mobileqq/img/v50/ph2-2.png" alt="" /></div>
+                <div id="ph2-3" class="ph2-3"><img src="mobileqq/img/v50/ph2-3.png" alt="" /></div>
+                <div id="ph2-4" class="ph2-4"><img src="mobileqq/img/v50/ph2-4.png" alt="" /></div>
+                <div id="ph2-5" class="ph2-5"><img src="mobileqq/img/v50/ph2-5.png" alt="" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="mbbg"><img src="mobileqq/img/v50/bg2.jpg" alt="" /></div>
+</script>
+<script type="text/x-template" id="ph3temp">
+    <div class="mbwrap">
+        <div id="ph3txt" class="ph3txt txtLeft">
+            <h2>精彩动态</h2>
+            <p>自由定制你的专属动态页面<br />熟人、附近、兴趣部落各有精彩</p>
+            <span><img src="mobileqq/img/v50/plus.png" alt="" /></span>
+        </div>
+        <div id="ph3img" class="ph3img"><img src="qq_product_operations/im/mobileqq/ph3.png" alt="" /></div>
+        <div id="ph3ani" class="ph3ani">
+            <div class="ph3-1"></div>
+            <div id="ph3-ani" class="ph3-ani"><img src="mobileqq/img/v50/ph3ani.png" alt="" /></div>
+        </div>
+    </div>
+    <div class="mbbg"><img src="mobileqq/img/v50/bg3.jpg" alt="" /></div>
+</script>
+<script type="text/x-template" id="ph4temp">
+    <div class="mbwrap">
+        <div id="ph4txt" class="ph4txt txtLeft">
+            <h2>多人视频</h2>
+            <p>多人通话支持开启视频模式<br />最高容纳50人面对面欢乐畅聊</p>
+            <span><img src="mobileqq/img/v50/tho.png" alt="" /></span>
+        </div>
+        <div id="ph4img" class="ph4img">
+            <div id="ph4ani" class="ph4ani">
+                <div class="ph4-0"><img src="mobileqq/img/v50/ph4.png" alt="" /></div>
+                <div id="ph4-1" class="ph4-1"><img src="mobileqq/img/v50/ph4-1.png" alt="" /></div>
+                <div id="ph4-2" class="ph4-2"><img src="mobileqq/img/v50/ph4-2.png" alt="" /></div>
+                <div id="ph4-3" class="ph4-3"><img src="mobileqq/img/v50/ph4-31.png" alt="" /></div>
+                <div id="ph4-4" class="ph4-4"><img src="mobileqq/img/v50/ph4-4.png" alt="" /></div>
+                <div id="ph4-5" class="ph4-5"><img src="mobileqq/img/v50/ph4-5.png" alt="" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="mbbg"><img src="mobileqq/img/v50/bg4.jpg" alt="" /></div>
+</script>
+
+<script type="text/x-template" id="ph5temp">
+    <div id="footer" class="footer">
+        <p>Copyright &copy; 1998-2014 Tencent. All Rights Reserved.</p>
+        <p>腾讯公司 版权所有</p>
+    </div>
+    <div class="ftbg"></div>
+    <div class="mbbg"><img src="mobileqq/img/v50/bg5.jpg" alt="" /></div>
+</script>
+
+<!-- <div id="console" style="position:absolute; left:0; top:100px; width:100%; background:#000; color:#fff; z-index:99999;"></div>-->
+<script type="text/javascript" src="jslib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="jslib/jquery/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="tencentvideo_v1/tvp/js/tvp.player_v2_jq.js"></script>
+<script type="text/javascript" src="home/js/8/swfobject.js"></script>
+<script>$(function(){var loadTimer=setTimeout(scrollTo,0,0,1);var winh=$(window).height();var minh=winh>720?winh:720;var fgNum=$(".figure").size();var c=0;var timer=null;var styleSupport=(function(){var div=document.createElement("div"),vendors="Khtml Ms O Moz Webkit".split(" ");return function(prop){if(prop in div.style){return true}prop=prop.replace(/^[a-z]/,function(val){return val.toUpperCase()});var len=vendors.length;while(len--){if((vendors[len]+prop) in div.style){return true}}return false}})();var ltie10=(function(){var lt=false;var verInfo=window.navigator.userAgent.match(/MSIE\s\d+/);if(!!verInfo){var verNum=verInfo[0].split(" ")[1];if(verNum<10){lt=true}}return lt})();if(ltie10){$("#figph2").addClass("ltie")}$("#figph2").html($("#ph2temp").html());$("#figph3").html($("#ph3temp").html());$("#figph4").html($("#ph4temp").html());$("#figph5").html($("#ph5temp").html());$(".figure").each(function(i,item){$(item).css("height",minh+"px")});$("#downtouch").click(function(e){e.preventDefault();$("#downfloor").fadeIn(400).focus()});$("#msgclose").click(function(e){e.preventDefault();$("#downfloor").fadeOut(200)});$("#fixrelative").bind("mousewheel",function(event,delta,deltaX,deltaY){if(timer){window.clearTimeout(timer)}timer=window.setTimeout(function(){if(delta<0){motion(1)}else{motion(-1)}},500)});var moveData={};function getArr(){var arr=[0];var allheight=0;var _wh_=$(window).height();var winheight=_wh_>720?_wh_:720;$(".figure").each(function(i,item){allheight+=$(item).height()});allheight+=126;var mod=allheight%winheight;var floor_ind=Math.floor(allheight/winheight);var inds=(mod===0)?floor_ind:Math.ceil(allheight/winheight);var i=0;while(i<floor_ind-1){arr.push(winheight+arr[i]);i++}if(mod){arr.push(mod+arr[floor_ind-1])}moveData.arr=arr;moveData.inds=inds;return moveData}getArr();$(window).resize(function(){winh=$(window).height();minh=winh>720?winh:720;$(".figure").each(function(i,item){$(item).css("height",minh+"px")});getArr();motion(0)});$(window).keydown(function(event){var code=event.keyCode||event.which||event.charCode;switch(code){case 38:motion(-1);break;case 40:motion(1);break}});var $$figure=$(".figure");var $curfg=$$figure.eq(0);function anichage(n){$curfg.removeClass("trans1");$$figure.eq(n).addClass("trans1");$curfg=$$figure.eq(n)}var $sideLis=$("#sdnav").find("li");$sideLis.click(function(){var id=$(this).attr("tabid");motion(id-c)});var ii=0;function motion(d){c=c+d;ii=ii+d;var _ind_=moveData.inds-1;if(c<0||c===0){c=0}else{if(c===_ind_||c>_ind_){c=_ind_}}if(ii<0||ii===0){ii=0}else{if(ii===_ind_||ii>_ind_){ii=_ind_}}anichage(c);if(c<4){$("#sdnav").fadeIn();$sideLis.removeClass();$sideLis.eq(c).addClass("current")}else{$("#sdnav").hide()}$("body").attr("id","page"+c);if(!ltie10){$("#fixrelative").css({"-webkit-transform":"translate(0px, -"+moveData.arr[ii]+"px)","-moz-transform":"translate(0px, -"+moveData.arr[ii]+"px)","-o-transform":"translate(0px, -"+moveData.arr[ii]+"px)","-ms-transform":"translate(0px, -"+moveData.arr[ii]+"px)",transform:"translate(0px, -"+moveData.arr[ii]+"px)"})}else{$("#fixrelative").animate({top:(0-moveData.arr[ii])+"px"},1000)}}var TCSS_TAG=function(){};if(typeof(pgvMain)!="function"){var tcss="http://pingjs.qq.com/tcss.ping.js?v=1";$.getScript(tcss,function(){if(typeof(pgvMain)=="function"){pgvMain()}TCSS_TAG=pgvSendClick})}var getHash=function(name){var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)");var r=window.location.hash.substring(1).match(reg);if(!!r){return unescape(r[2])}return null};var getSearch=function(name){var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)");var r=window.location.search.substring(1).match(reg);if(!!r){return unescape(r[2])}return null};var hashTimer=setTimeout(function(){if(!!getHash("from")){TCSS_TAG({hottag:""+getHash("from")})}},1000);$(".forTcss").click(function(){var tag=$(this).attr("name");if(!!getHash("from")&&(tag==="im.mobileqq.iPhone-download"||tag==="im.mobileqq.android-apk-download")){TCSS_TAG({hottag:getHash("from")+"."+tag.slice(3)})}else{TCSS_TAG({hottag:tag})}});window.online_resp=function(data){if(data&&data.c){$("#cur_online").text(data.c.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g,"$1,"));$("#max_online").text(data.h.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g,"$1,"))}};$.getJSON("http://mma.qq.com/cgi-bin/im/online&callback=?",function(data){});swfobject.embedSWF("http://im.qq.com/online/flash/flash20140304.swf","flashBox","910","700","9.0.0","expressInstall.swf");$("#viewOnline").click(function(e){e.preventDefault();$("#flashDiv").show();$("#overlay").css({opacity:"0.9"}).fadeIn();$("#overlay").css({height:$(document).height()});TCSS_TAG({hottag:"im.qq.com.mobile.openflash"})});$("#flashClose").click(function(e){e.preventDefault();$("#flashDiv").hide();$("#overlay").fadeOut()});$("#flashZone").click(function(){var left=($(window).width()-615)/2,top=($(window).height()-713)/2;window.open("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2Fim.qq.com%2F&showcount=1&desc=%E4%BA%BF%E4%B8%87%E4%B8%AA%E9%97%AA%E8%80%80%E6%98%9F%E5%85%89%E8%83%8C%E5%90%8E%EF%BC%8C%E6%98%AF%E6%9C%8B%E5%8F%8B%EF%BC%8C%E6%98%AF%E5%AE%B6%E4%BA%BA%EF%BC%8C%E6%98%AF%E7%88%B1%E4%BA%BA%E2%80%A6%E2%80%A6%E7%99%BB%E5%BD%95QQ%EF%BC%8C%E4%B8%BA%E4%BB%96%EF%BC%88%E5%A5%B9%EF%BC%89%E7%82%B9%E4%BA%AE%E4%BD%A0%E7%9A%84%E9%82%A3%E9%A2%97%E6%98%9F%E3%80%82&summary=&title=&site=IM%20QQ%20-%20QQ%E5%AE%98%E6%96%B9%E7%BD%91%E7%AB%99&pics=http%3A%2F%2Fim-img.qq.com%2Fhome%2Fimg%2Fq2013%2Fyun.png&style=203&width=98&height=22&otype=share","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=615, height=363, left="+left+", top="+top);TCSS_TAG({hottag:"im.qq.com.mobile.sharetozone"})});$("#flashWeibo").click(function(){window.open("http://share.v.t.qq.com/index.php?c=share&a=index&url=http%3A%2F%2Fim.qq.com%2F&title=%E4%BA%BF%E4%B8%87%E4%B8%AA%E9%97%AA%E8%80%80%E6%98%9F%E5%85%89%E8%83%8C%E5%90%8E%EF%BC%8C%E6%98%AF%E6%9C%8B%E5%8F%8B%EF%BC%8C%E6%98%AF%E5%AE%B6%E4%BA%BA%EF%BC%8C%E6%98%AF%E7%88%B1%E4%BA%BA%E2%80%A6%E2%80%A6%E7%99%BB%E5%BD%95QQ%EF%BC%8C%E4%B8%BA%E4%BB%96%EF%BC%88%E5%A5%B9%EF%BC%89%E7%82%B9%E4%BA%AE%E4%BD%A0%E7%9A%84%E9%82%A3%E9%A2%97%E6%98%9F%E3%80%82&pic=http%3A%2F%2Fim-img.qq.com%2Fhome%2Fimg%2Fq2013%2Fyun.png&appkey=","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=615, height=363");TCSS_TAG({hottag:"im.qq.com.mobile.sharetoweibo"})});var cookie={get:function(n){var m=document.cookie.match(new RegExp("(^| )"+n+"=([^;]*)(;|$)"));return !m?"":decodeURIComponent(m[2])},set:function(name,value,domain,path,hour){var expire=new Date();expire.setTime(expire.getTime()+(hour?3600000*hour:30*24*60*60*1000));document.cookie=name+"="+value+"; expires="+expire.toGMTString()+"; path="+(path?path:"/")+"; "+(domain?("domain="+domain+";"):"")},del:function(name,domain,path){document.cookie=name+"=; expires=Mon, 26 Jul 1997 05:00:00 GMT; path="+(path?path:"/")+"; "+(domain?("domain="+domain+";"):"")},uin:function(){var u=cookie.get("uin");return !u?null:parseInt(u.substring(1,u.length),10)}};var htmlEncodeDict={'"':"#34","<":"#60",">":"#62","&":"#38"," ":"#160"};var encodeHtml=function(s){s+="";return s.replace(/["<>& ]/g,function(all){return"&"+htmlEncodeDict[all]+";"})};window.share={net:{requestUserNameCallback:function(json){if(json&&json.retcode===0){var $login=$("#login");$login.addClass("in");$login.html("[退出]");$("#loginInfo").html("欢迎您，"+encodeHtml(json.result.nick)+"&nbsp;");$("#regit").hide()}}}};try{var uin=cookie.uin();if(!!uin){$.ajax({type:"GET",async:false,url:"http://cgi.connect.qq.com/qqconnectopen/openapi/get_nick?retype=2",dataType:"jsonp",jsonp:"callback",jsonpCallback:"share.net.requestUserNameCallback",success:function(json){},error:function(){}})}}catch(e){}window.ptlogin2_onClose=function(){$("#login_div").hide();$("#overlay").fadeOut()};window.ptlogin2_onResize=function(width,height){$("#login_div").css({width:width,height:height,visibility:"hidden"}).css("visibility","visible")};function str2JSON(str){eval("var __pt_json="+str);return __pt_json}if(typeof window.postMessage!=="undefined"){window.onmessage=function(event){var msg=event||window.event;var data;if(typeof JSON!=="undefined"){data=JSON.parse(msg.data)}else{data=str2JSON(msg.data)}switch(data.action){case"close":ptlogin2_onClose();break;case"resize":ptlogin2_onResize(data.width,data.height);break;default:break}}}var showLogin=function(){var loginWin=$("#login_div");var _url=window.location.href;if(!loginWin.length){loginWin=$('<div id="login_div" class="login_div"><iframe name="login_frame" frameborder="0" scrolling="auto" width="100%" height="100%" src="http://xui.ptlogin2.qq.com/cgi-bin/xlogin?appid=501038301&proxy_url=http%3A%2F%2Fid.qq.com%2Flogin%2Fproxy.html&s_url='+encodeURIComponent(_url)+'"></iframe></div>');loginWin.appendTo($("body"))}$("#overlay").css({opacity:"0.5"}).fadeIn();$("#overlay").css({height:$(document).height()});loginWin.show()};$("#login").click(function(e){e.preventDefault();if($(this).hasClass("in")){cookie.del("uin",".qq.com");cookie.del("skey",".qq.com");cookie.del("uin","im.qq.com");cookie.del("skey","im.qq.com");$(this).removeClass("in");$(this).html("登录");$("#loginInfo").html("")}else{showLogin()}});var vdw=$(window).width()*0.7;var vdh=vdw*1080/1920;$("#videoArea").css({width:vdw+"px",height:vdh+"px",marginLeft:(0-vdw/2)+"px",marginTop:(0-vdh/2)+"px"});$("#myVideo").css({width:vdw+"px",height:vdh+"px"});var video=new tvp.VideoInfo();video.setVid("h013399opsf");var player=new tvp.Player();player.create({width:vdw,height:vdh,video:video,modId:"myVideo",autoplay:true});$(".vediotouch").click(function(event){event.preventDefault();$("#overlay").css({opacity:"0.5"}).fadeIn();$("#overlay").css({height:$(document).height()});$("#videoArea").show();player.play(video)});$("#close_x").click(function(event){event.preventDefault();player.pause();$("#overlay").fadeOut();$("#videoArea").hide()})});</script>
+</body>
+</html>
