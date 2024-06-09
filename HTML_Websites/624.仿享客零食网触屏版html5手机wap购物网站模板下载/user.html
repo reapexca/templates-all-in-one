@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon.png" />
+<link rel="apple-touch-startup-image" href="images/apple-touch-startup-image.png" />
+<meta name="author" content="FamousThemes" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<title>仿享客零食网触屏版html5手机wap购物网站模板会员登入-懒人模板【http://www.lanrenmb.com/shenghuofuwu/gouwu/】</title>
+
+
+<link rel="stylesheet" href="templates/style.css" type="text/css" media="screen" />
+
+<link href='../fonts.googleapis.com/css@family=Niconne' rel='stylesheet' type='text/css' />
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/jquery.tabify.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+var $ = jQuery.noConflict();
+
+$(window).load(function() {
+	$('.images_slider').flexslider({
+	animation: "slide",
+	directionNav: false,
+	controlNav: true,
+	animationLoop: true,
+	animationDuration: 300, 
+	slideshow: false
+	});
+});
+
+$(function() {
+$('#tabsmenu').tabify();
+$(".toggle_container").hide(); 
+$(".trigger").click(function(){
+	$(this).toggleClass("active").next().slideToggle("slow");
+	return false;
+});
+});
+</script>
+
+<script src="js/effects.js"></script>
+
+<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+
+<script type="text/javascript">
+window.addEventListener("load",function() {
+// Set a timeout...
+setTimeout(function(){
+// Hide the address bar!
+window.scrollTo(0, 1);
+}, 0);
+});
+</script>
+</head>
+
+<body id="page">
+<div id="pagecontainer">
+	<section class="Fh_head">
+	 <div class="page_title"><a href="default.htm"><img src="images/logo.png"></a></div>
+         
+    <div style="float:right; padding-right:10px; padding-top:20px;">
+     
+        
+        <a href="index.php" class="Fh_hright btn_menu"><span></span></a>
+        <a href="user.php" class="Fh_hright btn_user"><span></span></a>
+        <a href="flow.php" class="Fh_hright btn_cart"><span></span></a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</section>    
+    <div class="content">
+        <blockquote style="height: 25px; margin-top: 20px;"><h1>会员登入</h1></blockquote>
+        <div class="form">
+        <form action="/user.php?act=do_login" method="post">
+        <label>会员帐号: </label><input type="text" name="username" class="form_input" />
+        <label>会员密码: </label><input type="password" name="pwd" class="form_input" />
+        <input type="submit" name="登入" value="登入" class="form_submit" style="margin-bottom: 10px;" />
+        </form>
+        <a href="zhuce.html"><input type="button" value="加入会员" class="form_submit" /></a>
+    </div>
+    <div class="clear"></div>
+    </div>
+   
+</div>
+  <div class="margb20"></div>
+<section class="Fh_bottom">
+<a href="index.php"><img src="images/logobott.png"></a></section>
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbc4525ac529334d19a9886f46cce7852' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

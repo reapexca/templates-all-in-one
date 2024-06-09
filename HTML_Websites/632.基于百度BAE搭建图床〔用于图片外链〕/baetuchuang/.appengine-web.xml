@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app>
+	<application></application>
+	<version></version>
+	<access_key></access_key>
+	<secure_key></secure_key>
+	<local_sql_host></local_sql_host>
+	<local_sql_port></local_sql_port>
+	<local_sql_user></local_sql_user>
+	<local_sql_password></local_sql_password>
+	<save_emulation_data>false</save_emulation_data>
+</appengine-web-app>

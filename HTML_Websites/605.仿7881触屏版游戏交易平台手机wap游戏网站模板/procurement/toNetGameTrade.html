@@ -1,0 +1,148 @@
+
+
+
+
+<!DOCTYPE HTML>
+  <html>
+  <head>
+	<meta charset="utf-8">
+	<title>仿7881触屏版游戏交易平台手机wap游戏网站模板分类列表-懒人模板【http://www.lanrenmb.com/yulexiuxian/youxi/】</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+	<meta name="viewport" content="width=device-width" />
+    <meta name="description" content="7881中国网络游戏交易门户,征途|热血江湖|武林外传|梦幻西游等网络游戏领先交易平台,是中国电子商务诚信单位。">
+    <meta name="keywords" content="7881,AppStore充值,手游交易,苹果手游直充,网游交易,热血江湖,武林外传,魔域,巨人,赤壁,梦幻西游,魔兽世界,千年3">
+    <link rel="stylesheet" href="../m7881/m.common.css">
+  </head>
+  <body class="mWrap">
+	<header class="topHd"><a href="javascript:pageBack();" class="back">返回</a><a href="../index.html" class="home">首页</a><span>
+	
+	手游交易
+	</span></header>
+	<section class="mContent">
+		<div class="tab"><a href="javascript:void(0);" class="current"><i></i>热门游戏</a><a href="javascript:void(0);">最近浏览</a></div>
+		<div>
+			
+				
+				
+					<ul class="tlist column2 showOne pusht">
+						<li><a href="../buy-A817.html">忘仙</a></li>
+						<li><a href="../buy-A988.html">神魔</a></li>
+						<li><a href="../buy-A820.html">仙变</a></li>
+						<li><a href="../buy-A809.html">时空猎人</a></li>
+						<li><a href="../buy-A803.html">魔与道 </a></li>
+						<li><a href="../buy-A851.html">九州OL</a></li>
+						<li><a href="../buy-A968.html">世界OL</a></li>
+						<li><a href="../buy-A948.html">诛神OL</a></li>
+					</ul>
+				
+			
+
+			<ul class="tlist historyList pusht">
+			</ul>
+		</div>
+		<p class="aBlue pusht tright clearfix" id="clearfixid">
+			
+			<a href="toNetGameMore.action@gametype=1">更多手机游戏&gt;&gt;</a>
+		</p>
+	</section>
+	<script src="../m7881/jquery.min.js"></script>
+	
+<footer class="Mfoot">
+<p class="nav">
+	<a href="../login.html">登录</a><em>|</em><a href="../reg.jsp">注册</a><em>|</em><a
+		href="javascript:window.scrollTo(0,0);">返回顶部</a>
+</p>
+<p class="cp">
+	<a href="../../www.7881.com/index.html">电脑版</a>
+</p>
+<p class="copyright">
+	&copy;2014 m.7881.com
+</p>
+</footer>
+<script type="text/javascript">
+	// 判断是否登录
+	var username1 = '';
+	if(username1 != ''){//已经登录
+	 $('.Mfoot .nav').empty();
+	 var divuserText = '<a href="../personal.html">'+username1+'</a><em>|</em><a href="../logout.action" class="blue">退出</a><em>|</em>'
+	     +'<a href="javascript:window.scrollTo(0,0);">返回顶部</a>';
+	 $('.Mfoot .nav').html(divuserText);
+	}
+</script>
+
+
+
+ 
+<img src="
+../../hm.baidu.com/hm.gif@si=d154d52d9a3f20939957ef609a0b977f&et=0&nv=0&st=4&lt=1394504234&v=wap-2-0.3&rnd=681430415" width="0" height="0" />
+
+	<script src="../m7881/m.js"></script>
+  </body>
+  <script>
+  	 $(function(){
+  	 	//加载看过的游戏
+  	 	$('.tab a:last').click(function(){
+  	 		$('#clearfixid').hide();
+  	 		loadHaveSeenGame();
+  	 	});
+  	 	
+  	 	$('.tab a:first').click(function(){
+  	 		$('#clearfixid').show();
+  	 	});
+  	 });
+  	 
+  	   		
+ 	function loadHaveSeenGame() {
+		$.ajax({
+			type:'post',
+			data:{},
+			url:'loadGameSeenHistory.action@gametype=1',
+			dataType:'json',
+			success:function(json) {
+				if (json.success == 'T') {
+					var dataList=json.list;
+					dataList=eval("("+dataList+")");//转换为json对象
+					var content = '';
+					if(dataList != ''){
+						$.each(dataList,function(i,item){
+							var groupNamelen = item.groupName.length;
+							var groupNames = '';
+							if(groupNamelen>8){
+								groupNames = item.groupName.substring(0,8)+'...';
+							}else{
+								groupNames = item.groupName;
+							}
+						
+							var serverNamelen = item.serverName.length;
+							var serverNames = '';
+							if(serverNamelen>8){
+								serverNames = item.serverName.substring(0,8)+'...';
+							}else{
+								serverNames = item.serverName;
+							}
+							if(item.gtId!=''){
+								content+='<li><a href="../buy-'+item.gameId+'-'+item.groupid+'-'+item.serverId+'-'+item.gtId+'-1.html"><span class="blue">'+item.gameName+'</span>'+'<span class="gray">/'+groupNames+'/'
+								+serverNames
+								+'</span></a></li>';
+							}else{
+								content+='<li><a href="../buy-'+item.gameId+'-'+item.groupid+'-'+item.serverId+'-1.html"><span class="blue">'+item.gameName+'</span>'+'<span class="gray">/'+groupNames+'/'
+								+serverNames
+								+'</span></a></li>';
+							}
+						});
+					}
+					$('.tab').next().children().last().html(content);
+				} else if (json.success == 'F') {
+					$('.tab').next().children().last().html('<section class="noteBox pusht">'+json.msg+'</section>');
+				}
+			},
+			failure:function(json) {
+				alert(json);
+			}
+		});	
+	}
+  </script>
+  </html>

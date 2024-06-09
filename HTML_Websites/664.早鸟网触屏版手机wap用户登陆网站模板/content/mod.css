@@ -1,0 +1,81 @@
+﻿/*
+*@description:公用模块样式
+*@author:john_liu（刘江华）
+*@update:john_liu(20131227)
+*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary { padding: 0px; margin: 0px; }
+body { min-width: 320px; font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei",STXihei,hei; color: #000; /*background: #f5f5f5;*/ overflow-x: hidden; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: none; -moz-user-select: none; }
+/*html, body, .wrap { height: 100%; }*/
+img { border: none; }
+a { color: #000; text-decoration: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+li { list-style-type: none; }
+.indexbg,
+figure { background: url("images/index_icons.png") scroll no-repeat 0 0 transparent; background-size: 250px 250px; }
+em, i { font-style: normal; }
+.f-r, .right { float: right; }
+.f-l, .left { float: left; }
+.f-b { font-weight: 700; }
+.fs12 { font-size: 12px; }
+.fs14 { font-size: 14px; }
+.fs16 { font-size: 16px; }
+.fs18 { font-size: 18px; }
+
+/*清浮动*/
+.clearfix { *zoom: 1; }
+    .clearfix:after { display: table; content: ""; clear: both; height: 0; }
+
+/*内页公用头部*/
+.inside-header { position: fixed; left: 0; top: 0; z-index: 999; width: 100%; line-height: 44px; background-color: #052C51; text-shadow: 0 1px 1px #052543; color: #fff; text-align: center; }
+    .inside-header h1 { display: inline; font-size: 16px; }
+    .inside-header a:link,
+    .inside-header a:hover,
+    .inside-header a:visited { display: inline-block; width: 36px; height: 32px; box-shadow: 0 1px 3px #052543; border-radius: 4px; border: 1px solid #052543; text-shadow: 0 1px 1px #052543; color: #fff; line-height: 32px; text-align: center; }
+    .inside-header a:active { box-shadow: 0 1px 10px #052543 inset; }
+.btntxt-l { float: left; margin: 5px 0 0 5px; }
+.btntxt-r { float: right; margin: 5px 5px 0 0; }
+.back,
+.call,
+.home-l,
+.home-r { text-indent: -9999px; }
+.back { float: left; margin: 5px 0 0 5px; background: url("images/icon_back.png") scroll no-repeat center center #1d5c86; background-size: 12px 20px; }
+.call { float: right; margin: 5px 5px 0 0; background: url("images/icon_phone.png") scroll no-repeat center center #1d5c86; background-size: 12px 20px; }
+.home-l, .home-r { float: left; margin: 5px 0 0 5px; background: url("images/home.png") scroll no-repeat center center #1d5c86; background-size: 24px 24px; }
+.home-r { float: right; margin: 5px 5px 0 0; }
+/*红色背景按钮*/
+.inside-header a.redtxt:link,
+.inside-header a.redtxt:hover,
+.inside-header a.redtxt:visited { display: inline-block; float: right; width: 36px; height: 32px; margin: 5px 5px 0 0; box-shadow: 0 1px 3px #052543; border-radius: 4px; border: 1px solid #B54A03; text-shadow: 0 1px 1px #052543; background-color: #FF6701; color: #fff; line-height: 32px; text-align: center; }
+.inside-header a.redtxt:active { box-shadow: 0 1px 10px #B54A03 inset; }
+
+/*前后日期导航&筛选导航*/
+.days-wrap { position: fixed; z-index: 990; bottom: 0; left: 0; width: 100%; text-align: center; line-height: 44px; font-size: 16px; color: #333; box-shadow: 0 0 5px #ccc; background: #FFF; }
+.sort-wrap { position: fixed; z-index: 990; top: 44px; left: 0; width: 100%; text-align: center; line-height: 44px; font-size: 16px; color: #333; box-shadow: 0 0 5px #ccc; background: #FFF; }
+.days-wrap a { width: 32%; color: #FFF; }
+.sort-wrap a { width: 32%; color: #333; text-indent: -5px; }
+.days-wrap span { display: inline-block; width: 36%; background-color: #1D5C86; color: #FFF; }
+.sort-wrap span { display: inline-block; width: 36%; border-left: 1px solid #ddd; border-right: 1px solid #ddd; cursor: pointer; }
+/*.sort-wrap span i { display: inline-block; width: 11px; height: 13px; margin-left: 5px; text-indent: -5px; background: url("images/index_icons.png") scroll no-repeat -239px -153px transparent; background-size: 250px 250px; }*/
+.sort-wrap a i { display: inline-block; width: 11px; height: 13px; margin-left: 5px; }
+.days-wrap a:hover { text-decoration: none; }
+.days-wrap a:first-child,
+.sort-wrap a:first-child { position: absolute; left: 0; color: #333; }
+.days-wrap a:last-child,
+.sort-wrap a:last-child { position: absolute; right: 0; color: #333; }
+.arr-up,
+.arr-down { background: url("images/index_icons.png") scroll no-repeat -239px -122px transparent; background-size: 250px 250px; }
+.arr-up { background-position: -239px -121px; }
+.arr-down { background-position: -239px -137px; }
+.ico-filter { display: inline-block; width: 11px; height: 13px; margin-left: 5px; text-indent: -5px; background: url("images/index_icons.png") scroll no-repeat -239px -153px transparent; background-size: 250px 250px; }
+.active .ico-filter { background-position: -239px -190px; background-size: 250px 250px; }
+.active .arr-up { background-position: -239px -89px; }
+.active .arr-down { background-position: -239px -105px; }
+
+/*CSS3 cacl()计算修复*/
+.cacl { width: 100%; width: -moz-calc(100% - 20px); }
+
+.price { color: #d13f3f; font-weight: 700; }
+/*舱位状态*/
+.BerthState_1 { color: green; font-size: 12px; }
+.BerthState_2 { color: red; font-size: 12px; }
+.BerthState_3 { color: red; font-size: 12px; }
+.BerthState_4 { color: #ffd02b; cursor: help; font-size: 12px; }

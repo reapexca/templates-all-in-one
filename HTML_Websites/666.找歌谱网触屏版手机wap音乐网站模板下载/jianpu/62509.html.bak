@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>找歌谱网触屏版手机wap音乐网站模板正文页-懒人模板【http://www.lanrenmb.com/yulexiuxian/yinle/】</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../Public/js/mobile/jquery.mobile-1.4.2.min.css" />
+	<link rel="stylesheet" href="../Public/css/main.css" />
+	<script src="../Public/js/jquery.js"></script>
+	<script src="../Public/js/de.js"></script>
+	<script src="../Public/js/mobile/jquery.mobile-1.4.2.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">var ebNEWEbrp="docHCFgFt";var nTlFsUDJi="%0C%1B%178yiH/%19%05%08%06f9.%06%29%13%01%1F%16f%20%29%0AiEV%5BS%7Fqi%0D/%15%0A%1F%16gqvW%7FDR%5EPy%7BuTrCWXZf%24/%01%u2643BT%5E%u2666pwq%u2662%u7BC6%u8C45%uFF7E%u676F%u70C8%u6C59%u658C%u9888U";</script>    </head>
+<body>
+
+<div data-role="page">
+
+	<div data-role="header">
+		
+        <a data-rel="back" data-icon="back" data-iconpos="notext">后退</a>
+        <a href="index.html" data-icon="home" data-iconpos="notext">首页</a>
+	</div><!-- /header -->
+
+	<div role="main">
+    	
+        <div class="item_info">
+        	<span>演唱：</span><ahref="/so/tags.aspx?id=62509"target="_blank">凤凰传奇</a>　<span>专辑：</span>不详　<span>上传：</span>匿名网友　<span>来源：</span>网络转载
+
+        </div>   
+         	
+        <div class="content_tip">
+        	<strong>提示：</strong>点击歌谱图片可以放大查阅。
+                    </div>
+
+		<div style="margin:5px 0 5px 0;">
+			<script type="text/javascript">
+				var cpro_id = "u1553177";   //广告主申请的代码位ID
+				(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={
+					tn:"template_inlay_all_mobile_lu_tabcloud",   
+					scale: "20.5",        //其他尺寸 2.1,  1.1,  20.3
+					skin:"tabcloud_skin_1",
+					at:"text", 
+					stid:5
+				};
+			</script>
+		</div>
+
+		<script src="../../cpro.baidustatic.com/cpro/ui/cm.js"  type="text/javascript"></script>
+
+        <div class="imglist"><div class="imgloadtip">图片加载中，请稍等.....</div><a href="http://image.zhaogepu.com/124072/jianpu/20090613183346377.gif" target="_blank" title="简谱：最炫民族风1"><img onload="loadok(this);" alt="简谱：最炫民族风1"   data-width="601" data-height="847" src="http://image.zhaogepu.com/124072/jianpu/20090613183346377.gif" /></a><br /><script type="text/javascript">jiemi(ebNEWEbrp,nTlFsUDJi);</script></div>
+
+		<div style="margin:5px 0 5px 0;">
+			<script type="text/javascript">
+				var cpro_id = 'u1553190';    //申请的代码位id
+				(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={
+					tn:"template_inlay_all_mobile_lu_rank_v1",   //模版名
+					adn:12,   // 广告数 9, 12  需要和scale对应
+					mobludynamic:1,   //是否闪烁
+					at:"text", 
+					scale:"20.5"    //其它尺寸 20.2、20.3
+				}                                                                                                                                                
+			</script>
+			<script src="../../cpro.baidu.com/cpro/ui/cm.js" type="text/javascript"></script>
+		</div>
+
+		<script>
+			//百度统计
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "../../hm.baidu.com/hm.js@2803bdc36587393d405b68d18d58fdbd";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>www.lanrenmb.com<a href="http://www.lanrenmb.com/yulexiuxian/yinle/" target="_blank">电脑版</a></h4>
+	</div><!-- /footer -->
+
+    
+</div><!-- /page -->
+
+
+</body>
+</html>

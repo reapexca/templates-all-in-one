@@ -1,0 +1,158 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><meta name="format-detection" content="telephone=no" /><meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=0" /><meta name="apple-mobile-web-app-status-bar-style" content="black" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-touch-fullscreen" content="yes" /><meta name="format-detection" content="telphone=no" /><title>
+	仿手机搞趣网触屏版手机wap游戏网站模板列表页-懒人模板【http://www.lanrenmb.com/yulexiuxian/youxi/】
+</title><link rel="stylesheet" type="text/css" href="css/newcore.css" /><link rel="stylesheet" type="text/css" href="css/news.css" /><link href="css/search.css" rel="stylesheet" />
+
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/newslist.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/touch.js"></script>
+    <script type="text/javascript">
+        window.onscroll = function () {
+            //return;
+            if (reachBottom()) {
+                //$("#btnViewMore").val("下一页有点害羞哦~");
+                //$("#btnViewMore").attr({ "disabled": "disabled" });
+                var t = setTimeout(function () {
+                    clearTimeout(t);
+                    //$("#btnViewMore").attr({ "disabled": "disabled" });
+                    if (!loading) {
+                        loading = true;
+                        AjaxGetData('interface/NewsListAjax.aspx');
+                    }
+                }, 500);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="news-1.shtm?type=1" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0MTMwODM0MTNkZCC32ZAT2GrSvEa9eiufYtGThsv8cERkre6nAHA5n01z" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQKGpdm3BgLjzafyBwK++/7nBAKm4dCKDAKuvMfmBC43Dgzl7U2nzVSBrdWfGWFqNfopDI8vEIk+3I9vq6vr" />
+</div>
+        <!-- 隐藏信息 -->
+        <input type="hidden" name="pageIndex" id="pageIndex" value="1" />
+        <input type="hidden" name="pageCount" id="pageCount" value="699" />
+        <input type="hidden" name="type" id="type" value="1" />
+        <input type="hidden" name="hfKeyword" id="hfKeyword" />
+        <div class="wrap">
+            <!-- 标题 -->
+            <div class="top">
+                   <h1>搞趣网-手游快讯</h1>
+                
+ 
+    <i class="menu-click"></i>
+    <i onclick="window.location.href='search.shtm'"></i>
+            </div>
+            <!-- 业界资讯 -->
+            <div id="yjNews" class="yj-news">
+                
+                <div class="list-nav">
+				    <ul id="ci-tag">
+					    <li id="li1"><a href="news-1.htm">新游资讯</a></li>
+					    <li id="li10"><a href="news-10.shtm">业界资讯</a></li>
+					    <li id="li7"><a href="news-7.shtm">业界人物</a></li>
+					    <li id="li6"><a href="news-6.shtm">行业数字</a></li>
+					    <li id="li8"><a href="news-8.shtm">搞科技</a></li>
+				    </ul>
+			    </div>
+                <div class="news-list">
+                    <ul id="newslist" class="list">
+                         <li 'boxItem'><img src="http://files.gao7.com/Files/CmsFile/2014-02-15/c187832c-7b20-4eb8-9267-361a6ce1ce31.jpg">      <dl>          <dt>有灰机！《天天修仙》坐骑萌三界</dt>          <dd>            <span>2014-02-15</span><br>          </dd>      </dl><a href='newsDetail-157704.htm'></a></li> <li 'boxItem'><img src="http://files.gao7.com/Files/CmsFile/2014-02-17/2f891084-89c4-4763-a960-1e029b9a9d92.jpg">      <dl>          <dt>仙侠题材手游《神仙也疯狂》疯狂来袭！</dt>          <dd>            <span>2014-02-17</span><br>          </dd>      </dl><a href='newsDetail-159567.shtm'></a></li> <li 'boxItem'><img src="http://files.gao7.com/Files/CmsFile/2014-02-17/81a2ad0d-e991-440e-9934-a884043f61be.jpg">      <dl>          <dt>科幻冒险《异星探险》即将启航</dt>          <dd>            <span>2014-02-17</span><br>          </dd>      </dl><a href='newsDetail-159563.shtm'></a></li> <li 'boxItem'><img src="http://files.gao7.com/Files/CmsFile/2014-02-17/e7437a59-2287-4c40-b57f-b36534b5f8ef.jpg">      <dl>          <dt>中手游花费百万为《三国志威力加强版》玩家办“登基大典”</dt>          <dd>            <span>2014-02-17</span><br>          </dd>      </dl><a href='newsDetail-159562.shtm'></a></li> <li 'boxItem'><img src="http://files.gao7.com/Files/CmsFile/2014-02-17/cdd58082-e64c-4357-a6ca-f6fa892b63d5.jpg">      <dl>          <dt>惊悚解谜游戏《当幽灵来敲门》3月来袭</dt>          <dd>            <span>2014-02-17</span><br>          </dd>      </dl><a href='newsDetail-159561.shtm'></a></li> <li 'boxItem'><img src="http://files.gao7.com/Files/CmsFile/2014-02-17/08349391-3c50-41f9-8e66-757c4ea9ed76.jpg">      <dl>          <dt>《飞车漂移》带你体验速度与激情</dt>          <dd>            <span>2014-02-17</span><br>          </dd>      </dl><a href='newsDetail-159557.shtm'></a></li> <li 'boxItem'><img src="http://files.gao7.com/Files/CmsFile/2014-02-17/53995f01-3808-4634-9d59-b1cef320704b.jpg">      <dl>          <dt>乱炖型塔防游戏《布拉德野蛮人》安卓版</dt>          <dd>            <span>2014-02-17</span><br>          </dd>      </dl><a href='newsDetail-159547.shtm'></a></li> <li 'boxItem'><img src="http://files.gao7.com/Files/CmsFile/2014-02-17/a178385a-831f-400f-a01c-b1ce5d4f260d.jpg">      <dl>          <dt>终极神吐槽，科幻游戏的阿喀琉斯之踵</dt>          <dd>            <span>2014-02-17</span><br>          </dd>      </dl><a href='newsDetail-159537.shtm'></a></li> <li 'boxItem'><img src="http://files.gao7.com/Files/CmsFile/2014-02-17/4713e9ae-8b61-479e-84c9-012674a228cc.jpg">      <dl>          <dt>人类太空进程《登月大计》震撼登陆</dt>          <dd>            <span>2014-02-17</span><br>          </dd>      </dl><a href='newsDetail-159468.shtm'></a></li> <li 'boxItem'><img src="http://files.gao7.com/Files/CmsFile/2014-02-17/06e5b485-fd05-4a04-9069-65abe823aa9c.jpg">      <dl>          <dt>蝶舞赤霞蜻蜓点水  《天天修仙》霸气羽翼王者亮相</dt>          <dd>            <span>2014-02-17</span><br>          </dd>      </dl><a href='newsDetail-159454.shtm'></a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+            
+            <div id="divMorePic" onclick="AjaxGetData(&#39;interface/NewsListAjax.aspx&#39;);">
+                
+                <img src="images/loading.gif" alt="载入中……" />
+            </div>
+        
+
+<div class="foot">
+	<div class="f-btn"><a href="default.htm">返回首页</a></div>
+	<p>©2013 闽11003190号-1<br>http://m.gao7.com 手机搞趣网</p>
+</div>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cdiv id='cnzz_stat_icon_30077283'%3E%3C/div%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D30077283' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cdiv id='cnzz_stat_icon_30067947'%3E%3C/div%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D30067947' type='text/javascript'%3E%3C/script%3E"));</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '../www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-45954041-4', 'gao7.com');
+    ga('send', 'pageview');
+
+</script>
+
+
+            
+<div class="gtop" id="gtop">
+    <a href="javascript:scroll(0,0)" id="gotop" class="gotop">返回顶部</a>
+</div>
+<div class="con-menu" style="display: none;">
+	<div class="menu-box">
+		<div class="box-list">
+			<div class="menu-tit"><h2>全站导航</h2></div>
+			<ul>
+				<li>
+					<a href="default.htm" title="首页"><h2>首页</h2></a>
+					<a href="news-1.shtm" title="手游资讯"><h2>手游资讯</h2></a>
+				</li>
+				<li>
+					<a href="pince-1.shtm" title="新游评测"><h2>新游评测</h2></a>
+					<a href="gl-1.shtm" title="攻略大全"><h2>攻略大全</h2></a>
+					<a href="pack.shtm" title="礼包大全"><h2>礼包中心</h2></a>
+				</li>
+				<li>
+					<a href="gamezonelist.shtm" title="游戏专区"><img src="images/dhzq.jpg" alt="游戏专区"><em>游戏专区</em></a>  
+				</li>
+				<li>
+                  
+                    <a href="freelist.shtm" title="游戏库"><h2>游戏库</h2></a>
+                    
+					<a href="rank-1.shtm" title="排行"><h2>排行</h2></a>
+					
+                    <a href="product.shtm" title="搞趣产品"><h2>搞趣产品</h2></a>
+				</li>
+				<li>
+					<a href="packlogin.shtm" title=""><h2>登录&nbsp;|&nbsp;注册</h2></a>
+					<a href="../bbs.gao7.com/default.htm" title=""><h2>社区</h2></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<a href="javascript:;" class="menu-touch"></a>
+</div>
+<script>
+    $(".menu-click").click(function () {
+        $(".con-menu").show();
+    });
+    $(".menu-touch").click(function () {
+        $(".con-menu").hide();
+    });
+</script>
+
+        </div>
+        <script src="js/common.js"></script>
+        <script>
+            $("#li1").addClass("cur");
+      </script>
+    </form>
+</body>
+</html>

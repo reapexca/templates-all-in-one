@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>自适应性蓝色触屏版手机wap企业网站模板下载联系我们-懒人模板【http://www.lanrenmb.com/shenghuofuwu/qiye/】</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+<!--[if lt IE 9]>
+		<script src="../../../../html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- JQuery -->
+<script src="js/jquery.min.js"></script>
+
+<!-- JQueryUI -->
+<script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+<!-- Script Controls -->
+<script src="js/site.js"></script>
+
+<script type="text/javascript">
+
+var messageDelay = 2000;  // How long to display status messages (in milliseconds)
+
+// Init the form once the document is ready
+$( init );
+
+
+// Initialize the form
+
+function init() {
+
+  // Hide the form initially.
+  // Make submitForm() the form's submit handler.
+  // Position the form so it sits in the centre of the browser window.
+  $('#contactForm').submit( submitForm ).addClass( 'positioned' );
+
+  // When the "Send us an email" link is clicked:
+  // 1. Fade the content out
+  // 2. Display the form
+  // 3. Move focus to the first field
+  // 4. Prevent the link being followed
+
+  $('a[href="#contactForm"]').click( function() {
+    $('#content').fadeTo( 'slow', .2 );
+    $('#contactForm').fadeIn( 'slow', function() {
+      $('#senderName').focus();
+    } )
+
+    return false;
+  } );
+  
+  // When the "Escape" key is pressed, close the form
+  $('#contactForm').keydown( function( event ) {
+    if ( event.which == 27 ) {
+      $('#contactForm').fadeOut();
+      $('#content').fadeTo( 'slow', 1 );
+    }
+  } );
+
+}
+
+
+// Submit the form via Ajax
+
+function submitForm() {
+  var contactForm = $(this);
+
+  // Are all the fields filled in?
+
+  if ( !$('#senderName').val() || !$('#senderEmail').val() || !$('#message').val() ) {
+
+    // No; display a warning message and return to the form
+    $('#incompleteMessage').fadeIn().delay(messageDelay).fadeOut();
+    contactForm.fadeOut().delay(messageDelay).fadeIn();
+
+  } else {
+
+    // Yes; submit the form to the PHP script via Ajax
+
+    $('#sendingMessage').fadeIn();
+   
+
+    $.ajax( {
+      url: contactForm.attr( 'action' ) + "@ajax=true",
+      type: contactForm.attr( 'method' ),
+      data: contactForm.serialize(),
+      success: submitFinished
+    } );
+  }
+
+  // Prevent the default form submission occurring
+  return false;
+}
+
+
+// Handle the Ajax response
+
+function submitFinished( response ) {
+  response = $.trim( response );
+  $('#sendingMessage').fadeOut();
+
+  if ( response == "success" ) {
+
+    // Form submitted successfully:
+    // 1. Display the success message
+    // 2. Clear the form fields
+    // 3. Fade the content back in
+
+    $('#successMessage').fadeIn().delay(messageDelay).fadeOut();
+    $('#senderName').val( "" );
+    $('#senderEmail').val( "" );
+    $('#message').val( "" );
+
+    $('#content').delay(messageDelay+500).fadeTo( 'slow', 1 );
+
+  } else {
+
+    // Form submission failed: Display the failure message,
+    // then redisplay the form
+    $('#failureMessage').fadeIn().delay(messageDelay).fadeOut();
+    $('#contactForm').delay(messageDelay+500).fadeIn();
+  }
+}
+
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <!--Header Starts-->
+  <header>
+    <ul class="navigation">
+      <li><a href="index.html"><span class="nav_icon home"></span> Home</a></li>
+      <li class="dropdown"><a href="#"><span class="nav_icon about"></span> About</a>
+        <!--Submenu-->
+        <ul id="submenu">
+          <li> <a href="about.html">About Moby Elite</a></li>
+          <li> <a href="about.html">Technology</a></li>
+          <li> <a href="about.html">Support</a></li>
+          <li> <a href="about.html">Our Clients</a></li>
+          <li> <a href="index.html">Buy Moby Elite</a></li>
+        </ul>
+        <!--Submenu-->
+      </li>
+      <li><a href="blog.html"><span class="nav_icon blog"></span> Blog</a></li>
+      <li class="active"><a href="contact.html"><span class="nav_icon contact"></span> Contact</a></li>
+      <li class="nav_search"><a href="#"></a></li>
+    </ul>
+    <!--Search starts-->
+    <div id="search">
+      <form class="search" action="about.html">
+        <fieldset class=" ">
+        <input type="text" placeholder="search" class="text ">
+        <input type="submit" value="search" class="submit">
+        </fieldset>
+      </form>
+    </div>
+    <!--Search ends-->
+    <ul class="share">
+      <li class="twitter"><a href="#"></a></li>
+      <li class="facebook"><a href="#"></a></li>
+      <li class="rss"><a href="#"></a></li>
+    </ul>
+    <a href="#" title="Back to Home page" id="logo"><img alt="" src="images/logo.png" /></a> </header>
+  <!--Header Ends-->
+  <!--Section Starts-->
+  <section id="main">
+    <!--Block Starts-->
+    <div class="block_module paper_bh_white">
+      <h2>Get in touch</h2>
+      <img class="fl_left" alt="" src="images/map.jpg" />
+      <ul id="contact">
+        <li class="address"><strong>Moby - Europe</strong><br/>
+          1036 Budapest, Kolosy tér 2<br/>
+          Hungary</li>
+        <li class="telephone"><strong>+37 7 200 323 324 </strong></li>
+        <li class="website"><a href="#">www.demourl.com</a></li>
+      </ul>
+    </div>
+    <!--Block Ends-->
+    <!--Comments Starts-->
+    <div class="block_module comment_form">
+      <h2>Contact Form</h2>
+      <form id="contactForm" action="processForm.php" method="post">
+        <ul id="moby_form">
+          <li>
+            <input type="text" name="senderName" id="senderName" placeholder="Please type your name" required="required"/>
+          </li>
+          <li>
+           <input type="email" name="senderEmail" id="senderEmail" placeholder="Please type your email address" required="required" />
+          </li>
+          <li>
+            <textarea name="message" id="message" placeholder="Please type your message" required="required" cols="80" rows="10" maxlength="10000"></textarea>
+          </li>
+          <li>
+          <input type="submit" id="sendMessage" name="sendMessage" value="Send Email" />
+          </li>
+        </ul>
+      </form>      
+      <div id="sendingMessage" class="statusMessage">
+        <p>Sending your message. Please wait...</p>
+      </div>
+      <div id="successMessage" class="statusMessage">
+        <p>Thanks for sending your message! We'll get back to you shortly.</p>
+      </div>
+      <div id="failureMessage" class="statusMessage">
+        <p>There was a problem sending your message. Please try again.</p>
+      </div>
+      <div id="incompleteMessage" class="statusMessage">
+        <p>Please complete all the fields in the form before sending.</p>
+      </div>
+    </div>
+    <!--Comments Ends-->
+  </section>
+  <!--Section Ends-->
+  <!--Footer Starts-->
+  <footer>
+    <ul class="footer_nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <span class="copyright">Copyright © 2012 Moby-elite. All Rights Reserved.</span> </footer>
+  <!--Footer Ends-->
+</div>
+</body>
+</html>

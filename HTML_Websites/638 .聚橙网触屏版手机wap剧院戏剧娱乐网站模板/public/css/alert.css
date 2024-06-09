@@ -1,0 +1,30 @@
+.test{text-align:center;margin-top:60px;}
+.test button{width:200px;height:40px;margin:5px 0;}
+
+
+/*主要CSS*/
+@font-face{font-family:iconfont;font-weight:400;font-style:normal;src:url(../../../t.tbcdn.cn/apps/e/brix/fonts/uxiconfont.eot);src:url(../../../t.tbcdn.cn/apps/e/brix/fonts/uxiconfont.eot@#iefix) format("embedded-opentype"),url(../../../t.tbcdn.cn/apps/e/brix/fonts/uxiconfont.woff) format("woff"),url(../../../t.tbcdn.cn/apps/e/brix/fonts/uxiconfont.ttf) format("truetype"),url(../../../t.tbcdn.cn/apps/e/brix/fonts/uxiconfont.svg#iconfont) format("svg")}
+.ui-iconfont1{font-family:"iconfont";font-size:16px;font-style:normal}
+#mask_layer{background-color:#000;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=50)"; filter: alpha(opacity=50); -moz-opacity: 0.5; -khtml-opacity: 0.5; opacity: 0.5; z-index:1000;position:fixed;	_position:absolute; /*IE6*/top:0;left:0;width:100%;height:100%;	}
+#scs_alert{	position:fixed;	_position:absolute; /*IE6*/	z-index:1001;top:50%;left:50%;margin-left:-144px;margin-top:-76px;text-align:left;width:289px;}
+#alert_top{height:20px;/*background:url(../image/scs_alert.png) no-repeat 0 -73px*/ background-color:#fff; display:none;}
+#alert_bg{/*background:url(../image/scs_bg.png) repeat-y 0 0; padding-bottom:15px;*/ background-color:#fff;*+height:1%;-webkit-border-radius:4px;}
+#alert_bg:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+#alert_foot{height:13px;/*background:url(../image/scs_alert.png) no-repeat 0 -93px*/ background-color:#fff; display:none;}
+
+
+#alert_tit{ text-indent:1em; height:33px; line-height:33px; text-align:left; font-size:18px;font-family:微软雅黑,宋体; border-bottom:1px solid #f1f1f1;/* background-color:#f1f1f1;*/-webkit-border-radius:4px 4px 0 0;}
+#alert_txt{	padding:0.5rem 1rem;	text-align:left;	font-family:微软雅黑,宋体;	font-size:16px; color:#666;}
+.ui-iconfont1{ font-size:2rem; vertical-align:middle; padding-right:10px;}
+.ico_ok{ color: #699f4c;}
+.ico_error{ color:#9f4c4c;} 
+.alert_btn{background-color:#f1f1f1;-webkit-border-radius: 0 0 4px 4px; padding:10px 0; width:100%; text-align:center;}
+.alert_btn a{display:inline-block; background-color:#666; color:#666; line-height:30px; padding:0 20px;	font-family:微软雅黑,宋体; border:1px solid #c1c1c1; text-decoration:none;background:-webkit-gradient(linear,0 0,0 100%,color-stop(0,#fff),color-stop(1,#e6e6e6));margin:0 7px;	font-size:16px;-webkit-border-radius:4px;}
+#alert_ok{}
+
+#inco_ok,#inco_warn,#inco_error,#inco_confirm{
+	width:30px;height:30px; overflow: hidden; display: inline-block; vertical-align: middle; margin-right: 10px;
+	background:url(../image/scs_alert.png@v=1.1) no-repeat 0 0;}
+#inco_error{background-position:-32px 0}
+#inco_warn{background-position:-64px 0}
+#inco_confirm{background-position:-96px 0}

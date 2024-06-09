@@ -1,0 +1,29 @@
+<?php
+$typeArr[1] = '整形中心';
+$typeArr[2] = '皮肤中心';
+$typeArr[3] = '注射中心';
+$typeArr[4] = '医院简介';
+$typeArr[5] = '专家团队';
+$typeArr[6] = '医院地址';
+$typeArr[7] = '胸部整形';
+$typeArr[8] = '鼻部整形';
+$typeArr[9] = '面部整形';
+$typeArr[10] = '唇部整形';
+$typeArr[11] = '吸脂减肥';
+$typeArr[12] = '割双眼皮';
+$typeArr[13] = '眼部整形';
+$typeArr[14] = '祛斑美肤';
+$typeArr[15] = '零感脱毛';
+$typeArr[16] = '祛痘除疤';
+$typeArr[17] = '嫩肤美白';
+$typeArr[18] = '紧肤除皱';
+$typeArr[19] = '玻尿酸';
+$typeArr[20] = '瘦脸针';
+$typeArr[21] = '美白针';
+$typeArr[22] = 'botox';
+$typeArr[23] = '自体脂肪';
+$typeArr[24] = '优惠活动';
+$typeArr[25] = '毛发移植';
+$typeArr[26] = '私密整形';
+$typeArr[27] = '  自体脂肪隆胸';
+?>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>家庭医生在线html5响应式触屏版手机wap健康网站模板-懒人模板【http://www.lanrenmb.com/shenghuofuwu/jiankang/】</title>
+<meta name="description" content="家庭医生在线触屏版" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="author" content="familydoctor.com.cn" />
+<meta name="copyright" content="familydoctor.com.cn" />
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon-precomposed" href="../img.familydoctor.com.cn/images/logo/family-doctor-icon_114.png" >
+<link href="css/mobile/common/bootstrap3.1.min.css" rel="stylesheet" media="screen">
+<link href="css/mobile/wap/style.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="../ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/mobile/common/jquery-2.0.3.min.js"><\/script>')</script>
+<script type="text/javascript" charset="utf-8" src="scripts/mobile/common/hammer.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/mobile/common/common.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/mobile/wap/script.js"></script>
+<script type="text/javascript">
+<!--
+	//广告切换
+	$(document).ready(function(){
+		(function(){
+			var imgs = ["images/mobile/gg/baby-client.jpg", "images/mobile/gg/baby-growth.jpg"];
+			var urls = ["../apps.familydoctor.com.cn/baby/aos/parenting.apk", "baby/growth/default.htm"];
+			var $adv = $("#adv");
+			var len = imgs.length;
+			var curIndex = 0;
+			var timer;
+			function advPlay(){
+				if(curIndex >= len){curIndex = 0;}
+				$adv.html('<a target="_blank" href="'+ urls[curIndex] +'"><img src="'+ imgs[curIndex] +'" /></a>');
+				curIndex++;
+				timer = setTimeout(function(){advPlay()}, 5000);
+			}
+			advPlay();
+			window.onload = function(){
+				$adv.css({height: $adv.find("img").height() + 16 + "px"});
+			};
+		})();
+		$(".consult .btn").click(function(){
+			var content = $(".consult .input").val();
+			window.location.href = "ask/ask@Content=" + content;
+		});
+	});
+//-->
+</script>
+<meta name="sogou_site_verification" content="6TR72jWvnr"/>
+</head>
+<body>
+<header class="header-home">
+	<div class="fixed">
+		<div class="wrap float">
+			<div class="left-icon">
+				<a class="logo" href="default.htm">家庭医生在线触屏版</a>
+			</div>
+			<div class="right-icon">
+				<a class="icon app" href="app/index/default.htm">APP</a>
+				<a class="icon my" href="ask/PersonalCenter/InfoCenter/default.htm">我的</a>
+				<a class="icon more" href="javascript:;">更多</a>
+			</div>
+		</div>
+		<div class="more-fn hide-me" id="more-fn">
+			            <a class="icon home" href="default.htm">首页</a>
+            <a class="icon srh" href="so/default.htm">搜索</a>
+            <a class="icon app" href="app/index/default.htm">客户端</a>
+            <a class="icon map" href="infonav.html">导航</a>
+            <a class="icon my" href="ask/PersonalCenter/InfoCenter/default.htm">个人中心</a>
+            <!--<a class="icon set" href="">设置</a>-->
+		</div>
+	</div>
+</header>
+<section id="container" class="container">
+	<div class="nav nav-green" id="nav">
+				<a href="yinshi/default.htm">新闻</a>
+		<a href="yinshi/default.htm">养生</a>
+		<a href="yinshi/default.htm">育儿</a>
+		<a href="yinshi/default.htm">美容</a>
+		<a href="yinshi/default.htm">两性</a>
+		<a href="yinshi/default.htm">饮食</a>
+		<a href="xinli/default.htm">心理</a>
+		<a href="jianfei/default.htm">减肥</a>
+		<a href="fuke/default.htm">妇科</a>
+		<a href="man/default.htm">男人</a>
+		<a href="lady/default.htm">女人</a>
+		<a href="zhengxing/default.htm">整形</a>
+		<a href="nanke/default.htm">男科</a>
+		<a href="ganbing/default.htm">肝病</a>
+		<a href="eye/default.htm">眼科</a>
+		<a href="tangniaobing/default.htm">糖尿</a>
+		<a href="cancer/default.htm">肿瘤</a>
+		<a href="mouth/default.htm">口腔</a>
+		<a href="shimian/default.htm">失眠</a>
+		<a href="yx/default.htm">影像</a>
+		<a href="zy/default.htm">中医</a>
+		<a href="zf/default.htm">专访</a>
+		<a href="medicine/default.htm">用药</a>
+		<a href="encyclopedia/default.htm">疾病</a>
+		<a href="ya/default.htm">牙科</a>
+		<a href="teng/default.htm">疼痛</a>
+		<a href="photo/default.htm">图库</a>
+		<a href="sp/default.htm">视频</a>
+		<a href="javascript:;" class="more">更多</a>
+	</div>
+	<div class="inner">
+		<div class="adv-full" id="adv"></div>
+		<dl class="consult">
+			<dt><input type="text" class="input" placeholder="请输入您要咨询的问题" /></dt>
+			<dd><a href="javascript:;" class="btn">免费咨询</a></dd>
+		</dl>
+		<div class="row channel">
+			<div class="col-xs-6 col-sm-6 col-md-6 column purple icon_zd">
+				<a href="ask/default.htm"><h2>柯大夫知道</h2><p>上万名三甲医生为您服务</p></a>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 column blue icon_wsm">
+				<a href="why/default.htm"><h2>健康十万个为什么</h2><p>数万条精华问题收录</p></a>
+			</div>
+			<div class="col-xs-7 col-sm-7 col-md-7 column green icon_xw">
+				<a href="news/default.htm"><h2>新闻</h2><p>中山一院神经科黄如训教授获表彰<br />2014-06-12</p></a>
+			</div>
+			<div class="col-xs-5 col-sm-5 col-md-5 column cyan icon_ys">
+				<a href="yangsheng/default.htm"><h2>养生</h2><p>芒果吃多小心过敏 5步挑出好芒果<br />2014-06-13</p></a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 column orange icon_yingshi">
+				<a href="yinshi/default.htm"><h2>营养</h2><p>吃什么可祛湿 汤水助你远离湿气<br />2014-06-11</p></a>
+			</div>
+			<div class="col-xs-5 col-sm-5 col-md-5 column blue icon_ye">
+				<a href="baby/default.htm"><h2>育儿</h2><p>孩子说话不流利定是舌系带短吗？<br />2014-06-12</p></a>
+			</div>
+			<div class="col-xs-7 col-sm-7 col-md-7 column purple icon_female">
+				<a href="lady/default.htm"><h2>女人</h2><p>靓汤配靓女 5款汤水养出明星般美女<br />2014-06-12</p></a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 column green icon_male">
+				<a href="man/default.htm"><h2>男人</h2><p>男士选香注意四要点 合理涂香添品味<br />2014-06-10</p></a>
+			</div>
+			<div class="col-xs-7 col-sm-7 col-md-7 column orange icon_zx">
+				<a href="zhengxing/default.htm"><h2>整形</h2><p>郑爽为爱整容？技术帝揭秘郑爽整容真相<br />2014-06-12</p></a>
+			</div>
+			<div class="col-xs-5 col-sm-5 col-md-5 column cyan icon_mr">
+				<a href="beauty/default.htm"><h2>美容</h2><p>夏季痘痘复发 6款食谱根除痘痘变光滑<br />2014-06-12</p></a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 column purple icon_xl">
+				<a href="xinli/default.htm"><h2>心理</h2><p>巧避夫妻相处5矛盾 教你夫妻甜蜜之道<br />2014-06-12</p></a>
+			</div>
+			<div class="col-xs-5 col-sm-5 col-md-5 column green icon_lx">
+				<a href="sex/default.htm"><h2>两性</h2><p>8性保健法助“性”让你性爱养生更健康<br />2014-06-12</p></a>
+			</div>
+			<div class="col-xs-7 col-sm-7 col-md-7 column cyan icon_zy">
+				<a href="zy/default.htm"><h2>中医</h2><p>熬夜看世界杯 推荐男女球迷最佳食谱<br />2014-06-12</p></a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 column orange icon_fk">
+				<a href="fuke/default.htm"><h2>妇科</h2><p>反复痛经要小心子宫内膜异位症<br />2014-06-13</p></a>
+			</div>
+			<div class="col-xs-7 col-sm-7 col-md-7 column blue icon_nk">
+				<a href="nanke/default.htm"><h2>男科</h2><p>五种包皮形态会损坏男性私处健康<br />2014-06-12</p></a>
+			</div>
+			<div class="col-xs-5 col-sm-5 col-md-5 column green icon_zl">
+				<a href="cancer/default.htm"><h2>肿瘤</h2><p>肺癌晚期怎么治疗 肺癌晚期食疗方<br />2014-06-13</p></a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 column purple icon_gb">
+				<a href="ganbing/default.htm"><h2>肝病</h2><p>避孕套可助乙肝患者过性生活<br />2014-06-12</p></a>
+			</div>
+			<div class="col-xs-5 col-sm-5 col-md-5 column cyan icon_tnb">
+				<a href="tangniaobing/default.htm"><h2>糖尿病</h2><p>不吃早餐对糖尿病患者危害<br />2014-06-13</p></a>
+			</div>
+			<div class="col-xs-7 col-sm-7 col-md-7 column blue icon_yanke">
+				<a href="eye/default.htm"><h2>眼科</h2><p>李胜基被刺伤眼 4大眼外伤急救法揭晓<br />2014-06-12</p></a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 column orange icon_yx">
+				<a href="yx/default.htm"><h2>影像</h2><p>月经期间可以做核磁共振检查吗<br />2014-06-11</p></a>
+			</div>
+			<div class="col-xs-7 col-sm-7 col-md-7 column green icon_yy">
+				<a href="medicine/default.htm"><h2>用药</h2><p>跨国药企争夺中国市场 本土企业感压力<br />2014-06-12</p></a>
+			</div>
+			<div class="col-xs-5 col-sm-5 col-md-5 column cyan icon_zf">
+				<a href="zf/default.htm"><h2>专访</h2><p>陈燕铭：患者感激的笑容是我坚持从医唯一理<br />2014-05-30</p></a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 column purple icon_sp">
+				<a href="sp/default.htm"><h2>视频</h2><p>徐建刚:青光眼与其他疾病<br />2014-06-12</p></a>
+			</div>
+		</div>
+	</div>
+		<form action="http://m.familydoctor.com.cn/so/" method="get" id="formsearch">
+	<dl class="search">
+		<dt class="ddl">
+			<select name="Source">
+				<option value="资讯">资讯</option>
+				<option value="柯大夫">柯大夫</option>
+				<option value="十万">十万</option>
+				<!--<option value="疾病库">疾病库</option>
+				<option value="症状库">症状库</option>
+				<option value="医生库">医生库</option>
+				<option value="医院库">医院库</option>
+				<option value="药品库">药品库</option>
+				<option value="器械库">器械库</option>-->
+			</select>
+		</dt>
+		<dd>
+		<input name="q" type="text" class="input" placeholder="" />
+		<a href="javascript:;" id="btn-search" class="btn-search"></a></dd>
+	</dl>
+	</form>
+	<script type="text/javascript">
+		$("#btn-search").click(function () {
+			$("#formsearch").submit();
+		});
+	</script>
+	<div class="footer-nav">
+	    <a href="news/default.htm">新闻</a>
+    <a href="yangsheng/default.htm">养生</a>
+    <a href="baby/default.htm">育儿</a>
+    <a href="beauty/default.htm">美容</a>
+    <a href="sex/default.htm">两性</a>
+    <a href="yinshi/default.htm">饮食</a>
+    <a href="xinli/default.htm">心理</a>
+    <a href="jianfei/default.htm">减肥</a>
+    <a href="fuke/default.htm">妇科</a>
+    <a href="man/default.htm">男人</a>
+    <a href="lady/default.htm">女人</a>
+    <a href="infonav.html" class="more icon-right">更多</a>
+	</div>
+	    <dl class="footer-menu">
+        <dt><a href="#">返回顶部</a></dt>
+        <dd>
+			<span id="login-user-name">
+<script language="JavaScript" type="text/javascript">
+document.write('<a href="ask/PerSonalCenter/Register@returnUrl='+encodeURIComponent(window.location.href)+'">注册</a>');
+document.write('<a href="ask/PersonalCenter/Login@returnUrl='+encodeURIComponent(window.location.href)+'">登录</a>');
+</script>
+			</span>
+            <!-- <a href="">设置</a> -->
+            <a href="feedback.html">反馈</a>
+            <a href="bookmark.html">收藏</a>
+        </dd>
+    </dl>
+	<footer>
+		<div class="link"><a class="pc-url" href="../www.familydoctor.com.cn/default.htm">电脑版</a> <a href="app/index/default.htm">客户端</a></div>
+		<p>家庭医生在线旗下网站</p>
+		<p>经营许可证号:B2-20090028</p>
+	</footer>
+</section>
+<div align="center" style="display:none;">
+<!-- Start Alexa Certify Javascript -->
+<!--ipt type="text/javascript" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js"></scri--><script type="text/javascript">_atrk_opts = { atrk_acct: "TFY+e1aoin000V", domain:"familydoctor.com.cn"}; atrk ();</script><noscript><img src="../https@d5nxst8fruw4z.cloudfront.net/atrk.gif@account=TFY+e1aoin000V" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+<script src="../s17.cnzz.com/stat.php@id=3878005&web_id=3878005" language="JavaScript"></script></div>
+<div align="center" style="display:none;">
+<script src="../s81.cnzz.com/stat.php@id=899409&web_id=899409" language="JavaScript" charset="gb2312"></script>
+</div>
+</body>
+</html>

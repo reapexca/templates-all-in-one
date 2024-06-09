@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<meta name="description" content="掌上家庭医生"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon-precomposed" href="../../../img.familydoctor.com.cn/images/logo/logo-icon.png" >
+<meta name="format-detection" content="telephone=no">
+<link href="css/mobile/ask/ask.css" rel="stylesheet" media="screen">
+<script type="text/javascript">window.jQuery || document.write('<script src="scripts/mobile/common/jquery-2.0.3.min.js"><\/script>')</script>
+<script type="text/javascript" charset="utf-8" src="scripts/mobile/common/hammer.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/mobile/common/common.js"></script>
+<title>懒人模板-掌上家庭医生手机wap用户注册登陆网站模板-http://www.lanrenmb.com/shenghuofuwu/yiyuan/</title>
+</head>
+
+<body>
+<header>
+    <div class="fixed">
+        <div class="wrap float">
+            <div class="left-icon">
+                <a class="back" href="javascript:;" onclick="history.back(); return false;">返回</a>
+                <h2>用户登录 </h2>
+            </div>
+            <div class="right-icon">
+                <a class="icon app" href="../../app/index">APP</a>
+                <a class="icon my" href="InfoCenter/default.htm">我的</a>
+                <a class="icon more" href="javascript:;">更多</a>
+            </div>
+        </div>
+        <div class="more-fn hide-me" id="more-fn">
+            <a class="icon home" href="../../default.htm">首页</a>
+            <a class="icon srh" href="../../so/default.htm">搜索</a>
+            <a class="icon app" href="../../app/index">客户端</a>
+            <a class="icon map" href="../../infonav.html">导航</a>
+            <a class="icon my" href="InfoCenter/default.htm">个人中心</a>
+            <!--<a class="icon set" href="">设置</a>-->
+            <em></em>
+        </div>
+    </div>
+</header>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //记住密码
+        (function () {
+            var $wrap = $("#remember");
+            var $checkbox = $wrap.find("input[type='checkbox']");
+            var $trigger = $wrap.find("em");
+            $trigger.click(function () {
+                $(this).toggleClass("checked");
+                $checkbox.attr("checked", $(this).hasClass("checked"));
+            });
+        })();
+
+    });
+    $(function () {
+        $("#showpw").click(function () {
+            $("input[name=ShowPassword]").attr("checked", $(this).hasClass("checked"));
+            if($("input[name=ShowPassword]").attr("checked")=="checked")
+            {
+                $("input[name=Password]").attr("type", "text")
+             } else {
+                 $("input[name=Password]").attr("type", "password")
+             }
+        });
+
+       
+    })
+</script>
+<div class="wrapper">
+    <div class="form-wrap login-form">
+        <form action="http://m.familydoctor.com.cn/ask/PersonalCenter/Login" method="post" id="LoginForm">
+        
+        <div class="label">
+            <input type="text" id="username" name="UserName" class="input long uname" placeholder="请输入用户名/邮箱/手机号" value=""/></div>
+        <div class="label">
+            <input type="password" id="password" name="Password" oncopy="return false" class="input long pwd" placeholder="请输入密码" value=""/></div>
+        <div class="remember" id="remember">
+            <label class="hide">
+                <input type="checkbox" name="RememberMe" value="true" checked="checked" />
+                记住密码</label>
+
+            <em class="checked">记住密码</em><a href="../../../passport.familydoctor.com.cn/reg/login/forgetPassword.aspx">
+                忘记密码？</a>
+        </div>
+        <input type="hidden" id="returnUrl" name="returnUrl" value="http%3a%2f%2fm.familydoctor.com.cn%2fask%2fPersonalCenter%2fInfoCenter%2f" />
+        </form>
+        <div class="btn-wrap">
+            <a class="btn-normal" href="Reg.html">注册</a> <a
+                class="submit" href="javascript:;">登录</a>
+        </div>
+    </div>
+    
+</div>
+<script type="text/javascript">
+    $(".submit").click(
+     function () {
+         var name = $("#username").val();
+         var password = $("#password").val();
+         $("#returnUrl").val("../../../bbs.familydoctor.com.cn/login.aspx@username=" + name + "&password=" + password + "&question=0&answer=&templateid=0&login=&expires=3200&returl=http%3a%2f%2fm.familydoctor.com.cn%2fask%2fPersonalCenter%2fInfoCenter%2f");
+         $("#LoginForm").submit();
+     });
+</script>
+
+
+<div class="srh-wrap">
+<form action="http://m.familydoctor.com.cn/so/" method="get" id="formsearch">
+<dl class="search">
+    <dt class="ddl">
+        <select name="Source">
+            <option value="资讯">资讯</option>
+            <option value="柯大夫">柯大夫</option>
+            <option value="十万">十万</option>
+            <!--<option value="疾病库">疾病库</option>
+            <option value="症状库">症状库</option>
+            <option value="医生库">医生库</option>
+            <option value="医院库">医院库</option>
+            <option value="药品库">药品库</option>
+            <option value="器械库">器械库</option>-->
+        </select>
+    </dt>
+    <dd>
+    <input name="q" type="text" class="input" placeholder="" />
+    <a href="javascript:;" id="btn-search" class="btn-search"></a></dd>
+</dl>
+</form>
+</div>
+
+<script type="text/javascript">
+    $("#btn-search").click(function () {
+        $("#formsearch").submit();
+    });
+</script>
+
+<div class="footer-nav">
+    <a href="../../news/default.htm">新闻</a>
+    <a href="../../yangsheng/default.htm">养生</a>
+    <a href="../../baby/default.htm">育儿</a>
+    <a href="../../beauty/default.htm">美容</a>
+    <a href="../../sex/default.htm">两性</a>
+    <a href="../../yinshi/default.htm">饮食</a>
+    <a href="../../xinli/default.htm">心理</a>
+    <a href="../../jianfei/default.htm">减肥</a>
+    <a href="../../fuke/default.htm">妇科</a>
+    <a href="../../man/default.htm">男人</a>
+    <a href="../../lady/default.htm">女人</a>
+    <a href="../../infonav.html" class="more icon-right">更多</a>
+</div>
+
+<dl class="footer-menu">
+    <dt><a href="javascript:;">返回顶部</a></dt>
+    <dd>
+        <span id="login-user-name">
+        <a href="Register">注册</a>
+        <a href="Login">登录</a>
+        </span>
+        <!--<a href="">设置</a>-->
+        <a href="../../feedback.html">反馈</a>
+        <a href="../../bookmark.html">收藏</a>
+    </dd>
+</dl>
+<footer>
+    <div class="link"><a href="../../../www.familydoctor.com.cn/default.htm">电脑版</a> <a href="../../app/index/default.htm">客户端</a></div>
+    <p>家庭医生在线旗下网站</p>
+    <p>经营许可证号:B2-20090028</p>
+</footer>
+
+</body>
+
+<div align="center" style="display:none;">
+<!-- Start Alexa Certify Javascript -->
+<!--ipt type="text/javascript" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js"></scri--><script type="text/javascript">                                                                                                _atrk_opts = { atrk_acct: "TFY+e1aoin000V", domain: "familydoctor.com.cn" }; atrk();</script><noscript><img src="../../../https@d5nxst8fruw4z.cloudfront.net/atrk.gif@account=TFY+e1aoin000V" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+
+</div>
+</html>

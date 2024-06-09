@@ -1,0 +1,27 @@
+@charset "utf-8";
+*{ font-family:'微软雅黑';}
+.index_search{ text-align:center;}
+	.index_search .text{width:80%; margin:auto; margin-top:20px;}
+	.index_search .buttom{width:50%; margin:auto; margin-top:20px;}
+
+.index_category{ margin-top:15px; border-top:#CCC dotted 1px; padding-top:20px; }
+.index_tinfo{ font-size:12px; margin-top:20px; line-height:2;}
+.index_tinfo span{ color:#FF0000; }
+.index_tinfo i{ font-style:normal; color:#C93; }
+.index_news{ width:99%; margin:15px auto 15px auto;}
+	
+.page_html{ margin:5px 0 5px 0;}
+
+.imglist img{ width:100%; margin-bottom:5px;}
+.item_info{ background:#F2F2F2; border-bottom:1px #CCC dotted; padding:5px 10px 5px 10px; font-size:12px; color:#666; line-height:1.8;}
+.item_info span{ font-weight:bold; }
+.content_tip{ background:#F9EECA; border-bottom:1px #CCC dotted; padding:10px; font-size:12px; color:#666;}
+
+.catelist_list li a{ font-size:14px; font-weight:normal; }
+.catelist_list li .ui-li-count{ font-size:12px; font-weight:normal; color:#999;}
+.catelist_list li span{ color:#999;}
+
+.txtpu{ background:#fff; padding:8px;}
+
+
+.imgloadtip{margin:10px; padding:10px; text-align:center;color:#F00; font-weight:bold; font-size:16px;  border:#F00 1px solid; background:#FFE3E4;}

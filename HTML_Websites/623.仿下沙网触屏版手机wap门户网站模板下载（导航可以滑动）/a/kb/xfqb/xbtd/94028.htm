@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>仿下沙网触屏版手机wap门户网站模板正文页-懒人模板【http://www.lanrenmb.com/shenghuofuwu/menhu/】</title>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta content="width=device-width,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<script type="text/javascript" src="../../../../skin/default/js/jquery.js"></script>
+<script type="text/javascript" src="../../../../skin/default/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../../../skin/default/js/function.js"></script>
+<script type="text/javascript" src="../../../../skin/default/js/tabs.js"></script>
+<script type="text/javascript" src="../../../../skin/default/js/tupian.js"></script>
+<script type="text/javascript" src="../../../../skin/default/js/touch.js"></script>
+<script type="text/javascript" src="../../../../skin/default/js/pubu.js"></script>
+<link href="../../../../skin/default/css/header.css" rel="stylesheet" type="text/css" />
+<link href="../../../../skin/default/css/common.css" rel="stylesheet" type="text/css" />
+<script>
+$(function() {
+	var firsttouch = 0;
+	var navwidth = $("#nav1 .navdata").width();
+	var winwidth = $(window).width();
+	
+	var classid = '179';	
+	if(classid!=''){
+		if ($("#nav_"+classid).length > 0) {
+			var thisleft = $("#nav_"+classid).offset().left;
+			var thiswidth = $("#nav_"+classid).width();
+			if(winwidth < navwidth && thisleft + thiswidth > winwidth){
+				if(navwidth - thisleft < winwidth){
+					thisleft = thisleft - winwidth + thiswidth;
+				}
+				$("#nav1 .navcon").animate({"left": -1*thisleft});	
+			}
+		}
+	}
+	
+	
+	$("#nav1").bind('touchstart',function(ev){
+		//ev.preventDefault();
+		var e = ev.originalEvent;
+		var touches = e.targetTouches;
+		firsttouch = touches[0].pageX;
+	}, false);
+	
+	$("#nav1").bind('touchend',function(ev){
+		ev.preventDefault();
+		var e = ev.originalEvent;
+		var touches = e.changedTouches[0];
+		var endtouch = touches.pageX;
+		var left = $("#nav1 .navcon").offset().left;
+		var _left = Math.abs(left);
+		var lengthX = Math.abs(firsttouch - endtouch);
+		
+		if(firsttouch > endtouch){
+			if(navwidth - _left - lengthX - winwidth>= 0){
+				lengthX = -1*lengthX - _left;
+				$("#nav1 .navcon").animate({"left": lengthX}, 200);
+			}else{
+				lengthX = -1 *(navwidth - winwidth);
+				$("#nav1 .navcon").animate({"left": lengthX-10}, 200, function(){
+					$("#nav1 .navcon").animate({"left": lengthX}, 200);
+				});
+			}
+		}else if(firsttouch < endtouch){
+			if(lengthX > _left){
+				lengthX = 0;
+				$("#nav1 .navcon").animate({"left": lengthX + 10}, 200,function(){
+					$("#nav1 .navcon").animate({"left": lengthX});
+				});
+			}else{
+				lengthX = lengthX - _left;
+				$("#nav1 .navcon").animate({"left": lengthX}, 200);
+			}
+		}
+	}, false);
+	
+
+	$("#showMenuRight").click(function(e){
+		e.stopPropagation();
+		var menu = $("#menu-right .menu-right-box");
+		$("body").css("overflow","hidden");
+		$(".menu-right-bg").show();
+		menu.animate({width:$(".search-right").width()},200);
+	});
+	$("#menu-right .menu-right-box").click(function (e) { 
+		e.stopPropagation();//阻止事件向上冒泡
+	}); 
+	
+	$(document).click(function() {
+		$("#menu-right .menu-right-box").animate({width:0},200,function(){$("body").css("overflow","auto");$(".menu-right-bg").hide();});
+	});
+
+	var navtipcookie = $.cookie("navtipcookie");
+	if(navtipcookie != '1'){
+		$(".navtip").show();
+		setTimeout(function(){$(".navtip").hide();},10000);
+		$.cookie('navtipcookie', "1", { expires: 7 });
+	}
+});
+</script>
+</head>
+<body>
+	<header class="active">
+		<div id="top" class="logoBar"> <a id="logo" class="logoimg" href="../../../../default.htm"><img src="../../../../skin/default/images/waplogo.png"/></a><a id="showMenuRight"><img src="../../../../skin/default/images/more.png" /></a> </div>		
+
+		<nav class="menu-right" id="menu-right">
+			<div class="menu-right-box">
+				<div class="menu-right-body">
+					<div class="search-right">
+						<form name="searchrightform" action="/e/search/index.php" method="post">
+						<input type="hidden" value="title" name="show">
+						<input type="hidden" value="0" name="classid">
+						<input type="text" name="keyboard" class="search-right-input" ><input type="submit" name="search-right-button" class="search-right-button" value="搜索" />
+						</form>
+					</div>
+					
+					<div class="morenav">
+						<div class="hd">更多导航</div>
+						<ul class="list">
+							<li><a href="../../../../../fang.xiashanet.com/rents/default.htm">找租房</a></li>
+							<li><a href="../../../../../fang.xiashanet.com/sales/default.htm">找买房</a></li>
+							<li><a href="../../../../../fang.xiashanet.com/sales/default.htm">找商铺</a></li>
+							
+							<li><a href="../../../../../job.xiashanet.com/resume/resume-list-------------1.htm">找简历</a></li>
+							<li><a href="../../../../../job.xiashanet.com/jobs/jobs-list-------------1.htm">找岗位</a></li>
+							<li><a href="../../../../../job.xiashanet.com/jobs/jobs-list--------63-----1.htm">找兼职</a></li>
+							
+							<li><a href="../../../../../kb.xiashanet.com/item/list-1">找美食</a></li>
+							<li><a href="../../../../../kb.xiashanet.com/coupon">优惠券</a></li>
+							<li><a href="../../../../../bbs.xiashanet.com/thread-htm-fid-426.html">情感交友</a></li>
+							
+							<li><a href="../../../../../c2c.xiashanet.com/default.htm">找二手</a></li>
+							<li><a href="../../../../../info.xiashanet.com/default.htm">找家政</a></li>
+							<li><a href="../../../../../hotel.xiashanet.com/default.htm">找酒店</a></li>
+							
+							<li><a href="../../../../../bbs.xiashanet.com/default.htm">论坛</a></li>
+							<li><a href="../../../../../auto.xiashanet.com/default.htm">汽车频道</a></li>
+							<li><a href="../../../../../zx.xiashanet.com/default.htm">家装建材</a></li>
+						</ul>
+						<div class="pc"><a href="../../../../../www.xiashanet.com/@terminal=pc">下沙网电脑版</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="menu-right-bg"></div>
+		</nav>
+		
+	</header>
+	<div class="nav1" id="nav1">
+		<div class="navcon">
+			<div class="navdata" style="display:inline-block">
+						<a href="../../../../default.htm" >首 页</a>			<a id="nav_129" href="../../../n/wy/default.htm">网友播报</a>
+									<a id="nav_41" href="../../../n/xs/default.htm">下沙资讯</a>
+									<a id="nav_202" href="../wzxs/default.htm">口碑情报</a>
+									<a id="nav_200" href="../../../n/qgjy/default.htm">情感交友</a>
+									<a id="nav_197" href="../cjft/default.htm">超级访谈</a>
+									<a id="nav_191" href="../../../fc/hot/default.htm">户型鉴赏</a>
+									<a id="nav_189" href="../../../fc/kl/default.htm">大家侃楼</a>
+									<a id="nav_175" href="../../../bd/jc/default.htm">建材动态</a>
+									<a id="nav_91" href="../../../fc/xs/default.htm">下沙楼市</a>
+									<a id="nav_176" href="../../../bd/zs/default.htm">装饰动态</a>
+									<a id="nav_196" href="../../../fc/cjft/default.htm">超级访谈</a>
+									<a id="nav_187" href="../../../fc/jf/default.htm">小编荐房</a>
+									<a id="nav_190" href="../../../bd/td/default.htm">小编探店</a>
+						</div>
+		</div>
+	</div>
+	
+	<div class="navtip">
+		<div class="box">
+			<div class="sanjiao"></div>
+			<div class="tipbg"></div>
+			<div class="txt">左右滑动，查看更多菜单</div>
+		</div>
+	</div>
+<div id="wrap">
+	<div class="detail_tab">
+		<div class="left"><a href="javascript:history.back(-1);"><img src="../../../../skin/default/images/bk1.png"></a></div>
+		<div class="right"><div class="tie"><span class="tie_num"><a href="../../../../e/pl/@classid=179&id=94028"><script type="text/javascript" src="../../../../e/public/ViewClick/@classid=179&id=94028&down=2"></script>个跟帖</a></span><span class="showpage">1/1页</span></div></div>
+	</div>
+	<div class="main">
+		<h1 class="title">[小编探店]简约之楷模 高沙锦江之星酒店</h1>
+		<div class="titBar">来源：<a href='../../../../default.htm' target=_blank>本站</a>&nbsp;&nbsp;2014-03-06&nbsp;&nbsp;阅读：<span id="showclick"></span></div>
+		<div class="content" id="contentItem">
+			<p><span style="font-size:14px">　　不一样的简约风，却演绎出了另类的经典！锦江之星高沙店，拥有着高沙商业区块入住率最高的客户群体，这背后有怎么样的秘密？又是什么深深的吸引着远道而来的住客？本期小编探店来到了中国驰名的综合性旅游企业集团——锦江之星的新店（高沙商业街店），让小编来给大家介绍下国内第一家具有现代意义的经济型酒店是怎么样的。</span></p><p><span style="font-size:14px">　　忍不住先给大家播报一条好消息，</span><strong><span style="font-size:14px">下沙网此行也为我们的网友争得了优惠：</span></strong></p><p style="white-space:normal;"><strong><span style="font-size:14px;color:#ff0000">　　优惠1：</span></strong><span style="font-size:14px;color:#ff0000">每周日到周四，凭学生证到店住宿可以享受7折优惠（原价199元，折后139元），任意房型可选；<br /></span><strong><span style="font-size:14px">　　<span style="color:#ff0000">优惠2：</span></span></strong><span style="font-size:14px"><span style="color:#ff0000">每周日到周四，下沙网的网友，可享<span style="color:#ff0000;font-family:helvetica, arial, sans-serif;font-size:14px;background-color:#ffffff">139元锦江之星高沙店特价房优惠券，原价199元，房型自选</span>。优惠券下载打印地址：</span><a href="../../../../../kb.xiashanet.com/coupon/113" target="_blank"></a></span><a href="../../../../../kb.xiashanet.com/coupon/113" style="font-size:14px;"></a><a href="../../../../../kb.xiashanet.com/coupon/113">http://kb.xiashanet.com/coupon/113</a></p><p><span style="font-size:14px">　　<strong>口碑地址：锦江之星（高沙店）</strong><br /></span><span style="font-size:14px">　　</span><span style="font-weight:bold;white-space:nowrap;"><span style="font-size:14px;text-decoration:underline"><a href="../../../../../kb.xiashanet.com/item/2297" target="_blank" style="font-size:14px;text-decoration:underline;"><span style="font-size:14px;text-decoration:underline">http://kb.xiashanet.com/item/2297</span></a></span></span></p><p style="text-align:center;"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-06kat3h7o4v4v985bg6zfxvb4t9ipigsd0.JPG" class="xsn_lazy" title="DSC_0991.JPG" /><br /><span style="font-size:14px">酒店大门的电子屏幕上正在播报着最新消息，经常有知名人士、来下沙的</span><span style="font-size:14px">明星莅临锦江之星。</span></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07szbbnoiuuvzreez60jlffa69z33xhq79.jpg" class="xsn_lazy" title="1.jpg" /></p><p><span style="font-size:14px">　　锦江之星高沙店，位于下沙最繁华的高沙学林街1251号，紧邻颐高数码广场。这一带车马如龙热闹非凡，来锦江之星完全不用担心停车的问题，这里有地下停车位300多个，客房117间，入住之后也完全不用担心其他生活问题，周边吃喝玩乐购一条龙，真可谓“方便到家”了。</span></p><p><span style="font-size:14px"><br /></span></p><p><span style="font-size:14px">　</span><strong><span style="font-size:14px">　相关阅读：</span><span style="white-space:nowrap;font-size:14px;">[美女试睡]锦江之星：宁静如心干净如家<br /></span></strong><span style="white-space:nowrap;font-size:14px;">　　<a href="../../../../../news.xiashanet.com/a/kb/xfqb/xbtd/94230.htm" target="_blank">http://news.xiashanet.com/a/kb/xfqb/xbtd/94230.htm</a></span><strong><span style="white-space:nowrap;font-size:14px;"><br /></span></strong></p><p><span style="font-size:14px"></span></p><p><span style="font-size:14px">　　一进酒店大门，店面亮堂，干净。乍一看你会觉得大堂很小，但却精致，这其实是锦江之星连锁经济型酒店的特点之一，不会浪费太多的空间，更不会让顾客为铺张浪费来买单，同时每个细节都照顾的很好。入口处就有免费的电脑和网络，还张贴了下沙地图，酒店到处都有免费Wifi，走廊电梯口有电话……还没进入客房，在电梯等候处，就看到了几个便利式商品橱柜，里面有一些杭州特产以及出行必备用品等等，让我们见识到了锦江之星的贴心与细致。</span></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07yanrorbc8gcgjp5pgrzaju9fx2jy5ms4.jpg" class="xsn_lazy" title="a.jpg" border="0" hspace="0" vspace="0" style="text-align:center;white-space:normal;" /><br /><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07ezms2ckq2r2t4ihu921i00nx9ud1swg7.jpg" class="xsn_lazy" title="b.jpg" border="0" hspace="0" vspace="0" /><br /><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07b49c9uht1kqfhurcze33et4yvkgcgg7s.jpg" class="xsn_lazy" title="c.jpg" border="0" hspace="0" vspace="0" width="550" height="186" style="width:550px;height:186px;" /><br /></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-072adndlyq8kcc6v74mhnvvkro2vto0uq2.JPG" class="xsn_lazy" title="5.JPG" border="0" hspace="0" vspace="0" /><br /><span style="font-size:14px">（简约风格的前台）</span><br /></p><p style="text-align:left;"><span style="font-size:14px">　　店长张总一身西装干净利索，他很自豪的告诉小编，锦江之星在高沙这片酒店多如牛毛的地方天天都是第一个满房的，别看酒店是经济型酒店，却是一家涉外酒店，很多下沙的外企都是有包专房的。虽然没有下沙主题酒店那么花枝招展，没有大酒店那么富丽堂皇，却是非常严格的一家酒店，因为锦江之星主打的是安全、健康、舒适、专业。</span></p><p><span style="font-size:14px">　　了解了那么多，让小编去探探酒店内部的情况，先去看看最主要的房间怎么样吧。从电梯上去，我们发现了锦江简单又细致的小细节，走廊里的灯，走廊里贴心的空调“安静”的可爱标志，到房间里贴心的种种，我们第一时间感觉到了锦江给我们的亲切感。</span></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07jsr5mirs4187s2zdbbhnipwyo5g8d57x.jpg" class="xsn_lazy" title="d.jpg" /><br /><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-075yydfh4bnxrkya79r32qcgumnkckcmkh.JPG" class="xsn_lazy" title="f.JPG" /><br /><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-076d48gjnrk80gphps2tybykwcamxbm5vs.JPG" class="xsn_lazy" title="g.JPG" /><br /><br /></p><p><span style="font-size:14px">　　一百多个房间分类很精简，可选房型有<strong><span style="font-size:14px">商务A、商务B和标准房三种</span></strong>，每种房型的标配除了空间和配套稍有不同之外，装修基本都一致，以简洁大方为主。据张店长介绍“<strong><span style="font-size:14px">锦江之星的床上用品选用美国安睡宝，床垫选用斯林百兰和贵族床垫，躺上去很舒服的，不软不硬适度刚刚好</span></strong>”。</span></p><p><span style="font-size:14px">　　凭着张总多年在五星级酒店工作的经验，这里被他管理的井然有序，在酒店行业呆久了都明白这里面的水有多深，有些人住在外面都不敢脱衣服睡觉，看似华丽的地毯实际上很脏，张总说而自从管理锦江这么简约整洁的酒店开始，他敢光屁股在这里睡，好幽默的店长！果几层参观下来，这里果然是看得见的简约设计，看不到的健康细节啊。</span></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07fh83r6grpqllm5idbniteko44ssvvs7b.jpg" class="xsn_lazy" title="3.jpg" border="0" hspace="0" vspace="0" /><br /><span style="font-size:14px">标准房</span><br /></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07a5fgqce840tps2mb1zi4chl8xsarug94.JPG" class="xsn_lazy" title="6.JPG" border="0" hspace="0" vspace="0" /><br /><span style="font-size:14px">商务A</span><br /></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07jrqu6d4iw7i7k7g9k8hdtsx6y0tefbpz.jpg" class="xsn_lazy" title="4.jpg" border="0" hspace="0" vspace="0" /><br /><span style="font-size:14px">商务A</span></p><p style="text-align:center;"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07qbyyxju5pszhsj42sdp5dzlhec2dpr1f.JPG" class="xsn_lazy" title="5.JPG" border="0" hspace="0" vspace="0" style="text-align:center;white-space:normal;" /><br /></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07tzpo7210qdwe9wo97zmhysp3mr8ehlha.JPG" class="xsn_lazy" title="10.JPG" border="0" hspace="0" vspace="0" /><br /><span style="font-size:14px">商务B</span><br /></p><p style="text-align:center"><span style="font-size:14px"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07yw1zfoxm1m5ain328fo3y7k73zm9ydax.jpg" class="xsn_lazy" title="h.jpg" border="0" hspace="0" vspace="0" style="text-align:center;white-space:normal;" /><br /></span></p><p><span style="font-size:14px">　　再来看看的卫生间，小编对卫生间的要求还是蛮高的，可以不奢华但是要干净，不知道锦江这里怎么样呢？走进锦江的卫生间，不大，但是有点像飞机里的卫生间，张店长跟我们介绍说：“</span><strong><span style="font-size:14px">是的，这个跟飞机里的卫生间一样，是整体卫浴，所以不会漏水，干湿分离，水温保持在常温55°，卫生间的我们每天用5块特定抹布，84消毒水浸泡15分钟来清洁卫生间，要说这卫生间干净的干净程度，就是掉个馒头我们都敢吃。</span></strong><span style="font-size:14px">”</span></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07psujrw93fettkbcse3nn9vb7n8824yvt.JPG" class="xsn_lazy" title="13.JPG" border="0" hspace="0" vspace="0" width="436" height="650" style="width:436px;height:650px;" /></p><p><span style="font-size:14px">　　卫生做的不错，甚至小编去住过的希尔顿都不敢有这种承诺。听说锦江跟别的经济酒店不同之处，还有锦江有自己特有的早餐。现在我们去看看餐厅怎么样吧。</span></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-073dzbx2t9ihc5qg3dbdvovlywjsirwtu0.JPG" class="xsn_lazy" title="11.JPG" /></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07t85mm7epxfczbaru0425khx1g59yhrxa.JPG" class="xsn_lazy" title="12.JPG" /></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-071doejxtev2a0gwmqrcvqgc55e6ynu6hw.jpg" class="xsn_lazy" title="7.jpg" border="0" hspace="0" vspace="0" /></p><p><span style="font-size:14px">　　<strong><span style="font-size:14px">早餐价位18一位，不算贵</span></strong>，走进去一看，很像是一个咖啡厅，桌上摆满了玫瑰，情调十足。因为去的时候是下午，暂时没能拍到早餐，听张店长介绍，早餐是营养自助形式，有20多样菜品，酸奶、小菜、粥类、面包应有尽有，他们对食品的安全品质要求很高，这里的食品都可以查到来源。的确，锦江处处为客户考虑的很细致，对锦江来说好像我们更多的不是客户，而是家人。下次有机会小编一定帮大家去探探这丰盛的早餐。</span></p><p style="text-align:center"><img src="../../../../skin/default/images/loading.gif" data-original="http://news.xiashanet.com/d/file/a/kb/xfqb/xbtd/2014-03-07lofvc1lolmdfk1mtkqyjfyr49nnpnxb9.JPG" class="xsn_lazy" title="14.JPG" border="0" hspace="0" vspace="0" /></p><p><strong><span style="font-size:14px">　　这就是锦江高沙店的团队，获奖无数，微笑却始终是他们独有的接客方式，我们有理由相信，一个细心为客户的团队，一个享誉世界的团队，必定会在下沙这片土地上生根发芽。</span></strong><span style="font-size:14px">&nbsp;&nbsp;</span></p>		</div>
+	</div>
+	<div class="news_box">
+		<div class="hd"><h3>相关新闻</h3></div>
+		<ul class="list">
+			<li>·<a href="94230.htm" title="[美女试睡]锦江之星：宁静如心干净如家">[美女试睡]锦江之星：宁静如心干净如家</a> <SPAN>2014.03.14</SPAN></li><li>·<a href="../../../fc/xs/94182.htm" title="[超值投资]遍地开花 盘点下沙酒店式公寓">[超值投资]遍地开花 盘点下沙酒店式公寓</a> <SPAN>2014.03.13</SPAN></li><li>·<a href="../../../fc/xs/91654.htm" title="[艾肯金座人多]下沙酒店式公寓 租金分析">[艾肯金座人多]下沙酒店式公寓 租金分析</a> <SPAN>2013.10.30</SPAN></li><li>·<a href="../../../fc/xs/87813.htm" title="[深入调查]下沙酒店式公寓 投资势头看好">[深入调查]下沙酒店式公寓 投资势头看好</a> <SPAN>2013.05.13</SPAN></li><li>·<a href="../../../fc/xs/77456.htm" title="[咨询]下沙酒店式公寓鸣鼓 世茂广场入市">[咨询]下沙酒店式公寓鸣鼓 世茂广场入市</a> <SPAN>2012.03.28</SPAN></li><li>·<a href="../../../fc/xs/77194.htm" title="[优惠]世茂广场下沙酒店式公寓折后1万">[优惠]世茂广场下沙酒店式公寓折后1万</a> <SPAN>2012.03.19</SPAN></li><li>·<a href="../../../fc/xs/70875.htm" title="下沙酒店式公寓户型越来越“类住宅”">下沙酒店式公寓户型越来越“类住宅”</a> <SPAN>2011.09.22</SPAN></li><li>·<a href="../../../fc/xs/68094.htm" title="下沙酒店式公寓竞争激烈 温州购房者热">下沙酒店式公寓竞争激烈 温州购房者热</a> <SPAN>2011.06.18</SPAN></li><li>·<a href="../../../fc/xs/67930.htm" title="价格暗战引发肉搏 下沙酒店式公寓盘点">价格暗战引发肉搏 下沙酒店式公寓盘点</a> <SPAN>2011.06.11</SPAN></li><li>·<a href="../../../fc/xs/67877.htm" title="下沙酒店式公寓贴身肉搏战正拉开序幕">下沙酒店式公寓贴身肉搏战正拉开序幕</a> <SPAN>2011.06.09</SPAN></li>		</ul>
+	</div>
+	<div class="news_box">
+		<div class="hd"><div class="txt fr"><a href="../../../../e/pl/@classid=179&id=94028" target="_blank">共<span class="review_num"><script type="text/javascript" src="../../../../e/public/ViewClick/@classid=179&id=94028&down=2"></script></span>条评论，点击查看</a></div><h3>网友评论</h3></div>
+		<div class="reviewItem">
+			<form action="/e/pl/doaction.php" method="post" name="saypl" id="saypl">
+			<input name="id" type="hidden" id="id" value="94028" />
+			<input name="classid" type="hidden" id="classid" value="179" />
+			<input name="enews" type="hidden" id="enews" value="AddPl" />
+			<input name="repid" type="hidden" id="repid" value="0" />
+			<input type="hidden" name="ecmsfrom" value="/a/kb/xfqb/xbtd/94028.htm">
+			<input name="nomember" type="hidden" id="nomember" value="1" />
+			<div class="review_input">
+				<div class="left"><img src="../../../../skin/default/images/pl_logo.gif" /></div>
+				<div class="right"><textarea name="saytext" id="saytext" style="width:100%;height:70px;overflow:hidden;line-height:24px;color:#666;"></textarea></div>
+			</div>
+			<div class="review_bottom"><div class="submitBtn"><div class="keycode">验证码:&nbsp;&nbsp;<input name="key" id="keycode" type="text" size="10" style="width:70px;height:24px;line-height:24px;border:1px solid #DBDBDB;" /><img src="../../../../e/ShowKey/@v=pl" onClick="this.src='../../../../e/ShowKey/@v=pl&t='+(new Date().getTime());" style="cursor:pointer;margin-right:5px;" /></div><input type="submit" value="提交" name="imageField" class="button" /></div></div>
+			</form>
+		</div>
+	</div>
+
+</div>
+<div id="showclick_hidden" style="display:none;"><script src=../../../../e/public/ViewClick@addclick=1&classid=179&id=94028></script></div>
+<script type="text/javascript">
+document.getElementById("showclick").innerHTML=document.getElementById("showclick_hidden").innerHTML;
+$(function(){
+	var width = $(window).width() - 40;
+	loadImg("xsn_lazy", width);
+});
+</script>
+
+<div style="display: none">
+	<script src="../../../../../s17.cnzz.com/stat.php@id=2418841&web_id=2418841" language="JavaScript"></script>
+</div>
+<div class='bottom'>
+<!-- 页脚 -->
+        <div class="footer">
+            <span><a href="../../../../../www.xiashanet.com/@terminal=pc">电脑版</a></span><span>|</span><span><a href="../../../../../about.xiashanet.com/xieyi.htm">使用下沙网前必读</a></span><span>|</span><span><a>浙B2-20110888</a></span>
+        </div>
+</div>
+<div style="display:none;">
+	<script src='../../../../../s30.cnzz.com/stat.php@id=99121&web_id=99121' language='JavaScript' charset='gb2312'></script>
+</div>
+</body>
+</html>

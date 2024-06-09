@@ -1,0 +1,201 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+
+/* self-clear floats - if you need them, this is my (current) favourite technique. More info: http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	html{background-color:#f2f2f2;}
+	body{font-size:12px;}
+	a{text-decoration:none;}
+	.page{width:100%;min-width:320px;max-width:480px;padding:0;margin-left:auto;margin-right:auto;background-color:#f2f2f2;}
+
+	/* header */
+	.header{width:96%;height:50px;margin-bottom:14px;padding:0 2%;}
+	.header .logo{display:block;width:100%;height:100%;text-align:center;margin-left:auto;margin-right:auto;background:url('../images/wap/demo_header.png') no-repeat 50% 0;}
+
+	/* content */
+	.content{width:96%;padding:0 2%;}
+	/* c_sbar */
+	.c_sbar{position:relative;z-index:199;width:100%;height:48px;border:1px solid #ff7f00;margin-bottom:17px;background:#fff;}
+	.c_sbar .txt{float:left;width:75.444445%;height:48px;padding:0 10px;border:none 0;}
+	.c_sbar .submit{display:block;float:right;width:86px;height:48px;border-left:1px solid #ff7f00;border:none;text-align:-999em;background:url('../images/wap/search_btn.png') no-repeat 0 0;}
+	.c_sbar .list{position:absolute;top:48px;left:-1px;border:1px solid #f60;}
+	.c_sbar .list ul{width:375px;}
+	.c_sbar .list li{width:100%;height:43px;border-top:1px solid #ccc;margin-top:-1px;background:#fff;text-indent:10px;line-height:43px;font-size:16px;color:#555;font-weight:700;}
+	.c_sbar .list li:hover{cursor:pointer;background:#f9f9f9;}	
+
+	/* c_tab */
+	.c_tab{width:100%;margin-bottom:16px;}
+	.c_tab .tab_l{display:block;float:left;width:49%;padding:.73em 0;background:#FA6567;border-radius:6px;color:#fff;text-decoration:none;text-align:center;font:300 1.5em/1em arial,'microsoft yahei','tahoma','simsun';}
+	.c_tab .tab_r{display:block;float:right;width:49%;padding:.73em 0;background:#92CF68;border-radius:6px;color:#fff;text-decoration:none;text-align:center;font:300 1.5em/1em arial,'microsoft yahei','tahoma','simsun';}
+
+	/* c_focus */
+	.c_focus{width:100%;/*height:173px;*/margin-bottom:24px;}
+	.c_focus .img{display:block;width:100%;margin-left:auto;margin-right:auto;}
+
+	/* c_part */
+	.c_part{margin-bottom:20px;}
+	.c_part .tit{position:relative;text-align:center;margin-top:5px;margin-bottom:20px;}
+	.c_part .tit .title{position:absolute;top:-13px;left:0%;display:inline-block;height:26px;padding:0 10 0 0;font:700 20px/26px 'microsoft yahei',arial,'simsun'; color:#333;background-color:#f2f2f2;}
+	.c_part .con{}
+	.c_part .con dl.list{height:111px;border:1px solid #ccc;background:#fff;margin-top:-1px;}
+	.c_part .con dl.list dt{display:block;float:left;width:120px;height:90px;margin:10px;}
+	.c_part .con dl.list dt img{display:block;width:120px;height:90px;}
+	.c_part .con dl.list dd{margin-top:10px;margin-right:10px;}
+	.c_part .con dl.list dd .s_tit{margin-bottom:8px;font:16px/20px 'microsoft yahei',arial,'simsun';color:#333;}
+	.c_part .con dl.list dd .s_des{margin-bottom:5px;font:14px/18px 'microsoft yahei',arial,'simsun';color:#999;}
+	.c_part .con dl.list dd .s_ext{font:14px/18px 'microsoft yahei',arial,'simsun';color:#555;}
+	.c_part .con dl.list dd .s_ext .n{color:#ff7f00;}
+
+	/* c_more */
+	.c_more{width:100%;margin-bottom:20px;}
+	.c_more a{display:block;width:100%;padding:.73em 0;background:#FF9326;border-radius:6px;color:#fff;text-decoration:none;text-align:center;font:300 1.5em/1em arial,'microsoft yahei','tahoma','simsun';}
+
+	/* c_app */
+	.c_app{width:100%;height:102px;margin-bottom:20px;}
+	.c_app a{display:block;width:100%;height:102px;background:#73C13E;border-radius:6px;color:#fff;text-decoration:none;text-align:center;}
+	.c_app a span{display:inline-block;width:95%;height:86px;margin-top:6px;background:url('../images/wap/app_down.jpg') no-repeat 100% 0;text-align:left;font:300 18px/86px arial,'microsoft yahei','tahoma','simsun';}
+
+	/* footer */
+	.footer{text-align:center;line-height:2em;}
+	.footer .top a{display:inline-block;padding:0 2%;font-size:1.1667em;font-weight:700;text-decoration:none;color:#777;}
+	.footer .btm{color:#999;font-size:1em;margin-bottom:10px;}
+	.footer .gotop a{display:block;width:100%;height:73px;border-top:1px solid #ccc;background:#fff;font: 20px/72px arial,'microsoft yahei','simsun';text-decoration:none;color:#333;}
+/* 屏幕小于960px */
+@media screen and (max-width:960px){
+
+	} 
+/* 屏幕小于768px */	
+@media screen and (max-width:768px){
+
+	} 
+/* 屏幕小于480px */
+@media screen and (max-width:479px){
+
+
+	.page{width:100%;min-width:320px;max-width:480px;padding:0;margin-left:auto;margin-right:auto;background-color:#f2f2f2;}
+
+	/* header */
+	.header{width:96%;height:34px;margin-bottom:5px;padding:0 2%;}
+	.header .logo{display:block;width:100%;height:34px;text-align:center;margin-left:auto;margin-right:auto;background:url('../images/wap/demo_header_320.png') no-repeat 50% 0;}
+
+	/* content */
+
+	/* c_sbar */
+	.c_sbar{position:relative;z-index:199;width:100%;height:34px;border:1px solid #ff7f00;margin-bottom:17px;background:#fff;}
+	.c_sbar .txt{float:left;width:75%;height:34px;padding:0 2.5%;border:none 0;}
+	.c_sbar .submit{display:block;float:right;width:60px;height:34px;border-left:1px solid #ff7f00;border:none;text-align:-999em;background:url('../images/wap/search_btn_320.png') no-repeat 0 0;}
+	.c_sbar .list{position:absolute;top:34px;left:-1px;border:1px solid #f60;}
+	.c_sbar .list ul{width:248px;}
+	.c_sbar .list li{width:100%;height:34px;border-top:1px solid #ccc;margin-top:-1px;background:#fff;text-indent:10px;line-height:30px;font-size:14px;color:#555;font-weight:700;}
+	.c_sbar .list li:hover{cursor:pointer;background:#f9f9f9;}
+
+	/* c_tab */
+
+	/* c_focus */
+
+	/* c_part */
+	.c_part{margin-bottom:20px;}
+	.c_part .tit{position:relative;text-align:center;margin-top:5px;margin-bottom:20px;}
+	.c_part .tit .title{position:absolute;top:-13px;left:0%;display:inline-block;height:26px;padding:0 10px 0 0;font:700 16px/26px 'microsoft yahei',arial,'simsun'; color:#333;background-color:#f2f2f2;}
+	.c_part .con{}
+	.c_part .con dl.list{height:81px;border:1px solid #ccc;background:#fff;margin-top:-1px;}
+	.c_part .con dl.list dt{display:block;float:left;width:93px;height:70px;margin:5px;}
+	.c_part .con dl.list dt img{display:block;width:93px;height:70px;}
+	.c_part .con dl.list dd{margin-top:5px;margin-right:5px;}
+	.c_part .con dl.list dd .s_tit{margin-bottom:8px;font:14px/16px 'microsoft yahei',arial,'simsun';color:#333;}
+	.c_part .con dl.list dd .s_des{margin-bottom:5px;font:12px/14px 'microsoft yahei',arial,'simsun';color:#999;}
+	.c_part .con dl.list dd .s_ext{font:12px/14px 'microsoft yahei',arial,'simsun';color:#555;}
+	.c_part .con dl.list dd .s_ext .n{color:#ff7f00;}
+
+	/* c_more */
+
+	/* c_app */
+	.c_app a span{display:inline-block;width:95%;height:86px;margin-top:6px;background:url('../images/wap/app_down_.jpg') no-repeat 0 0;text-align:center;font:300 16px/86px arial,'microsoft yahei','tahoma','simsun';}
+
+	/* footer */
+	} 
+@media screen and (-webkit-min-device-pixel-ratio:2) and (max-width:479px){
+	.header .logo{background:url('../images/wap/demo_header.png') no-repeat 50% 0;-webkit-background-size:307px 34px;background-size:307px 34px;}
+	.c_sbar .submit{background:url('../images/wap/search_btn.png') no-repeat 0 0;-webkit-background-size:60px 34px;background-size:60px 34px;}
+}
+/* 屏幕小于320px */
+@media screen and (max-width:320px) and (max-device-width:320px){
+	} 
+

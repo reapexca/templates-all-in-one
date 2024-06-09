@@ -1,0 +1,185 @@
+﻿@charset "utf-8";
+
+/* 标题 */
+.news-tit {
+    padding: 15px 20px;
+    font-size: 30px;
+    color: #099bd1;
+}
+
+.news-list {
+    margin-bottom: 25px;
+    margin-top: 178px;
+}
+
+/* 图片资讯 */
+.pic-news {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-shadow: 0 1px 0 #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid #c2c2c2;
+}
+
+    .pic-news a {
+        display: block;
+        width: 290px;
+        position: relative;
+        padding-bottom: 20px;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #494949;
+    }
+
+        .pic-news a:nth-of-type(1) {
+            margin-right: 20px;
+        }
+
+        .pic-news a img {
+            display: block;
+            -webkit-box-sizing: border-box;
+            -webkit-box-shadow: 0 0 5px rgba(0,0,0,.2);
+            width: 280px;
+            height: 176px;
+            padding: 4px;
+            margin: 5px 5px 15px;
+        }
+
+        .pic-news a span {
+            display: block;
+            width: 280px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+/* 文字资讯列表 */
+.txt-news li { 
+	display: block;
+	padding: 23px 20px;
+	background: #fff;
+	border-bottom: 1px dashed #d4d4d4;
+	font-size: 26px;
+	-webkit-box-shadow: 0 1px 0 #fff;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #333;
+	}
+.txt-news li:nth-of-type(odd) { background: #f2f2f2; }
+.txt-news li a { display: block; color: #333; }
+.txt-news li a:before { content: "·"; margin-right: 14px; color: #333; }
+/* 列表 */
+.list a { position: absolute; right: 0; top: 0; left: 0; bottom: 0; }
+.list li {
+ 	position: relative;
+ 	display: -webkit-box;
+ 	padding: 20px;
+ 	text-align: left;
+	color: #717782;
+ 	border-bottom: 1px solid #dcdcdc;
+ 	text-shadow: 1px 1px #fff;
+ 	-webkit-box-sizing: border-box;
+ 	-webkit-box-shadow: 0 1px 0 #fff;
+ 	background: #f8f8f8;
+ 	}
+ 	/*.list li:after {
+ 		content: "";
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		margin-top: -10px;
+		border: none;
+		border-top: 6px solid #acb0b8;
+		border-right: 6px solid #acb0b8;
+		width: 20px;
+		height: 20px;
+		background: transparent;
+		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset,
+							1px 0 0 rgba(255, 255, 255, .3);
+		-webkit-transform: rotate(45deg);
+		}*/ 
+		.list li img {
+			display: block;
+			width: 240px;
+			height: 140px;
+			margin-right: 20px;
+			-webkit-border-radius: 10px;
+			border: 1px solid #919191;
+			}
+	.list dl {
+		-webkit-box-flex: 1;
+		-webkit-box-sizing: border-box;
+		color: #717782;
+		}
+		.list dt {
+			font-size: 30px;
+			font-weight: bold;
+			color: #333a48;
+			/*white-space: nowrap;*/
+			overflow: hidden;
+			text-overflow: ellipsis;
+            height: 72px;
+            margin-bottom:40px;
+			}
+		.list dd {
+			font-size: 26px;
+			line-height: 1.5; 
+			padding-right: 30px;
+			}
+		.list dd.art-word { height: 72px; overflow: hidden; }
+		.list time { font-size: 22px; color: #565656; }
+
+/* 进入频道按钮 */
+.link-btn {
+    display: block;
+    height: 58px;
+    margin: 23px 58px 0;
+    border: 1px solid #1a7a9b;
+    text-align: center;
+    line-height: 58px;
+    font-size: 28px;
+    color: #00343a;
+    background: -webkit-linear-gradient(top,#73dce6,#3ac0d2);
+    -webkit-border-radius: 6px;
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.25), 0 1px 0 rgba(255,255,255,0.45) inset;
+    white-space: nowrap;
+}
+
+/* ipad */
+@media only screen and (min-device-width: 768px) {
+	.news-tit { font-size: 48px; }
+	/* 图片资讯 */
+		.pic-news  a {
+			width: 580px;
+			font-size: 36px;
+			}
+		.pic-news a:nth-of-type(1) { margin-right: 40px; }
+			.pic-news a img {
+				display: block;
+				-webkit-box-sizing: border-box;
+				-webkit-box-shadow: 0 0 5px rgba(0,0,0,.2);
+				width: 560px;
+				height: 352px;
+				padding: 8px;
+				margin: 10px 10px 20px;
+				}
+			.pic-news a span {
+				width: 560px;
+				}
+	/* 文字资讯列表 */
+	.txt-news a { 
+		padding: 23px 20px;
+		font-size: 36px;
+		}
+	/* 进入频道按钮 */
+	.link-btn {
+		height: 80px;
+		line-height: 80px;
+		font-size: 36px;
+		-webkit-border-radius: 12px;
+		}
+    .news-list { margin-top: 208px; }
+}

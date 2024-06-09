@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/> 
+<title>壹心理触屏版手机wap用户注册网站模板-懒人模板【http://www.lanrenmb.com/yulexiuxian/yule/】</title>
+<meta name="baidu-tc-cerfication" content="e37b9fc48676fae6577f9e35f95fdb3e" />
+
+<meta name="keywords" content="心理杂志,心理杂志频道" />
+<meta name="description" content="本网心理杂志频道是一个集两性心理、职场发展、情绪管理、心灵探索、心理百科、社会热点的实用心理杂志频道，我们拒绝枯燥、拒绝陈腐，将心理杂志通过通过有趣的、多媒体等方式帮助大家改变、成长……"/>
+
+
+<!--<meta name="apple-itunes-app" content="app-id=591341152">-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> 
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no" name="format-detection" /> 
+
+
+<link rel="stylesheet" href="css/qz_home.css" />
+
+</head>
+<body>
+<div id="main_body">
+	 <header class="s_header">
+		<nav>
+			
+<a href="javascript:history.back();" class="bg">
+	<span>返回</span>
+</a>
+
+			
+			
+			<span id="more">心理导航</span>
+			
+			
+			<span style="font-size: 1.4rem">注册账号</span>
+			
+		</nav>
+	</header>
+	
+	<div class="s_toplist" id="toplist" style="display:none">
+	<div>
+		<a href="../../infos/default.htm">心理杂志</a>
+		<a href="../../fm/default.htm">心理FM</a>
+		<a href="../../hole/default.htm">树洞</a>
+		<a href="../../movie/default.htm">微电影</a>
+		<a href="../options/default.htm">设置</a>
+	</div>
+	<div>
+		<a href="../../ceshi/default.htm">心理测试</a>
+		<a href="../../cureimg/default.htm">治愈系图片</a>
+		<a href="../../smile/default.htm">微笑墙</a>	
+		<a href="../../daka/default.htm">打卡学习</a>
+		<a href="../../fm/app/default.htm">客户端下载</a>
+	</div>
+	<span></span>
+</div>
+	
+	
+
+<section class="s_reg s_login">
+	<div></div>
+    <form action="/account/register/" id="form1" onsubmit="return false">
+    	<input type="text" id="username" name="username" placeholder="邮箱">
+    	<p class="wrong_tip" id="username_tip"></p>
+    	<input type="text" id="nickname" name="nickname" placeholder="昵称">
+    	<p class="wrong_tip" id="nickname_tip"></p>
+        <input type="password" id="password1" name="password1" placeholder="密码">
+        <p class="wrong_tip" id="password1_tip"></p>
+        <input type="password" id="password2" name="password2" placeholder="再一次输入密码">
+        <p class="wrong_tip" id="password2_tip"></p>
+        <input type="submit" id="submit" value="提交">
+    </form>
+</section>
+
+
+	
+	
+<div class="module module-margin tuijian">
+	<div class="topic">
+		<ul class="cont-list">
+			
+			
+			<li>
+				<span class="live-icon">推荐</span><a href="../../../murl.xinli001.com/aacjl/default.htm">心情不好的时候，听听心理FM</a>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="topic">
+		<ul class="cont-list">
+			
+			
+			<li>
+				<span class="live-icon">推荐</span><a href="../../../murl.xinli001.com/aacop/default.htm">口袋心理测试：探索内心的真实世界</a>
+			</li>
+			
+		</ul>
+	</div>
+</div>
+	<footer class="footer">
+	<div>
+		<p>
+			<a href="../../feedback/default.htm">留言</a>
+			|<span id="userspan2"></span>
+			<a href="../../mapp/default.htm">客户端下载</a>
+		</p>
+		<p>
+			粤ICP备12051153号<span>m.xinli001.com</span>
+		</p>
+	</div>
+</footer>
+
+</div>
+<script src="../../../file.xinli001.com//media/js/jquery-2.1.0.min.js"></script>
+<script>
+var USERINFO_URL = "../../userinfo/";
+$.get(USERINFO_URL, {t:$.now()}, function(resp) {
+	$('#userspan2').html(resp.data2);
+});
+</script>
+
+<script>
+$('#more').click(function(){  
+	if($('#toplist').css('display')!='none')
+	{
+		$('#toplist').hide();
+	}
+	else
+	{
+		$('#toplist').show();
+	}
+});
+$('#form1').submit(function(){
+	var username = $.trim($('#username').val());
+	var check1 = false, check2 = false, check3 = false, check4 = false;
+	if(username == '') {
+		$('#username_tip').html('请输入邮箱');
+	} else if(!/^[\w-]+@[\w\.]+/.test(username)) {
+		$('#username_tip').html('邮箱格式不正确');
+	} else {
+		$('#username_tip').html('');
+		check1 = true;
+	}
+	var nickname = $.trim($('#nickname').val());
+	if(nickname == '') {
+		$('#nickname_tip').html('请输入昵称');
+	} else if(nickname.length < 2){
+		$('#nickname_tip').html('昵称不能少于2个字');
+	} else {
+		$('#nickname_tip').html('');
+		check2 = true;
+	}
+	var password1 = $.trim($('#password1').val());
+	if(password1 == '') {
+		$('#password_tip').html('请输入密码');
+		return false;
+	} else if(!/^[a-z0-9A-Z_]{4,20}$/.test(password1)){
+		$('#password1_tip').html('密码长度应为6到20位，只支持数字、字母、下划线');
+	} else {
+		$('#password1_tip').html('');
+		check3 = true;
+	}
+	var password2 = $.trim($('#password2').val());
+	if(password1 != password2) {
+		$('#password2_tip').html('两次密码输入不相同');
+	} else {
+		$('#password2_tip').html('');
+		check4 = true;
+	}
+	if (!(check1 && check2 && check3 && check4)) {
+		return false;
+	}
+	$('#submit').val('提交中...');
+	$('#submit').attr('disabled', true);
+	var url = $(this).attr('action');
+	var data = {};
+	data.username = username;
+	data.nickname = nickname;
+	data.password1 = password1;
+	data.password2 = password2;
+	$.post(url, data, function(resp) {
+		switch(resp.code) {
+			case 0:
+				window.location = '../../default.htm';
+				break;
+			case -1:
+				$('#username_tip').html('邮箱已经注册');
+				break;
+			case -3:
+				$('#nickname_tip').html('昵称已经注册');
+				break;
+			case -4:
+				$('#username_tip').html('邮箱格式不正确');
+				break;
+			case -5:
+				$('#nickname_tip').html('昵称格式不正确');
+				break;
+			default:
+				alert('表单输入不正确');
+				break;
+		}
+		if (resp.code < 0) {
+			$('#submit').val('提交');
+			$('#submit').attr('disabled', false);
+		}
+	});
+	return false;
+});
+</script>
+
+
+<span style="display: none"><script type="text/javascript" src="../../../js.tongji.linezing.com/2646296/tongji.js"></script><noscript><a href="../../../www.linezing.com/default.htm"><img src="../../../img.tongji.linezing.com/2646296/tongji.gif"/></a></noscript></span><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd64469e9d7bdbf03af6f074dffe7f9b5' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</span>
+<script type="text/javascript" src="../../../js.tongji.linezing.com/3475061/tongji.js"></script>
+<noscript>
+	<a href="../../../www.linezing.com/default.htm"><img src="../../../img.tongji.linezing.com/3475061/tongji.gif"/></a>
+</noscript>
+<script src="../../../m.baidu.com/static/ala/webapp/api.js"></script>
+</body>
+</html>

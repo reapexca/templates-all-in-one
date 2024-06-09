@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<meta name="description" content="掌上家庭医生"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon-precomposed" href="../../../img.familydoctor.com.cn/images/logo/logo-icon.png" >
+<meta name="format-detection" content="telephone=no">
+<link href="css/mobile/ask/ask.css" rel="stylesheet" media="screen">
+<script type="text/javascript">window.jQuery || document.write('<script src="scripts/mobile/common/jquery-2.0.3.min.js"><\/script>')</script>
+<script type="text/javascript" charset="utf-8" src="scripts/mobile/common/hammer.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/mobile/common/common.js"></script>
+<title>懒人模板-掌上家庭医生手机wap用户注册登陆网站模板-http://www.lanrenmb.com/shenghuofuwu/yiyuan/</title>
+
+</head>
+
+<body>
+<header>
+    <div class="fixed">
+        <div class="wrap float">
+            <div class="left-icon">
+                <a class="back" href="javascript:;" onclick="history.back(); return false;">返回</a>
+                <h2>用户注册 </h2>
+            </div>
+            <div class="right-icon">
+                <a class="icon app" href="../../app/index">APP</a>
+                <a class="icon my" href="InfoCenter/default.htm">我的</a>
+                <a class="icon more" href="javascript:;">更多</a>
+            </div>
+        </div>
+        <div class="more-fn hide-me" id="more-fn">
+            <a class="icon home" href="../../default.htm">首页</a>
+            <a class="icon srh" href="../../so/default.htm">搜索</a>
+            <a class="icon app" href="../../app/index">客户端</a>
+            <a class="icon map" href="../../infonav.html">导航</a>
+            <a class="icon my" href="InfoCenter/default.htm">个人中心</a>
+            <!--<a class="icon set" href="">设置</a>-->
+            <em></em>
+        </div>
+    </div>
+</header>
+
+<div class="wrapper">
+<form action="http://m.familydoctor.com.cn/ask/PersonalCenter/Register" method="post" id="RegisterForm">
+    
+    <div class="form-wrap">
+        <div class="label"><input id="EmailOrMobile" type="text" name="EmailOrMobile" class="input long input-error" placeholder="邮箱" value=""></div>
+        <div class="label"><input id="UserName" type="text" name="UserName" class="input long" placeholder="请输入用户名" value=""></div>
+        <div class="label"><input type="password" name="Password" class="input long" placeholder="请输入密码" ></div>
+        <div class="label"><input type="password" name="ConfirmPassword" class="input long" placeholder="请再次输入密码" ></div>
+        <div class="more-btn more-btn-no-pd" id="register" ><a href="javascript:;">注册</a></div>
+    </div>
+    </form>
+</div>
+<script type="text/javascript">
+    var bo = false;
+    $("#register").click(
+    function () {
+        $("#RegisterForm").submit();
+    });
+
+    $("#EmailOrMobile").change(function () {
+        var name = $("#EmailOrMobile").val();
+        $.getJSON('IsExist', { "name": name }, function (json) {
+            if (!json) {
+                alert("已经存在的电子邮件");
+            }
+        });
+    });
+
+    $("#UserName").change(function () {
+        var name = $("#UserName").val();
+        $.getJSON('IsExist', { "name": name }, function (json) {
+            if (!json) {
+                alert("已经存在用户名");
+            }
+        });
+    });
+</script>
+
+<div class="srh-wrap">
+<form action="http://m.familydoctor.com.cn/so/" method="get" id="formsearch">
+<dl class="search">
+    <dt class="ddl">
+        <select name="Source">
+            <option value="资讯">资讯</option>
+            <option value="柯大夫">柯大夫</option>
+            <option value="十万">十万</option>
+            <!--<option value="疾病库">疾病库</option>
+            <option value="症状库">症状库</option>
+            <option value="医生库">医生库</option>
+            <option value="医院库">医院库</option>
+            <option value="药品库">药品库</option>
+            <option value="器械库">器械库</option>-->
+        </select>
+    </dt>
+    <dd>
+    <input name="q" type="text" class="input" placeholder="" />
+    <a href="javascript:;" id="btn-search" class="btn-search"></a></dd>
+</dl>
+</form>
+</div>
+
+<script type="text/javascript">
+    $("#btn-search").click(function () {
+        $("#formsearch").submit();
+    });
+</script>
+
+<div class="footer-nav">
+    <a href="../../news/default.htm">新闻</a>
+    <a href="../../yangsheng/default.htm">养生</a>
+    <a href="../../baby/default.htm">育儿</a>
+    <a href="../../beauty/default.htm">美容</a>
+    <a href="../../sex/default.htm">两性</a>
+    <a href="../../yinshi/default.htm">饮食</a>
+    <a href="../../xinli/default.htm">心理</a>
+    <a href="../../jianfei/default.htm">减肥</a>
+    <a href="../../fuke/default.htm">妇科</a>
+    <a href="../../man/default.htm">男人</a>
+    <a href="../../lady/default.htm">女人</a>
+    <a href="../../infonav.html" class="more icon-right">更多</a>
+</div>
+
+<dl class="footer-menu">
+    <dt><a href="javascript:;">返回顶部</a></dt>
+    <dd>
+        <span id="login-user-name">
+        <a href="Reg.html">注册</a>
+        <a href="Login.html">登录</a>
+        </span>
+        <!--<a href="">设置</a>-->
+        <a href="../../feedback.html">反馈</a>
+        <a href="../../bookmark.html">收藏</a>
+    </dd>
+</dl>
+<footer>
+    <div class="link"><a href="../../../www.familydoctor.com.cn/default.htm">电脑版</a> <a href="../../app/index/default.htm">客户端</a></div>
+    <p>家庭医生在线旗下网站</p>
+    <p>经营许可证号:B2-20090028</p>
+</footer>
+
+</body>
+
+<div align="center" style="display:none;">
+<!-- Start Alexa Certify Javascript -->
+<!--ipt type="text/javascript" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js"></scri--><script type="text/javascript">                                                                                                _atrk_opts = { atrk_acct: "TFY+e1aoin000V", domain: "familydoctor.com.cn" }; atrk();</script><noscript><img src="../../../https@d5nxst8fruw4z.cloudfront.net/atrk.gif@account=TFY+e1aoin000V" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+<script src="../../../s17.cnzz.com/stat.php@id=3878005&web_id=3878005" language="JavaScript"></script>
+<script src="../../../s81.cnzz.com/stat.php@id=899409&web_id=899409" language="JavaScript" charset="gb2312"></script>
+</div>
+</html>

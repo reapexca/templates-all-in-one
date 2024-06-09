@@ -1,0 +1,28 @@
+/*CSS viciao style pagination*/
+
+DIV.viciao {
+	MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px;padding-top:4px;text-align:center;
+}
+DIV.viciao A {
+	BORDER: #8db5d7 1px solid; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px;  COLOR: #000; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+DIV.viciao A:hover {
+	background-color:#FF6600; PADDING: 5px; MARGIN-RIGHT: 3px;color:#fff
+}
+
+DIV.viciao SPAN.current {
+	BORDER-RIGHT: #e89954 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #e89954 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; BORDER-LEFT: #e89954 1px solid; COLOR: #000; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #e89954 1px solid; BACKGROUND-COLOR: #ffca7d
+}
+DIV.viciao SPAN.disabled {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; BORDER-LEFT: #ccc 1px solid; COLOR: #ccc; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #ccc 1px solid
+}
+DIV.viciao SPAN.zongnum {
+	BORDER-RIGHT: #8db5d7 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #8db5d7 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; BORDER-LEFT: #8db5d7 1px solid; COLOR: #000; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #8db5d7 1px solid; TEXT-DECORATION: none
+}
+DIV.viciao .input{height:12px;font-size: 12px;text-decoration: none;line-height:12px;width:20px;
+}
+
+.handsetpage{margin:20px auto;width:90%;text-align:center}
+.handsetpage  a {
+	background-color:#21A4E4; display:block;color: #000;  TEXT-DECORATION: none;width:48%;margin-bottom:6px;font-size:20px;color:#fff;height:35px;line-height:35px
+}

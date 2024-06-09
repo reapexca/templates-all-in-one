@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>资讯-北京房地产交易网触屏版</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../../includes/css/xk-style.css" rel="stylesheet">
+	<link href="../../includes/css/gmu.css" rel="stylesheet">
+	<link href="../../includes/css/loading.default.css" rel="stylesheet">
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../includes/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" href="../../includes/ico/apple-touch-icon-57.png">
+	<link rel="shortcut icon" href="ico/favicon.png">
+	<!--组件依赖js begin-->
+	<script type="text/javascript" src="../../includes/js/zepto.js"></script>
+	<script type="text/javascript" src="../../includes/js/gmu.js"></script>	
+	<script src="../../includes/js/widget/slider.js"></script>
+	<script src="../../includes/js/widget/tabs.js"></script>
+	<script src="../../includes/js/widget/tabs.swipe.js"></script>	
+	<script src="../../includes/js/widget/refresh.js"></script>
+</head>
+
+<body>
+
+<header class="bar_fixed">
+	<div id="toolbar_1" class="toolbar">
+		<div class="ui-toolbar-left"><a href="javascript:theStory();" class="ui-toolbar-backbtn"></a></div>
+		<h2 class="ui-toolbar-title">资讯</h2>
+		<div class="ui-toolbar-right"><span id="menu" class="ui-toolbar-home" onclick="show()"></span></div>	
+	</div>
+	<div id="dropmenu" style="display:none;">
+            <!--nav-->
+<nav>
+	<ul class="head-nav clearfix">
+		<li><a href="../home/home" title="">首页</a></li>
+        <li><a href="news" title="">资讯</a></li>
+        <li><a href="../newhouse/newhouse" title="">新房</a></li>
+                <li><a href="../jiaju/jiaju" title="">家居</a></li>
+                <li><a href="../bbs/bbs" title="">社区</a></li>
+                <li><a href="../video/video" title="">视频</a></li>
+        		        <li><a href="../user/me" title="">我</a></li>
+	</ul>
+</nav>        </div>
+	<script language="javascript"> 
+	function show(){ 
+	with(document.getElementById('dropmenu').style){display==""&&(display="none")||(display="")} 
+	} 
+	function theStory() {
+	window.history.length <= 1 ? window.location.href = "../../": window.history.go( - 1)
+	} 
+	</script> 
+</header>
+
+
+
+<article id="tabs1">
+	
+	<!--标题栏-->
+    <div class="tab_nav">    	
+        <div class="tab_s">
+		<ul class="nav_house web_nav">
+                <li><a href="#conten1">星空声音</a></li>
+                <li><a href="#conten2">业界动态</a></li>
+                <li><a href="#conten3">楼市直通车</a></li>
+            </ul>
+        </div>
+    </div>
+	<!--新闻列表-->		
+        <div id="conten1">
+			<div id="slider1">
+								<div>
+					<a href="news_detail/index/1076413"><img lazyload="http://img2.xkhouse.com/bjxkhouse/bjxkNews/2014/03/20140324/OXKCI1395640205_small.jpg"></a>
+					<p>北京市张王安顺：要在一张图上规划京津</p>
+				</div>
+								<div>
+					<a href="news_detail/index/1075904"><img lazyload="http://img2.xkhouse.com/bjxkhouse/bjxkNews/2014/03/20140319/BIP611395215851_small.jpg"></a>
+					<p>2014年北京春季房地产交易会—汇聚</p>
+				</div>
+								<div>
+					<a href="news_detail/index/1075690"><img lazyload="http://img2.xkhouse.com/bjxkhouse/bjxkNews/2014/03/20140318/VI6GP1395113078_small.jpg"></a>
+					<p>北京一万科楼盘每平米降价3000元销</p>
+				</div>
+								<div>
+					<a href="news_detail/index/1075297"><img lazyload="http://img2.xkhouse.com/bjxkhouse/bjxkNews/2014/03/20140314/NBBCD1394765769_small.jpg"></a>
+					<p>北京4月起廉租房公租房并轨 承租家庭</p>
+				</div>
+							</div>
+			<script>
+				//创建slider组件
+				$('#slider1').slider({loop:true});
+			</script>
+			<div class="ui-refresh1">
+			<ul class="newslist data-list1">
+				                <li><a href="news_detail/index/1076935">星空地产网挥师再斩一城 徐州迎来专业房地</a></li>
+                                <li><a href="news_detail/index/1076908">市场出现倒春寒 北京土地出让昨现“一冷一</a></li>
+                                <li><a href="news_detail/index/1076728">京津冀大城市高度集聚 11新区或是城市群</a></li>
+                                <li><a href="news_detail/index/1076721">北京住宅产业化加速：建立国家级住宅产业化</a></li>
+                                <li><a href="news_detail/index/1076498">北京楼市一周内现4个“日光”盘 数千购房</a></li>
+                                <li><a href="news_detail/index/1076497">北京今年将调整城市规划：非首都核心职能向</a></li>
+                                <li><a href="news_detail/index/1076414">北京进入土地出让小高峰 楼市冷清或令市场</a></li>
+                                <li><a href="news_detail/index/1076413">北京市张王安顺：要在一张图上规划京津冀的</a><i class="ico_pic"></i></li>
+                                <li><a href="news_detail/index/1076068">北京楼市再现价格松动 低预期平价项目接连</a></li>
+                                <li><a href="news_detail/index/1076065">2月北京二手房停涨 楼市进入调整期压力增</a></li>
+                	
+			</ul>
+			<div class="ui-refresh-down"></div>		
+			</div>
+		</div>
+		<script type="text/javascript">
+			(function () {
+				/*组件初始化js begin*/
+				var count = 0;     //demo演示使用变量
+				$('.ui-refresh1').refresh({
+					ready: function (dir, type) {
+						var me = this;
+						$.getJSON('news/refresh/1/10/'+count, function (data) {
+							var $list = $('.data-list1'),
+									html = (function (data) {      //数据渲染
+										var liArr = [];
+										$.each(data, function () {
+											liArr.push(this.html);
+										});
+										return liArr.join('');
+									})(data);
+
+							$list[dir == 'up' ? 'prepend' : 'append'](html);
+							var abox = $('#tabs1 .ui-tabs-content')
+							var aheight = abox.height()
+							for (var i = 0;i < 10;i++) {
+								abox.css('height', aheight + 360);
+							}
+							me.afterDataLoading();    //数据加载完成后改变状态
+							++count > 19 && me.disable(dir, true);    //加载5次后，按钮隐藏
+						});
+					}
+				});
+				/*组件初始化js end*/
+			})();
+		</script>
+        <div id="conten2">
+			<div class="ui-refresh2">
+			<ul class="newslist data-list2">
+				                <li><a href="news_detail/index/1076948">中信集团注资2250亿元入中信泰富 将在</a></li>
+                                <li><a href="news_detail/index/1076723">广州公积金贷款新政或成全国最严 仅一次贷</a></li>
+                                <li><a href="news_detail/index/1076532">住建部官员：房价暴跌只是妄想 城镇化会拉</a></li>
+                                <li><a href="news_detail/index/1076411">财税改革已有总体方案 财政部长楼继伟坦言</a></li>
+                                <li><a href="news_detail/index/1076075">任志强再“发声”：中国楼市二三十年内不会</a></li>
+                                <li><a href="news_detail/index/1075837">浙江崩盘房企35亿债务资不抵债 关联公司</a></li>
+                                <li><a href="news_detail/index/1075691">城镇化激活新机遇 房地产行业进入转型周期</a></li>
+                                <li><a href="news_detail/index/1075523">宁波一房企资金断链负债超35亿 7公务员</a></li>
+                			</ul>
+			<div class="ui-refresh-down"></div>		
+			</div>
+		</div>
+		<script type="text/javascript">
+			(function () {
+				/*组件初始化js begin*/
+				var count = 0;     //demo演示使用变量
+				$('.ui-refresh2').refresh({
+					ready: function (dir, type) {
+						var me = this;
+						$.getJSON('news/refresh/2/8/'+count, function (data) {
+							var $list = $('.data-list2'),
+									html = (function (data) {      //数据渲染
+										var liArr = [];
+										$.each(data, function () {
+											liArr.push(this.html);
+										});
+										return liArr.join('');
+									})(data);
+
+							$list[dir == 'up' ? 'prepend' : 'append'](html);
+							var abox = $('#tabs1 .ui-tabs-content')
+							var aheight = abox.height()
+							for (var i = 0;i < 10;i++) {
+								abox.css('height', aheight + 360);
+							}
+							me.afterDataLoading();    //数据加载完成后改变状态
+							++count > 19 && me.disable(dir, true);    //加载5次后，按钮隐藏
+						});
+					}
+				});
+				/*组件初始化js end*/
+			})();
+		</script>
+        <div id="conten3">			
+			<div class="ui-refresh3">
+			<ul class="newslist data-list3">
+				                <li><a href="news_detail/index/1076428">第二届亚洲购物中心餐饮行业及儿童业态创新</a></li>
+                                <li><a href="news_detail/index/1076045">北京春季房展《京津冀》“城市之星“： 保</a></li>
+                                <li><a href="news_detail/index/1076044">北京春季房展开幕在即 刚需购房又遇良机？</a></li>
+                                <li><a href="news_detail/index/1076043">当“白发苏州”遇上北京春季房展 苏州很骚</a></li>
+                                <li><a href="news_detail/index/1076042">当魅力承德遇上北京春季房展 给董小姐一个</a></li>
+                                <li><a href="news_detail/index/1075704">北京春季房展—京拟疏散500万人口，环京</a></li>
+                                <li><a href="news_detail/index/1075702">访北京春季房展组委会秘书长郑向东--买自</a></li>
+                                <li><a href="news_detail/index/1075701">北京春季房展----京津冀一体化将引发置</a></li>
+                			</ul>
+			<div class="ui-refresh-down"></div>		
+			</div>
+		</div>        
+		<script type="text/javascript">
+			(function () {
+				/*组件初始化js begin*/
+				var count = 0;     //demo演示使用变量
+				$('.ui-refresh3').refresh({
+					ready: function (dir, type) {
+						var me = this;
+						$.getJSON('news/refresh/3/8/'+count, function (data) {
+							var $list = $('.data-list3'),
+									html = (function (data) {      //数据渲染
+										var liArr = [];
+										$.each(data, function () {
+											liArr.push(this.html);
+										});
+										return liArr.join('');
+									})(data);
+
+							$list[dir == 'up' ? 'prepend' : 'append'](html);
+							var abox = $('#tabs1 .ui-tabs-content')
+							var aheight = abox.height()
+							for (var i = 0;i < 10;i++) {
+								abox.css('height', aheight + 360);
+							}
+							me.afterDataLoading();    //数据加载完成后改变状态
+							++count > 19 && me.disable(dir, true);    //加载5次后，按钮隐藏
+						});
+					}
+				});
+				/*组件初始化js end*/
+			})();
+		</script>
+</article>
+<script>
+    window.scrollTo(0, 1);//收起地址栏
+    $('#tabs1').tabs();
+    $('#tabs1').on('beforeActivate');
+
+</script>
+<article id="tabs2">
+	<!--标题栏-->
+    <div class="tab_nav">
+        <div class="tab_s">
+        	<ul class="nav_house web_nav">
+                <li><a href="#conten21">每日行情</a></li><li><a href="#conten22">一周热点</a></li><li><a href="#conten23">北京民生</a></li>
+            </ul>
+        </div>
+    </div>
+	<!--楼盘列表-->
+	
+		<div class="newsitem">	
+            <div id="conten21">				
+				<div class="ui-refresh4">
+				<ul class="newslist data-list4">
+						                <li><a href="news_detail/index/1073663">2月27日北京住宅期房签约252套 现房</a></li>
+	                	                <li><a href="news_detail/index/1073513">2月27日北京住宅期房签约163套 现房</a></li>
+	                	                <li><a href="news_detail/index/1073354">2月26日北京住宅期房签约154套 现房</a></li>
+	                	                <li><a href="news_detail/index/1073106">2月25日北京住宅期房签约160套 现房</a></li>
+	                	                <li><a href="news_detail/index/1072869">2月24日北京住宅期房签约122套 现房</a></li>
+	                	                <li><a href="news_detail/index/1072664">2月23日北京住宅期房签约137套 现房</a></li>
+	                	                <li><a href="news_detail/index/1072603">2月22日北京住宅期房签约219套 现房</a></li>
+	                	                <li><a href="news_detail/index/1072590">2月21日北京住宅期房签约213套 现房</a></li>
+	                	                <li><a href="news_detail/index/1072361">2月20日北京住宅期房签约190套 现房</a></li>
+	                				</ul>
+				<div class="ui-refresh-down"></div>		
+			</div>
+			<script type="text/javascript">
+			(function () {
+				/*组件初始化js begin*/
+				var count = 0;     //demo演示使用变量
+				$('.ui-refresh4').refresh({
+					ready: function (dir, type) {
+						var me = this;
+						$.getJSON('news/refresh/4/9/'+count, function (data) {
+							var $list = $('.data-list4'),
+									html = (function (data) {      //数据渲染
+										var liArr = [];
+										$.each(data, function () {
+											liArr.push(this.html);
+										});
+										return liArr.join('');
+									})(data);
+
+							$list[dir == 'up' ? 'prepend' : 'append'](html);
+							var abox = $('#tabs2 .ui-tabs-content')
+							var aheight = abox.height()
+							for (var i = 0;i < 10;i++) {
+								abox.css('height', aheight + 360);
+							}
+							me.afterDataLoading();    //数据加载完成后改变状态
+							++count > 19 && me.disable(dir, true);    //加载5次后，按钮隐藏
+						});
+					}
+				});
+				/*组件初始化js end*/
+			})();
+		</script>
+			<div id="conten22">
+				<div class="ui-refresh5">
+				<ul class="newslist data-list5">
+						                <li><a href="news_detail/index/1076935">星空地产网挥师再斩一城 徐州迎来专业房地</a></li>
+	                	                <li><a href="news_detail/index/1076908">市场出现倒春寒 北京土地出让昨现“一冷一</a></li>
+	                	                <li><a href="news_detail/index/1076728">京津冀大城市高度集聚 11新区或是城市群</a></li>
+	                	                <li><a href="news_detail/index/1076721">北京住宅产业化加速：建立国家级住宅产业化</a></li>
+	                	                <li><a href="news_detail/index/1076498">北京楼市一周内现4个“日光”盘 数千购房</a></li>
+	                	                <li><a href="news_detail/index/1076497">北京今年将调整城市规划：非首都核心职能向</a></li>
+	                	                <li><a href="news_detail/index/1076428">第二届亚洲购物中心餐饮行业及儿童业态创新</a></li>
+	                	                <li><a href="news_detail/index/1076414">北京进入土地出让小高峰 楼市冷清或令市场</a></li>
+	                	                <li><a href="news_detail/index/1076413">北京市张王安顺：要在一张图上规划京津冀的</a><i class="ico_pic"></i></li>
+	                				</ul>
+				<div class="ui-refresh-down"></div>		
+				</div>
+			</div>
+			<script type="text/javascript">
+			(function () {
+				/*组件初始化js begin*/
+				var count = 0;     //demo演示使用变量
+				$('.ui-refresh5').refresh({
+					ready: function (dir, type) {
+						var me = this;
+						$.getJSON('news/refresh/5/9/'+count, function (data) {
+							var $list = $('.data-list5'),
+									html = (function (data) {      //数据渲染
+										var liArr = [];
+										$.each(data, function () {
+											liArr.push(this.html);
+										});
+										return liArr.join('');
+									})(data);
+
+							$list[dir == 'up' ? 'prepend' : 'append'](html);
+							var abox = $('#tabs2 .ui-tabs-content')
+							var aheight = abox.height()
+							for (var i = 0;i < 10;i++) {
+								abox.css('height', aheight + 360);
+							}
+							me.afterDataLoading();    //数据加载完成后改变状态
+							++count > 19 && me.disable(dir, true);    //加载5次后，按钮隐藏
+						});
+					}
+				});
+				/*组件初始化js end*/
+			})();
+		</script>
+			<div id="conten23">
+				<div class="ui-refresh6">
+				<ul class="newslist data-list6">
+						                <li><a href="news_detail/index/1076939">北京阶梯水价下月听证：九成居民影响不大</a></li>
+	                	                <li><a href="news_detail/index/1076530">北京新能源汽车推广被指地方保护 消费者难</a></li>
+	                	                <li><a href="news_detail/index/1076412">北京今24日将现重度污染 PM2.5指数</a></li>
+	                	                <li><a href="news_detail/index/1076073">北京地铁公交票价下半年将调整 以距离为标</a></li>
+	                	                <li><a href="news_detail/index/1075802">北京居民阶梯水价将听证 六类水价调整为三</a></li>
+	                	                <li><a href="news_detail/index/1075693">北京市级单位晒三公预算 灭蟑花费3310</a></li>
+	                	                <li><a href="news_detail/index/1075525">北京开“大气污染条例”首张罚单 一热力公</a></li>
+	                	                <li><a href="news_detail/index/1075302">市民排队在北京银行取医保 官方称没必要着</a></li>
+	                	                <li><a href="news_detail/index/1075130">北京医保账户年底封闭管理 个人不能自由支</a></li>
+	                				</ul>
+				<div class="ui-refresh-down"></div>		
+				</div>
+			</div>
+			<script type="text/javascript">
+			(function () {
+				/*组件初始化js begin*/
+				var count = 0;     //demo演示使用变量
+				$('.ui-refresh6').refresh({
+					ready: function (dir, type) {
+						var me = this;
+						$.getJSON('news/refresh/6/9/'+count, function (data) {
+							var $list = $('.data-list6'),
+									html = (function (data) {      //数据渲染
+										var liArr = [];
+										$.each(data, function () {
+											liArr.push(this.html);
+										});
+										return liArr.join('');
+									})(data);
+
+							$list[dir == 'up' ? 'prepend' : 'append'](html);
+							var abox = $('#tabs2 .ui-tabs-content')
+							var aheight = abox.height()
+							for (var i = 0;i < 10;i++) {
+								abox.css('height', aheight + 360);
+							}
+							me.afterDataLoading();    //数据加载完成后改变状态
+							++count > 19 && me.disable(dir, true);    //加载5次后，按钮隐藏
+						});
+					}
+				});
+				/*组件初始化js end*/
+			})();
+		</script>
+		</div>
+	
+</article>
+<script>    
+    $('#tabs2').tabs();
+    $('#tabs2').on('beforeActivate');
+</script><footer>
+	<div  style="margin-top:5px;"></div>
+	<div class="foot-link"><a href="../user/message" class="fora">意见反馈</a><a href="javascript:gotohead();" class="fgray">返回顶部</a></div>
+	<script type="text/javascript">
+	function gotohead(){
+	window.scrollTo(0, 1);
+	}
+	</script>
+    <div class="media-link"><a target="_blank" href="default.htm" class="app">客户端</a><a href="../../../www.hfhouse.com/index.html" class="pc">电脑版</a><a href="../../../m.hfhouse.com/default.htm" class="ip fora">触屏版</a></div>
+    <div class="copy">
+		m.xkhouse.com Copyright &copy; 2013
+		</div>
+</footer>
+<script src="../../includes/js/widget/gotop.js"></script>
+<div id="gotop"></div>
+<script>
+	$('#gotop').gotop();	
+function closes(obj){
+	var a = document.getElementById(obj);
+	a.style.display= 'none';
+}	
+</script>
+<div style="display:none;">
+<script type="text/javascript" src="../../../js.tongji.linezing.com/3367876/tongji.js"></script>
+</div>
+</body>
+</html>

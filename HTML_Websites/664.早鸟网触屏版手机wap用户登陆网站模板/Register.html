@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <meta name="apple-mobile-web-app-title" content="早鸟网" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="../Templates/GZ001/Content/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../Templates/GZ001/Content/images/apple/57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../Templates/GZ001/Content/images/apple/72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../Templates/GZ001/Content/images/apple/114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../Templates/GZ001/Content/images/apple/144.png" />
+    <title>早鸟网触屏版用户注册模板-懒人模板【http://www.lanrenmb.com/yulexiuxian/lvyou/】</title>
+    
+    <link href="content/mod.css" rel="stylesheet" />
+    <link href="content/member.css" rel="stylesheet" />
+
+    <script src="../bundles/lng/zh-Hans@v=VBbPyaWRE40WF4j7MFRZXiRPzqxV_JXZsGhmnDwFICQ1"></script>
+
+</head>
+<body>
+    
+<header class="inside-header">
+    <a data-bind="click: app.goBack" href="javascript:;" class="back">返回</a>
+    <h1>用户注册</h1>
+    <a class="home-r" href="javascript:;" data-bind="click: app.goHome">首页</a>
+    <a href="tel_3A400-678-6633" class="call" id="call">400-678-6633</a>
+</header>
+<section class="reg-box">
+    <aside class="integral">注册即可获得<span>500</span>积分</aside>
+<form action="/Account/Register?returnUrl=%2FMember" data-bind="submit:onSubmit" method="post">        <ul class="reg-con">
+            <li>
+                <input id="Mobile" maxlength="11" name="Mobile" placeholder="手机号" type="tel" value="" />
+            </li>
+            <li>
+                <input id="Password" maxlength="20" name="Password" placeholder="密码（6-20位应为或数字）" type="password" />
+            </li>
+            <li>
+                <input id="ConfirmPassword" maxlength="20" name="ConfirmPassword" placeholder="重复密码" type="password" />
+            </li>
+        </ul>
+        <div class="btn-wrap">
+            <button type="submit" class="reg-btn">注册</button>
+        </div>
+		
+</form>
+
+<aside class="reg clearfix">
+        <a href="login.html" class="f-l">登陆</a>
+        
+    </aside>
+
+</section>
+
+<script src="../bundles/jquery@v=JzhfglzUfmVF2qo-weTo-kvXJ9AJvIRBLmu11PgpbVY1"></script>
+    <script src="../bundles/knockout@v=J5386K6j8B5upXNNISGwFz3jj6QBWaY0mqhZEuh-1K41"></script>
+<script src="../bundles/viewmodel@v=0o2nCDLriHovlMkJwFsUQPtMuTX9EaI2YlTqzfHdAyE1"></script>
+
+    
+    <script>
+        app.setViewModel(AccountRegisterViewModel);
+    </script>
+
+</body>
+</html>

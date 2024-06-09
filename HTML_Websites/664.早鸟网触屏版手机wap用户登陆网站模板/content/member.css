@@ -1,0 +1,139 @@
+﻿/*
+*@description:登陆与注册
+*@author:john_liu（刘江华）
+*@update:john_liu(20140103)
+*/
+/*登陆**************************/
+.login-box { margin-top: 44px; padding: 30px 10px 10px; }
+.login-con { width: 100%; border: 1px solid #ccc; border-radius: 4px; }
+    .login-con li { padding: 1px; }
+        .login-con li:first-child { border-bottom: 1px solid #ccc; }
+        .login-con li input { width: 100%; height: 40px; border: 0; outline: none; line-height: 40px; text-indent: 10px; box-sizing: border-box; }
+.btn-wrap { text-align: center; padding-top: 30px; }
+.login-btn { width: 100%; height: 40px; line-height: 40px; border: none; background-color: #FF6701; border-radius: 3px; color: #FFFFFF; font-size: 16px; font-weight: bold; text-align: center; cursor: pointer; }
+    .login-btn:active { background-color: #e0620d; box-shadow: 0 0 3px #999; }
+.reg { padding-top: 20px; }
+    .reg a { color: #0066B3; }
+.integral { padding: 10px 0; color: #333; }
+    .integral span { color: #D13F3F; }
+.tel-btn { display: block; width: 100%; height: 38px; line-height: 38px; border: 1px solid #ccc; border-radius: 3px; color: #FF6701; font-size: 16px; font-weight: bold; text-align: center; text-indent: 10px; box-shadow: 0 0 3px #f9f9f9 inset; background: url(images/tel_ico.png) scroll no-repeat 12% center #e1e1e1; background-size: 20px 20px; }
+.or { padding: 10px 0; color: #e0620d; text-align: left; }
+.tel-btn:active { box-shadow: 0 0 5px #f9f9f9 inset; }
+
+/*注册**************************/
+.reg-box { margin-top: 44px; padding: 30px 10px 10px; }
+.reg-con { border: 1px solid #ccc; border-radius: 4px; }
+    .reg-con li:first-child { border-bottom: 1px solid #ccc; }
+    .reg-con li:last-child { border-top: 1px solid #ccc; }
+    .reg-con li input { width: 100%; height: 40px; border: none; line-height: 40px; text-indent: 10px; }
+.reg-btn { width: 100%; height: 40px; line-height: 40px; border: none; background-color: #FF6701; border-radius: 3px; color: #FFFFFF; font-size: 16px; font-weight: bold; text-align: center; }
+    .reg-btn:active { background-color: #e0620d; box-shadow: 0 0 3px #999; }
+
+/*会员中心**************************/
+.member-con { margin: 54px 10px 10px; background-color: #fff; }
+.member-info { margin-bottom: 10px; border: 1px solid #ddd; border-bottom: none; }
+    .member-info dt, .member-info dd { position: relative; border-bottom: 1px solid #ddd; padding: 10px; overflow: hidden; }
+    .member-info dt { background-color: #f0f0f0; }
+.feature-list dd:active { background: #F0F0F0; }
+.quit { display: inline-block; position: absolute; z-index: 100; right: 8px; top: 6px; border: 1px solid #ddd; padding: 3px 5px; background: linear-gradient(#fff, #f1f1f1) #eee; color: #0066B3; }
+.mi-ord { display: inline-block; position: relative; font-weight: 400; }
+    .mi-ord span { display: inline-block; position: absolute; z-index: 800; right: -18px; top: -5px; width: 18px; height: 18px; line-height: 18px; text-align: center; border-radius: 50%; background-color: #FF6701; color: #fff; font-size: 12px; }
+.arr-right { position: absolute; z-index: 80; right: 10px; top: 15px; display: inline-block; width: 9px; height: 14px; margin: 0 0 -3px 10px; background: url(images/arrow_grey_sprites.png) no-repeat scroll -10px 0 transparent; }
+
+/*机票订单列表**************************/
+.wrap { margin: 54px 10px 10px; background-color: #fff; }
+    .wrap ul:first-child { border-top: none; }
+.order-list { padding: 10px; border-top: 1px solid #ccc; cursor: pointer; }
+    .order-list:active { background: #F0F0F0; }
+    .order-list li { float: left; }
+    .order-list .fn-data { width: 71%; }
+    .order-list .fn-price { width: 25%; }
+    .order-list .fn-arrow { width: 4%; }
+.fn-data b { padding-right: 5px; }
+.fn-price .price { font-weight: 700; color: #d13f3f; }
+.fn-price .tax { color: #d13f3f; }
+.fn-arrow i { display: inline-block; width: 9px; height: 14px; margin-top: 26px; background: url(images/arrow_grey_sprites.png) scroll no-repeat 0 0 transparent; }
+.fn-arrow .fna-right { background-position: -10px 0; }
+.green { color: green; }
+.red { color: red; }
+.gray { color: gray; }
+
+/*机票订单详情**************************/
+.flight-box { margin-bottom: 10px; border: 1px solid #1D5C86; border-radius: 4px; background-color: #fff; }
+.flight-tit { height: 30px; padding: 0 5px; background-color: #1D5C86; line-height: 30px; color: #fff; margin-bottom: 10px; }
+    .flight-tit span:last-child { float: left; }
+.flight-con { width: 100%; padding-top: 0px; }
+    .flight-con li { padding-bottom: 5px; padding-left: 10px; }
+        .flight-con li span { padding-left: 10px; }
+    .flight-con .list-num { padding-left: 0; width: 15px; height: 15px; line-height: 15px; background-color: #26a0ee; color: #fff; border-radius: 30px; text-align: center; display: inline-block; font-size: 12px; }
+    .flight-con .air { padding-left: 0; }
+    .flight-con .date { padding-left: 18px; }
+.fw-b { font-weight: 700; }
+.flight-con li .fly-ico { padding-left: 0; }
+.air-transfer { position: relative; width: 96%; height: 15px; margin: 0 auto; border-top: 1px dashed #808080; }
+    .air-transfer span { position: absolute; z-index: 10; padding: 0 5px; background-color: #fff; left: 0; top: -10px; color: #666; }
+.bt-change { margin-bottom: 10px; padding: 5px 10px; border: 1px solid #ddd; border-radius: 4px; background-color: #fff; }
+.unit-price { padding: 5px 0; }
+    .unit-price li { float: left; padding-right: 10px; }
+        .unit-price li span { color: #D13F3F; }
+        .unit-price li:first-child span { font-size: 16px; font-weight: 700; }
+.bt-change h3 { font-size: 14px; font-weight: 400; }
+.btc-up, .btc-down { display: inline-block; width: 14px; height: 9px; margin-left: 10px; margin-top: 8px; background: url(images/arrow_grey_sprites.png) no-repeat scroll -19px 0 transparent; }
+.btc-up { background-position: -33px 0; }
+.bt-change dl { display: none; border-top: 1px dotted #ddd; font-size: 12px; }
+    .bt-change dl dt { padding-top: 5px; }
+.info-box { border: 1px solid #ddd; border-bottom: none; border-radius: 4px; background-color: #fff; }
+.info-write dt, .info-write dd { position: relative; border-bottom: 1px solid #ddd; padding: 10px; overflow: hidden; }
+.info-write dt { background-color: #f0f0f0; }
+.info-write dd input[type="text"] { width: 100%; height: 30px; line-height: 30px; padding: 0; border: none; }
+.pg-tit { display: block; float: left; width: 70px; text-align: left; }
+.pg-content { display: block; margin-left: 70px; }
+.add-passenger { display: inline-block; position: absolute; z-index: 100; right: 8px; top: 6px; border: 1px solid #ddd; padding: 3px 5px; background: linear-gradient(#fff, #f1f1f1) #eee; color: #0F91A1; }
+    .add-passenger:active { background: linear-gradient(#f1f1f1, #fff) #eee; box-shadow: 0 0 3px #ccc; }
+.send-ticket { position: absolute; z-index: 30; right: 10px; top: 10px; color: #0F91A1; }
+.delete { position: absolute; right: 10px; top: 20px; color: #0F91A1; }
+.adviser-box { margin-top: 10px; }
+    .adviser-box .pic { margin-right: 10px; }
+        .adviser-box .pic img { width: 60px; }
+.flow-box { text-align: center; margin-top: 10px; }
+.go-next { position: fixed; bottom: 0; z-index: 800; height: 60px; line-height: 40px; color: #fff; }
+.btn-wrap .btn-wait { background-color: #ddd; }
+.btn-wrap .btn-yet { background-color: #D13F3F; }
+.tel a { color: #0066B3; }
+
+/*简易下单列表**************************/
+.down-arrow:after { background: url(images/arrow_grey_sprites.png) no-repeat; content: " "; position: absolute; right: 8px; background-position: -9px 0; height: 14px; margin-top: -7px; width: 9px; }
+.simpleorderlist { margin-top: 44px; width: 100%; background-color: #f9f9f9; }
+    .simpleorderlist .list { padding: 5px 20px 5px 10px; border-bottom: 1px solid #ccc; }
+        .simpleorderlist .list:active { background: #F0F0F0; }
+    .simpleorderlist .d-arrow { padding-right: 15px; }
+    .simpleorderlist .state { color: #D13F3F; }
+.select-city .d-arrow:after { right: 8px; }
+
+/*加载更多**************************/
+.loadMore { text-align: center; cursor: pointer; background: #1D5C86; color: #fff; padding: 10px 0; display: block; border: none; width: 100%; }
+    .loadMore:active { opacity: 0.8; }
+
+/*我的差旅顾问**************************/
+#container { margin: 44px 0 0; padding: 1px 0px; }
+.top-box, .bottom-box { padding: 10px; border-bottom: 1px solid #CCCCCC; }
+.hot-tel { height: 25px; margin: 0; font-size: 14px; text-align: center; }
+.number, .number a { color: #d13f3f; font-size: 16px; }
+.place-tel { margin-left: 70px; line-height: 25px; font-size: 14px; }
+.white { border-top: 1px solid #fff; }
+.adviser-list { margin-top: 10px; padding-bottom: 10px; border-bottom: 1px dotted #ccc; overflow: hidden; clear: both; zoom: 1; }
+.adviser-pic { float: left; width: 52px; margin-right: 10px; }
+.adviser-phto { border: 1px solid #ccc; margin: 0; }
+    .adviser-phto img { width: 50px; height: 50px; display: block; }
+.adviser-name { margin: 5px 0 0 0; white-space: nowrap; }
+.adviser-info { float: left; width: 230px; line-height: 17px; overflow: hidden; }
+    .adviser-info a { color: #0066B3; }
+
+/*没有订单是提示**************************/
+.empty-order { padding-top: 20px; }
+.oth-figure { position: relative; width: 68px; height: 68px; margin: 0 auto; border-radius: 50%; border: 4px solid #626262; }
+    .oth-figure:before,
+    .oth-figure:after { position: absolute; content: ""; }
+    .oth-figure:before { width: 10px; height: 30px; margin-left: -5px; border-radius: 5px; left: 50%; top: 12px; background-color: #626262; }
+    .oth-figure:after { width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; left: 50%; bottom: 12px; background-color: #626262; }
+.oth-description { padding: 20px 10px; text-align: center; }

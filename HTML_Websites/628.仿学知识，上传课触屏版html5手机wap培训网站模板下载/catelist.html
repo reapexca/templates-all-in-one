@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>仿学知识，上传课触屏版html5手机wap培训网站模板下载所有分类-懒人模板【http://www.lanrenmb.com/jiaoyuxuexi/peixun/】</title>
+	<meta name="keywords" content="传课,KK,新思诺,英语,在线课堂,远程教育,在线学习,视频课程,公开课,电子商务,信息分享,职场培训,直播课堂,免费听课,名师网络课程,名师网课,B2B" />
+	<meta name="description" content="传课，中国最大的网络课程在线分享平台。您可在线传授技能，亦可在线学习你所需的一技之长。内容涉及英语学习、职场培训、生活技巧等任何技能。" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+	<meta name="baidu-tc-cerfication" content="db175fa3009ce8d0524a062e74905334" />
+	<link rel="shortcut icon" type="/image/x-icon" href="favicon.ico" />
+	<link href="sites/www/v2/css/wap_list.css" rel="stylesheet" />
+	<script src="sites/www/v2/js/jquery-1.7.1.js"></script>
+	<script src="lib/jquery/plugin/jquery.common.js"></script>
+	<script src="common/v2/js/functions.js"></script>
+	<script src="common/v2/js/kk_header.js"></script>
+	<script src="sites/uc/v1/js/jquery.mailAutoComplete-4.0.js"></script>
+	<script src="js/plugins/suggest/suggest.js"></script>
+	<script>
+	$(function(){
+		KK.init();
+		setInterval("getrsp()",60000);
+	});
+	</script>
+</head><body id="list">
+	<div role="page" class="page cf">
+		<header role="header" class="header">
+	<a href="default.htm"><span class="logo"></span></a>
+	<div class="c_tab1 cf">
+		<a href="@mod=student&act=course" class="tab_l">我的课程</a>
+		<a href="@mod=course&act=catelist" class="tab_r">课程分类</a>
+	</div><!-- =E c_tab -->
+
+</header>		<div role="content" class="content">
+			<script>
+$(function(){
+	//KK.Suggest.Install('head_searchKeywords', 'search_suggestion');
+
+	$("#head_searchKeywords").keydown(function(event){
+		if(event.keyCode == 13){
+			$("#head_searchSubmit").trigger('click');
+		}
+	});
+	
+	$("#head_searchSubmit").click(function(){
+		var keywords = $.trim($("#head_searchKeywords").val());
+		if(keywords == ''){
+			searchUrl = "course/index.html";	
+		}else{
+			searchUrl = "course/_"+encodeURIComponent(keywords)+"____.html";
+		}
+		document.location.href = searchUrl;
+		return false;
+	});
+})
+</script>
+<a href="javascript:history.back();" class="back"></a>
+<div class="c_sbar1">
+	<span>
+		<input class="txt" id="head_searchKeywords" value="" type="text">
+	</span>				
+	<a href="javascript:;" id="head_searchSubmit" class="submit"></a>
+	<div id="search_suggestion" class="list" style="visibility:hidden;"></div>
+</div><!-- =E searchbar -->
+			<div class="c_sort">
+				<ul>
+	<li>
+		<a href="course/72363258270449664_____.html">中小学</a>
+	</li>
+	<li>
+		<a href="course/72351163642544128_____.html">IT/互联网</a>
+	</li>
+	<li>
+		<a href="course/72362158758821888_____.html">职场必备</a>
+	</li>
+	<li>
+		<a href="course/72354462177427456_____.html">外语学习</a>
+	</li>
+		<li>
+		<a href="course/72348990389092352_____.html">投资理财</a>
+	</li>
+	<li>
+		<a href="course/72366556805332992_____.html">市场营销</a>
+	</li>
+	<li>
+		<a href="course/72365465883639808_____.html">资格考试</a>
+	</li>
+	<li>
+		<a href="course/72365478768541696_____.html">出国留学</a>
+	</li>
+	<li>
+		<a href="course/72364357782077440_____.html">兴趣爱好</a>
+	</li>
+</ul>			</div>
+			
+		<div class="c_app">
+				</div>
+	</div>
+		<footer role="footer" class="footer">
+			<p class="top">
+				<a target="_blank" href="@mod=client&type=mobile">触屏版</a>
+				<a target="_blank" href="@mod=client&type=pc">电脑版</a>
+			</p>
+			<p class="btm">Copyright(c)2014  传课 Chuanke.com </p>
+			<p class="gotop"><a href="#">返回顶部</a></p>
+		</footer>
+	</div>	
+</body>
+</html>
+<!--ipt type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33765729-1']);
+  _gaq.push(['_setDomainName', 'chuanke.com']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</scri-->
+<script src="sites/stat/ckpage.js" language="javascript"></script> 

@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+	<head>
+		<base  />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0" />
+		<meta name="format-detection" content="telephone=no">
+		<link type="text/css" rel="styleSheet" href="../css/mobileindex.css">
+		<title>景安官网触屏版手机wap用户注册网站模板-懒人模板【http://www.lanrenmb.com/diannaowangluo/kongjian/】</title>
+	</head>
+	<body class="page-swipe">
+		<div id="wrap">
+			<div class="mobile-main">
+				<section id="guid">
+				<div class="mobile-top">
+					<div class="mobile-logo" id="logo">
+	<a href="index.html"><img src="../images/mobile-logo.png"
+			width="180" height="58" alt="景安网络触屏版" />
+	</a>
+</div>
+<script type="text/javascript">
+	function IsPC() {
+		var userAgentInfo = navigator.userAgent;
+		var Agents = new Array("Android", "iPhone", "SymbianOS",
+				"Windows Phone", "iPad", "iPod");
+		var flag = true;
+		for ( var v = 0; v < Agents.length; v++) {
+			if (userAgentInfo.indexOf(Agents[v]) > 0) {
+				flag = false;
+				break;
+			}
+		}
+		return flag;
+	}
+	//window.onload = function() {
+	//	if (IsPC()) {
+	//		window.location.href = "../../www.zzidc.com/"
+	//	}
+	//}
+</script><div class="mobile-toplogin" style="padding-top: 3px;">
+<p style="padding-bottom: 10px;"><a href="tologin.html">登录</a></p>
+	<p><a href="toreg.html">注册</a></p>
+</div></div>
+				</section>
+				<section id="guide-b">
+				<div class="header">
+					<a href="index.html" class="back"> 返回首页 </a>
+					<span class="txtcolor3">会员注册</span>
+				</div>
+				</section>
+				<section id="guide-b">
+				<div class="zhuce">
+					<form method="post" action="main/memregist.action" id="memreg">
+						<fieldset>
+							<div class="zhuce-type">
+								用户类型:
+								<input type="radio" name="memtype" id="registergerenradio"
+									value="0" checked="checked">
+								个人&nbsp;
+								<input type="radio" name="memtype" id="registerqiyeradio"
+									value="1">
+								企业
+							</div>
+							<div id="registergerenradiodiv">
+								<div class="gs-name-b">
+									<label>
+										邮箱：
+									</label>
+									<div class="mail marginleft26">
+										<input type="text" id="umail" name="usermail"
+											class="login-username26" placeholder="邮箱"
+											onChange="return umailCheck();"
+											onFocus="doonfocus('umailcheck','umail');">
+									</div>
+								</div>
+								<div class="login-tipstxt2" style="display: none" id="umailcheck">
+									账号输入错误
+								</div>
+								<div class="gs-name-b paddingtop10">
+									<label>
+										密码：
+									</label>
+									<div class="pwd marginleft26">
+										<input type="password" name="password"
+											password"" class="login-username26" placeholder="密码8-30字符" id="pwd"
+											onChange="return pwdcheck();"
+											onFocus="doonfocus('pwdcheck','pwd');">
+									</div>
+								</div>
+								<div class="login-tipstxt2" style="display: none" id="pwdcheck">
+									密码输入错误
+								</div>
+								<div class="gs-name-b paddingtop10">
+									<label>
+										确认密码：
+									</label>
+									<div class="pwd">
+										<input type="password" name="tpassword"
+											class="login-username26" placeholder="再次输入密码" id="tpwd"
+											onChange="return tpwdcheck();"
+											onFocus="doonfocus('tpwdcheck','tpwd')">
+									</div>
+								</div>
+								<div class="login-tipstxt2" style="display: none" id="tpwdcheck">
+									两次密码输入不一致
+								</div>
+								<div class="gs-name-b">
+									<a href="javascript:void(0);" onClick="return tijiao();" class="login-linkbtn-c">注册</a>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				</section>
+				</section>
+<section id="guide-b">
+<div class="mobile-hotmsg" id="gg1" style="display: none">
+	<span class="hotmsg-img"><a href="virtual/toFreeVirtual.action">景安风暴再次来袭，虚拟空间免费使用！</a></span>
+</div>
+<div class="mobile-hotmsg" id="gg2">
+	<span class="hotmsg-img"><a href="vps/showALL.action">快云49元，比域名还便宜的云服务器！</a></span>
+</div>
+<div class="mobile-hotmsg" id="gg3" style="display: none">
+	<span class="hotmsg-img"><a href="vps/showALL.action">快云第四次免费升级，价格不变，配置翻番！</a></span>
+</div>
+</section>
+<script type="text/javascript">
+var NowImg=1;//表示当前显示的div
+var MaxImg=3;//表示div的个数
+function show(){for(var i=1;i<=MaxImg;i++){if(NowImg==i) document.getElementById("gg"+NowImg).style.display='block'; else  document.getElementById("gg"+i).style.display='none'; }if(NowImg==MaxImg) NowImg=1; else NowImg++;} theTimer=setInterval("show()",2000);
+</script>
+<img src="../../c.cnzz.com/wapstat.php@siteid=5781051&r=&rnd=1642110692" width="0" height="0"/>
+</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	function getObjById(name) {
+		return document.getElementById(name);
+	}
+	function umailCheck() {
+		var umail = getObjById('umail');
+		var umails = umail.value.replace(/\s/ig, '');
+		if (!isMail(umails)) {
+			getObjById('umailcheck').style.display = '';
+			return false;
+		}
+		return true;
+	}
+	function isMail(umail) {
+		var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+		if (!myreg.test(umail)) {
+			return false;
+		}
+		return true;
+	}
+	function pwdcheck(){
+		var pwd=getObjById('pwd');
+		var pwds=pwd.value.replace(/\s/ig, '');
+		if(pwds.length<8 || pwds.length>30){
+			getObjById('pwdcheck').style.display = '';
+			return false;
+			}
+		return true;
+		}
+	function tpwdcheck(){
+	var password=getObjById('pwd').value;
+	var tpassword=getObjById('tpwd').value;
+	if(pwd.length<8 || pwd.length>30){
+		getObjById('pwdcheck').style.display = '';
+		return false;
+		}
+	if(password!=tpassword){
+		getObjById('tpwdcheck').style.display = '';
+		return false;
+		}
+	return true;
+		}
+	function doonfocus(divname,inptutname){
+		getObjById(divname).style.display = 'none';
+		getObjById(inptutname).value='';
+		}
+	function tijiao(){
+	if(umailCheck() && pwdcheck() && tpwdcheck()){
+		getObjById('memreg').submit();
+		}else{return false;} }
+</script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F84b899fdcf552762a646b0623e05f971' type='text/javascript'%3E%3C/script%3E"));
+</script>

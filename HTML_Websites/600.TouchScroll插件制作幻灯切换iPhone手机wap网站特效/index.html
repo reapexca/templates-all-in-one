@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TouchScroll插件制作幻灯切换iPhone手机wap网站特效-懒人模板【http://www.lanrenmb.com/yidongyunying/shoujijianzhan/】</title>
+<meta name="description" content="js代码触屏手机开发TouchScroll插件制作iPhone手机触屏效果。iPhone手机网页带幻灯片触屏鼠标或手指滑动幻灯片切换。触屏手机开发应用js代码。" />
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+/* iphonebox */
+.iphonebox{background:url(images/iphone5.png) no-repeat;width:355px;height:690px;overflow:hidden;padding:110px 0 0 27px;margin:0 auto;}
+.webbox{position:relative;width:326px;height:565px;overflow:hidden;}
+#header{
+	position:absolute;z-index:2;top:0;left:0;width:100%;height:45px;line-height:45px;padding:0;color:#eee;font-size:20px;text-align:center;
+	background-color:#d51875;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #fe96c9), color-stop(0.05, #d51875), color-stop(1, #7b0a2e));
+	background-image:-moz-linear-gradient(top, #fe96c9, #d51875 5%, #7b0a2e);
+	background-image:-o-linear-gradient(top, #fe96c9, #d51875 5%, #7b0a2e);
+}
+#header a,#footer a{color:#f3f3f3;text-decoration:none;font-weight:bold;text-shadow:0 -1px 0 rgba(0,0,0,0.5);}
+#footer{
+	position:absolute;z-index:2;bottom:0;left:0;width:100%;height:48px;line-height:48px;padding:0;border-top:1px solid #444;color:#eee;font-size:20px;text-align:center;
+	background-color:#222;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+	background-image:-moz-linear-gradient(top, #999, #666 2%, #222);
+	background-image:-o-linear-gradient(top, #999, #666 2%, #222);
+}
+#wrapper{position:absolute;z-index:1;top:45px;bottom:48px;left:0;width:100%;background:#aaa;overflow:hidden;}
+/* scroller */
+#scroller li{padding:5px 0;border-bottom:1px solid #ccc;border-top:1px solid #fff;background-color:#fafafa;font-size:14px;height:85px;vertical-align:bottom;}
+#scroller li img{float:left;width:111px;height:83px;}
+#scroller li span{float:left;margin:30px 0 0 6px;}
+/* swipe */
+.swipe{width:326px;height:235px;overflow:hidden;position:relative;}
+.swipe ul{
+	-webkit-transition:left 800ms ease-in 0;
+	-moz-transition:left 800ms ease-in 0;
+	-o-transition:left 800ms ease-in 0;
+	-ms-transition:left 800ms ease-in 0;
+	transition:left 800ms ease-in 0;
+}
+.swipe #pagenavi{position:absolute;left:0;bottom:10px;text-align:center;width:100%;}
+.swipe #pagenavi a{width:14px;height:14px;line-height:99em;background:#b5b5b5;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;margin:0 4px;overflow:hidden;cursor:pointer;display:inline-block;*display:inline;*zoom:1;}
+.swipe #pagenavi a.active{background:#C80002;}
+</style>
+</head>
+<body>
+
+<div class="iphonebox">
+	<div class="webbox">
+		<div id="header"><a href="http://www.lanrenmb.com/yidongyunying/shoujijianzhan/">懒人模板</a></div>
+		<div id="wrapper">
+			<div class="swipe">
+				<ul id="slider">
+					<li style="display:block"><img width="326" height="235" src="images/1.jpg" alt="" /></li>
+					<li><img width="326" height="235" src="images/2.jpg" alt="" /></li>
+					<li><img width="326" height="235" src="images/3.jpg" alt="" /></li>
+					<li><img width="326" height="235" src="images/4.jpg" alt="" /></li>
+				</ul>
+				<div id="pagenavi">
+					<a href="javascript:void(0);" class="active">1</a>
+					<a href="javascript:void(0);">2</a>
+					<a href="javascript:void(0);">3</a>
+					<a href="javascript:void(0);">4</a>
+				</div>
+			</div><!--swipe end-->
+			<div id="scroller">
+				<ul>
+					<li><img src="images/img01.jpg" /><span>叙利亚战机轰炸叙土边境致6死</span></li>
+					<li><img src="images/img02.jpg" /><span>寒冬!李宁匹克上千家门店倒闭</span></li>
+					<li><img src="images/img03.jpg" /><span>梅西压C罗连续三年夺西甲MVP</span></li>
+					<li><img src="images/img04.jpg" /><span>传姚晨曹郁完婚 宣传:会通知</span></li>
+					<li><img src="images/img05.jpg" /><span>Nexus4开卖 22分钟抢购一空</span></li>
+					<li><img src="images/img01.jpg" /><span>叙利亚战机轰炸叙土边境致6死</span></li>
+					<li><img src="images/img02.jpg" /><span>寒冬!李宁匹克上千家门店倒闭</span></li>
+					<li><img src="images/img03.jpg" /><span>梅西压C罗连续三年夺西甲MVP</span></li>
+					<li><img src="images/img04.jpg" /><span>传姚晨曹郁完婚 宣传:会通知</span></li>
+					<li><img src="images/img05.jpg" /><span>Nexus4开卖 22分钟抢购一空</span></li>
+					<li><img src="images/img01.jpg" /><span>叙利亚战机轰炸叙土边境致6死</span></li>
+					<li><img src="images/img02.jpg" /><span>寒冬!李宁匹克上千家门店倒闭</span></li>
+					<li><img src="images/img03.jpg" /><span>梅西压C罗连续三年夺西甲MVP</span></li>
+					<li><img src="images/img04.jpg" /><span>传姚晨曹郁完婚 宣传:会通知</span></li>
+					<li><img src="images/img05.jpg" /><span>Nexus4开卖 22分钟抢购一空</span></li>
+				</ul>
+			</div><!--scroller end-->
+		</div>
+		<div id="footer"><a href="http://www.lanrenmb.com/yidongyunying/shoujijianzhan/">不支持IE6、7、8</a></div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/touchScroll.js"></script>
+<script type="text/javascript" src="js/touchslider.dev.js"></script>
+<script type="text/javascript">
+var active=0,
+	as=document.getElementById('pagenavi').getElementsByTagName('a');
+	
+for(var i=0;i<as.length;i++){
+	(function(){
+		var j=i;
+		as[i].onclick=function(){
+			t2.slide(j);
+			return false;
+		}
+	})();
+}
+
+var t1=new TouchScroll({id:'wrapper','width':5,'opacity':0.7,color:'#555',minLength:20});
+
+var t2=new TouchSlider({id:'slider', speed:600, timeout:6000, before:function(index){
+		as[active].className='';
+		active=index;
+		as[active].className='active';
+	}});
+</script>
+</body>
+</html>

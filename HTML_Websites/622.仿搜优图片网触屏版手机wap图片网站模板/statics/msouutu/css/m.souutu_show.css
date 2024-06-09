@@ -1,0 +1,135 @@
+@charset "utf-8";
+html, body, section, article, nav, header, footer, form, div, em, span, a, label, p, h1, h2, h3, h4, h5, h6, dl, ul, ol, li, dt, dd, select { margin: 0; padding: 0; font-size: 16px; font-weight: normal; font-style: normal; }
+body, select, input, option { color: #0a0a0a; font-family: "Microsoft YaHei",Arial; }
+body > header, body > section { clear: both; }
+
+h3 { font-size: 18px; }
+li { list-style-type: none; }
+a { text-decoration: none; color: #0a0a0a; }
+input[type=text]:focus::-webkit-input-placeholder, input[type=search]:focus::-webkit-input-placeholder { color: rgba(0,0,0,0); }
+input:focus, :active, :focus { outline: 0 none; }
+
+@-webkit-keyframes loading-q-animation {
+	from { padding-right: 2.5ex; }
+	to { padding-right: 0; }
+}
+
+@keyframes loading-q-animation {
+	from { padding-right: 2.5ex; }
+	to { padding-right: 0; }
+}
+
+/* 滑动资讯 */
+.articles { margin: -1px auto 0 auto; height: 323px; overflow: hidden; }
+.articles footer a { margin: 8px 10px; }
+.fliptab .container { position: relative; width: 700%; display: -webkit-box; white-space: nowrap; -webkit-backface-visibility: hidden; -webkit-appearance: caps-lock-indicator; clear: both; -webkit-transition-property: left, top, transform,-webkit-transform; -webkit-transition-duration: .4s; }
+.fliptab .container > * { display: block; -webkit-transform: translate3d(0,0,0); -webkit-box-flex: 1; width: 0; }
+
+.nav-2 .container { width: 400%; }
+.nav-3 .container { width: 500%; }
+.nav-4 .container { width: 601%; }
+.nav-5 .container { width: 700%; }
+
+*[touch=false].nav-2 .container { width: 200%; }
+*[touch=false].nav-3 .container { width: 300%; }
+*[touch=false].nav-4 .container { width: 400%; }
+*[touch=false].nav-5 .container { width: 500%; }
+
+.fliptab .touching { -webkit-transition-property: none; }
+
+
+/* 搜索框 */
+.search form { width: 100%; clear: both; margin: 0; height: 44px; }
+.search-popup .search form { height: 88px; }
+.search div:first-child { height: 44px; overflow: hidden; }
+.search div:first-child p { display: -webkit-box; height: 38px;line-height:38px; margin: 0 64px 0 5px; border: 3px solid #7acbff; -webkit-border-radius: 3px; border-radius: 3px; }
+.search div:first-child p::before { content: ""; position: absolute;z-index:1; pointer-events: none; width: 0; height: 0; margin:18px 0 0 49px; border: 6px solid rgba(0,0,0,0); border-top-color: #a0a0a0; }
+
+.search div:first-child label:first-child { display: inline-block; width: 60px; -webkit-box-flex: 1; height: 28px; line-height: 30px; border: 0 none; border-radius: 0; border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-image: none; margin: 0 0 0 12px; }
+.search select:first-child { width: 69px; -webkit-box-flex: 1; height: 38px; border: 0 none; border-radius: 0; -webkit-appearance: none; text-align: left; border-image: none; padding: 0 9px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.search div:first-child span { -webkit-box-flex: 1; display: block; width: 0; margin: 0; border-left: 1px solid rgba(0,0,0,0.1); }
+.search input[type=text], .search input[type=search] { border: 0 none; -webkit-border-radius: 0; border-radius: 0; -webkit-appearance: none;width: 100%; padding: 0 0 0 10px; -webkit-box-sizing: border-box; box-sizing: border-box; height: 38px; font-size: 15px; border-image: none; background: rgba(0,0,0,0); }
+.search input.focused { background: transparent none; }
+.search input[type=submit] { float: right; width: 54px; height: 44px; font-size: 16px; line-height: 44px; color: #fff; -webkit-appearance: none; text-align: center; text-indent: -2px; padding: 0; margin: -44px 5px 0 0; -webkit-border-radius: 3px; border-radius: 3px; border: 0; border-image: none; background: #2ea6fa none }
+.search input[disabled] { background-color: #bdbdbd!important; }
+.hotwords { position: relative; height: 34px; clear: both; line-height: 36px; text-indent: 30px; margin: 8px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAiCAMAAAB2vTk8AAAANlBMVEX/////JAD/kX//dmD/8e//1s//5N//PyD/MhD/rZ//uq//TTD/yL//W0D/n4//hHD/aVD///+aYBCdAAAAAXRSTlMAQObYZgAAALlJREFUeF51kwkKBCEMBNPxPubY/392XV2GjMYCDyjaBFSa8I50LEermxpw6YYBsGoMGtfWICgmYVAX4yMGh1ZIxKwTITyUZkrWQgDTIStGCCqEcpgwovMZP0QmxiYWMkOPOdwVeuwETugxBhBXdXalUob6oI9P47cbq1B9FhNZyjvlkh1HrIoCBzV19FKqSkQ2TB0OFajhIhSyeiXyPea4v0pX3oZfX0SI4uiFN/EvEi3YZI779I/4AtRTB5yRoir7AAAAAElFTkSuQmCC) no-repeat 0 0; }
+
+
+/* show */
+#article .popup { padding: 0; }
+
+.article .caption { margin: 12px 10px 0 10px; text-align: left; color: #000; font-size: 18px; }
+.article .publish { margin: 9px 10px 0 10px; padding-bottom: 12px; text-align: left; color: #757575; font-size: 12px; border-bottom: 1px dashed #e1e1e1; }
+.article .publish a { float: right; font-size: 12px; color: #169aef; }
+.article article { padding: 0 10px; }
+.article footer { border-top: 1px solid #ededed; }
+.article article p { font-size: 16px; line-height: 180%; margin: 7px 0; text-indent: 2em; }
+.article article.f4 p { font-size: 24px; }
+.article article.f3 p { font-size: 18px; }
+.article article.f2 p { font-size: 16px; }
+.article article.f1 p { font-size: 14px; }
+.article article.middle p { font-size: 16px; }
+.article article.small p { font-size: 14px; }
+.article article a { display: inline; width: auto; }
+.article article a[rel="external"] { display: block; position: relative; overflow: hidden; white-space: nowrap; text-align: center; }
+.article article p a[rel="external"] { margin: 0 0 0 -2em; }
+.article article a[rel="external"]:after { content: ""; display: inline-block; position: absolute; bottom: -51px; margin: 0 0 0 -50px; width: 100px; height: 100px; vertical-align: bottom; background: #ababab; opacity: .4; -webkit-border-radius: 100px; border-radius: 100px; clip: rect(0 50px 40px 0); }
+
+.article article a[rel="external"] i, .article article a[rel="external"] i:after, .article article a[rel="external"] i:before { display: inline-block; position: absolute; width: 19px; height: 15px; background: #8b8b8b; border: 1px solid #cacaca; opacity: .9; -webkit-border-radius: 1px; border-radius: 1px; }
+.article article a[rel="external"] i:before { content: ""; top: 2px; left: -4px; }
+.article article a[rel="external"] i:after { content: ""; top: 5px; left: -7px; }
+.article article a[rel="external"] i { z-index: 1; bottom: 19px; margin: 0 0 0 -25px; }
+.article article img { display: block; max-height: 100%; width: auto; margin: 0 auto; border: 0; }
+.article article a img { display: inline-block; }
+
+
+/* 图片集页 */
+#album { background: #fff; }
+#album header { position: absolute; z-index: 100; top: -45px; -webkit-transition: .5s; }
+#album header:before { background: none; }
+#album header.visible { top: 0; }
+#album header a { height: 44px; line-height: 44px; color:#fff; }
+#album header .comment { float: right; padding: 0 10px 0 16px; border: 0 none; background-position: left 0; }
+#album header .back { width: auto; text-indent: inherit; }
+#albums, #albums .container > * { width: 320px; }
+#albums img { margin: auto; }
+#albums { position: absolute; width: 320px; height: 100%; overflow: hidden; left: 50%; top: 0; margin: 0 0 0 -160px; overflow:hidden; }
+
+#album #albums .container { width: auto; height: 100%; white-space: nowrap; position: absolute; clear: none; border-bottom: 0 none; margin: 0; }
+#albums .container > * { float: left; overflow: hidden; margin: 0 10px 0 0; }
+#album > nav { position: absolute; width: 280px; height: 50px; line-height: 50px; font-size: 20px; color: #9d9d9d; left: 50%; top: 50%; margin-top: 116px; margin-left: -142px; text-align: center; }
+#album > nav span { font-size: 20px; color: #9d9d9d; }
+#album > nav a { display: block; width: 50px; height: 50px; color: #333; text-indent: -400px; overflow: hidden; }
+#album > nav a:before { content: ""; display: block; width: 30px; height: 30px; margin: 10px 0; text-indent: -100px; overflow: hidden; border-radius: 4px; -webkit-box-shadow: 1px 1px 1px #222; box-shadow: 1px 1px 1px #222; }
+#album #previousbutton { float: left; margin: 0 0 0 50px; text-align: right; }
+#album #nextbutton { float: right; margin: 0 50px 0 0; text-align: left; }
+#album #previousbutton:before { float: right; background: #474747 url("../img/black.png") no-repeat 10px -275px; }
+#album #nextbutton:before { background: #474747 url("../img/black.png") no-repeat -50px -275px; }
+
+#album .albums-info { position: fixed; bottom: -300px; left: 0; width: 100%; padding: 0 10px 9px; -webkit-transition: .5s; -webkit-box-sizing: border-box; background: rgba(28,28,28,1); color: #eee; }
+#album .albums-info.visible { bottom: 0; }
+#album .albums-info h3 { position: relative; height: 28px; margin: 5px 0 0; padding: 0 50px 0 0; line-height: 28px; font-size: 14px; font-weight: 400; overflow:hidden; }
+.albums-info h3 span { position: absolute; top: 0; right: 0; font-size: 14px; }
+#album .albums-info h1 { position: relative; height: 28px; margin: 5px 0 0; padding: 0 50px 0 0; line-height: 28px; font-size: 14px; font-weight: 400;  overflow:hidden;}
+.albums-info h1 span { position: absolute; top: 0; right: 0; font-size: 14px; }
+#album .albums-info p { font-size: 12px; line-height: 18px; text-indent: 2em; }
+
+.showcontbt{width:100%; height:40px; line-height:40px; text-align:left; overflow:hidden; font-size:1em;}
+.showcontbt h1{font-size:1em; color:#eee; font-weight: 400; overflow:hidden;}
+
+/*分页*/
+#pageNumcont { width:100%; font-size: 14px; padding-bottom: 25px; padding-top: 20px; text-align: center; }
+#pageNumcont span { color:#eee;}
+#pageNumcont a { height:32px; text-decoration:none; padding:0 5px;line-height:32px; background: #134faa!important; color: #fff!important; display:inline-block;}
+
+#albums .container li { display: table-cell; width: 320px; height: 100%; overflow: hidden; vertical-align: middle; text-align: center; }
+#albums .container li img { vertical-align: middle; height:auto !important; }
+
+.album-title { font: 18px/28px Arial; color: #FFF; text-align: center; }
+.album-list { margin: 0 auto; width: 300px; }
+.album-list li { position: relative; margin: 10px 0 0 0; height: 120px; overflow: hidden; }
+.album-list .txt { position: absolute; left: 0; bottom: -1px; padding: 0 3%; width: 94%; height: 30px; font: 14px/30px Arial; color: #FFF; background: rgba(0,0,0,0.75); }
+.album-list .txt em { float: right; font: 14px/30px Arial; color: #FFF; }
+
+.contshow{width:320px; overflow:hidden; font-size:0.8em; color:#b5b5b5 !important; margin:6px auto 0;}
+.contshow img{max-width:320px !important; height:auto !important;}

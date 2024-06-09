@@ -1,0 +1,46 @@
+html, body, menu, ul, ol, li, p, dl, dt, dd, div, form, h1, h2, h3, h4, h5, h6, img, a img, input, button, textarea, fieldset {
+	padding:0;
+	margin:0;
+	border:0
+}
+ul, ol, li {
+	list-style:none
+}
+h1, h2, h3, h4, h5, h6, b, i, em {
+	font-size:1em;
+	font-weight:normal;
+	font-style:normal
+}
+body, input, button, textarea, select {
+	-webkit-text-size-adjust:none;
+	font:normal 14px/1.5 "\5FAE\8F6F\96C5\9ED1", helvetica, verdana, san-serif;
+	outline:none;
+	color:#333;
+}
+input[type="text"], input[type="password"], input[type="button"], input[type="submit"], button, textarea {
+	-webkit-appearance:none
+}
+a {
+	text-decoration:none;
+	color:#333;
+}
+.img img, video {
+	vertical-align:middle;
+}
+body {
+	min-width:320px;
+	margin:0 auto;
+	background:#fff
+}
+.btn {
+	display:inline-block;
+	vertical-align:middle;
+}
+.cfx:after, nav.mini:after, .h:after, .hn:after {
+	content:' ';
+	clear:both;
+	display:block;
+	height:0;
+	visibility:hidden;
+	line-height:0
+}

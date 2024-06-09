@@ -1,0 +1,26 @@
+/* CSS Document */
+*{ padding:0px; margin:0px auto}
+body{ margin:0px; padding:0px; font-size:12px; font-family:Arial, Helvetica, sans-serif;}
+img{vertical-align:bottom; border:0px;}
+ul{ list-style:none; margin:0px; padding:0px;}
+a{ text-decoration:none;}
+li{ list-style-type:none;}
+.clear{ clear:both;}
+#main{ width:310px; margin:0px auto; padding:0px;}
+#index{ width:310px; margin:0px auto; padding:10px 0px 0px 0px; background:url(images/bg.png) repeat-y;}
+#lm{ width:288px; margin:0px 0px 6px 12px; padding:0px 0px 4px 0px; background:#FFF;}
+#lm-left{ width:162px;  float:left; margin:0px 0px 0px 10px; padding:12px 0px 0px 0px;}
+#lm-right{ width:110px; margin:0px; padding:0px; float:left;}
+#title{ width:162px; height:18px; margin:0px; padding:0px; background:url(images/yi.png) no-repeat;} 
+#title2{ width:162px; height:18px; margin:0px; padding:0px; background:url(images/er.png) no-repeat;} 
+#title3{ width:162px; height:18px; margin:0px; padding:0px; background:url(images/san.png) no-repeat;}
+#title4{ width:162px; height:18px; margin:0px; padding:0px; background:url(images/sit.png) no-repeat;}
+#lm-left p{ line-height:20px; display:block; margin:0px 0px 6px 0px;}
+#zk{ width:136px; height:13px; margin:0px; padding:0px;}
+#yh{ width:296px; margin:0px 0px 0px 8px; padding:0px;}
+#yhlist{ width:95px; height:98px; float:left; margin:0px 3px 0px 0px; background:#FFF; padding:6px 0px 0px 0px;}
+#yhlist p{ line-height:18px; text-align:center;}
+#yhlist img{ text-align:center;}
+#zj{ width:290px; margin:0px 0px 0px 8px; padding:119px 3px 8px 3px; background:url(images/zj.png) no-repeat; color:#231815; line-height:18px;}
+#bottom{ width:310px; margin:0px auto; padding:0px; background:#898989; text-align:center; line-height:24px; color:#FFF;}
+#bottom a{ color:#FFF; text-decoration:none;}

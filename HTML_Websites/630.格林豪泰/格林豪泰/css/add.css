@@ -1,0 +1,22 @@
+﻿header a span.app
+{
+    position: absolute;
+    left: 0;
+    padding: 26px 0px;
+    cursor: pointer;
+    display: block;
+    color:Red; 
+    }
+    
+ body#applinkbody #content div a
+ {
+     height:30%;
+     width:100%;
+     display:block; 
+     text-align:center;
+     }
+     
+  body#applinkbody #content div a img
+  {
+       width:100%; height:100%; 
+      }

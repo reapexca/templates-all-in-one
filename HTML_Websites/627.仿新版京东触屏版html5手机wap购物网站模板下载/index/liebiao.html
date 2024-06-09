@@ -1,0 +1,363 @@
+ 
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+															   	 					   京东触屏版
+									</title>
+    	<meta name="author" content="m.jd.com">
+        			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	            <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+		
+	  				<link rel="stylesheet" type="text/css" href="../css/base2013.css@v=20140325100001" charset="gbk"/>
+		
+		
+							<link rel="stylesheet" type="text/css" href="../css/2013/ware/search_html5.css" charset="gbk"/>	
+				
+					
+		        						<link rel="stylesheet" type="text/css" href="../css/chapter.css" charset="gbk"/>	
+						<link rel="apple-touch-icon-precomposed" href="../../m.jd.com/images/apple-touch-icon.png"/>
+						<script type="text/javascript">
+			var _winLocation=window.location.href;//获得当前页面的路径，根据路径规则进行逐页替换
+			var _isWebKit = '__proto__' in {};//是否是webkit内核
+			if(_isWebKit){//如果是webkit内核，则分模块使用zepto
+				//要使用zeptojs的路径列表，可以做为分模块替换的开关
+				var _locationList=new Array();
+				//活动模块
+				_locationList.push('../activity/proActList');
+				_locationList.push('../activity/proActWareList');
+				_locationList.push('../activity/list');
+				//商品分类模块
+				_locationList.push('../category/');
+				//京东快讯模块
+				_locationList.push('../newslist.html');
+				_locationList.push('../newslist/');
+				_locationList.push('../news/');
+				//机票模块
+				_locationList.push('../airline/');
+				//酒店模块
+				_locationList.push('../hotel/');
+				//团购模块
+				_locationList.push('../tuan/');
+				//首页相关
+				_locationList.push('../hotbrand.html');//品牌馆
+				//商品筛选相关
+				_locationList.push('../ware/expandSort.action');
+				_locationList.push('../ware/categoryFilter.action');
+				_locationList.push('../ware/search.action');
+				_locationList.push('../products/');
+				
+				_locationList.push('../notice/');//通告模块
+				_locationList.push('../coupons/');//随地惠模块
+				_locationList.push('../chongzhi/');//手机充值模块
+				_locationList.push('../comment/');//手机推荐模块
+				_locationList.push('../pay/');//支付
+				_locationList.push('../order/');//订单
+				var _needReplace = false;
+				//如果当前路径符合要使用的路径规则，则进行替换
+				for(var i=0;i<_locationList.length;i++){
+					if(_winLocation.indexOf(_locationList[i])!=-1){
+						_needReplace=true;
+						break;
+					}
+				}
+				//如果是首页的话，则使用zepto
+				var _tmp = _winLocation.replace(/(^http:\/\/)|(\/*$)/g,'');
+				if(_tmp.indexOf('/')<0 || (_tmp.split('/').length<=2 && _tmp.indexOf('/index')>=0)){
+					_needReplace=true;
+				}
+				//如果是商品详情页的话，则使用zepto
+                var _dlocationList=new Array();
+                _dlocationList.push(/\/product\/([0-9]+)\.html/);
+                _dlocationList.push(/\/orderComment\/([0-9]+)\.html/);
+                _dlocationList.push(/\/consultations\/([0-9]+)\.html/);
+                _dlocationList.push(/\/consultations\/([0-9]+)-([0-9]+)\.html/);
+                _dlocationList.push(/\/comments\/([0-9]+)\.html/);
+                for(var i=0,len=_dlocationList.length;i<len;i++){
+                	if(_dlocationList[i].test(_winLocation)){
+                		_needReplace=true;
+               			 break;
+               		 }
+                }
+				if(_needReplace){
+					document.write('<script src="../js/zepto.min.js"><\/script>');
+					document.write('<script type="text/javascript">window.jQuery=window.Zepto;<\/script>');
+				}else{
+					document.write('<script src="../js/jquery-1.6.2.min.js"><\/script>');
+				}
+			}else{//如果是非webkit内核直接使用jquery
+				document.write('<script src="../js/jquery-1.6.2.min.js"><\/script>');
+			}
+		</script>
+				        <script type="text/javascript" src="../js/html5/common.js@v=201401141358"></script>
+        <script type="text/javascript" src="../js/html5/spin.min.js"></script>
+	</head>
+
+<body id="body">
+<a name="top"></a>
+<header>
+			<div class="new-header">
+        	<a href="javascript:pageBack();" class="new-a-back" id="backUrl"><span>返回</span></a>
+							<h2>热门特惠</h2>
+			            <a href="javascript:void(0)" id="btnJdkey" class="new-a-jd"><span>京东键</span></a>
+    	</div>
+		<div class="new-jd-tab" style="display:none" id="jdkey">
+        	<div class="new-tbl-type">
+                <a href="../index.html@sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-tbl-cell">
+                	<span class="icon">首页</span>
+					<p style="color:#6e6e6e;">首页</p>
+                </a>
+                <a href="../category/all.html@sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-tbl-cell">
+                	<span class="icon2">分类搜索</span>
+					<p style="color:#6e6e6e;">分类搜索</p>
+                </a>
+                <a href="javascript:void(0)" id="html5_cart" class="new-tbl-cell">
+                	<span class="icon3">购物车</span>
+					<p style="color:#6e6e6e;">购物车</p>
+                </a>
+                <a href="../user/home.action@sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-tbl-cell">
+                	<span class="icon4">我的京东</span>
+					<p style="color:#6e6e6e;">我的京东</p>
+                </a>
+            </div>
+        </div>
+	</header>
+<div class="new-ct new-p-re">
+	<div class="new-search">
+		<ul class="new-mu_l2w">
+										
+												
+				            <li class="new-mu_l2">
+                <a href="../product/1016292843.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img13.360buyimg.com/n4/g10/M00/05/12/rBEQWFEtb78IAAAAAAWca7l6fjYAABFowBCPIEABZyD393.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">香织恋蝶 浪漫LOVE熊抱心熊泰迪熊抱抱熊毛绒玩具布娃娃公仔玩偶 粉红色 1米</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥98.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/583476.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img30.360buyimg.com/n4/1750/fefd5509-a360-47ea-b3f5-35a651b6a0dd.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">AUBY澳贝 益智玩具 迪迪兔床铃 463201</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥139.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/1017663587.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img10.360buyimg.com/n4/g10/M00/1A/08/rBEQWVF7fPIIAAAAAAFQEJVgC3YAAFIOgNghxQAAVAo199.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">圣手三阶魔方3阶比赛专用魔方 内含专业还原教程 光面贴纸黑色</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥13.60</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/528423.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img13.360buyimg.com/n4/g13/M00/0A/01/rBEhVFIpcOIIAAAAAAKikxmKx0wAAC25ADKGZMAAqKr961.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">妈咪宝贝（Mamypoko）均吸干爽纸尿裤 加大号XL32片【11kg以上】</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥39.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/208417.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img10.360buyimg.com/n4/g7/M03/08/1B/rBEHZVB7p3QIAAAAAAHsCSYRazkAABu1wEw33wAAewh105.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">帮宝适（Pampers）拉拉裤【女】大号L21片【9-14kg】</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥36.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/526825.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img20.360buyimg.com/n4/g3/M01/04/14/rBEGFE-rGE8IAAAAAAMm5brFZlIAAA54ACvqdsAAyb9866.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">花王（Merries）纸尿裤 新生儿NB90片【0-5kg】（日本原装进口）</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥139.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/1005495271.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img11.360buyimg.com/n4/g5/M02/13/19/rBEDik_9J0oIAAAAAAdubN2ofFgAAD3lANNDt0AB26E229.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">亲子日 保蒂卡 1米 毛绒玩具熊大号 泰迪熊公仔 布娃娃 抱抱熊 熊娃娃 浅棕色 1米</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥49.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/695483.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img13.360buyimg.com/n4/g7/M03/08/1B/rBEHZlB7qt4IAAAAAAIiosUBrrEAABu3QNSH3AAAiK6817.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">帮宝适（Pampers）超薄干爽纸尿裤 超大号XXL34片【15kg以上】</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥86.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/1002120853.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img13.360buyimg.com/n4/g13/M02/07/0E/rBEhU1IWukYIAAAAAAP8V11ZKuwAACWWAMaptAAA_xv691.png" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">阿李罗火火兔儿童早教故事机G6-4G 儿童早教机 0-7岁婴幼儿童宝宝益智玩具 可下载充电 蓝色</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥188.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/160509.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img12.360buyimg.com/n4/g15/M01/00/05/rBEhWVHo5zUIAAAAAAF2mYMjzlEAABKpQLkuFcAAXax199.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">HOHNER德国 白银之星10孔布鲁斯口琴504/20C调</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥49.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/1029507.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img10.360buyimg.com/n4/g13/M04/0C/1F/rBEhVFKyndMIAAAAAAYMZShXrCAAAG_2wOWmRcABgx9702.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">美素佳儿（Friso） 荷兰原装进口 金装幼儿配方奶粉 3段 900克（1-3岁幼儿适用）</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥189.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/1006697761.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img11.360buyimg.com/n4/g8/M03/00/04/rBEHaFAssr0IAAAAAAIm51SuflcAAABpgGjhzcAAib_271.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">毛绒玩具熊 泰迪熊 布娃娃 生日礼物女 玩偶 抱抱熊 公仔 围巾熊 大号dmsky 普通包装 70厘米</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥78.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/1002159383.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img13.360buyimg.com/n4/g14/M06/0C/07/rBEhV1IWunwIAAAAAANXjCVqZeIAACYyAD-e_8AA1ek546.png" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">阿李罗火火兔儿童早教故事机G6-4G 儿童早教机 0-7岁婴幼儿童宝宝益智玩具 可下载充电 粉色</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥188.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/901900.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img10.360buyimg.com/n4/g15/M06/08/0D/rBEhWFIm0fcIAAAAAAKTOfSOcxUAACxqgDvfEQAApNR229.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">妈咪宝贝（Mamypoko）瞬吸干爽纸尿裤【男】大号L138片【9-14kg】</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥189.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+				            <li class="new-mu_l2">
+                <a href="../product/1022104931.html@resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-mu_l2a">
+                    <span class="new-mu_tmb"><img src="../../img11.360buyimg.com/n4/g12/M00/05/1F/rBEQYFGSR1gIAAAAAAdPacVO6moAABKnwI76JYAB0-B345.jpg" width="100" height="100" /></span>
+                    <span class="new-mu_l2cw">
+                        <strong class="new-mu_l2h">儿童双层钓鱼玩具 二合一磁性钓鱼 可旋转带灯光音乐 钓鱼盘 儿童玩具</strong>
+												                        <span class="new-mu_l2h"><span class="new-txt-rd2 new-elps"></span></span>
+                        <span class="new-mu_l2c"><strong class="new-txt-rd2">￥43.00</strong></span>
+						 					</span>
+                </a>
+            </li>
+							        </ul>
+	</div>
+</div>
+
+<div class="new-paging">
+	<div class="new-tbl-type">
+    	<div class="new-tbl-cell">
+						<span class="new-a-prve"><span>上一页</span>
+					</div>
+		<div class="new-tbl-cell new-p-re">
+        	<div sytle="new-a-page">
+            	<span class="new-open">第1页</span>
+            </div>
+		</div>
+		<div class="new-tbl-cell">
+						<a href="getWare.action@page=2&resourceType=index_promotion&resourceValue=f1&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-a-next"><span>下一页</span></a>
+					</div>
+	</div>
+</div>
+   
+	<div class="login-area" id="footer">
+        	<div class="login">
+									    					<a href="../user/login.action@sid=e0d0f025d6d3e8e8d7be5428c43ef911">登录</a><span class="lg-bar">|</span><a href="../user/mobileRegister.action@sid=e0d0f025d6d3e8e8d7be5428c43ef911">注册</a>
+    												<span  class="new-fr"><a href="../showvote.html@sid=e0d0f025d6d3e8e8d7be5428c43ef911">反馈</a><span class="lg-bar">|</span><a href="#top">回到顶部</a></span>
+            </div>
+        	<div class="version"><a href="../index.html@v=w&sid=e0d0f025d6d3e8e8d7be5428c43ef911">标准版</a><a href="javascript:void(0)" class="on">触屏版</a><a href="pcsite.action" id="toPcHome">电脑版</a></div>
+            <div class="copyright">&copy; m.jd.com </div>
+        </div>
+
+    <div style="display:none;">
+    					<img src="../ja.jsp@&utmn=1338423821&utmr=-&utmp=_252Findex_252FgetWare.action_253Fsid_253De0d0f025d6d3e8e8d7be5428c43ef911%26r01E06B4152" />
+			    </div>
+<script type="text/javascript">
+$("#unsupport").hide();
+if(!testLocalStorage()){ //not support html5
+    if(0!=0 && !$clearCart && !$teamId){
+		$("#html5_cart_num").text(0>0>0);
+	}
+}else{
+	updateToolBar('');
+}
+
+$("#html5_cart").click(function(){
+//	syncCart('e0d0f025d6d3e8e8d7be5428c43ef911',true);
+	location.href='../cart/cart.action';
+});
+
+function reSearch(){
+var depCity = window.sessionStorage.getItem("airline_depCityName");
+	if(testSessionStorage() && isNotBlank(depCity) && !/^\s*$/.test(depCity) && depCity!=""){
+    	var airStr = '<form action="../airline/list.action" method="post" id="reseach">'
+        +'<input type="hidden" name="sid"  value="e0d0f025d6d3e8e8d7be5428c43ef911"/>'
+        +'<input type="hidden" name="depCity" value="'+ window.sessionStorage.getItem("airline_depCityName") +'"/>'
+        +'<input type="hidden" name="arrCity" value="'+ window.sessionStorage.getItem("airline_arrCityName") +'"/>'
+        +'<input type="hidden" name="depDate" value="'+ window.sessionStorage.getItem("airline_depDate") +'"/>'
+        +'<input type="hidden" name="depTime" value="'+ window.sessionStorage.getItem("airline_depTime") +'"/>'
+        +'<input type="hidden" name="classNo" value="'+ window.sessionStorage.getItem("airline_classNo") +'"/>'
+        +'</form>';
+    	$("body").append(airStr);
+    	$("#reseach").submit();
+	}else{
+    	window.location.href='../airline/index.action@sid=e0d0f025d6d3e8e8d7be5428c43ef911';
+	}
+}
+ //banner 关闭点击
+    $('.div_banner_close').click(function(){
+        $('#div_banner_header').unbind('click');
+        jQuery.post('addClientCookieVal.json',function(d){
+              $('#div_banner_header').slideUp(500);
+        });
+    });
+    //banner 下载点击
+    $('.div_banner_download').click(function(){
+         var downloadUrl = $(this).attr('url');
+         jQuery.post('addClientCookieVal.json',function(d){
+               window.location.href=downloadUrl;
+        });
+    });
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全部分类 - 海王星辰网上药店触屏版</title>
+    <meta name="author" content="m.star365.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    
+<link rel="stylesheet" type="text/css" href="../css/base2013.css" />
+<link rel="stylesheet" type="text/css" href="../css/search_html5.css" />
+
+    
+    <script type="text/javascript">
+        var _winLocation = window.location.href; //获得当前页面的路径，根据路径规则进行逐页替换
+        var _isWebKit = '__proto__' in {}; //是否是webkit内核
+        if (_isWebKit) {//如果是webkit内核，则分模块使用zepto
+            //要使用zeptojs的路径列表，可以做为分模块替换的开关
+            var _locationList = new Array();
+            //活动模块
+            _locationList.push('../activity/proActList');
+            _locationList.push('../activity/proActWareList');
+            _locationList.push('../activity/list');
+            //商品分类模块
+            _locationList.push('../category/');
+            //首页相关
+            _locationList.push('../hotbrand.html');
+            //商品筛选相关
+            _locationList.push('../ware/expandSort.action');
+            _locationList.push('../ware/categoryFilter.action');
+            _locationList.push('../search');
+
+            _locationList.push('../pay/'); //支付
+            _locationList.push('../order/'); //订单
+            var _needReplace = false;
+            //如果当前路径符合要使用的路径规则，则进行替换
+            for (var i = 0; i < _locationList.length; i++) {
+                if (_winLocation.indexOf(_locationList[i]) != -1) {
+                    _needReplace = true;
+                    break;
+                }
+            }
+            //如果是首页的话，则使用zepto
+            var _tmp = _winLocation.replace(/(^http:\/\/)|(\/*$)/g, '');
+            if (_tmp.indexOf('/') < 0 || (_tmp.split('/').length <= 2 && _tmp.indexOf('/index') >= 0)) {
+                _needReplace = true;
+            }
+            //如果是商品详情页的话，则使用zepto
+            var _dlocationList = new Array();
+            _dlocationList.push(/\/product\/([0-9]+)\.html/);
+            _dlocationList.push(/\/detail\/([0-9]+)\.html/);
+            _dlocationList.push(/\/orderComment\/([0-9]+)\.html/);
+            _dlocationList.push(/\/consultations\/([0-9]+)\.html/);
+            _dlocationList.push(/\/consultations\/([0-9]+)-([0-9]+)\.html/);
+            _dlocationList.push(/\/comments\/([0-9]+)\.html/);
+            for (var i = 0, len = _dlocationList.length; i < len; i++) {
+                if (_dlocationList[i].test(_winLocation)) {
+                    _needReplace = true;
+                    break;
+                }
+            }
+            if (_needReplace) {
+                document.write('<script src="../js/zepto.min.js"><\/script>');
+                document.write('<script type="text/javascript">window.jQuery=window.Zepto;<\/script>');
+            } else {
+                document.write('<script src="../js/jquery-1.6.2.min.js"><\/script>');
+            }
+        } else {//如果是非webkit内核直接使用jquery
+            document.write('<script src="../js/jquery-1.6.2.min.js"><\/script>');
+        }
+    </script>
+    <script type="text/javascript" src="../js/html5/common.js@v=201309260001"></script>
+    <script type="text/javascript" src="../js/html5/spin.min.js"></script>
+</head>
+<body id="body">
+    <a name="top"></a>
+    <header>
+<div id="_hwBox" class="new-header">
+    <a class="new-a-back" href="javascript:pageBack();"><span>返回</span></a>
+    <a class="new-srch-box2" id="btnHwBox" href="javascript:void(0)"></a>
+    <a class="new-a-hw" id="btnHwkey" href="javascript:void(0)"><span>海王键</span></a>
+</div>
+<div style="display: none" id="_hwSearch" class="new-header">
+    <form id="searchForm" action="/search">
+    <a class="new-a-cancel" id="_cancelSearch" href="javascript:void(0)">取消</a>
+    <div class="new-srch-box new-srch-box-v1">
+        <input type="text" value="" required="" cleardefault="no" id="newkeyword" name="keyword"
+            class="new-srch-input"><a class="new-s-close new-s-close-v1" onclick="cancelHotWord()"
+                target="_self" href="javascript:void(0);"></a><a class="new-s-srch" onclick="$('#searchForm').submit();"
+                    target="_self" href="javascript:void(0)"><span></span></a>
+        <div style="display: none" id="shelper" class="new-srch-lst">
+        </div>
+    </div>
+    </form>
+</div>
+<div id="hwkey" style="display: none" class="new-hw-tab">
+    <div class="new-tbl-type">
+        <a class="new-tbl-cell" href="../index.html">
+            <span class="icon">首页</span>
+            <p style="color: #6e6e6e;">首页</p>
+        </a>
+        <a class="new-tbl-cell" href="../category/all.html">
+            <span class="icon2">分类搜索</span>
+            <p style="color: #6e6e6e;">分类搜索</p>
+        </a>
+        <a class="new-tbl-cell" id="html5_cart" href="javascript:void(0)">
+            <span class="icon3">购物车</span>
+            <p style="color: #6e6e6e;">购物车</p>
+        </a>
+        <a class="new-tbl-cell" href="../user/home">
+            <span class="icon4">我的账户</span>
+            <p style="color: #6e6e6e;" class="on">我的账户</p>
+        </a>
+    </div>
+</div>    </header>
+    
+<div class="new-ct new-p-re">
+    <div class="new-search">
+    <div class="new-tab-type">
+        <ul class="new-tbl-type">
+                <li style="float:left;"><a class="new-tbl-cell on" href="1006-1032-2427-0-1.html">上架时间</a></li>
+                <li>
+                    <a href="1006-1032-2427-2-1.html" class="new-tbl-cell">
+                    <span class="bar"></span>价格<span class="icon"></span></a>
+                </li>
+        </ul>
+    </div>
+    <ul class="new-mu_l2w">
+        <li class="new-mu_l2">
+            <a href='../product/22349.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/800/8000841_m_168x168_T.jpg" alt="杰士邦优质超薄+爽滑倍润共24只" width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">杰士邦优质超薄+爽滑倍润共24只</strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;48.90</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥91.00</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有0人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/21004.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/805/8058781_m_168x168_T.jpg" alt="尚牌 天然胶乳橡胶避孕套(极薄经典) 10s" width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">尚牌 天然胶乳橡胶避孕套(极薄经典) 10s</strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;12.90</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥21.00</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有0人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/22319.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/800/8000841_m_168x168_T.jpg" alt="第6感,天然胶乳橡胶避孕套螺纹(柠檬香)  马来西亚  24只" width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">第6感,天然胶乳橡胶避孕套螺纹(柠檬香)  马来西亚  24只</strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;32.80</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥32.80</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有0人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/22503.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/zuh/zuhe_2752_m_168x168_T.jpg" alt="第六感 超薄超滑24只+超薄平滑24只+螺纹24只" width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">第六感 超薄超滑24只+超薄平滑24只+螺纹24只</strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;48.70</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥159.00</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有0人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/21488.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/zuh/zuhe_2192_m_168x168_T.jpg" alt="冈本003白金10片（1盒) + 冈本芦荟6片（1盒) + 冈本黄金003（2片*2盒）" width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">冈本003白金10片（1盒) + 冈本芦荟6片（1盒) + 冈本黄金003（2片*2盒）</strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;124.10</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥305.00</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有0人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/22505.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/zuh/zuhe_2754_m_168x168_T.jpg" alt="冈本纯20只+激薄10只+超润滑10只+质感超薄10只" width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">冈本纯20只+激薄10只+超润滑10只+质感超薄10只</strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;78.80</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥159.80</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有0人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/9473.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/802/8027436_m_168x168_T.jpg" alt="冈本003 超薄安全套 10只 白金 超薄 冈本安全套 冈本避孕套" width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">冈本003 超薄安全套 10只 白金 超薄 冈本安全套 冈本避孕套</strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;108.00</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥108.00</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有129人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/9480.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/802/8022865_m_168x168_T.jpg" alt="杜蕾斯避孕套 love装 10只 杜蕾斯安全套 " width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">杜蕾斯避孕套 love装 10只 杜蕾斯安全套 </strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;24.90</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥24.90</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有207人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/9469.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/803/8036433_m_168x168_T.jpg" alt="冈本避孕套 冈本激薄 10只 激情超薄安全套" width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">冈本避孕套 冈本激薄 10只 激情超薄安全套</strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;43.00</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥43.00</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有66人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/9470.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/802/8027435_m_168x168_T.jpg" alt="冈本003白金超薄安全套 3只 冈本避孕套 " width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">冈本003白金超薄安全套 3只 冈本避孕套 </strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;43.00</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥43.00</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有2人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/9482.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/000/0000846_m_168x168_T.jpg" alt="杜蕾斯避孕套 挚爱装 12只 安全套  正品 " width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">杜蕾斯避孕套 挚爱装 12只 安全套  正品 </strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;36.90</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥36.90</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有4人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/9478.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/803/8037148_m_168x168_T.jpg" alt="舞影 天然胶乳橡胶避 孕套（玫瑰香） 10只" width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">舞影 天然胶乳橡胶避 孕套（玫瑰香） 10只</strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;17.90</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥17.90</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有2人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/9474.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/803/8036434_m_168x168_T.jpg" alt="冈本003超薄安全套 10只 黄金 贴身 超薄 安全套 冈本避孕套" width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">冈本003超薄安全套 10只 黄金 贴身 超薄 安全套 冈本避孕套</strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;118.00</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥118.00</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有49人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/9481.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/000/0000852_m_168x168_T.jpg" alt="杜蕾斯 避孕套 活力装 12只 杜蕾斯安全套 " width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">杜蕾斯 避孕套 活力装 12只 杜蕾斯安全套 </strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;34.90</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥34.90</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有144人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+        <li class="new-mu_l2">
+            <a href='../product/9477.html' class="new-mu_l2a">
+            <span class="new-mu_tmb">
+                <img src="http://img.star365.com/images/productPicture/803/8037147_m_168x168_T.jpg" alt="舞影 天然胶乳橡胶避 孕套（草莓香） 10只" width="100" height="100" />
+            </span>
+            <span class="new-mu_l2cw">
+                <strong class="new-mu_l2h">舞影 天然胶乳橡胶避 孕套（草莓香） 10只</strong>
+                <span class="new-mu_l2h">
+                    <span class="new-txt-rd2 new-elps"></span>
+                </span>
+                <span class="new-mu_l2c">
+                    <strong class="new-txt-rd2">&yen;16.90</strong>
+                    <del style="padding-left: 5px; color: #b8b4b2;font-size: .625em; text-decoration: line-through;">￥16.90</del>
+                </span> 
+                <span class="new-mu_l2c new-p-re">
+                    <span class="new-txt">已有2人评价</span> 
+                </span>
+            </span>
+            </a>
+        </li>
+    </ul>
+    </div>
+    <div class="new-paging">
+        <div class="new-tbl-type">
+            <div class="new-tbl-cell">
+                <span class="new-a-prve">上一页</span>
+            </div>
+            <div class="new-tbl-cell new-p-re">
+                1/6
+            </div>
+            <div class="new-tbl-cell">
+                <a class="new-a-next" href='1006-1032-2427-0-2.html'><span>下一页</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>
+         <div class="new-footer">
+    <div class="new-f-login">
+            <a href="../user/login">登录</a>
+    <span style="margin: 0 10px;">|</span><a href="../user/register">注册</a>
+
+
+        
+        <span class="new-back-top"><a href="#top">回到顶部</a></span>
+    </div>
+    <div class="new-f-section"><a class="on" href="javascript:void(0)">触屏版</a><a href="../../www.star365.com/@pcsite">电脑版</a></div>
+    <div class="new-f-section2">            
+    互联网药品交易资格证：粤C20100004<br />
+    订购热线：400-6626-365<br />
+    Copyright &copy; 2013 m.star365.com</div>
+</div>
+    </footer>
+    <script type="text/javascript">
+        $("#unsupport").hide();
+        if (!testLocalStorage()) { //not support html5
+            if (0 != 0 && !$clearCart && !$teamId) {
+                $("#html5_cart_num").text(0 > 0 > 0);
+            }
+        } else {
+            updateToolBar('index');
+        }
+
+        $("#html5_cart").click(function () {
+            //	syncCart('',true);
+            location.href = '../cart/cart.html';
+        });
+
+        function reSearch() {
+            var depCity = window.sessionStorage.getItem("airline_depCityName");
+            if (testSessionStorage() && isNotBlank(depCity) && !/^\s*$/.test(depCity) && depCity != "") {
+                var airStr = '<form action="../airline/list.action" method="post" id="reseach">'
+        + '<input type="hidden" name="sid"  value=""/>'
+        + '<input type="hidden" name="depCity" value="' + window.sessionStorage.getItem("airline_depCityName") + '"/>'
+        + '<input type="hidden" name="arrCity" value="' + window.sessionStorage.getItem("airline_arrCityName") + '"/>'
+        + '<input type="hidden" name="depDate" value="' + window.sessionStorage.getItem("airline_depDate") + '"/>'
+        + '<input type="hidden" name="depTime" value="' + window.sessionStorage.getItem("airline_depTime") + '"/>'
+        + '<input type="hidden" name="classNo" value="' + window.sessionStorage.getItem("airline_classNo") + '"/>'
+        + '</form>';
+                $("body").append(airStr);
+                $("#reseach").submit();
+            } else {
+                window.location.href = '../airline/index.action';
+            }
+        }
+        //banner 关闭点击
+        $('.div_banner_close').click(function () {
+            $('#div_banner_header').unbind('click');
+            jQuery.post('../index/addClientCookieVal.json', function (d) {
+                $('#div_banner_header').slideUp(500);
+            });
+        });
+        //banner 下载点击
+        $('.div_banner_download').click(function () {
+            var downloadUrl = $(this).attr('url');
+            jQuery.post('../index/addClientCookieVal.json', function (d) {
+                window.location.href = downloadUrl;
+            });
+        });
+    </script>
+</body>
+</html>

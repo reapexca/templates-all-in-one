@@ -1,0 +1,75 @@
+
+html {
+	-webkit-text-size-adjust:none
+}
+body {
+}
+ul ,p{ list-style-type:none; margin:0px; padding:0px}
+ul li{
+	margin:0px; padding:0px
+	
+}
+
+img { border:0}
+.m_focuspic {
+	position:relative;
+	overflow:hidden;
+	margin:13px
+}
+.swipe {
+	width:100%;
+	overflow:hidden;
+	position:relative
+}
+.swipe-wrap {
+	overflow:hidden;
+	position:relative
+}
+.swipe-wrap li {
+	float:left;
+	width:100%;
+	position:relative
+}
+.swipe-wrap img {
+	display:block
+}
+.swipe-wrap .tit {
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	padding:5px 0 15px;
+	background:rgba(0, 0, 0, 0.6);
+	font-size:14px;
+	line-height:18px;
+	color:#fff
+}
+.swipe-wrap .tit span {
+	display:block;
+	height:36px;
+	padding:0 10px;
+	overflow:hidden
+}
+.m_focuspic .page {
+	position:absolute;
+	z-index:99;
+	left:0;
+	bottom:2px;
+	width:100%;
+	text-align:center
+}
+.m_focuspic .page li {
+	display:inline-block;
+	width:6px;
+	height:6px;
+	overflow:hidden;
+	line-height:100px;
+	margin:0 5px;
+	background:#F00;
+	border-radius:50%;
+	opacity:0.3;
+	cursor:pointer
+}
+.m_focuspic .page li.on {
+	opacity:1
+}

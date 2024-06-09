@@ -1,0 +1,184 @@
+body
+{
+margin:0px;
+padding:0px;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+img
+{
+border:none;
+}
+
+ul,li,h1,h2,h3,h4,h5,h6,p,span,td,div
+{
+margin:0px;
+padding:0px;
+line-height:0px;
+list-style:none;
+}
+
+li a,a,a:hover,li a:hover
+{
+text-decoration:none;
+}
+
+
+input,
+textarea,
+select {
+	font:100% Arial, Helvetica, sans-serif;
+	vertical-align:middle;
+	color:#000;
+	outline:none;
+}
+form, fieldset {
+	margin:0;
+	padding:0;
+	border-style:none;
+}
+
+
+
+/*Site Gentral Start*/
+
+#wrapper
+{
+width:100%;
+height:auto;
+float:left;
+}
+
+#page
+{
+width:320px;
+height:auto;
+margin:0px auto;
+}
+
+
+/*header Start*/
+
+.header
+{
+width:320px;
+height:auto;
+float:left;
+background:#fbfaf9;
+}
+
+.logo
+{
+width:302px;
+height:auto;
+float:left;
+padding:0px 0px 10px 18px;
+background:url(../images/border.png) bottom repeat-x;
+}
+
+.banner
+{
+width:302px;
+height:auto;
+float:left;
+padding:0px 0px 0px 18px;
+}
+
+.small-logo
+{
+width:251px;
+height:auto;
+float:left;
+}
+
+.home
+{
+width:51px;
+height:auto;
+float:left;
+padding-top:30px;
+}
+
+/*content Start*/
+
+.content
+{
+width:302px;
+height:auto;
+float:left;
+padding:0px 0px 0px 18px;
+background:#fbfaf9;
+}
+
+.content ul
+{
+margin:12px 0px 0px 0px;
+padding:0px;
+}
+
+.content ul li
+{
+background:url(../images/menu-bg.png) no-repeat;
+height:25px;
+font:bold 12px Arial, Helvetica, sans-serif;
+color:#383333;
+padding:14px 0px 0px 15px;
+margin-bottom:5px;
+display:block;
+}
+
+.content ul li a,a:hover
+{
+color:#383333;
+}
+
+.content h1
+{
+font:18px Arial, Helvetica, sans-serif;
+color:#8f9294;
+padding:5px 0px 5px 0px;
+}
+
+.content p
+{
+font:12px Arial, Helvetica, sans-serif;
+color:#8f9294;
+line-height:18px;
+padding-right:22px;
+text-align:justify;
+padding-bottom:15px;
+}
+
+/*footer Start*/
+
+.footer
+{
+width:302px;
+height:auto;
+float:left;
+padding:5px 0px 20px 18px;
+background:#fbfaf9;
+}
+
+.footer-left
+{
+width:22px;
+height:auto;
+float:left;
+}
+.footer-right
+{
+width:100px;
+height:auto;
+float:left;
+}
+.footer-center
+{
+width:159px;
+float:left;
+background:url(../images/footer-center.png) repeat-x;
+height:28px;
+font:12px Arial, Helvetica, sans-serif;
+color:#FFFFFF;
+padding-top:12px;
+}

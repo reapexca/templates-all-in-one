@@ -1,0 +1,12 @@
+
+/*------img_ad-------*/
+.img_ad{ height:222px; width:320px; margin:0 auto; overflow:hidden;position:relative;}
+.img_ad img{width:320px; height:222px;}
+.img_ad_titleP1{ text-transform:uppercase; margin-right:20px;}
+.img_wrap{position:absolute;left:0; top:0;height:222px; width:320px; background:#666;}
+.img_wrap ul{position:absolute; left:0px;}
+.img_wrap ul li{ float:left;display:inline;height:222px; width:320px;}
+.imgFlashIco{width:300px;overflow:hidden; margin:0 auto; position:relative; top:-220px; background:url(../images/ico_base.png) no-repeat -336px 6px; }
+.imgFlashIco li{ float:left; font-weight:bold;  width:20px; font-size:14px; margin-top:2px;margin-left:6px; text-align:center;line-height:26px;height:26px; cursor:pointer; color:#FFF;}
+.imgFlashIco li.on{ color:#000;}
+.imgFlashSpan{ display:inline-block; height:26px;line-height:26px;  color:#F00;overflow:hidden;margin-left:8px; cursor:pointer;}

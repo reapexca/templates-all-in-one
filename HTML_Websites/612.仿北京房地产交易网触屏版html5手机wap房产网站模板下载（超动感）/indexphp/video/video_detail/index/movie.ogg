@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>视频详情页-北京房地产交易网触屏版</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../../../../includes/css/xk-style.css" rel="stylesheet">	
+	<link href="../../../../includes/css/xk-info.css" rel="stylesheet">
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../includes/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../../includes/ico/apple-touch-icon-57.png">
+	<link rel="shortcut icon" href="../../../../includes/ico/favicon.png">	
+</head>
+
+<body>
+
+<header class="bar_fixed">
+	<div id="toolbar_1" class="toolbar">
+		<div class="ui-toolbar-left"><a href="javascript:theStory();" class="ui-toolbar-backbtn"></a></div>
+		<h2 class="ui-toolbar-title">视频详情</h2>
+		<div class="ui-toolbar-right"><span id="menu" class="ui-toolbar-home" onclick="show()"></span></div>
+		
+	</div>
+	<div id="dropmenu" style="display:none;">
+            <!--nav-->
+		<!--nav-->
+<nav>
+	<ul class="head-nav clearfix">
+		<li><a href="../../../home/home" title="">首页</a></li>
+        <li><a href="../../../news/news" title="">资讯</a></li>
+        <li><a href="../../../newhouse/newhouse" title="">新房</a></li>
+                <li><a href="../../../jiaju/jiaju" title="">家居</a></li>
+                <li><a href="../../../bbs/bbs" title="">社区</a></li>
+                <li><a href="../../video" title="">视频</a></li>
+        		        <li><a href="../../../user/me" title="">我</a></li>
+	</ul>
+</nav>        </div>
+	<script language="javascript"> 
+	function show(){ 
+	with(document.getElementById('dropmenu').style){display==""&&(display="none")||(display="")} 
+	} 
+	function theStory() {
+	window.history.length <= 1 ? window.location.href = "../../../../": window.history.go( - 1)
+	} 
+	</script> 
+</header>
+<div>视频不存在</div>
+<div class="share-area">
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a href="javascript:void(0);" class="share-dig">分享</a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_kaixin001"></a>
+</div>
+<script type="text/javascript" src="../../../../../v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+</div>
+<footer>
+	<div  style="margin-top:5px;"></div>
+	<div class="foot-link"><a href="../../../user/message" class="fora">意见反馈</a><a href="javascript:gotohead();" class="fgray">返回顶部</a></div>
+	<script type="text/javascript">
+	function gotohead(){
+	window.scrollTo(0, 1);
+	}
+	</script>
+    <div class="media-link"><a target="_blank" href="default.htm" class="app">客户端</a><a href="../../../../../www.hfhouse.com/index.html" class="pc">电脑版</a><a href="../../../../../m.hfhouse.com/default.htm" class="ip fora">触屏版</a></div>
+    <div class="copy">
+		m.xkhouse.com Copyright &copy; 2013
+		</div>
+</footer>
+<script src="../../../../includes/js/widget/gotop.js"></script>
+<div id="gotop"></div>
+<script>
+	$('#gotop').gotop();	
+function closes(obj){
+	var a = document.getElementById(obj);
+	a.style.display= 'none';
+}	
+</script>
+<div style="display:none;">
+<script type="text/javascript" src="../../../../../js.tongji.linezing.com/3367876/tongji.js"></script>
+</div>
+</body>
+</html>

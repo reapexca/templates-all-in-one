@@ -1,0 +1,207 @@
+
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>仿7881触屏版游戏交易平台手机wap游戏网站模板注册页-懒人模板【http://www.lanrenmb.com/yulexiuxian/youxi/】</title>
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description"
+			content="7881中国网络游戏交易门户,征途|热血江湖|武林外传|梦幻西游等网络游戏领先交易平台,是中国电子商务诚信单位。">
+		<meta name="keywords"
+			content="7881,AppStore充值,手游交易,苹果手游直充,网游交易,热血江湖,武林外传,魔域,巨人,赤壁,梦幻西游,魔兽世界,千年3">
+		<link rel="stylesheet" href="m7881/m.common.css">
+		<script type="text/javascript" src="common/js/jquery1.5.js"></script>
+		<script type="text/javascript" src="common/js/restrict_input.js"></script>
+	</head><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 手机网站适应性广告代码 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1449491313257558"
+     data-ad-slot="1246518959"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	<body class="mWrap">
+		<header class="topHd">
+		<a href="javascript:pageBack();" class="back">返回</a>
+		<a href="index.html" class="home">首页</a>
+		<span>会员注册</span>
+		</header>
+		<form id="registerForm" method="post" action="/user/doRegister.action">
+			<input type="hidden" id="userid" name="user.userid" />
+			<input type="hidden" id="code" />
+		<section class="mContent">
+		<ul class="form">
+			<li>
+				<input type="text" class="input" placeholder="请输入你的手机号码：" id="tel" name="user.tel"/>
+			</li>
+			<li>
+				<input type="password" class="input"
+					placeholder="密   码：（6-12位英文或数字） " id="userPassword" name="user.userPassword"/>
+			</li>
+			<li>
+				<input type="password" class="input" placeholder="确认密码：" id="userPassword_"  maxlength="20"/>
+			</li>
+			<li>
+				<input type="text" class="input input70" placeholder="请输入手机验证码" id="validcode" size="8" maxlength="4"/>
+				<ins class="action vCode" id="btnSend">
+					发送验证码
+				</ins>
+			</li>
+			<li class="btnArea">
+				<input type="button" class="btn" id="hlkOK" value="注&nbsp;&nbsp;册" />
+			</li>
+		</ul>
+		</section>
+		</form>
+		
+<footer class="Mfoot">
+<p class="nav">
+	<a href="login.html">登录</a><em>|</em><a href="reg.jsp">注册</a><em>|</em><a
+		href="javascript:window.scrollTo(0,0);">返回顶部</a>
+</p>
+<p class="cp">
+	<a href="../www.7881.com/index.html">电脑版</a>
+</p>
+<p class="copyright">
+	&copy;2014 m.7881.com
+</p>
+</footer>
+<script type="text/javascript">
+	// 判断是否登录
+	var username1 = '';
+	if(username1 != ''){//已经登录
+	 $('.Mfoot .nav').empty();
+	 var divuserText = '<a href="personal.html">'+username1+'</a><em>|</em><a href="logout.action" class="blue">退出</a><em>|</em>'
+	     +'<a href="javascript:window.scrollTo(0,0);">返回顶部</a>';
+	 $('.Mfoot .nav').html(divuserText);
+	}
+</script>
+
+
+
+ 
+<img src="
+../hm.baidu.com/hm.gif@si=d154d52d9a3f20939957ef609a0b977f&et=0&nv=0&st=4&lt=1394504435&v=wap-2-0.3&rnd=1530559923" width="0" height="0" />
+
+		<script src="m7881/m.js"></script>
+	</body>
+	<script type="text/javascript">
+		
+	if ($.trim('') != '') {
+		alert('');
+	}
+	
+	var timer = 60;
+	
+	function register_submit() {
+		if($('#userPassword').val() == '' || $('#userPassword_').val() == ''){
+			alert('密码或确认密码不能为空');
+			return false;
+		}else if($('#userPassword').val() != $('#userPassword_').val()){
+			alert('密码和确认密码不一致');
+			return false;
+		}
+		if ($('#userid').val() == '' || $('#validcode').val() != $('#code').val()) {
+			alert('手机验证码无效');
+			return false;
+		}
+		$('#registerForm').submit();
+	}
+	
+	function validateMobile(){
+		var tel = $('#tel').val();
+		var partten=/^(?:\+86)?(?:13\d|15\d|18\d)\d{8}$/;
+		if ($.trim(tel) == '') {
+			alert('请输入手机号');
+			return false;
+		}
+		if(!tel.match(partten)){
+			alert('请正确输入手机号');
+			return false;
+		}
+		//$('#btnSend').attr('disabled', true);
+		//$('#btnSend').html('正在校验手机号，请稍候...');
+		$.ajax({
+			type : 'post',
+			url: 'user/examineUserTel.action@random='+Math.random()*1000,
+			data : {
+				tel : $('#tel').val()
+			},
+			dataType : 'json',
+			success : function(data){
+				//$('#btnSend').removeAttr('disabled');
+				//$('#btnSend').html('发送验证码');
+				//alert(data);
+				if(data == '1') {//已经注册
+					alert('该手机号已被注册，请输入其他手机号');
+					return false;
+				}else if(data == '0'){
+					codeSend();
+				}
+				return false;
+			},
+			failure : function(json) {
+				alert(json);
+				return false;
+			}
+		});
+	}
+	
+	function codeSend(){
+		$('#btnSend').attr('disabled', true);
+			var interval = setInterval(function(){
+				$('#btnSend').html(timer + '秒后重新发送');
+				timer--;
+				if (timer == 0) {
+					$('#btnSend').removeAttr('disabled');
+					$('#btnSend').html('发送验证码');
+					clearInterval(interval);
+					timer = 60;
+				}
+			}, 1000);
+			$.ajax({
+				type : 'post',
+				url : 'commerical/sendPhoneValid.action',
+				data : {
+					tel : $('#tel').val()
+				},
+				dataType : 'json',
+				success : function(json){
+					if (json.success == 'T'){
+						$('#userid').val(json.userid);
+						$('#code').val(json.code);
+					}
+					return false;
+				},
+				failure : function(json){
+					alert(json);
+					return false;
+				}
+		});
+	}
+	
+	$(document).ready(function(){
+	
+		$('#hlkOK').click(function(){
+			register_submit();
+		});
+		
+		restrict_digit_input($('#tel'));
+		
+		$('#btnSend').click(function() {
+			validateMobile();
+		});
+	});
+</script>
+</html>

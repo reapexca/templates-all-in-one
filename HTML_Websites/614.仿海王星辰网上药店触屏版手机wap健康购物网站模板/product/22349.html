@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>仿海王星辰网上药店触屏版手机wap健康购物网站模板正文页-懒人模板【http://www.lanrenmb.com/shenghuofuwu/jiankang/】</title>
+    <meta name="author" content="m.star365.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+
+    
+    <script type="text/javascript">
+        var _winLocation = window.location.href; //获得当前页面的路径，根据路径规则进行逐页替换
+        var _isWebKit = '__proto__' in {}; //是否是webkit内核
+        if (_isWebKit) {//如果是webkit内核，则分模块使用zepto
+            //要使用zeptojs的路径列表，可以做为分模块替换的开关
+            var _locationList = new Array();
+            //活动模块
+            _locationList.push('../activity/proActList');
+            _locationList.push('../activity/proActWareList');
+            _locationList.push('../activity/list');
+            //商品分类模块
+            _locationList.push('../category/');
+            //首页相关
+            _locationList.push('../hotbrand.html');
+            //商品筛选相关
+            _locationList.push('../ware/expandSort.action');
+            _locationList.push('../ware/categoryFilter.action');
+            _locationList.push('../search');
+
+            _locationList.push('../pay/'); //支付
+            _locationList.push('../order/'); //订单
+            var _needReplace = false;
+            //如果当前路径符合要使用的路径规则，则进行替换
+            for (var i = 0; i < _locationList.length; i++) {
+                if (_winLocation.indexOf(_locationList[i]) != -1) {
+                    _needReplace = true;
+                    break;
+                }
+            }
+            //如果是首页的话，则使用zepto
+            var _tmp = _winLocation.replace(/(^http:\/\/)|(\/*$)/g, '');
+            if (_tmp.indexOf('/') < 0 || (_tmp.split('/').length <= 2 && _tmp.indexOf('/index') >= 0)) {
+                _needReplace = true;
+            }
+            //如果是商品详情页的话，则使用zepto
+            var _dlocationList = new Array();
+            _dlocationList.push(/\/product\/([0-9]+)\.html/);
+            _dlocationList.push(/\/detail\/([0-9]+)\.html/);
+            _dlocationList.push(/\/orderComment\/([0-9]+)\.html/);
+            _dlocationList.push(/\/consultations\/([0-9]+)\.html/);
+            _dlocationList.push(/\/consultations\/([0-9]+)-([0-9]+)\.html/);
+            _dlocationList.push(/\/comments\/([0-9]+)\.html/);
+            for (var i = 0, len = _dlocationList.length; i < len; i++) {
+                if (_dlocationList[i].test(_winLocation)) {
+                    _needReplace = true;
+                    break;
+                }
+            }
+            if (_needReplace) {
+                document.write('<script src="../js/zepto.min.js"><\/script>');
+                document.write('<script type="text/javascript">window.jQuery=window.Zepto;<\/script>');
+            } else {
+                document.write('<script src="../js/jquery-1.6.2.min.js"><\/script>');
+            }
+        } else {//如果是非webkit内核直接使用jquery
+            document.write('<script src="../js/jquery-1.6.2.min.js"><\/script>');
+        }
+    </script>
+    <script type="text/javascript" src="../js/html5/common.js"></script>
+    <script type="text/javascript" src="../js/html5/spin.min.js"></script>
+</head>
+<body id="body">
+    <a name="top"></a>
+    <header>
+        <div class="new-header">
+                <a class="new-a-back" href="javascript:pageBack();"><span>返回</span></a>
+                <h2>商品详情</h2>
+                <a class="new-a-hw" id="btnHwkey" href="javascript:void(0)"><span>海王键</span></a>
+            </div>
+        <div id="hwkey" style="display: none" class="new-hw-tab">
+            <div class="new-tbl-type">
+                <a class="new-tbl-cell" href="../index.html">
+                    <span class="icon">首页</span>
+                    <p style="color: #6e6e6e;">首页</p>
+                </a>
+                <a class="new-tbl-cell" href="../category/all.html">
+                    <span class="icon2">分类搜索</span>
+                    <p style="color: #6e6e6e;">分类搜索</p>
+                </a>
+                <a class="new-tbl-cell" id="html5_cart" href="javascript:void(0)">
+                    <span class="icon3">购物车</span>
+                    <p style="color: #6e6e6e;">购物车</p>
+                </a>
+                <a class="new-tbl-cell" href="../user/home">
+                    <span class="icon4">我的账户</span>
+                    <p style="color: #6e6e6e;" class="on">我的账户</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+<style type="text/css">
+#ware-prop li
+{
+    padding: 1px;
+    position: relative;
+    float:left;
+}
+#ware-prop li span
+{
+    background-color: #FFFFFF;
+    border: 1px solid #E2E1E3;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    min-width: 10px;
+    padding: 0 6px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    width: auto !important;
+}
+#ware-prop .current span {
+    border: 2px solid #DF0001;
+}
+.bulletin
+{
+    border:1px dotted #000000;
+    color:#848383;
+    margin-top:10px;
+    padding:4px 10px;
+    margin-bottom:10px;
+    font-size:12px;
+}
+</style>
+<script type="text/javascript" src="../js/html5/view.js"></script>
+<div class="good-detail sift-mg" id="div">
+    <h3 class="h_h3">
+        杰士邦优质超薄+爽滑倍润共24只 &nbsp;&nbsp;
+        <font color="red"> </font>
+    </h3>
+    <div class="view-photo tc">
+        <a href="javascript:void(0)" id="i_pre" class="btn-prev">上一个</a> 
+        <span class="mid-img" id="div_img" style="width: 180px; height: 180px">
+            <img id="showPic" ontouchmove="touchMove(event);" ontouchend="touchEnd(event);" src="http://img.star365.com/images/productPicture/zuh/zuhe_5F2572_m_300x300_T.jpg" width="180" height="180" /><br>
+        </span>
+        <a id="i_next" href="javascript:void(0)" class="btn-next">下一个</a>
+    </div>
+    <input type="hidden" value="http://img.star365.com/images/productPicture/zuh/zuhe_2572_b_300x300_T.jpg,http://img.star365.com/images/productPicture/zuh/zuhe_2572_m_300x300_T.jpg,http://img.star365.com/images/productPicture/zuh/zuhe_2572_c_1_300x300_T.jpg,http://img.star365.com/images/productPicture/zuh/zuhe_2572_c_2_300x300_T.jpg," id="imgs" />
+    <ul class="mu_lw">
+        <li class="mu_l">
+            <span class="mu_lh">海王价：
+</span> 
+            <span class="mu_lc red price-txt" id="jdPriceShow">
+            &yen;48.90
+            </span>
+        </li>
+        <li class="mu_l">
+            <span class="mu_lh">市场价：</span> 
+            <span class="mu_lc">&yen;91.0</span>
+        </li>
+        <li class="mu_l">
+        <span class="mu_lh">商品编号：</span> 
+        <span class="mu_lc" id="wareNo">zuhe_2572
+        </span></li>
+        <div id="spinner1" class="spinner" style="left: 30%; position: absolute; height: 120px;
+            margin-top: 50px;">
+        </div>
+        <li class="mu_l" id="kucun"><span class="mu_lh">库存信息：</span>
+            <div class="sel-opt" id="store" style="margin-left: 1px;">
+                    无货
+            </div>
+        </li>
+        <div id="spinner2" class="spinner" style="left: 30%; position: absolute; height: 120px;
+            margin-top: 50px;">
+        </div>
+        <li class="mu_l" style="display:none;">
+            <span class="mu_lh2">服务：由深圳市南山区海王片区配送。</span>
+        </li>
+        <li class="mu_l">
+            <span class="mu_lh red">赠品：</span> 
+            <span class="mu_lc" id="ware-gifts">
+                <a target="_blank" href="../../www.star365.com/products/21783.html">KEY   情趣玩具润滑啫喱 5ml</a>
+                <span class="red">(买1送2)</span><br />
+            </span>
+        </li>
+        
+        <li class="mu_l">
+            <span class="mu_lh red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
+            <span class="mu_lc" id="ware-gifts">
+                <img src="http://img.star365.com/images/productPicture/020/0209113_m_50x50_T.jpg" />
+                <img src="http://img.star365.com/images/productPicture/805/8052694_m_50x50_T.jpg" />
+            </span>
+        </li>
+        <li class="mu_l">
+            <span class="red mgn-bt">温馨提示：12月31日前满128元免配送费</span> 
+        </li>
+        <li class="mu_l">
+            <div class="btn-section">
+                
+                    <span class="btn-tbl-cell"><a class="btn-attention" id="attention" date=""><span class="icon">关注</span></a></span>
+                    <span class="btn-tbl-cell"><a id="add_cart" class="btn-add-cart" >加入购物车</a></span>
+                
+            </div>
+        </li>
+    </ul>
+    <div class="parting-line">
+    </div>
+    <a href="../detail/22349.html" class="good-lnk2" style="margin-left: 10px" id="wareDetail">
+        <span class="tit">商品详情</span> 
+    </a>
+    <div class="parting-line">
+    </div>
+    <div class="detail" style="margin-left: 10px; table-layout: fixed;word-break: break-all; overflow: hidden;">
+        <p class="tit">通用名称:避孕套</p>
+        <p class="tit">品牌:杰士邦</p>
+        <p class="tit">商品简介:</p>
+        <p class="tit">用法用量:</p>
+        <p class="tit">规格:12片</p>
+        <p class="tit">有效期:5年</p>
+        <p class="tit">生产企业:SURETEX LIMITED（泰国）</p>
+        <p class="tit">批准文号:国食药监械(进)字2009第2661004号</p>
+    </div>
+    
+    <div class="parting-line">
+    </div>
+    
+        <a href="javascript:return false;" class="good-lnk" style="margin-left: 10px" id="comment">
+            <span class="tit">商品评价</span> 
+            <span class="cont" id="cont" style="margin-left: 0px;line-height: 30px; table-layout: fixed; word-break: break-all; overflow: hidden;">
+            共<span class="red">0</span>条评价
+            </span>
+        </a>
+
+
+    <div class="parting-line">
+    </div>
+</div>
+<div class="cart-pop" id="cart" style="display: none; position: absolute; bottom: 50%;z-index: 9999">
+    <div class="ico-succ">
+        <span class="att-succ">添加成功！</span> <span class="cart-succ">商品已成功加入购物车</span>
+    </div>
+    <div class="cp-lnk">
+        <a href="javascript:void(0)" onclick="$('#cart').hide();$('#_mask').hide();" id="stroll">再逛逛</a> 
+        <a id="goCart"><span class="bar"></span>去购物车</a>
+    </div>
+</div>
+<span class="pop-attention" style="display: none" id="save">
+    <span class="icon-succ" id="guanzhu">关注成功</span>
+</span>
+<input type="hidden" id="currentWareId" value="22349" />
+<input type="hidden" id="pid" value="22349" />
+<input type="hidden" id="sid" value="" />
+<input type="hidden" id="resourceType" value="1" />
+<input type="hidden" id="resourceValue" value="1" />
+<input type="hidden" id="stockFlag" value="true" />
+<input type="hidden" id="teamSign" value="0" />
+<script type="text/javascript">
+    $(function () {
+        if (!(true && true) || 0 <= 0) {
+            $('#add_cart').removeClass('btn-add-cart');
+            $('#directorder').removeClass('btn-quk-buy');
+            $('#add_cart').addClass('btn-defult-add-cart');
+            $('#directorder').addClass('btn-defult-quk-buy');
+            $("#add_cart").unbind('click');
+            $("#directorder").unbind('click');
+        } else {
+            $('#add_cart').css("background", "#f9413a");
+            $('#directorder').css("background", "#ffe8a4");
+        }
+        
+        $("#ware-prop li").click(function () {
+            $("#ware-prop li").removeClass("current");
+            $(this).addClass("current");
+            var item = $(this).attr("data-item");
+            var tprice = 0, tmp, pid = 0;
+            tmp = item.split('.');
+            pid = tmp[0];
+            if (tmp.length == 4) {
+                tprice = parseFloat(tmp[3]);
+            }
+            if (tmp.length == 5) {
+                tprice = (parseFloat(tmp[3]) + parseFloat("0." + tmp[4]));
+            }
+            $("#jdPriceShow").html("&#x00A5;" + tprice.toFixed(2));
+            $("#pid").val(pid);
+        });
+        if ($("#ware-prop li").length > 0) {
+            $("#ware-prop li").eq(0).addClass("current");
+        }
+        //        jQuery.post("comments", { "pId": 584686 }, function (d) {
+        //            var html = '';
+        //            html = '<span class="txt">\u597d\u8bc4</span><span class="red">' + d.commentCountMap.scoreCount1 + '</span>'
+        //			+ '<span class="txt">\u4e2d\u8bc4</span><span class="red">' + d.commentCountMap.scoreCount2 + '</span>'
+        //			+ '<span class="txt">\u5dee\u8bc4</span><span class="red">' + d.commentCountMap.scoreCount3 + '</span>';
+        //            $("#cont").html(html);
+        //            if (d.commentCountMap.scoreCount1 > 0 || d.commentCountMap.scoreCount2 > 0 || d.commentCountMap.scoreCount3 > 0) {
+        //                var htmlContent = '<p class="tit">' + d.comments[0].title + '</p>'
+        //    				+ '<p><span>\u8bc4\u5206:</span><span  class="mu-star"><span class="mu-starv star-width' + d.comments[0].score + '"></span></span></p>'
+        //    				+ '<p class="user_id"><span class="name">' + d.comments[0].userId + '</span><span class="time">' + d.comments[0].creationTime + '</span></p>'
+        //    				+ '<p><span>\u4f18\u70b9\uff1a</span><span>' + d.comments[0].pros + '</span></p>'
+        //    				+ '<p><span>\u4e0d\u8db3\uff1a</span><span>' + d.comments[0].cons + '</span></p>'
+        //    				+ '<p><span>\u5fc3\u5f97\uff1a</span><span>' + d.comments[0].content + '</span></p>';
+        //                $("#commentDetail").html(htmlContent);
+        //            } else {
+        //                //$("#commentDetail").hide();
+        //                $("#commentDetail").parent().hide();
+        //                $("#commentDetail").parent().prev().hide();
+        //                //$("#commentDetail").prev().hide();
+        //            }
+        //        }, 'json');
+        //        jQuery.post("../ware/consultations", { wareId: 584686 }, function (d) {
+        //            var html = "";
+        //            if (d.commentCount) {
+        //                html = d.commentCount;
+        //            }
+        //            if (html != '')
+        //                $("#zixun").html(html);
+        //        }, 'json');
+
+    });
+
+    function changeProvince() {
+        var selectIndex = document.getElementById("province").selectedIndex;
+        $('#provincetip').html(document.getElementById("province").options[selectIndex].text);
+    }
+    function changeCity() {
+        var selectIndex = document.getElementById("city").selectedIndex;
+        $('#citytip').html(document.getElementById("city").options[selectIndex].text);
+    }
+    var endTime;
+
+    $('#attention').click(function () {
+        jQuery.post("../user/addFavorite", { "pid": $('#pid').val() }, function (d) {
+            try {
+                var obj = eval('(' + d + ')');
+                endTime = new Date().getTime() / 1000 + 3;
+                iconShow();
+            } catch (e) {
+                window.location.href = '../user/login@returnurl=_2Fproduct_2F' + $('#pid').val()+'.html';
+            }
+        })
+    });
+
+    function iconShow() {
+        var nowTime = new Date().getTime() / 1000;
+        var time = Math.floor(endTime - nowTime);
+        if (time > 0) {
+            setTimeout("iconShow()", 1000);
+            var scrollleft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft;
+            var allWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            var left = scrollleft - 60 + (allWidth / 2);
+            document.getElementById('save').style.left = left + 'px';
+            var scrollheight = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+            var allHeight = document.documentElement.clientHeight || document.body.clientHeight;
+            var top = scrollheight - 25 + (allHeight / 2);
+            document.getElementById('save').style.top = top + 'px';
+            $('.pop-attention').show();
+        } else {
+            $('.pop-attention').hide();
+        }
+    }
+
+    function getLeft() {
+        var scrollleft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft;
+        var allWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        var left = scrollleft - 114 + (allWidth / 2);
+        document.getElementById('cart').style.left = left + 'px';
+    }
+    $(function () {
+        getLeft();
+        $('#_mask').live('click', function () {
+            $('#cart').hide();
+            if ($('#_mask'))
+                $('#_mask').hide();
+        })
+        $(window).bind('resize', function () {
+            getLeft();
+        });
+    })
+	
+			   
+</script>
+
+    <footer>
+         <div class="new-footer">
+    <div class="new-f-login">
+            <a href="../user/login">登录</a>
+    <span style="margin: 0 10px;">|</span><a href="../user/register">注册</a>
+
+
+        
+        <span class="new-back-top"><a href="#top">回到顶部</a></span>
+    </div>
+    <div class="new-f-section"><a class="on" href="javascript:void(0)">触屏版</a><a href="../../www.star365.com/@pcsite">电脑版</a></div>
+    <div class="new-f-section2">            
+    互联网药品交易资格证：粤C20100004<br />
+    订购热线：400-6626-365<br />
+    Copyright &copy; 2013 m.star365.com</div>
+</div>
+    </footer>
+    <script type="text/javascript">
+        $("#unsupport").hide();
+        if (!testLocalStorage()) { //not support html5
+            if (0 != 0 && !$clearCart && !$teamId) {
+                $("#html5_cart_num").text(0 > 0 > 0);
+            }
+        } else {
+            updateToolBar('index');
+        }
+
+        $("#html5_cart").click(function () {
+            //	syncCart('',true);
+            location.href = '../cart/cart.html';
+        });
+
+        function reSearch() {
+            var depCity = window.sessionStorage.getItem("airline_depCityName");
+            if (testSessionStorage() && isNotBlank(depCity) && !/^\s*$/.test(depCity) && depCity != "") {
+                var airStr = '<form action="../airline/list.action" method="post" id="reseach">'
+        + '<input type="hidden" name="sid"  value=""/>'
+        + '<input type="hidden" name="depCity" value="' + window.sessionStorage.getItem("airline_depCityName") + '"/>'
+        + '<input type="hidden" name="arrCity" value="' + window.sessionStorage.getItem("airline_arrCityName") + '"/>'
+        + '<input type="hidden" name="depDate" value="' + window.sessionStorage.getItem("airline_depDate") + '"/>'
+        + '<input type="hidden" name="depTime" value="' + window.sessionStorage.getItem("airline_depTime") + '"/>'
+        + '<input type="hidden" name="classNo" value="' + window.sessionStorage.getItem("airline_classNo") + '"/>'
+        + '</form>';
+                $("body").append(airStr);
+                $("#reseach").submit();
+            } else {
+                window.location.href = '../airline/index.action';
+            }
+        }
+        //banner 关闭点击
+        $('.div_banner_close').click(function () {
+            $('#div_banner_header').unbind('click');
+            jQuery.post('../index/addClientCookieVal.json', function (d) {
+                $('#div_banner_header').slideUp(500);
+            });
+        });
+        //banner 下载点击
+        $('.div_banner_download').click(function () {
+            var downloadUrl = $(this).attr('url');
+            jQuery.post('../index/addClientCookieVal.json', function (d) {
+                window.location.href = downloadUrl;
+            });
+        });
+    </script>
+</body>
+</html>

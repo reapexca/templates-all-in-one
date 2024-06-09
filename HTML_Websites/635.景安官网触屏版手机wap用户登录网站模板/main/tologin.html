@@ -1,0 +1,404 @@
+<!doctype html>
+<html>
+	<head>
+		<base  />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0" />
+		<meta name="format-detection" content="telephone=no">
+		<link type="text/css" rel="styleSheet" href="../css/mobileindex.css">
+		<title>景安官网触屏版手机wap用户登录网站模板-懒人模板【http://www.lanrenmb.com/diannaowangluo/kongjian/】</title>
+	</head>
+	<body class="page-swipe">
+		<div id="wrap">
+			<div class="mobile-main">
+			<section id="guid">
+				<div class="mobile-top">
+					<div class="mobile-logo">
+						<img src="../images/mobile-logo.png" width="180" height="58"
+							alt="景安网络触屏版" />
+					</div>
+				</div>
+				</section>
+				<section id="guide-b">
+				<div class="header">
+					<a href="#" class="back">返回首页</a>
+					<span class="txtcolor3">会员登录</span>
+				</div>
+				</section>
+				<section id="guide-b">
+				<div class="vipbox">
+					<div class="newbar">
+						<ul>
+							<li class="current" onclick="tabhead(1)" id="1">
+								<a href="javascript:void(0)" class="endomain">会员登录</a>
+							</li>
+							<li class="cndomain" onclick="tabhead(2)" id="2">
+								<a href="javascript:void(0)">服务码登录</a>
+							</li>
+							<li class="ftpmain" onclick="tabhead(3)" id="3">
+								<a href="javascript:void(0)">FTP登录</a>
+							</li>
+						</ul>
+					</div>
+					<div class="formbox">
+						<div class="list1" id="list1">
+							<div class="loginbox">
+								<fieldset>
+									<div class="hezuo-login">
+										<div class="cpfwsm">
+											<p>
+												会员帐号登录用于管理所有产品。
+											</p>
+										</div>
+										<div class="login-top">
+											<input id="member_wx" checked="checked" type="radio" name="member_login"
+												onClick="tab('member_wx','member_')" value="male">
+											<a href="javascript:void(0);" onClick="tab('member_wx','member_');">微信登陆</a>
+											<input id="member_" type="radio" style="margin-left: 30px"
+												onClick="tab('member_','member_wx')" name="member_login" value="female">
+											<a href="javascript:void(0);" onClick="tab('member_','member_wx');">帐号登陆</a>
+										</div>
+										<fieldset id="member_wxlogin"><!-- 会员微信登陆 -->
+											<div class="login-center">
+												<a href="../../https@open.weixin.qq.com/connect/oauth2/authorize@appid=wx6bd8db2c5c9a1d3b&redirect_uri=http_3A_2F_2Fm.zzidc.com_2Fwx_2FwxCallBack.action&response_type=code&scope=snsapi_userinfo&state=dlszE5X3V0#wechat_redirect">
+												<img src="../images/login-weixin.gif" width="100">
+												<img src="../images/jiantou.gif" width="30">
+												<img src="../images/mobile-logo.png" width="100">
+												</a>
+												<p>使用绑定微信登录</p>
+											</div>
+											<div class="gs-name-b">
+												<a href="../../https@open.weixin.qq.com/connect/oauth2/authorize@appid=wx6bd8db2c5c9a1d3b&redirect_uri=http_3A_2F_2Fm.zzidc.com_2Fwx_2FwxCallBack.action&response_type=code&scope=snsapi_userinfo&state=dlszE5X3V0#wechat_redirect" class="login-linkbtn-c">登录</a>
+											</div>
+
+
+											<div class="gs-name-b">
+												<a href="toreg.html" class="login-linkbtn-c">注册</a>
+												
+											</div>
+
+										
+
+
+										</fieldset><!-- 会员微信登陆结束 -->
+										<fieldset id="member_login" class="hide"><!-- 会员账号登陆 -->
+											<form action="main/memberLogin.action" method="post" id="mem">
+												<div class="gs-name-b">
+													<label>
+														账号：
+													</label>
+													<div class="userbox-icon">
+														<input id="uname" name="username" type="text" class="login-username26"
+															placeholder="账号" value="" onfocus="muonfocus();" onChange="return unamecheck();">
+													</div>
+												</div>
+												<div id="ucheck" class="login-tipstxt" style="display: none" >
+													账号输入错误
+												</div>
+												<div class="gs-name-b paddingtop10">
+													<label>
+														密码：
+													</label>
+													<div class="pwd">
+														<input id="pwd" type="password" name="password" class="login-username26"
+															placeholder="密码" value="" onfocus="mponfocus();" onChange="return pwdcheck();">
+													</div>
+												</div>
+												<div class="login-tipstxt" style="display: none" id="pwdcheck">
+													密码8-30位
+												</div>
+												<div class="gs-name-b">
+													<a id="ulogin" href="javascript:void(0);" class="login-linkbtn-c" onClick="memberlogin()">登录</a>
+												</div>
+											</form>
+										</fieldset><!-- 会员账号登陆结束 -->
+										<div class="clearfix">
+											<div class="zhuce-linka">
+												<a href="toreg.html">免费注册</a>
+											</div>
+											<div class="zhaohui-txt">
+												<p class="zhaohui-pcolora">
+													忘记密码？找回密码请联系商务人员:
+												</p>
+												<p class="zhaohui-pcolorb">
+													4006-598-598&nbsp;&nbsp;&nbsp;0371-9618961
+												</p>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+						<div class="list2 hide" id="list2">
+							<div class="loginbox">
+								<fieldset>
+									<div class="cpfwsm">
+										<p>
+											服务码登陆用于管理单个产品。
+										</p>
+									</div>
+									<div class="login-top">
+										<input id="svccode_wx" type="radio" checked="checked" name="svccode_login"
+										 	onclick="tab('svccode_wx', 'svccode_')" value="male">
+										<a href="javascript:void(0);" onClick="tab('svccode_wx','svccode_');">微信登陆</a>
+										<input id="svccode_" type="radio" style="margin-left: 30px" name="svccode_login"
+											onClick="tab('svccode_','svccode_wx');" value="female">
+										<a href="javascript:void(0);" onClick="tab('svccode_','svccode_wx');">服务码登陆</a>
+									</div>
+									<fieldset id="svccode_wxlogin"><!-- 会员serviceCode微信登陆 -->
+										<div class="login-center">
+											<a href="../../https@open.weixin.qq.com/connect/oauth2/authorize@appid=wx6bd8db2c5c9a1d3b&redirect_uri=http_3A_2F_2Fm.zzidc.com_2Fservicecode_2FwxCallBack.action&response_type=code&scope=snsapi_userinfo&state=dlszE5X3V0#wechat_redirect">
+											<img src="../images/login-weixin.gif" width="100">
+											<img src="../images/jiantou.gif" width="30">
+											<img src="../images/mobile-logo.png" width="100">
+											</a>
+											<p>
+												使用绑定微信登录
+											</p>
+										</div>
+										<div class="gs-name-b">
+											<a href="../../https@open.weixin.qq.com/connect/oauth2/authorize@appid=wx6bd8db2c5c9a1d3b&redirect_uri=http_3A_2F_2Fm.zzidc.com_2Fservicecode_2FwxCallBack.action&response_type=code&scope=snsapi_userinfo&state=dlszE5X3V0#wechat_redirect" class="login-linkbtn-c">登录</a>
+										</div>
+									</fieldset><!-- 会员serviceCode微信登陆结束 -->
+									<fieldset id="svccode_login" class="hide"><!-- 会员serviceCode登陆开始 -->
+										<form action="main/codeLogin.action" method="post" id="fwmform">
+											<div class="gs-name-b">
+												<label style="float:left;padding-top:10px">
+													产品服务码：
+												</label>
+												<input id="scode" type="text" name="scode" class="login-username26" style="width:163px;padding-left: 5px"
+													placeholder="产品服务码" value="" onfocus="fconfocus" onChange="return fccheck();">
+											</div>
+											<div class="login-tipstxt" style="display: none"
+												id="codecheck">
+												服务码输入错误
+											</div>
+											<div class="gs-name-b paddingtop10">
+												<label style="float:left;padding-top:10px">
+													服务码口令：
+												</label>
+												<div class="ftpdl">
+													<input id="spwd" type="password" name="spwd" class="login-username26" style="width:163px;padding-left: 5px"
+														placeholder="服务码口令" value="" onfocus="fponfocus();" onChange="return fpwdcheck();">
+												</div>
+											</div>
+											<div class="login-tipstxt" style="display: none"
+												id="spwdcheck">
+												服务码口令输入错误
+											</div>
+											<div class="gs-name-b">
+												<a href="javascript:void(0);" class="login-linkbtn-c"
+												onClick="flogin()" >登录</a>
+											</div>
+										</form>
+									</fieldset><!-- 会员serviceCode登陆结束 -->
+								</fieldset>
+							</div>
+						</div>
+						<div class="list3 hide" id="list3">
+							<div class="loginbox">
+								<div class="cpfwsm">
+									<p>
+										FTP登录用于管理单个产品。
+									</p>
+								</div>
+								<fieldset>
+									<div class="hezuo-login">
+										<div class="login-top">
+											<input id="ftp_wx" checked="checked" onclick="tab('ftp_wx', 'ftp_')" type="radio" name="ftp_login"
+												value="male">
+											<a href="javascript:void(0);" onClick="tab('ftp_wx','ftp_');">微信登陆</a>
+											<input id="ftp_" onclick="tab('ftp_', 'ftp_wx')" type="radio" style="margin-left: 30px"
+												name="ftp_login" value="female">
+											<a href="javascript:void(0);" onClick="tab('ftp_','ftp_wx');">FTP登陆</a>
+										</div>
+										<fieldset id="ftp_wxlogin"><!-- FTP微信登陆 -->
+											<div class="login-center">
+												<a href="../../https@open.weixin.qq.com/connect/oauth2/authorize@appid=wx6bd8db2c5c9a1d3b&redirect_uri=http_3A_2F_2Fm.zzidc.com_2Fftp_2FwxCallBack.action&response_type=code&scope=snsapi_userinfo&state=dlszE5X3V0#wechat_redirect">
+												<img src="../images/login-weixin.gif" width="100">
+												<img src="../images/jiantou.gif" width="30">
+												<img src="../images/mobile-logo.png" width="100">
+												</a>
+												<p>
+													使用绑定微信登录
+												</p>
+											</div>
+											<div class="gs-name-b">
+												<a href="../../https@open.weixin.qq.com/connect/oauth2/authorize@appid=wx6bd8db2c5c9a1d3b&redirect_uri=http_3A_2F_2Fm.zzidc.com_2Fftp_2FwxCallBack.action&response_type=code&scope=snsapi_userinfo&state=dlszE5X3V0#wechat_redirect" class="login-linkbtn-c">登录</a>
+											</div>
+										</fieldset><!-- FTP微信登陆结束 -->
+										<fieldset id="ftp_login" class="hide"><!-- FTP登陆 -->
+											<form id="ftpform" method="post" action="main/ftplogin.action">
+												<div class="gs-name-b">
+													<label>
+														FTP帐号：
+													</label>
+													webmaster@
+													<input id="ftpu" name="ftpname" type="text" class="login-username26"
+														placeholder="FTP帐号" value="" style="width: 93px;padding-left: 5px">
+												</div>
+												<div class="login-tipstxt" style="display: none">
+													账号输入错误
+												</div>
+												<div class="gs-name-b paddingtop10">
+													<label style="float:left;padding-top:10px">
+														FTP密码：
+													</label>
+													<div class="ftpdl">
+														<input id="ftppass" name="ftppass" type="password" class="login-username26" style="width:181px;padding-left: 5px"
+															placeholder="FTP密码" value="" onChange="return ftppasscheck();" onfocus="ftppassfocus();">
+													</div>
+												</div>
+												<div class="login-tipstxt" style="display:none;padding-left: 70px;" id="ftppasscheck">
+													FTP密码输入错误
+												</div>
+												<div class="gs-name-b">
+													<a href="javascript:void(0);" class="login-linkbtn-c" onClick="return ftplogin();">登录</a>
+												</div>
+											</form>
+										</fieldset><!-- FTP登陆结束 -->
+									</div>
+								</fieldset>
+							</div>
+						</div>
+					</div>
+					</section>
+<section id="guide-b">
+<div class="mobile-hotmsg" id="gg1" style="display: none">
+	<span class="hotmsg-img"><a href="virtual/toFreeVirtual.action">景安风暴再次来袭，虚拟空间免费使用！</a></span>
+</div>
+<div class="mobile-hotmsg" id="gg2">
+	<span class="hotmsg-img"><a href="vps/showALL.action">快云49元，比域名还便宜的云服务器！</a></span>
+</div>
+<div class="mobile-hotmsg" id="gg3" style="display: none">
+	<span class="hotmsg-img"><a href="vps/showALL.action">快云第四次免费升级，价格不变，配置翻番！</a></span>
+</div>
+</section>
+<script type="text/javascript">
+var NowImg=1;//表示当前显示的div
+var MaxImg=3;//表示div的个数
+function show(){for(var i=1;i<=MaxImg;i++){if(NowImg==i) document.getElementById("gg"+NowImg).style.display='block'; else  document.getElementById("gg"+i).style.display='none'; }if(NowImg==MaxImg) NowImg=1; else NowImg++;} theTimer=setInterval("show()",2000);
+</script>
+<img src="../../c.cnzz.com/wapstat.php@siteid=5781051&r=&rnd=1022498580" width="0" height="0"/>
+</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+function getById(name){return document.getElementById(name);}
+function tabhead(headli){
+var a=['1','2','3'];
+for(var i=0;i<a.length;i++){
+	if(headli!=a[i]){
+		getById(a[i]).className=getById(a[i]).className.replace("current", "");
+		var con='list'+a[i];
+		var cont=getById(con);
+		cont.className='list'+a[i]+' hide';
+		}else{
+			getById(a[i]).className=getById(a[i]).className+' current';
+			getById('list'+a[i]).className='list'+a[i];
+		}
+}
+}
+function unamecheck(){
+var uname=document.getElementById('uname').value;
+	uname=uname.replace(/\s/ig,'');
+	var regex=/^[0-9A-Za-z_,./~!@#$%^&*()_+=-`]{6,30}$/
+	if(!regex.test(uname) || uname.length==0){
+	document.getElementById('ucheck').style.display=''; return false; }else{ return true;}
+}
+function pwdcheck(){
+	var pass=document.getElementById('pwd').value;
+	pass=pass.replace(/\s/ig,'');
+	if(pass.length<8 || pass.length>30){
+	document.getElementById('pwdcheck').style.display=''; return false;}else{return true;}
+}
+function memberlogin(){ 
+	if(unamecheck() && pwdcheck()){ document.getElementById('mem').submit(); }
+	else{
+		return false;
+  }
+}
+function muonfocus(){ document.getElementById('uname').value=''; document.getElementById('ucheck').style.display='none'}
+function mponfocus(){document.getElementById('pwd').value='';document.getElementById('pwdcheck').style.display='none'}
+function fccheck(){
+var code=document.getElementById('scode').value;
+code=code.replace(/\s/ig,'');
+var regex=/^[0-9A-Za-z]{5,30}$/
+if(!regex.test(code) || code.length<=0){
+	document.getElementById('codecheck').style.display='';
+ 	return false; 
+ }else{ 
+ 	return true;
+ }
+ }
+function fconfocus(){
+document.getElementById('scode').value='';
+document.getElementById('codecheck').style.display='none';
+}
+function fpwdcheck(){
+var spwd=document.getElementById('spwd').value;
+spwd=spwd.replace(/\s/ig,'');
+if(spwd.length<=2 || spwd.length>30){
+document.getElementById('spwdcheck').style.display='';
+ return false;
+ }else{
+ return true;}
+}
+function fponfocus(){ document.getElementById('spwd').value=''; document.getElementById('spwdcheck').style.display='none'}
+function flogin(){ if(fccheck() && fpwdcheck()){ document.getElementById('fwmform').submit(); }else{ return false;} }
+function tab(show,hide){
+	getById(show).checked="true";
+	getById(show+'login').className="";
+	getById(hide).checked="";
+	getById(hide+'login').className="hide";
+}
+function ftpcheck(){
+	var ym=document.getElementById('ftpu').value;
+	var yms = ym.replace(/\s/ig, '');
+	if(!isValidURL(ym)){ 
+		document.getElementById('ftpcheck').style.display='';
+		return false;
+		}
+	return true;
+}
+function isValidURL(chars) {
+	var re = /^([A-Za-z0-9\-]+\.)+((com)|(net)|(org)|(gov\.cn)|(info)|(cc)|(com\.cn)|(net\.cn)|(org\.cn)|(name)|(biz)|(tv)|(tk)|(ca)|(ch)|(cn)|(la)|(mobi)|(me)|(edu)|(int)|(mil)|(so)|(hk)|(cd)|(tel)|(ph)|(pw)|(com\.ph)|(net\.ph)|(org\.ph)|(us)|(tw)|(idv\.tw)|(com\.tw)|(org\.tw)|(asia)|(co))$/;
+	chars = chars.replace(/(^\s*)|(\s*$)/g, "");
+	if (chars.match(re) == null)
+		return false;
+	else
+		return true;
+}
+function ftppasscheck(){
+	var pass=document.getElementById('ftppass').value;
+	pass = pass.replace(/(^\s*)|(\s*$)/g, "");
+	var regex=/^[0-9A-Za-z]{6,20}$/
+	if(!regex.test(pass) || pass.length<=0){
+		document.getElementById('ftppasscheck').style.display='';
+	 	return false; 
+	 }else{ 
+	 	return true;
+	 }
+}
+function ftpfocus(){
+	document.getElementById('ftpu').value=''; 
+	document.getElementById('ftpcheck').style.display='none'
+}
+function ftppassfocus(){
+	document.getElementById('ftppass').value=''; 
+	document.getElementById('ftppasscheck').style.display='none'
+}
+function ftplogin(){
+	if(ftpcheck()&&ftppasscheck){
+		document.getElementById('ftpform').submit(); 
+		}else{
+			return false;
+			}
+}
+</script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F84b899fdcf552762a646b0623e05f971' type='text/javascript'%3E%3C/script%3E"));
+</script>

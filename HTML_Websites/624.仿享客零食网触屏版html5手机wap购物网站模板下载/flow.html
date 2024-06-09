@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon.png" />
+        <link rel="apple-touch-startup-image" href="images/apple-touch-startup-image.png" />
+        <meta name="author" content="FamousThemes" />
+        <meta name="Keywords" content="" />
+        <meta name="Description" content="" />
+        <title>仿享客零食网触屏版html5手机wap购物网站模板购物车-懒人模板【http://www.lanrenmb.com/shenghuofuwu/gouwu/】</title>
+        
+        <link rel="stylesheet" href="templates/style.css" type="text/css" media="screen" />
+        
+        <link href='../fonts.googleapis.com/css@family=Niconne' rel='stylesheet' type='text/css' />
+        
+        <script src="js/jquery.min.js"></script>
+        
+        <script src="js/jquery.tabify.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="js/jquery.flexslider.js"></script>
+        <script type="text/javascript">
+            var $ = jQuery.noConflict();
+
+            $(window).load(function() {
+                $('.images_slider').flexslider({
+                    animation: "slide",
+                    directionNav: false,
+                    controlNav: true,
+                    animationLoop: true,
+                    animationDuration: 300,
+                    slideshow: false
+                });
+            });
+
+            $(function() {
+                $('#tabsmenu').tabify();
+                $(".toggle_container").hide();
+                $(".trigger").click(function() {
+                    $(this).toggleClass("active").next().slideToggle("slow");
+                    return false;
+                });
+            });
+        </script>
+        
+        <script src="js/effects.js"></script>
+        
+        <script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+        <link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+        
+        <script type="text/javascript">
+            window.addEventListener("load", function() {
+                // Set a timeout...
+                setTimeout(function() {
+                    // Hide the address bar!
+                    window.scrollTo(0, 1);
+                }, 0);
+            });
+        </script>
+        
+        <script src="js/transport_mobile.js"></script>
+    </head>
+
+    <body id="page">
+   
+        <div id="pagecontainer">
+            <section class="Fh_head">
+	 <div class="page_title"><a href="default.htm"><img src="images/logo.png"></a></div>
+         
+    <div style="float:right; padding-right:10px; padding-top:20px;">
+     
+        
+        <a href="index.php" class="Fh_hright btn_menu"><span></span></a>
+        <a href="user.php" class="Fh_hright btn_user"><span></span></a>
+        <a href="flow.php" class="Fh_hright btn_cart"><span></span></a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</section>            
+          
+             <section id="order_add" class="F_cqsmt box-shadow marg20" style="display: block">
+    <nav>
+      <i class="on">1</i><strong>购物车</strong><span>●●●</span>
+      <i>2</i>填写订单<span>●●●</span>
+      <i>3</i>确认支付<span>●●●</span>
+      <i>4</i>支付成功
+    </nav>
+    <h2>订单信息</h2>
+      <form name="formCart" id="formCart" action="/flow.php" method="post">
+                <ul style="margin-top:5px;" id="total_desc">
+                                        购物金额小计 ￥0.00元     
+    </ul>
+     <ul style="margin-top:5px;"  >
+      <a class="fc_btn fc_btn_c" onmouseup="$(this).removeClass($(this).attr('classstyle')+'Down');" onmousedown="$(this).addClass($(this).attr('classstyle')+'Down');" classstyle="red" href="flow.php@step=clear">
+                                        <span>清空购物车</span>                                    </a>
+                                    <a class="fc_btn fc_btn_f" onmouseup="$(this).removeClass($(this).attr('classstyle')+'Down');" onmousedown="$(this).addClass($(this).attr('classstyle')+'Down');" classstyle="blue" href="javascript:document.getElementById('formCart').submit();">
+                                        <span class="bicon update"> </span>
+                                        <span class="buttonText" style="">更新购物车</span>                                    </a>        
+    </ul>
+    <div style="margin-top:5px; height:60px;">
+    <a class="fc_btn fc_btn_o" style="float:left;" onmouseup="$(this).removeClass($(this).attr('classstyle')+'Down');" onmousedown="$(this).addClass($(this).attr('classstyle')+'Down');" href="default.htm"><span>继续购物</span></a>
+    
+    <a class="fc_btn" style="float:right;"  onmouseup="$(this).removeClass($(this).attr('classstyle')+'Down');" onmousedown="$(this).addClass($(this).attr('classstyle')+'Down');" href="buy.php@act=checkout&status_code=1">
+                                      
+                                        <span>去结算 >></span>
+                                    </a>
+    </div>
+       
+                    
+              </form>
+                <script type="text/javascript">
+				
+                    function changenum(rec_id, diff)
+                    {
+                        var num = parseInt(document.getElementById('goods_number_'+rec_id).value);
+                        
+                        var goods_number = num + Number(diff);        
+                        change_goods_number(rec_id,goods_number);
+                    }
+                    function change_goods_number(rec_id, goods_number)
+                    {   
+                       Ajax.call('flow.php@step=ajax_update_cart', 'rec_id=' + rec_id +'&goods_number=' + goods_number, change_goods_number_response, 'POST','JSON');
+                    }
+                    function change_goods_number_response(result)
+                    {    
+                        if (result.error == 0)
+                        {
+                            var rec_id = result.rec_id;
+                            document.getElementById('goods_number_'+rec_id).value = result.goods_number;//更新数量
+                            document.getElementById('goods_subtotal_'+rec_id).innerHTML = result.goods_subtotal;//更新小计
+                            if (result.goods_number <= 0)
+                            {// 数量为零则隐藏所在行
+                                document.getElementById('tr_goods_' +rec_id).style.display = 'none';
+                                document.getElementById('tr_goods_' +rec_id).innerHTML = '';
+                            }
+                            document.getElementById('total_desc').innerHTML =result.total_desc;//更新合计
+                            if (document.getElementById('ECS_CARTINFO'))
+                            {//更新购物车数量
+                               document.getElementById('ECS_CARTINFO').innerHTML = result.cart_info;
+                            }
+                        }
+                        else if (result.message != '')
+                        {
+                            alert(result.message);
+                        }                
+                    }
+                </script>
+       
+            </section>
+        </div>
+              <div class="margb20"></div>
+<section class="Fh_bottom">
+	<a href="index.php"><img src="images/logobott.png"></a></section>
+    </body>
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbc4525ac529334d19a9886f46cce7852' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+</html>

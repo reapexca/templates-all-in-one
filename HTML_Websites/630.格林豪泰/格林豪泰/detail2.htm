@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)hotel_detail_inc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/m998.css">
+<title>格林豪泰</title>
+</head>
+<body>
+	<div id="loading" style="-webkit-transform-origin: 0px 0px; opacity: 1; -webkit-transform: scale(1, 1); display: none; ">
+		<div class="loadingPanel">
+			<span class="loadingIcon"></span>
+			<p class="loadingLabel">正在努力加载中...</p>
+		</div>
+	</div>
+	<header id="header">
+        <a class="header-home" href="index.html">
+            <span class="header-icon header-icon-home"></span>
+            <span class="header-name">主页</span>
+        </a>
+        <div class="header-title">
+        	<span id="hotelName" class="hotel-name-show">格林豪泰上海市松江洞泾同乐路商务酒店</span>
+        	<script type="text/javascript">
+        		var hotelName = localStorage.getItem('M998_hotelName');
+        		document.getElementById('hotelName').innerHTML = hotelName;
+        	</script>
+        </div>
+	</header>
+
+	<div id="content" style="min-height: 611px; ">
+		<div class="detail-time-bar">
+			<img src="images/calendar.png" alt="">
+			<span class="detail-between-time"><span class="detail-time-start">5月16日</span> &gt; <span class="detail-time-end">5月17日</span></span>
+		</div>
+		<ul class="hotel-bar">
+			<li><span onclick="window.location.href=&#39;hotel_detail_style.html&#39;">房型</span></li>
+			<li class="current-option"><span onclick="window.location.href=&#39;hotel_detail_inc.html&#39;">简介</span><span style="width: 8px;height: 8px;left: 48%;" class="hotel-bar-deco"></span></li>
+			<li><span onclick="window.location.href=&#39;hotel_detail_map.html&#39;">周边</span></li>
+			<li><span onclick="window.location.href=&#39;hotel_detail_comment.html&#39;">评论</span></li>
+		</ul>
+		<div class="hotel-inc-detail-main">
+		<div class="hotel-inc-main">
+			<div class="hotel-show-pic-div">
+				<span class="hotel-show-pic" style="opacity: 0.9999999999999999; -webkit-transform: scale(0.9999999999999999); ">
+					
+					<a href="photo.html" class="hotel-see-more"><img src="images/def_default_pic.gif" onerror="this.src=&#39;images/def_default_pic.gif&#39;;" alt=""></a>
+					
+				</span> 
+				<a href="photo.html" class="hotel-see-more">查看更多</a>
+			</div>
+			<div class="hotel-inc-group-item">
+				<h2 class="hotel-inc-main-title">格林豪泰上海市松江洞泾同乐路商务酒店</h2>
+				<span class="hotel-phone"><img src="images/hotel_phone_icon.png" alt=""><a href="tel:021-67621333" style="color:#6f6f6f;">021-67621333</a></span>
+				<div class="hotel-inc-count">
+					<span class="hotel-score">4.7</span>分 / <span class="hotel-comment">8</span>条评论
+				</div>
+			</div>
+		</div>
+		<div class="hotel-inc-group">
+			<span class="hotel-inc-group-title">酒店地址</span>
+			<p>上海市松江区同乐路399号</p>
+		</div>
+		<div class="hotel-inc-group">
+			<span class="hotel-inc-group-title">酒店介绍</span>
+			<p>格林豪泰上海松江洞泾同乐路商务酒店位于上海市洞泾镇同乐路399号1号楼（同乐广场），距离地铁9线仅10分钟路程。交通：地铁9号线洞泾站，乘坐公交松江55路，同乐路振业路站下即可。酒店距离辰山植物园、中国最大的欢乐谷、玛雅水上乐园、佘山国家森林公园仅6公里路程。酒店环境舒适，是您休闲、商务旅游的最佳选择。酒店拥有各类客房94间、可容纳30人的会议室1间。客房内均提供无线网络覆盖服务和免费有线电视服务；配置齐全的商务房型能满足您的商务需求。除此之外，酒店还提供自助洗衣服务、健身设施服务。格林豪泰上海洞泾同乐路商务酒店秉持“超健康、超舒适、超价值、超期望”的服务理念，以优越的地理环境、成熟的商务氛围和热情的微笑服务成为国内外贵宾旅游休闲、商务活动的首要选择。格林豪泰，只需感受！</p>
+		</div>
+		<div class="hotel-inc-group">
+			<span class="hotel-inc-group-title">设施服务</span>
+			<p>免费宽带服务、免费有线电视、餐厅、商务中心、洗衣服务、停车场、叫车服务、订票服务、大堂无线网络、会议室、免费光纤宽带服务、小便利店、接待外宾、电脑数码一体机、无线网络覆盖、健身房、棋牌室</p>
+		</div>
+		</div>
+		<script id="hotelIncTemplate" type="text/html">
+		<div class="hotel-inc-main">
+			<div class="hotel-show-pic-div">
+				<span class="hotel-show-pic">
+					<%if(data.MiniPic != ''){%>
+					<a href="photo.html" class="hotel-see-more"><img src="<%= data.MiniPic%>" onError="this.src='images/def_default_pic.gif';" alt=""/></a>
+					<%} else {%>
+					<a href="photo.html" class="hotel-see-more"><img src="images/def_default_pic.gif" onError="this.src='images/def_default_pic.gif';" alt="" /></a>
+					<%}%>
+				</span> 
+				<a href="photo.html" class="hotel-see-more">查看更多</a>
+			</div>
+			<div class="hotel-inc-group-item">
+				<h2 class="hotel-inc-main-title"><%= data.HotelName%></h2>
+				<span class="hotel-phone"><img
+					src="images/hotel_phone_icon.png" alt="" /><a href="tel:<%= data.HotelTel%>" style="color:#6f6f6f;"><%= data.HotelTel%></a></span>
+				<div class="hotel-inc-count">
+					<span class="hotel-score"><%= data.CommentAveragePoint%></span>分 / <span class="hotel-comment"><%= data.CommentsCount%></span>条评论
+				</div>
+			</div>
+		</div>
+		<div class="hotel-inc-group">
+			<span class="hotel-inc-group-title">酒店地址</span>
+			<p><%= data.Address%></p>
+		</div>
+		<div class="hotel-inc-group">
+			<span class="hotel-inc-group-title">酒店介绍</span>
+			<p><%= data.MainIntro%></p>
+		</div>
+		<div class="hotel-inc-group">
+			<span class="hotel-inc-group-title">设施服务</span>
+			<p><%= data.HotelService%></p>
+		</div>
+		</script>
+	</div>
+
+	<footer id="footer">
+		<div class="phone">
+			<img class="phone-icon" alt="联系电话：" src="images/phone.png">
+            <a href="tel:4006998998" class="title">4006-<span style="color:Red">998</span>-<span style="color:Red">998</span></a>
+		</div>
+		<div class="copyright">
+			<h1 class="copyright-info">Copyright © 2013 格林豪泰</h1>
+			<ul>
+                <li><a href="about.html">关于我们</a></li>
+                <li style="border-right: 0;"><a href="applink.htm" target="_blank">App下载</a></li>
+            </ul>
+		</div>
+	</footer>
+	<script>
+		var $CONFIG = {};
+		$CONFIG['load'] = 'hotelDetail';
+		$CONFIG['module'] = 'hotelDetailInc';
+	</script>
+	<script src="images/sea.js" data-main="./js/init"></script>
+
+</body></html>

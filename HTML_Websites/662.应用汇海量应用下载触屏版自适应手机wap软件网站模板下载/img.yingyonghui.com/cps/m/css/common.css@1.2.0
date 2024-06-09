@@ -1,0 +1,941 @@
+/* CSS Document */
+body, div, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, iframe, input, textarea, select, label, article, aside, footer, header, menu, nav, section, time, audio, video {
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4{font-weight:normal;}
+article, aside, footer, header, hgroup, nav, section, audio, canvas, video, img {
+    display: block;
+}
+body {
+    font-family: MicrosoftYaHei,微软雅黑,Helvetica,STHeiti,Droid Sans Fallback;
+    font-size: 100%;
+}
+iframe, img {
+    border: 0 none;
+}
+ul, ol {
+    list-style: none outside none;
+}
+input, select, textarea {
+    outline: 0 none;
+}
+a {
+    text-decoration: none;
+	color:inherit;
+}
+
+.NoticeLayer
+{
+	z-index:10;
+	position:fixed;
+	background:#000;
+	opacity:0.4;
+	top:0px;
+	left:0px;
+}
+
+.NoticeBox
+{
+	z-index:11;
+	position:fixed;
+	margin-top:0px;
+	margin-left:0px;
+	width:270px;
+	background:#FFF;
+	padding-bottom:10px;
+}
+
+.Download_Cancel
+{
+	color:#999;
+	position:relative;
+	float:right;
+	margin-top:2px;
+	margin-right:2px;
+	height:20px;
+	width:20px;
+	font-size:16px;
+	line-height:20px;
+	text-align:center;
+	cursor:pointer;
+}
+
+.Download_Content
+{
+	width:240px;
+	position:relative;
+	margin-top:20px;
+	margin-left:15px;
+}
+
+.Download_Title
+{
+	width:230px;
+	position:relative;
+	float:left;
+	margin:0px;
+	line-height:30px;
+	text-align:left;
+	color:#333;
+}
+
+.Download_Content > span
+{
+	height:20px;
+	position:relative;
+	float:left;
+	line-height:20px;
+	margin-bottom:10px;
+	font-size:12px;
+	color:#999;
+}
+
+.Download_Button
+{
+	width:100px;
+	height:30px;
+	background:#53BF1D;
+	border-radius:5px;
+	position:relative;
+	float:left;
+	text-align:center;
+	line-height:30px;
+	cursor:pointer;
+}
+
+.Download_Button a
+{
+	display:block;
+	width:100px;
+	height:30px;
+}
+
+.Header
+{
+	height:80px;
+	width:100%;
+	position:fixed;
+	top:0;
+	z-index:1;
+	border-bottom:1px solid #E3E3E2;
+}
+
+.Top
+{
+	height:33px;
+	background:#ECECEB;
+	text-align:center;
+	padding-top:7px;
+}
+
+.Logo
+{
+	position:relative;
+	float:left;
+	margin:4px 0 0 15px;
+	width:86px;
+	height:20px;
+}
+
+.SearchBox
+{
+	height:26px;
+	width:60%;
+	position:relative;
+	float:right;
+	margin-right:15px;
+	background:#FFF;
+	border:1px solid #D9D9D9;
+	border-radius:14px;
+	
+}
+
+.Search_Input
+{
+	height:26px;
+	width:77%;
+	position:relative;
+	float:left;
+	margin-left:13px;
+}
+
+.Search_Input input
+{
+    width:100%; 
+    height:26px; 
+    margin-top:0px; 
+    border:0px; 
+    font-size:14px;
+}
+
+.Navigation
+{
+	height:40px;
+	width:100%;
+	position:relative;
+	background:#E3E3E2;
+}
+
+.Navigation a
+{
+	display:block;
+	border-right:1px solid #E3E3E2;
+	font-weight:normal;
+}
+
+.Navigation li
+{
+	height:40px;
+	background:#FFF;
+	position:relative;
+	float:left;
+	line-height:40px;
+	font-size:14px;
+	color:#44423C;
+	cursor:pointer;
+	width:15%;
+}
+
+.Navigation_Check > div
+{
+	height:4px;
+	width:100%;
+	background:#53BF1D;
+	display:block;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+.Navigation_Check > a
+{
+	color:#53BF1D;
+}
+
+.SearchTips
+{
+	height:40px;
+	border-bottom:1px solid #E3E3E2;
+	line-height:40px;
+}
+
+.SearchTips span
+{
+	margin-left:13px;
+	position:relative;
+	float:left;
+	font-size:12px;
+	color:#8F8D88;
+}
+
+.Piclist
+{
+	width:100%;
+	overflow:hidden;
+	position:relative;
+}
+
+.Piclist_Box
+{
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+.Piclist_Box img
+{
+	float:left;
+}
+
+.Banner_State_Box
+{
+	height:8px;
+	position:absolute;
+	bottom:14px;
+	right:4%;
+}
+
+.Banner_State
+{
+	display:inline-block;
+	margin-right:3px;
+	float:left;
+	cursor:pointer;
+	height:6px;
+	width:6px;
+	border:1px solid #FFF;
+	border-radius:4px;
+	background:#FFF;
+	opacity:0.4;
+}
+
+.RankList
+{
+	height:53px;
+	text-align:center;
+	border-bottom:1px solid #E3E3E2;
+	border-top:1px solid #D0D0CE;
+}
+
+.RankItemBox
+{
+	height:27px;;
+	width:168px;
+	margin:0px auto;
+	margin-top:13px;
+}
+
+.RankItemBox div
+{
+	height:23px;
+	width:82px;
+	margin:0px;
+	text-align:center;
+	line-height:23px;
+	font-size:13px;
+	position:relative;
+	float:left;
+	text-shadow:none;
+	border:2px solid #53BF1D;
+}
+
+.RankItemBox div a
+{
+    display:block;
+}
+
+.ClassifyBox
+{
+	text-align:left;
+	border-bottom:1px solid #E3E3E2;
+	border-top:1px solid #D0D0CE;
+	background:#EEEEEB;
+	padding:3px 0px 17px 24px;
+	display:block;
+}
+
+.ClassifyBox li
+{
+	font-size:13px;
+	margin:7px 0px 0px 1px;
+	display:inline-block;
+	width:60px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	cursor:pointer;
+	color:#8F8D88;
+	text-shadow:none;
+}
+
+.ClassifyBox .Classify_Checked
+{
+	border:1px solid #53BF1D;
+	border-radius:6px;
+	background:#53BF1D;
+	color:#FFF;
+	width:58px;
+}
+
+
+.Index_Content
+{
+	height:67px;
+	width:100%;
+	border-bottom:1px dashed #eee;/*E3E3E2*/
+	padding-top:13px;
+	position:relative;
+	overflow:hidden;
+}
+
+.StrategyList_Content
+{
+	height:40px;
+	width:100%;
+	border-bottom:1px dashed #eee;/*E3E3E2*/
+	padding-top:5px;
+	position:relative;
+	overflow:hidden;
+}
+
+.Strategy_ListBox
+{
+	width:100%;
+	height:auto;
+	margin-bottom:20px;
+}
+
+.Strategy_ListBox > img
+{
+	width:100%;
+}
+
+.StrategyList_ContentTitle
+{
+	margin-left:25px;
+	height:40px;
+	width:180px;
+	float:left;
+}
+
+.StrategyList_ContentTitle a
+{
+	color:#000;
+}
+
+.StrategyList_ContentTitle div
+{
+	height:40px;
+	line-height:40px;
+	width:100%;
+	text-align:left;
+	font-size:14px;
+	overflow:hidden;
+	float:left;overflow:hidden; 
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+}
+
+.StrategyList_TimeBox
+{
+	height:40px;
+	width:100px;
+	float:right;
+	margin-right:10px;
+}
+
+.StrategyList_TimeBox img
+{
+	width:12px;
+	height:12px;
+	float:left;
+	margin-left:5px;
+	margin-top:14px;
+}
+
+.StrategyList_TimeBox span
+{
+	float:left;
+	height:40px;
+	font-size:14px;
+	line-height:40px;
+	margin-left:5px;
+	color:#8F8D88;
+	display:block;
+}
+
+.Content_Icon
+{
+	margin-left:25px;
+	border:1px solid #FFF;
+	border-radius:12px;
+	height:51px;
+	width:51px;
+}
+
+.Content_Label
+{
+	position:absolute;
+	left:25px;
+	height:36px;
+	border:0px solid #FFF;
+}
+
+.Index_Content img
+{
+	position:relative;
+	float:left;
+}
+
+.Index_Content_details
+{
+	width:50%;
+	height:49px;
+	position:relative;
+	float:left;
+	margin-left:13px;
+}
+
+.Index_Content_AppName , .Index_Content_AppName > h1
+{
+	font-size:14px; 
+	color:#44423C; 
+	text-align:left; 
+	overflow:hidden; 
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+}
+
+.Index_Content_AppName a
+{
+	font-size:14px;
+	color:#44423C;
+	background:#FFF;
+}
+
+
+.Index_Content_AppDes h3
+{
+	height:18px;
+	font-size:12px; 
+	color:#8F8D88; 
+	text-align:left;
+	overflow:hidden;
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+}
+
+.Index_Content_Download
+{
+    text-align:right; 
+    padding-right:25px; 
+    position:relative; 
+    float:right; 
+    margin-top:12px;
+}
+.Index_Content_Download a
+{
+	height:27px;
+	width:53px;
+	background:url(../images/btn_01.png) no-repeat;
+	color:#FFF;
+	line-height:26px;
+	font-size:12px;
+	text-align:center;
+	cursor:pointer;
+	font-weight:normal;
+	text-shadow:none;
+	display:block;
+}
+
+.Index_Content_Download .disabled
+{
+    background:#ccc;
+    border-radius:5px;
+}
+
+.Index_Content .tips
+{
+    position:absolute;
+    bottom:0px;
+    right:25px;
+    background:none repeat scroll 0 0 #000000;
+    opacity:0.8;
+    color:#fff;
+    font-size:12px;
+    padding:2px 10px;
+    max-width:220px;
+    text-align:left;
+    display:none;
+}
+
+.get_more , .link_more
+{
+	width:90%;
+	height:27px;
+	background:#EEEEEB;
+	margin:0px auto;
+	cursor:pointer;
+	line-height:27px;
+	font-size:13px;
+	text-align:center;
+}
+
+.get_more img
+{
+    width:17px;
+    height:17px;
+    display:block;
+    line-height:27px;
+	margin-top:5px;
+	position:relative;
+	float:left;
+}
+
+.get_more span
+{
+	display:block;
+    line-height:27px;
+	margin-left:7px;
+	position:relative;
+	float:left;
+}
+
+.Search_Hot
+{
+	width:90%;
+	margin:0px auto;
+	margin-top:16px;
+	position:relative;
+	display:block;
+	text-align:left;
+}
+
+.Search_Hot > span
+{
+	text-shadow:none;
+	font-size:12px;
+	width:100%;
+	margin-left:4px;
+	color:#8F8D88;
+}
+
+.Search_Hot a
+{
+	text-shadow:none;
+	margin:5px 2px 0px 2px;
+	padding:0 10px;
+	background:#EEEEEB;
+	color:#8F8D88;
+	min-width:32px;
+	height:24px;
+	line-height:24px;
+	font-size:11px;
+	text-align:center;
+	display:inline-block;
+}
+
+
+.AppBox
+{
+}
+
+.App_Hots
+{
+	height:31px;
+	width:100%;
+	background:#FFF;
+	text-align:left;
+}
+
+.App_Hots > div
+{
+    width:28%;
+	overflow:hidden;
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+}
+
+.App_Hots div
+{
+	height:31px;
+	line-height:31px;
+	display:inline-block;
+}
+
+.App_Hots img
+{
+	height:11px;
+	width:11px;
+	margin-top:11px;
+	position:relative;
+	float:left;
+	display:block;
+}
+
+.App_Hots span
+{
+	font-size:12px;
+	color:#8F8D88;
+	position:relative;
+	float:left;
+	margin-left:8px;
+	display:block;
+}
+
+.App_Img
+{
+	background:#EEEEEB;
+	border-top:1px solid #E2E2DF;
+	border-bottom:1px solid #D8D9DA;
+	padding-top:9px;
+	padding-bottom:9px;
+	overflow-y:hidden;
+	overflow-x:auto;
+	height:220px;
+}
+
+.App_ImgBox
+{
+	height:220px;
+	text-align:left;
+}
+
+.App_ImgBox img
+{
+	height:220px;
+	margin:0px;
+	margin-left:8px;
+	margin-bottom:8px;
+	display:inline-block;
+}
+
+.App_Category
+{
+	padding:13px 0px 13px 0px;
+	text-align:center;
+}
+
+.App_SpreadBox
+{
+	width:95%;
+	margin:0px auto;
+	margin-bottom:10px;
+}
+
+.App_SpreadTitle
+{
+	width:100%;
+	height:27px;
+	line-height:27px;
+	background:#EEEEEB;
+}
+
+.App_SpreadTitle span
+{
+	float:left;
+	padding-left:14px;
+	font-size:15px;
+	border-left:7px solid #53BF1D;
+}
+
+.App_SpreadTitle .icon
+{
+	width:15px;
+	height:15px;
+	margin:7px 16px 0px 0px;
+	float:right;
+	background:url('../images/icon_06.png') no-repeat;
+}
+
+.App_SpreadTitle .close
+{
+    background:url('../images/icon_05.png') no-repeat;
+}
+
+.App_SpreadContent
+{
+	padding:10px 12px 0px 12px;
+	text-align:justify;
+	text-justify:distribute-all-lines;
+}
+
+.CategoryLink
+{
+	background:#53BF1D;
+	color:#FFF;
+	padding:0px 10px;
+}
+
+.App_SpreadContent span,ul,table
+{
+	line-height:18px;
+	font-size:14px;
+	color:#8F8D88;
+	display:block;
+}
+
+.App_SpreadContent li
+{
+	border-bottom:1px dashed #D8D9DA;
+	margin-bottom:10px;
+	padding-bottom:6px;
+}
+
+.StrategyTitle
+{
+	height:20px;
+	width:100%;
+	line-height:20px;
+	text-align:center;
+	font-size:16px;
+	color:#000;
+	margin-top:20px;
+}
+
+.StrategySource
+{
+	height:30px;
+	width:100%;
+	line-height:30px;
+	text-align:center;
+	font-size:14px;
+	color:#8F8D88;
+}
+
+.StrategyIntroduction
+{
+	line-height:16px;
+	text-align:center;
+	font-size:14px;
+	color:#8F8D88;
+	background:#EEEEEB;
+	padding:15px 20px 15px 20px;
+}
+
+.StrategyContent
+{
+	height:auto;
+	margin:0px auto;
+	margin-top:10px;
+	text-align:justify;
+	text-justify:distribute-all-lines;
+	font-size:14px;
+	line-height:1.5em;
+	color:#8F8D88;
+	padding:0px 25px;
+}
+
+.StrategyContent img
+{
+	width:100%;
+}
+
+.More_Strategy
+{
+	height:20px;
+	line-height:20px;
+	padding-top:5px;
+}
+
+.More_Strategy img
+{
+	width:12px;
+	height:12px;
+	float:left;
+} 
+
+.More_Strategy a
+{
+	display:block;
+	height:14px;
+	line-height:14px;
+	text-align:left;
+	overflow:hidden;
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+}
+
+
+.App_Message_More
+{
+	width:90%;
+	height:27px;
+	background:#EEEEEB;
+	margin:0px auto;
+	cursor:pointer;
+	line-height:27px;
+	font-size:12px;
+	text-align:center;
+}
+
+.Footer
+{
+	height:70px;
+	background:#EEEEEB;
+	color:#8F8D88;
+	text-align:center;
+}
+
+.Index_Content_details .list_app_info
+{
+    height:18px;
+    font-size:11px; 
+    color:#696864; 
+    text-align:left; 
+    position:relative;
+}
+
+.Index_Content_details .list_app_info img
+{
+    width:5px;
+    height:5px;
+    margin-top:7px; 
+    margin-right:3px;
+    position:relative; 
+    float:left;
+}
+
+.Index_Content_details .list_app_info div
+{
+    position:relative; 
+    float:left;
+    max-width:50%;
+    overflow:hidden;
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+}
+
+.footer_yyh
+{
+    display:block;
+    width:100%;
+    position:fixed;
+    bottom:0;
+    padding:10px 0;
+    overflow:hidden;
+    z-index:999999;
+    background:none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+    color:#fff;
+}
+
+.footer_yyh .logo
+{
+    width:36px;
+    height:36px;
+    padding-left:25px;
+}
+
+.footer_yyh .desc
+{
+    text-align:left;
+    padding-left:10px;
+    float:left;
+    line-height:1.1;
+}
+
+.footer_yyh .down
+{
+    background:#53BF1D;
+    float:right;
+    padding:0 20px;
+    line-height:36px;
+    display:inline-block;
+    margin-right:20px;
+}
+
+
+@media screen and (min-width:400px)
+{
+    .Navigation li
+    {
+        font-size:16px;
+    }
+    .Index_Content_AppName
+    {
+	   font-size:16px; 
+	   color:#44423C; 
+	   text-align:left; 
+	   margin-bottom:4px; 
+	   overflow:hidden; 
+	   white-space:nowrap; 
+	   text-overflow:ellipsis;
+    }
+    .Index_Content_AppName a
+    {
+        font-size:16px;
+	   overflow:hidden; 
+	   white-space:nowrap; 
+	   text-overflow:ellipsis;
+    }
+    .Index_Content_AppDes h3
+    {
+        font-size:13px;
+    }
+    .list_app_info div
+    {
+        font-size:12px;
+    }
+}

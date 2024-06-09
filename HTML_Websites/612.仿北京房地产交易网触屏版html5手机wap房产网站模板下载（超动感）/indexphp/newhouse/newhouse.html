@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>仿北京房地产交易网触屏版html5手机wap房产网站模板下载楼盘列表-懒人模板【http://www.lanrenmb.com/shenghuofuwu/fangchan/】</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../../includes/css/xk-style.css" rel="stylesheet">	
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../includes/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" href="../../includes/ico/apple-touch-icon-57.png">
+	<link rel="shortcut icon" href="../../includes/ico/favicon.png">
+	<script type="text/javascript" src="../../includes/js/pic/jquery.min.js"></script>
+</head>
+<body>
+<header class="bar_fixed">
+	<div id="toolbar_1" class="toolbar">
+		<div class="ui-toolbar-left"><a href="javascript:theStory();" class="ui-toolbar-backbtn"></a></div>
+		<h2 class="ui-toolbar-title">新房</h2>
+		<div class="ui-toolbar-right"><span id="menu" class="ui-toolbar-home" onclick="show()"></span></div>
+		
+	</div>
+	<div id="dropmenu" style="display:none;">
+            <!--nav-->
+		<!--nav-->
+<nav>
+	<ul class="head-nav clearfix">
+		<li><a href="../../default.htm" title="">首页</a></li>
+        <li><a href="../news/news" title="">资讯</a></li>
+        <li><a href="newhouse" title="">新房</a></li>
+                <li><a href="../jiaju/jiaju" title="">家居</a></li>
+                <li><a href="../bbs/bbs" title="">社区</a></li>
+                <li><a href="../video/video" title="">视频</a></li>
+        		        <li><a href="../user/me" title="">我</a></li>
+	</ul>
+</nav>        </div>
+	<script language="javascript"> 
+	function show(){ 
+	with(document.getElementById('dropmenu').style){display==""&&(display="none")||(display="")} 
+	} 
+	function theStory() {
+	window.history.length <= 1 ? window.location.href = "../../": window.history.go( - 1)
+	} 
+	</script> 
+</header>
+<article>
+	<div class="module_nav">查找楼盘</div>
+<dl class="cates">
+		<dt>区域</dt>
+		<dd class="cates_list">
+		<a class="" href="newhouse_search/index@area=200000001">昌平</a><a class="" href="newhouse_search/index@area=200000013">朝阳</a><a class="" href="newhouse_search/index@area=200000073">崇文</a><a class="" href="newhouse_search/index@area=200000084">大兴</a><div class="hide"><a class="" href="newhouse_search/index@area=200000092">东城</a><a class="" href="newhouse_search/index@area=200000105">房山</a><a class="" href="newhouse_search/index@area=200000118">丰台</a><a class="" href="newhouse_search/index@area=200000152">海淀</a><a class="" href="newhouse_search/index@area=200000199">怀柔</a><a class="" href="newhouse_search/index@area=200000200">门头沟</a><a class="" href="newhouse_search/index@area=200000208">密云</a><a class="" href="newhouse_search/index@area=200000214">平谷</a><a class="" href="newhouse_search/index@area=200000215">石景山</a><a class="" href="newhouse_search/index@area=200000229">顺义</a><a class="" href="newhouse_search/index@area=200000237">通州</a><a class="" href="newhouse_search/index@area=200000257">西城</a><a class="" href="newhouse_search/index@area=200000281">宣武</a><a class="" href="newhouse_search/index@area=200000297">延庆</a><a class="" href="newhouse_search/index@area=200000300">燕郊</a><a class="" href="newhouse_search/index@area=200000301">其他</a>		</dd>
+		<em class="cates_more up">全部</em>	</dl>
+	<dl class="cates">
+		<dt>类型</dt>
+		<dd class="cates_list">
+		<a class="" href="newhouse_search/index@sort=0">住宅</a><a class="" href="newhouse_search/index@sort=1">商铺</a><a class="" href="newhouse_search/index@sort=2">写字楼</a><a class="" href="newhouse_search/index@sort=3">别墅</a><div class="hide"><a class="" href="newhouse_search/index@sort=4">公寓</a><a class="" href="newhouse_search/index@sort=5">其他</a>		</dd>
+		<em class="cates_more up">全部</em>
+	</dl>
+	<dl class="cates">
+		<dt>价格</dt>
+		<dd class="cates_list">
+		<a class="" href="newhouse_search/index@price=0">4千以下</a><a class="" href="newhouse_search/index@price=1">4-5千</a><a class="" href="newhouse_search/index@price=2">5-6.5千</a><div class="hide"><a class="" href="newhouse_search/index@price=3">6.5-8千</a><a class="" href="newhouse_search/index@price=4">8千-1万</a><a class="" href="newhouse_search/index@price=5">1万以上</a><a class="" href="newhouse_search/index@price=6">其他</a>		</dd>
+		<em class="cates_more up">全部</em>
+	</dl>
+	<dl class="cates">
+		<dt>状态</dt>
+		<dd class="cates_list">
+		<a class="" href="newhouse_search/index@state=0">即将上市</a><a class="" href="newhouse_search/index@state=1">在售</a><a class="" href="newhouse_search/index@state=3">新盘</a><div class="hide"><a class="" href="newhouse_search/index@state=4">认筹</a><a class="" href="newhouse_search/index@state=5">尾盘</a><a class="" href="newhouse_search/index@state=2">销售结束</a>		</dd>
+		<em class="cates_more up">全部</em>
+	</dl>
+</article>
+
+<article>
+	<div class="module_nav">共<span class="fblu">1283</span>个楼盘</div>
+	<ul class="houselist" id="more_1">
+
+	<li class="icon-default">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 手机网站适应性广告代码 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1449491313257558"
+     data-ad-slot="1246518959"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</li>
+				<li onclick="location='newhouse_detail/index/200001526'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/200001526.html"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2012/08/20120828/0UNT21346145258_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/200001526.html">天恒乐活城D5</a></h6>
+                <p class="h-area fgray">房山</p><p class="h-addr fgray"><br /><span class="fora">在售</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">15000元/㎡</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/1400000697'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/1400000697"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2013/05/20130523/8UVJT1369292644_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/1400000697"> V7西园</a></h6>
+                <p class="h-area fgray">门头沟</p><p class="h-addr fgray">门头沟西四环阜石路双峪环<br /><span class="fora">在售</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">35000元/㎡</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/200001432'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/200001432"><img width="50" height="50" alt="" src="http://img1.bj.xkhouse.com/house/11/1128/A28111128154630.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/200001432">紫御华府</a></h6>
+                <p class="h-area fgray">朝阳</p><p class="h-addr fgray">朝阳奥林匹克森林公园北<br /><span class="fora">在售</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">81000元/㎡</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/200001479'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/200001479"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2013/03/20130304/WVOGN1362389630_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/200001479">首尔﹒甜城</a></h6>
+                <p class="h-area fgray">燕郊</p><p class="h-addr fgray">燕郊经济技术开发区燕顺路<br /><span class="fora">在售</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">8500元/㎡</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/1400001952'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/1400001952"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2013/06/20130613/DR69C1371106355_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/1400001952">京投万科·西华府</a></h6>
+                <p class="h-area fgray">丰台</p><p class="h-addr fgray">丰台西南四环科丰桥南<br /><span class="fora">在售</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">39000元/㎡</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/1400002008'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/1400002008"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2013/07/20130710/5FLII1373439072_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/1400002008">格林云墅</a></h6>
+                <p class="h-area fgray">大兴</p><p class="h-addr fgray">大兴南五环外4公里中轴路<br /><span class="fora">即将上市</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">一房一价</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/200001275'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/200001275"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2013/04/20130422/MYK8V1366618968_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/200001275">恒华·安纳湖</a></h6>
+                <p class="h-area fgray">顺义</p><p class="h-addr fgray">顺义新城，乔波滑雪馆西侧<br /><span class="fora">在售</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">一房一价</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/1400001555'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/1400001555"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2013/03/20130307/YR18Q1362631502_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/1400001555">天洋城4代</a></h6>
+                <p class="h-area fgray">燕郊</p><p class="h-addr fgray">燕郊迎宾南路东侧<br /><span class="fora">在售</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">8500元/㎡</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/1400001818'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/1400001818"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2013/05/20130517/D9YAF1368763009_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/1400001818">永定河孔雀城剑桥郡</a></h6>
+                <p class="h-area fgray">其他</p><p class="h-addr fgray"><br /><span class="fora">即将上市</span></p>                
+            </div>
+            <i class="h-tag gre">别墅</i><em class="h-price">一房一价</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/200000044'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/200000044"><img width="50" height="50" alt="" src="http://img1.bj.xkhouse.com/house/11/0103/8M21113153752.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/200000044">影人四季花园</a></h6>
+                <p class="h-area fgray">怀柔</p><p class="h-addr fgray">怀柔区迎宾中路27号（临<br /><span class="fora">在售</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">11800元/㎡</em>
+		</li>
+			
+	</ul>
+		<div id="add_more"  class="mt10"><a href="javascript:void(0)" class="newsmore" onclick="addmore('1','10','10','1');">点击加载更多</a></div>
+	</article>
+<article>
+	<div class="module_nav">最新楼盘</div>
+	<ul class="houselist" id="more_2">
+				<li onclick="location='newhouse_detail/index/1400002480'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/1400002480"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2014/03/20140320/E9GBH1395286813_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/1400002480">绿地中央广场·云谷</a></h6>
+                <p class="h-area fgray">昌平</p><p class="h-addr fgray"><br /><span class="fora">在售</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">一房一价</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/1400002475'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/1400002475"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2014/03/20140320/HOUEP1395285406_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/1400002475">中国铁建•梧桐汇</a></h6>
+                <p class="h-area fgray">门头沟</p><p class="h-addr fgray"><br /><span class="fora">认筹</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">一房一价</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/1400002473'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/1400002473"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2014/03/20140320/QYCX31395283451_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/1400002473">中国铁建·青秀尚城</a></h6>
+                <p class="h-area fgray">昌平</p><p class="h-addr fgray"><br /><span class="fora">在售</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">28000元/㎡</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/1400002472'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/1400002472"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2014/03/20140320/CAYNR1395283309_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/1400002472">中国铁建•国际花园</a></h6>
+                <p class="h-area fgray">房山</p><p class="h-addr fgray"><br /><span class="fora">在售</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">一房一价</em>
+		</li>
+				<li onclick="location='newhouse_detail/index/1400002471'">
+            <div class="h-img">
+                <a href="newhouse_detail/index/1400002471"><img width="50" height="50" alt="" src="http://img2.xkhouse.com/bjxkhouse/bjxkNewhouse/2014/03/20140320/8ETBT1395282072_small.jpg" /></a>
+            </div>
+            <div class="h-txt">
+                <h6 class="h-name"><a href="newhouse_detail/index/1400002471">中国铁建·山语城</a></h6>
+                <p class="h-area fgray">丰台</p><p class="h-addr fgray"><br /><span class="fora">在售</span></p>                
+            </div>
+            <i class="h-tag yel">住宅</i><em class="h-price">一房一价</em>
+		</li>
+				
+	</ul>
+		<div id="add_more"  class="mt10"><a href="javascript:void(0)" class="newsmore" onclick="addmore('2','5','10','1');">点击加载更多</a></div>
+	</article>
+<article>
+	<div class="module_nav">楼市优惠</div>
+	<ul class="newslist" id="more_3">
+		        <li><a href="../news/news_detail/index/1073294">大兴【华润公元九里】精装修现房37000</a></li>
+                <li><a href="../news/news_detail/index/1073291">大兴【众美光合原筑】三居尾房均价2100</a></li>
+                <li><a href="../news/news_detail/index/1073264">朝阳【华瀚国际】精装尾房均价60000元</a></li>
+                <li><a href="../news/news_detail/index/1073259">朝阳【华远九都汇】精装尾房在售 均价58</a></li>
+                <li><a href="../news/news_detail/index/1073257">朝阳【悠唐麒麟公馆】精装房均价80000</a></li>
+                <li><a href="../news/news_detail/index/1073255">朝阳【蝶泉花园】双拼别墅总价900万元/</a></li>
+                <li><a href="../news/news_detail/index/1073252">朝阳【观巢】精装修现房三居在售 全款98</a></li>
+                <li><a href="../news/news_detail/index/1073248">朝阳【凌云名苑】精装房在售均价59000</a></li>
+        	</ul>
+		<div id="add_more"  class="mt10"><a href="javascript:void(0)" class="newsmore" onclick="addmore('3','5','8','1');">点击加载更多</a></div>
+	</article>
+<script>
+var i= 0;
+var t= 0;
+var v = 0;
+function addmore(id,num,info,p)
+{
+	if(id==1){
+		var count = "133";
+		p = i;
+		++i;
+	}else if(id==2){
+		var count = "408";
+		p = t;
+		++t;
+	}else if(id==3){
+		var count = "200";
+		p = v;
+		++v;
+	}
+	jQuery.ajax({url:"newhouse/refresh/"+id+"/"+p+"/"+info,success:function(moredata)
+	{
+		$("#more_" + id).append(moredata);
+
+	}});
+	if((count-i*num-info) < 0)
+	{
+		$("#add_more").hide();
+	}
+	return false;
+}
+</script>
+<script type="text/javascript">
+	function gotohead(){
+	window.scrollTo(0, 1);
+	}
+	
+	(function () {
+	//更多、收起
+	for(var i=0;i<10;i++){
+		up(i);
+	}
+	function up(i){	
+		$('.up').eq(i).click(function(){
+		    if($('.up').eq(i).html()=="全部"){
+			    $('.hide').eq(i).show();
+				$('.up').eq(i).html("收起");
+		    }else if($('.up').eq(i).html()=="收起"){
+			    $('.hide').eq(i).hide();
+				$('.up').eq(i).html("全部");
+		    }
+		});
+	}
+	
+	})();
+</script><footer>
+	<div  style="margin-top:5px;"></div>
+	<div class="foot-link"><a href="../user/message" class="fora">意见反馈</a><a href="javascript:gotohead();" class="fgray">返回顶部</a></div>
+	<script type="text/javascript">
+	function gotohead(){
+	window.scrollTo(0, 1);
+	}
+	</script>
+    <div class="media-link"><a target="_blank" href="default.htm" class="app">客户端</a><a href="../../../www.hfhouse.com/index.html" class="pc">电脑版</a><a href="../../../m.hfhouse.com/default.htm" class="ip fora">触屏版</a></div>
+    <div class="copy">
+		m.xkhouse.com Copyright &copy; 2013
+		</div>
+</footer>
+<script src="../../includes/js/widget/gotop.js"></script>
+<div id="gotop"></div>
+<script>
+	$('#gotop').gotop();	
+function closes(obj){
+	var a = document.getElementById(obj);
+	a.style.display= 'none';
+}	
+</script>
+<div style="display:none;">
+<script type="text/javascript" src="../../../js.tongji.linezing.com/3367876/tongji.js"></script>
+</div>
+</body>
+</html>

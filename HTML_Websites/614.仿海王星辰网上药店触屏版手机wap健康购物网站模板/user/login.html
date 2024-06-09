@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>仿海王星辰网上药店触屏版手机wap健康购物网站模板登陆页-懒人模板【http://www.lanrenmb.com/shenghuofuwu/jiankang/】</title>
+    <meta name="author" content="m.star365.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    
+<link rel="stylesheet" type="text/css" href="../css/base2013.css" />
+<link rel="stylesheet" type="text/css" href="../css/login.css" />
+
+    
+    <script type="text/javascript">
+        var _winLocation = window.location.href; //获得当前页面的路径，根据路径规则进行逐页替换
+        var _isWebKit = '__proto__' in {}; //是否是webkit内核
+        if (_isWebKit) {//如果是webkit内核，则分模块使用zepto
+            //要使用zeptojs的路径列表，可以做为分模块替换的开关
+            var _locationList = new Array();
+            //活动模块
+            _locationList.push('../activity/proActList');
+            _locationList.push('../activity/proActWareList');
+            _locationList.push('../activity/list');
+            //商品分类模块
+            _locationList.push('../category/');
+            //首页相关
+            _locationList.push('../hotbrand.html');
+            //商品筛选相关
+            _locationList.push('../ware/expandSort.action');
+            _locationList.push('../ware/categoryFilter.action');
+            _locationList.push('../search');
+
+            _locationList.push('../pay/'); //支付
+            _locationList.push('../order/'); //订单
+            var _needReplace = false;
+            //如果当前路径符合要使用的路径规则，则进行替换
+            for (var i = 0; i < _locationList.length; i++) {
+                if (_winLocation.indexOf(_locationList[i]) != -1) {
+                    _needReplace = true;
+                    break;
+                }
+            }
+            //如果是首页的话，则使用zepto
+            var _tmp = _winLocation.replace(/(^http:\/\/)|(\/*$)/g, '');
+            if (_tmp.indexOf('/') < 0 || (_tmp.split('/').length <= 2 && _tmp.indexOf('/index') >= 0)) {
+                _needReplace = true;
+            }
+            //如果是商品详情页的话，则使用zepto
+            var _dlocationList = new Array();
+            _dlocationList.push(/\/product\/([0-9]+)\.html/);
+            _dlocationList.push(/\/detail\/([0-9]+)\.html/);
+            _dlocationList.push(/\/orderComment\/([0-9]+)\.html/);
+            _dlocationList.push(/\/consultations\/([0-9]+)\.html/);
+            _dlocationList.push(/\/consultations\/([0-9]+)-([0-9]+)\.html/);
+            _dlocationList.push(/\/comments\/([0-9]+)\.html/);
+            for (var i = 0, len = _dlocationList.length; i < len; i++) {
+                if (_dlocationList[i].test(_winLocation)) {
+                    _needReplace = true;
+                    break;
+                }
+            }
+            if (_needReplace) {
+                document.write('<script src="../js/zepto.min.js"><\/script>');
+                document.write('<script type="text/javascript">window.jQuery=window.Zepto;<\/script>');
+            } else {
+                document.write('<script src="../js/jquery-1.6.2.min.js"><\/script>');
+            }
+        } else {//如果是非webkit内核直接使用jquery
+            document.write('<script src="../js/jquery-1.6.2.min.js"><\/script>');
+        }
+    </script>
+    <script type="text/javascript" src="../js/html5/common.js@v=201309260001"></script>
+    <script type="text/javascript" src="../js/html5/spin.min.js"></script>
+</head>
+<body id="body">
+    <a name="top"></a>
+    <header>
+        <div class="new-header">
+                <a class="new-a-back" href="javascript:pageBack();"><span>返回</span></a>
+                <h2>登录</h2>
+                <a class="new-a-hw" id="btnHwkey" href="javascript:void(0)"><span>海王键</span></a>
+            </div>
+        <div id="hwkey" style="display: none" class="new-hw-tab">
+            <div class="new-tbl-type">
+                <a class="new-tbl-cell" href="../index.html">
+                    <span class="icon">首页</span>
+                    <p style="color: #6e6e6e;">首页</p>
+                </a>
+                <a class="new-tbl-cell" href="../category/all.html">
+                    <span class="icon2">分类搜索</span>
+                    <p style="color: #6e6e6e;">分类搜索</p>
+                </a>
+                <a class="new-tbl-cell" id="html5_cart" href="javascript:void(0)">
+                    <span class="icon3">购物车</span>
+                    <p style="color: #6e6e6e;">购物车</p>
+                </a>
+                <a class="new-tbl-cell" href="home">
+                    <span class="icon4">我的账户</span>
+                    <p style="color: #6e6e6e;" class="on">我的账户</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+<script type="text/javascript" src="../js/html5/user.js"></script>
+<div class="new-ct">
+    <div class="new-login">
+        <form action='/user/doLogin' method="post" id="frm_login" style="margin-top: 10px;">
+            <input type="hidden" name="returnurl" value="http://m.star365.com" />            
+            <div style="" id="err" class="new-txt-err"></div>
+            <span class="new-input-span new-mg-b10">
+                <input type="text" placeholder="请输入用户名/邮箱/已验证手机" id="username" name="username" class="new-input" value="">
+            </span>
+            <span class="new-input-span new-mg-b10">
+                <input type="password" placeholder="请输入密码" id="password" name="password" class="new-input" value="">
+            </span>
+            <input type="checkbox" checked id="remember" value="true" name="remember" />
+            <span class="new-a-txt3">一个月内免登录</span>
+            <a class="new-abtn-type new-mg-t15" id="loginSubmit" href="javascript:void(0);">登录</a>
+        </form>
+        <div class="new-lg-sec new-mg-t15">
+            <a class="new-fl" href="register@returnurl=http_3A_2F_2Fm.star365.com" rel="nofollow">免费注册</a>
+            <a class="new-fr" href="../findloginpassword/fillAccountName"> 找回密码</a>  
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        //如果支持本地存储
+        if (testLocalStorage()) {
+
+            //自动填充用户名
+            if (!$('#username').val()) {
+                var lName = window.localStorage.getItem('userName');
+                if (lName) {
+                    $('#username').val(lName);
+                }
+            }
+
+            //提交同时判断是否勾选记住我按钮   如果勾选则保存本地 否则删除
+            $('#frm_login').submit(function () {
+                var ckb_remember = $('#remember');
+                if (ckb_remember.is(":checked")) {
+                    window.localStorage.setItem('userName', $('#username').val());
+                } else {
+                    window.localStorage.removeItem("userName");
+                }
+            });
+        }
+        window.name = "login";
+    });
+
+
+    //刷新验证码
+    function refreshCode(d) {
+        if (d.codeKey) {
+            if ($('#codeLevel').val() && $('#codeLevel').val() != '0') {
+                $('#code').attr('src', '../validatecode/loginValidateCode.action@key=' + d.codeKey);
+            }
+
+            $('#codeKey').val(d.codeKey);
+        }
+    }
+    //超链接绑定 click事件
+    $('.c_code').click(function () {
+        refreshCodeAjax(refreshCode);
+    });
+
+
+    function checkUsername() {
+        var username = $("#username").val().trim();
+        if (username == "") {
+            if (true) {
+                $("#err").html("\u8d26\u6237\u540d\u4e0d\u80fd\u4e3a\u7a7a");
+                $("#err").show();
+            } else {
+                $("#error").html("\u8d26\u6237\u540d\u4e0d\u80fd\u4e3a\u7a7a");
+                $("#error").show();
+            }
+            return false;
+        }
+        return true; 
+    }
+
+    function checkPassword() {
+        var password = $("#password").val().trim();
+        if (password == "") {
+            if (true) {
+                $("#err").html("\u5bc6\u7801\u4e0d\u80fd\u4e3a\u7a7a");
+                $("#err").show();
+            } else {
+                $("#error").html("\u5bc6\u7801\u4e0d\u80fd\u4e3a\u7a7a");
+                $("#error").show();
+            }
+            return false;
+        }
+        return true; 
+    }
+
+    $(':text').focus(function () {
+        $("#error").hide();
+    });
+
+    $(':password').focus(function () {
+        $("#error").hide();
+    });
+
+    //非空验证
+    $(document).ready(function () {
+        $('#frm_login').bind('submit', function (e) {
+            if (!(checkUsername() && checkPassword())) {
+                e.preventDefault();
+            }
+        });
+        $('#loginSubmit').click(function () {
+            $('#frm_login').submit();
+        });
+    });
+</script>
+
+    <footer>
+         <div class="new-footer">
+    <div class="new-f-login">
+            <a href="login">登录</a>
+    <span style="margin: 0 10px;">|</span><a href="register">注册</a>
+
+
+        
+        <span class="new-back-top"><a href="#top">回到顶部</a></span>
+    </div>
+    <div class="new-f-section"><a class="on" href="javascript:void(0)">触屏版</a><a href="../../www.star365.com/@pcsite">电脑版</a></div>
+    <div class="new-f-section2">            
+    互联网药品交易资格证：粤C20100004<br />
+    订购热线：400-6626-365<br />
+    Copyright &copy; 2013 m.star365.com</div>
+</div>
+    </footer>
+    <script type="text/javascript">
+        $("#unsupport").hide();
+        if (!testLocalStorage()) { //not support html5
+            if (0 != 0 && !$clearCart && !$teamId) {
+                $("#html5_cart_num").text(0 > 0 > 0);
+            }
+        } else {
+            updateToolBar('index');
+        }
+
+        $("#html5_cart").click(function () {
+            //	syncCart('',true);
+            location.href = '../cart/cart.html';
+        });
+
+        function reSearch() {
+            var depCity = window.sessionStorage.getItem("airline_depCityName");
+            if (testSessionStorage() && isNotBlank(depCity) && !/^\s*$/.test(depCity) && depCity != "") {
+                var airStr = '<form action="../airline/list.action" method="post" id="reseach">'
+        + '<input type="hidden" name="sid"  value=""/>'
+        + '<input type="hidden" name="depCity" value="' + window.sessionStorage.getItem("airline_depCityName") + '"/>'
+        + '<input type="hidden" name="arrCity" value="' + window.sessionStorage.getItem("airline_arrCityName") + '"/>'
+        + '<input type="hidden" name="depDate" value="' + window.sessionStorage.getItem("airline_depDate") + '"/>'
+        + '<input type="hidden" name="depTime" value="' + window.sessionStorage.getItem("airline_depTime") + '"/>'
+        + '<input type="hidden" name="classNo" value="' + window.sessionStorage.getItem("airline_classNo") + '"/>'
+        + '</form>';
+                $("body").append(airStr);
+                $("#reseach").submit();
+            } else {
+                window.location.href = '../airline/index.action';
+            }
+        }
+        //banner 关闭点击
+        $('.div_banner_close').click(function () {
+            $('#div_banner_header').unbind('click');
+            jQuery.post('../index/addClientCookieVal.json', function (d) {
+                $('#div_banner_header').slideUp(500);
+            });
+        });
+        //banner 下载点击
+        $('.div_banner_download').click(function () {
+            var downloadUrl = $(this).attr('url');
+            jQuery.post('../index/addClientCookieVal.json', function (d) {
+                window.location.href = downloadUrl;
+            });
+        });
+    </script>
+</body>
+</html>

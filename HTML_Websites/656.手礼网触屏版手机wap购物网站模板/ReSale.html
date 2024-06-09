@@ -1,0 +1,148 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+    <link href="css/mygb.css" rel="stylesheet" type="text/css">
+    <title>手礼网触屏版手机wap购物网站模板-懒人模板【http://www.lanrenmb.com/shenghuofuwu/gouwu/】</title>
+
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<script type="text/javascript">    
+    var _winLocation = window.location.href.toLowerCase();//获得当前页面的路径，根据路径规则进行逐页替换
+    var _isWebKit = '__proto__' in {};//是否是webkit内核
+
+    if (_isWebKit) {//如果是webkit内核，则分模块使用zepto
+        //要使用zeptojs的路径列表，可以做为分模块替换的开关
+        var _locationList = new Array();
+        //活动模块
+        _locationList.push('register.html');
+        _locationList.push('forgetpwd.html');
+        _locationList.push('shoppingcart');
+        _locationList.push('orderinfo');
+        _locationList.push('myreviewinfo');
+        _locationList.push('myorderinfo');
+        _locationList.push('weixin');
+
+        var _needReplace = false;
+        //如果当前路径符合要使用的路径规则，则进行替换
+        for (var i = 0; i < _locationList.length; i++) {
+            if (_winLocation.indexOf(_locationList[i]) != -1) {
+                _needReplace = true;
+                break;
+            }
+        }
+        
+        if (isIE())
+            _needReplace = true;
+        
+        if (!_needReplace) {
+            document.write('<script src="js/zepto.min.js"><\/script>');
+            //document.write('<script src="js/touch.js"><\/script>');
+            document.write('<script type="text/javascript">window.jQuery=window.Zepto;<\/script>');
+        } else {
+            document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');
+            document.write('<script src="js/jquery.cookie.js"><\/script>');
+            document.write('<script src="js/giftport.js"><\/script>');
+        }
+    } else { //如果是非webkit内核直接使用jquery
+        document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');
+        document.write('<script src="js/jquery.cookie.js"><\/script>');
+        document.write('<script src="js/giftport.js"><\/script>');
+    }
+    
+    function isIE() { //ie?  
+        if (!!window.ActiveXObject || "ActiveXObject" in window)
+            return true;
+        else
+            return false;
+    }
+</script>
+   
+    
+    <link href="css/pro.css" rel="stylesheet" type="text/css">
+<link href="css/sbl.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    
+ <a name="top"></a>
+ 
+        
+<header>
+<div class="flex packj alignc cd44">
+      <a href="javascript:;" class="back fote db" onclick="pageBack()"></a>
+      <h2 class="tc it1 fenleix">
+          热卖
+
+      </h2>
+      <a href="javascript:;" id="btnSLKey" class="sl_fl fote db"></a>
+   </div>
+   <div class="flex packj alignc cd60" id="divSLKey" style="display: none;">
+      <a href="default.html" class="it1 ljpro"><span class="icofenlei home"></span>首页</a>
+      <a href="AllCategory.html" class="it1 ljpro"><span class="icofenlei proserch "></span>分类搜索</a>
+      <a href="ShoppingCart.html" class="it1 ljpro"><span class="icofenlei progw"></span>购物车</a>
+      <a href="MyAccount.html" class="it1 ljpro"><span class="icofenlei mysl "></span>我的手礼</a>
+   </div>
+</header>
+    
+    <!--搜索栏-->
+<form id="searchForm" method="POST" action="Search.html">
+    <div class="pro_search flex alignc box-siz" id="wrap">
+        <div class="inputl box-siz it1">
+            <input type="text" id="newkeyword" name="KeyWord" >
+            <a class="del1x db" href="javascript:;" onclick="cancelHotWord()"></a>
+        </div>
+        <a class="ssbot box-siz db" href="javascript:;" onclick="$('#searchForm').submit();"></a>
+        <a class="gl_sx box-siz lb_ico" href="ReSale.html@IsBigShow=1">大图</a>
+    </div>
+</form>
+    <!--产品列表-->
+<div class="prowrap">
+    
+    
+    <div class="cplbx">
+        <article><a href="Package4881.html" class="flex alignc libox"><div class="img_list"><img imgsrc="http://pic.giftport.com.cn/giftimages/test/01112_01.jpg" width="136" height="136" alt="产品"></div><div class="list_nr it1"><h2 class="cla pro_tit">凯悦芝麻肉松蛋卷仔150g爱不释手，尝不松口</h2><p class="wzinx"><strong>￥12.00</strong> <em>15.00</em></p><p class="pingjia_list">83人评价<span class="gwc_pro"></span></p></div></a></article><article><a href="Package4881.html" class="flex alignc libox"><div class="img_list"><img imgsrc="http://pic.giftport.com.cn/giftimages/test/11455_01.jpg" width="136" height="136" alt="产品"></div><div class="list_nr it1"><h2 class="cla pro_tit">同正原味梅饼380g碱性食品，中国第一家养生有机梅</h2><p class="wzinx"><strong>￥39.50</strong> <em>50.00</em><span class="bbq_pro zen">赠</span></p><p class="pingjia_list">5人评价<span class="gwc_pro"></span></p></div></a></article><article><a href="Product34936.html" class="flex alignc libox"><div class="img_list"><img imgsrc="http://pic.giftport.com.cn/giftimages/test/02798_01.jpg" width="136" height="136" alt="产品"></div><div class="list_nr it1"><h2 class="cla pro_tit">黄胜记莲蓉手工馅饼400g百年老字号，全新创意美味</h2><p class="wzinx"><strong>￥24.00</strong> <em>25.00</em></p><p class="pingjia_list">11人评价<span class="gwc_pro"></span></p></div></a></article><article><a href="Product32632.html" class="flex alignc libox"><div class="img_list"><img imgsrc="http://pic.giftport.com.cn/giftimages/test/02429_01.jpg" width="136" height="136" alt="产品"></div><div class="list_nr it1"><h2 class="cla pro_tit">南普陀菩提苏180g味道怎么好，一吃就知道！</h2><p class="wzinx"><strong>￥15.00</strong> <em>16.00</em></p><p class="pingjia_list">112人评价<span class="gwc_pro"></span></p></div></a></article><article><a href="Product31005.html" class="flex alignc libox"><div class="img_list"><img imgsrc="http://pic.giftport.com.cn/giftimages/test/01483_01.jpg" width="136" height="136" alt="产品"></div><div class="list_nr it1"><h2 class="cla pro_tit">素手浣花黑糖棒棒糖140g传承自冲绳古法，怀旧风味</h2><p class="wzinx"><strong>￥12.00</strong> <em>15.00</em></p><p class="pingjia_list">386人评价<span class="gwc_pro"></span></p></div></a></article><article><a href="Product30887.html" class="flex alignc libox"><div class="img_list"><img imgsrc="http://pic.giftport.com.cn/giftimages/test/01247_01.jpg" width="136" height="136" alt="产品"></div><div class="list_nr it1"><h2 class="cla pro_tit">银祥同安封肉(尊礼)380g非“尝”美味、非常享受</h2><p class="wzinx"><strong>￥22.80</strong> <em>26.00</em></p><p class="pingjia_list">108人评价<span class="gwc_pro"></span></p></div></a></article><article><a href="Product31006.html" class="flex alignc libox"><div class="img_list"><img imgsrc="http://pic.giftport.com.cn/giftimages/test/01484_01.jpg" width="136" height="136" alt="产品"></div><div class="list_nr it1"><h2 class="cla pro_tit">台湾宏亚77松塔(蜜兰诺)192g浓浓奶香，层层酥脆</h2><p class="wzinx"><strong>￥18.00</strong> <em>22.00</em></p><p class="pingjia_list">268人评价<span class="gwc_pro"></span></p></div></a></article><article><a href="Product31111.html" class="flex alignc libox"><div class="img_list"><img imgsrc="http://pic.giftport.com.cn/giftimages/test/01591_01.jpg" width="136" height="136" alt="产品"></div><div class="list_nr it1"><h2 class="cla pro_tit">大有椒盐香酥鳗 80g来自台湾澎湖的祖传薪火</h2><p class="wzinx"><strong>￥19.90</strong> <em>25.00</em></p><p class="pingjia_list">42人评价<span class="gwc_pro"></span></p></div></a></article><article><a href="Product29913.html" class="flex alignc libox"><div class="img_list"><img imgsrc="http://pic.giftport.com.cn/giftimages/test/00079_01.jpg" width="136" height="136" alt="产品"></div><div class="list_nr it1"><h2 class="cla pro_tit">太祖牛轧糖(花生味)220g奶香浓郁，果粒坚香</h2><p class="wzinx"><strong>￥18.50</strong> <em>20.00</em><span class="bbq_pro jian">减</span></p><p class="pingjia_list">496人评价<span class="gwc_pro"></span></p></div></a></article><article><a href="Product36749.html" class="flex alignc libox"><div class="img_list"><img imgsrc="http://pic.giftport.com.cn/giftimages/test/03368_01.jpg" width="136" height="136" alt="产品"></div><div class="list_nr it1"><h2 class="cla pro_tit">黄远堂榴莲酥 100g黄师傅精心制作，台湾风味</h2><p class="wzinx"><strong>￥25.00</strong> <em>25.00</em></p><p class="pingjia_list">1人评价<span class="gwc_pro"></span></p></div></a></article>
+    </div>
+    
+</div>
+
+   
+<!--页面底部-->
+
+<footer class="mt15">
+   <div class="login flex packj">
+       <div class="dlzc"><a href="login.html">登录</a>|<a href="register.html">注册</a></div>
+      <div class="dlzc"><a href="FaqList.html">帮助中心</a>|<a href="#top">回到顶部</a></div>
+   </div>
+   <div class="dib-wrap banb">
+   <a class="dib" href="app.html">APP版</a>
+   <a class="dib huangse" href="javascript:;">触屏版</a>
+   <a class="dib" href="../www.shouliwang.com/default.html@ismobile=1">电脑版</a>
+   </div>
+   <p class="cpl"><small>Copyright © 2010-2014 girfport 手礼网版权所有</small></p>
+</footer>
+ 
+
+<script src="js/common.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-28190571-7', 'shouliwang.com');
+        ga('send', 'pageview');
+
+</script> 
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb711c8c01c085d82dd3fc13201e1b45e' type='text/javascript'%3E%3C/script%3E"));
+    1
+</script>
+</body>
+</html>

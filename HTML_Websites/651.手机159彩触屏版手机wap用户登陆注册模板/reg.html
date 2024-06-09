@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head><title>
+	手机159彩触屏版手机wap用户注册模板-懒人模板【http://www.lanrenmb.com/shenghuofuwu/caipiao/】</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1;' name='viewport' />
+<meta content='yes' name='apple-mobile-web-app-capable' />
+<meta content='black' name='apple-mobile-web-app-status-bar-style' />
+<meta content='telephone=no' name='format-detection' />
+<link rel='stylesheet' href='style/main.css' />
+<link href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed" /> 
+<link rel='stylesheet' href='style/user.css' /></head>
+<style>
+.divErrorMSG { border: 1px solid #FEA485; line-height: 20px; padding: 3px 3px 3px 10px; background-color: #FEFDE9; margin:3px 0px 3px 2px; color: #F30; width: 90%; }
+.is {height: 28px;padding-left: 0px;}
+.ni1 {height:40px}
+.btnC {
+	width:90px;
+	height:27px;
+	font-size: 16px;
+}
+  </style>
+</head>
+<body>
+<div class="mainDiv">  
+<div id="webtop">
+<a href="default.htm"><img src="images/159logo.png" height="35" /></a>
+</div>
+<div class="topround" ><font><b>已注册159彩账号,可直接<a class="btn" href="login.html">登录</a></b></font></div>
+<div style="padding-top:5px" class="curved_box">
+<table>
+<tr>
+	<td style="width:90px">用&nbsp;户&nbsp;名：</td>
+	<td><input name="uname" id="uname" type="text" size="22" class="is" placeholder="4-16个中文、数字或英文" required="required"/></td>
+</tr>
+<tr>
+	<td>用户密码：</td>
+	<td><input name="pwd" id="pwd" type="password" size="22" class="is" placeholder="6-20个数字或字母" required="required"/></td>
+</tr>
+<tr>
+	<td>确认密码：</td>
+	<td><input name="pwdc" id="pwdc" type="password" size="22" class="is" placeholder="请再填写上面的密码"/></td>
+</tr>
+<!-- <tr id="tphone"> -->
+<!-- 	<td>手机号码：</td> -->
+<!-- 	<td><input name="phone" id="phone" type="text" size="22" class="is" placeholder="中奖通知，找回密码" required="required"/></td> -->
+<!-- </tr> -->
+<!-- <tr id="goemail"> -->
+<!-- 	<td>&nbsp;</td> -->
+<!-- 	<td class="cm_gray">或选择  <a href="javascript:void(0)" id="tomail">填写电子邮箱</a></td> -->
+<!-- </tr> -->
+<!-- <tr style="display:none" id="temail"> -->
+<!-- 	<td>电子邮箱：</td> -->
+<!-- 	<td><input name="email" id="email" type="text" size="22" class="is" placeholder="绑定后可用于找回密码" required="required"/></td> -->
+<!-- </tr> -->
+<tr style="display:none" id="gophone">
+	<td>&nbsp;</td>
+	<td class="cm_gray">或选择  <a href="javascript:void(0)" id="tophone">填写手机号码</a></td>
+</tr>
+<tr>
+	<td align="right">验证码：</td>
+	<td>
+		<input style="width:60px" id="rand" type="text" value=""  maxlength=4" class="is" required="required"/>
+		<img style="width: 60px; display: ; height: 25px; cursor: pointer" id='rad' alt="验证码" onclick = "rad()" src="http://m.159cai.com/rand.phpx">
+	</td>
+</tr>
+<tr>
+	<td colspan="2"><label><input id="pbig" type="checkbox" checked="checked"/>我已年满18周岁</label></td>
+</tr>
+<tr>
+	<td colspan="2"><a href="javascript:void(0)" id="btnreg" class="btnC">提交注册</a></td>
+</tr>
+</table>
+</div>
+</div>
+<input type="hidden" id="type" value="0" />
+<div id="bottom_menu"><a href="default.htm">首页</a> | <a href="hemai/default.htm">合买大厅</a> | <a href="help/default.htm" target="_blank">帮助</a></div>
+<footer>
+客服热线：<A href="tel_3A4000696159">400-0696-159</A>
+</footer>
+<div style="display:none"></div>
+
+</body>
+</html>

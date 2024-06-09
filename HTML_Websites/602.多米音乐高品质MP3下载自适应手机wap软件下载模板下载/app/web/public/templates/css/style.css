@@ -1,0 +1,159 @@
+﻿/*-----------------
+style sheet for wap.duomi
+author:rays
+email:dehua.wang@duomi.com
+website:www.rays2010.com
+
+/*reset*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+body,td,th,p { font-family:"Microsoft YaHei","宋体","Arial"; }
+body { margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px }
+html, body { height: 100%; margin: 0px; padding: 0px; width:100%; }
+img {border:0; vertical-align:middle;}
+input, textarea, select {vertical-align:middle }
+table, th, td { border:none; border-collapse: collapse; }
+ul { list-style-type:none }
+li { list-style-type:none }
+.hidden{ display: none; }
+.cb{ clear: both; }
+.bd{ border:1px solid;}
+h2{ font-size:20px; color: #343434;}
+h3{ font-size:14px; color: #343434;}
+
+/*layout*/
+.wrap{ width: 100%; min-width:320px;  background:#CBCBCB; float:left;}
+.container{ width:100%; margin:0 auto; }
+.header{ height:66px; background:#353535; }
+.logo{ width:115px; height:33px; position: relative; top:16px; left:14px; text-indent: -9999px; }
+.logo a:link, .logo a:visited { display: block; width:115px; height:33px; }
+.main{ background: #FBFBFB; float: left; width:100%; min-height: 450px;}
+
+/*nav*/
+.nav li{ float:left; width:50%;  text-align: center;  background-color:#E6E6E6; position: relative;}
+.nav .left a:link, .nav .left a:visited, .nav .right a:link, .nav .right a:visited { background-color:#E6E6E6; color: #343434; display: block; margin:0; padding:10px;}
+.nav .hightlight { background:#FBFBFB; }
+.nav .hightlight a:link , .nav .hightlight a:visited { background-color:#7FA945; color: #FFF; position: relative;}
+.nav .hightlight a:hover , .nav .hightlight a:active { cursor: default;}
+.nav .arrow{ width:10px; height:6px; margin: 0 auto; }
+
+/*main*/
+.main a:link, .main a:visited{ color:#6D8D42; text-decoration: none;  padding:1px;}
+
+.download_duomi { margin:20px 0 20px 0; }
+.download_duomi .right{ float: left; width: 60%}
+.download_duomi h2{  margin: 0 0 5px;}
+.download_duomi h3{  margin: 5px 0;}
+.download_duomi p{ color: #828282; font-size: 14px;}
+.download_duomi a:link, .download_duomi a:visited { font-size:18px; margin:0 5px 5px 0; display: inline-block; padding:1px; }
+.download_duomi a:hover, .download_duomi a:active { background:#7FA945; color: #FFF;  }
+
+.download_app h2{ margin:0 0 0 10px;}
+.download_app .line{ width:95%; height:3px; margin: 10px 0 15px 10px; overflow: hidden;}
+.download_app li{ float: left; padding:0 0 10px 10px; width:90%;}
+.download_app li h3{ float:left; width:80%; height:20px; }
+.download_app p{ float: left; width:80%; font-size: 16px;}
+.download_app img{ float: left; margin:0 8px 0 0; display: inline; }
+.download_app p a:link, .download_app p a:visited, .download_app h3 a:link, .download_app h3 a:visited{ float: left;}
+.download_app p a:hover, .download_app p a:active, .download_app h3 a:hover, .download_app h3 a:active{ background:#7FA945; color: #FFF; padding:1px; }
+
+.download_platform { position: relative; width:100%;}
+.download_platform h2{ margin:0 0 5px 0;}
+.download_platform h3{ font-size: 16px;}
+.download_platform .icon_title {float:left; font-size: 12px;line-height:20px;width:364px}
+.download_platform .meta{ font-size:14px; color:#666; margin:2px 0 4px;}
+.download_platform .left { width:58%; padding:20px 0 0 10px; position: relative; z-index:2; }
+.download_platform ul { margin:12px 0 18px; }
+.actionTimes { color:#78885B; }
+.download_platform .action li {color:#DC78AC;font-size:12px;}
+.download_platform li {  line-height:20px;font-size: 12px; margin:0; padding:0 10px 0 0;}
+.download_platform .button { width:214px; margin:15px auto; z-index: 3; position: relative;}
+.download_platform .button a:link, .download_platform .button a:visited{ display:block; width:212px; height:60px; overflow: hidden;  text-indent: -9999px; }
+.icon_android, .icon_iphone, .icon_wp7, .icon_symbianv3, .icon_symbianv5, .icon_java { float:left; display: block; width:55px; height:17px;  margin:2px 0 0 8px;}
+
+.app_platform h2{ float: left; margin: 0 5px 0 10px; }
+.app_platform .title{ float:left; color:#BBB; font-size:14px; margin:5px 0 10px 10px;}
+.app_platform .line{ margin: 10px 0 5px 10px; clear: left;} 
+.app_platform li{  width:100%; padding:10px 0 10px 0; position: relative; }
+.app_platform img{ margin:0 10px 0 10px;}
+.app_platform li+li {border-top:1px solid #EAEAEA; }
+.app_platform li h3{ float: left;  width:70%; font-size:16px; margin:0 0 5px;}
+.app_platform li .meta{ float: left; width:50%; font-size:12px; color:#666;}
+.app_platform li:hover, .app_platform li:active{ background:#E5E5E5; }
+.app_platform .button a:link,.app_platform .button a:visited{ display:block; width:76px; height:34px;  text-indent: -9999px; padding:0; position: absolute; right:15px; top: 15px; overflow: hidden; }
+.app_platform .button a:hover,.app_platform .button a:active{ padding:0; }
+
+.detail { padding: 0 10px; width:93%;} 
+.detail .button a {left:0px;}
+.detail h2{ float: left; margin: 10px 0 0;}
+.detail h3{ margin: 0 0 10px;}
+.detail .icon_android, .detail .icon_iphone, .detail .icon_wp7, .detail .icon_symbianv3, .detail .icon_symbianv5, .detail .icon_java {margin: 13px 0 0 8px;}
+.detail .box{  height: 101px; margin:15px 0 5px; padding: 15px 0; border-top: 1px dashed #CCC; position: relative;}
+.detail .meta{ font-size: 14px;  margin:0 0 10px; float: left; width:60%; }
+.detail .meta p { margin:0 0 8px;}
+.detail ul { min-height:0; }
+.detail .button2 { float: left; margin:6px 0 0;}
+.detail .button2 a:link, .detail .button2 a:visited{width:94px; height:33px; display: block; text-indent: -9999px; overflow: hidden; }
+.detail .button3 a:link, .detail .button3 a:visited{width:215px; height:60px; display: block;  text-indent: -9999px; margin:20px auto; overflow: hidden;}
+.detail li { list-style-type:none; margin:0 0 10px; padding:0;}
+
+.recommend h2{ margin:0 0 0 10px;}
+.recommend .line{ width:95%; height:4px;  margin: 10px 0 15px 10px; overflow: hidden; }
+.recommend ul{ margin:0 0 10px;}
+.recommend li{ width:25%; height:25%; float: left; text-align: center; }
+.recommend li a:link, .recommend li a:visited { display: block; }
+.recommend li a:hover h3, .recommend li a:active h3 { color: #7FA945; }
+.recommend h3 { margin: 5px 0;}
+
+.brand { margin: 8px 0 20px 10px; color:#7FA945; float: left; display: inline; width:97%; }
+.brand a:link, .brand a:visited{ display:inline-block; padding:3px; font-size: 20px; margin:5px 5px 0 0; text-align: center;}
+.brand a:hover, .brand a:active{ background:#7FA945; color: #FFF; padding:3px;}
+
+.platform { width:100%; }
+.platform ul{ margin: 10px;}
+.platform li{ margin:5px 0;}
+.platform a:link, .platform a:visited{ padding:3px; font-size: 20px;}
+.platform a:hover, .platform a:active{ background:#7FA945; color: #FFF; padding:3px;}
+
+.title_bg{ background:#E6E6E6; padding:10px; height:20px;} 
+.title_bg h3{ font-size: 16px;}
+.title_bg .return a:link, .title_bg .return a:visited{ font-size:16px; line-height:20px;}
+
+.brand_single { width:100%; }
+.brand_single h2 { float:left;}
+.brand_single h3 { margin:10px 0;}
+.brand_single ul{ margin: 0 0 10px 0;}
+.brand_single .brand{ margin: 8px 0 10px 10px; }
+.brand_single .brand a:link, .brand_single .brand a:visited{ max-width:200px;}
+.brand_single .return {float:right; line-height:45px; font-size:14px; margin: 0 10px 0 0; }
+
+.about ul{ padding:0 10px 0; margin: 0 0 60px; }
+.about li{ padding:10px 0 5px 0; color: #666; line-height:1.6em;}
+
+.work { padding: 0 0 10px 0;}
+.work p, .work ul{ padding:0 15px 0; margin:20px 0 0 0; color:#555; }
+.work li{ font-size: 16px; float: left; height:35px; width:100%; }
+.work .icon_qq {width:19px; height:21px; background: url(../images/qq_icon.png) no-repeat; float: left; margin: 0 10px 0 0;}
+
+.message h3{ margin:10px 0;}
+.message label{display: block;}
+.message form{ padding:2% 8% 0 3%; color: #555; }
+.message textarea{ display:block; width:100%; height:90px; border:1px solid #CCC; margin:10px 0; font-size: 16px; padding:8px 5px; color:#666; }
+.message input{display:block; width:100%; height:36px; line-height:26px;  font-size: 16px; padding:0 5px; border:1px solid #CCC; margin:10px 0; color:#666; }
+.message .submit, .message .home{ width:214px; height:59px;  border: none; text-indent:-9999px; margin:2% auto 5%; overflow: hidden; }
+.message .home { display:block;}
+
+.baidu_search { width: 300px; margin: 40px auto; position: relative;}
+.baidu_search .input,.baidu_search .submit{ width: 200px; height:30px; line-height:30px; border:1px solid #CCC; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius:5px; -moz-box-shadow: inset 0 0 1px 1px #CCC;    -webkit-box-shadow: inset 0 0 1px 1px#CCC;
+box-shadow: inset 0 0 1px 1px #CCC; padding:0 0 0 30px; }
+.baidu_search .submit{ width:54px;height:32px; margin: 0 0 0 5px; color:#666; padding:0; background:#FFF;}
+
+/*footer*/
+.footer{ background: #333; font-size: 20px; text-align: center; padding:10px 0; float:left; width:100%;}
+.footer .top, .footer .bottom { color:#FFF; height: 25px; }
+.footer .top a, .footer .bottom a{ margin: 0 .6%; display: inline-block;}
+.footer .top, .footer .bottom, .footer .select{ padding: 5px 0;}
+.footer .top a:link,.footer .top a:visited,.footer .select a:link, .footer .select a:visited{ color:#FFF; text-decoration: none;}
+.footer .top a:hover,.footer .top a:active{ color:#70A121; }
+.footer .top span a:link,.footer .top span a:visited{ color:#70A121; }
+.footer .bottom { color:#8B8B8B; }
+.footer .bottom a:link,.footer .bottom a:visited{ color:#8B8B8B; text-decoration: none; }

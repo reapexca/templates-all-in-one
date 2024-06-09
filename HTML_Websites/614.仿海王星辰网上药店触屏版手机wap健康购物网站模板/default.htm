@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>仿海王星辰网上药店触屏版手机wap健康购物网站模板-懒人模板【http://www.lanrenmb.com/shenghuofuwu/jiankang/】</title>
+    <meta name="author" content="m.star365.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    
+<link rel="stylesheet" type="text/css" href="css/base2013.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<script type="text/javascript" src="js/html5/view.js"></script>
+    
+    <script type="text/javascript">
+        var _winLocation = window.location.href; //获得当前页面的路径，根据路径规则进行逐页替换
+        var _isWebKit = '__proto__' in {}; //是否是webkit内核
+        if (_isWebKit) {//如果是webkit内核，则分模块使用zepto
+            //要使用zeptojs的路径列表，可以做为分模块替换的开关
+            var _locationList = new Array();
+            //活动模块
+            _locationList.push('activity/proActList');
+            _locationList.push('activity/proActWareList');
+            _locationList.push('activity/list');
+            //商品分类模块
+            _locationList.push('category/');
+            //首页相关
+            _locationList.push('hotbrand.html');
+            //商品筛选相关
+            _locationList.push('ware/expandSort.action');
+            _locationList.push('ware/categoryFilter.action');
+            _locationList.push('search');
+
+            _locationList.push('pay/'); //支付
+            _locationList.push('order/'); //订单
+            var _needReplace = false;
+            //如果当前路径符合要使用的路径规则，则进行替换
+            for (var i = 0; i < _locationList.length; i++) {
+                if (_winLocation.indexOf(_locationList[i]) != -1) {
+                    _needReplace = true;
+                    break;
+                }
+            }
+            //如果是首页的话，则使用zepto
+            var _tmp = _winLocation.replace(/(^http:\/\/)|(\/*$)/g, '');
+            if (_tmp.indexOf('/') < 0 || (_tmp.split('/').length <= 2 && _tmp.indexOf('/index') >= 0)) {
+                _needReplace = true;
+            }
+            //如果是商品详情页的话，则使用zepto
+            var _dlocationList = new Array();
+            _dlocationList.push(/\/product\/([0-9]+)\.html/);
+            _dlocationList.push(/\/detail\/([0-9]+)\.html/);
+            _dlocationList.push(/\/orderComment\/([0-9]+)\.html/);
+            _dlocationList.push(/\/consultations\/([0-9]+)\.html/);
+            _dlocationList.push(/\/consultations\/([0-9]+)-([0-9]+)\.html/);
+            _dlocationList.push(/\/comments\/([0-9]+)\.html/);
+            for (var i = 0, len = _dlocationList.length; i < len; i++) {
+                if (_dlocationList[i].test(_winLocation)) {
+                    _needReplace = true;
+                    break;
+                }
+            }
+            if (_needReplace) {
+                document.write('<script src="js/zepto.min.js"><\/script>');
+                document.write('<script type="text/javascript">window.jQuery=window.Zepto;<\/script>');
+            } else {
+                document.write('<script src="js/jquery-1.6.2.min.js"><\/script>');
+            }
+        } else {//如果是非webkit内核直接使用jquery
+            document.write('<script src="js/jquery-1.6.2.min.js"><\/script>');
+        }
+    </script>
+    <script type="text/javascript" src="js/html5/common.js"></script>
+    <script type="text/javascript" src="js/html5/spin.min.js"></script>
+</head>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 手机网站适应性广告代码 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1449491313257558"
+     data-ad-slot="1246518959"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<body id="body">
+    <a name="top"></a>
+    <header>
+        <div class="new-hw-logo">
+	        <h1 style="line-height:43px;"><img width="122" height="28" alt="海王星辰" src="images/html5/logo_new.png" /></h1>
+	        <div class="new-hlogo-btn">
+		        <a class="new-m-myhw" href="user/home"><span>会员中心</span></a>
+		        <a class="new-m-cart" id="html5_cart" href="javascript:void(0)"><span>购物车</span></a>
+	        </div>
+        </div>
+        <div class="new-header">
+            <form id="searchForm" action="/search">
+                <input type="hidden" value="0" id="sort">
+                <div class="new-srch-box new-srch-box-v2">
+		        <input type="text" value="感冒" required="" class="new-srch-input" id="newkeyword" name="keyword"><a class="new-s-close" onclick="cancelHotWord()" target="_self" href="javascript:void(0);"></a>
+		        <div style="display:none" id="shelper" class="new-srch-lst">
+    	        </div>
+                </div>
+                <a class="new-a-search" onclick="$('#searchForm').submit();" href="javascript:void(0)">搜索</a>
+	        </form>
+        </div>    </header>
+    
+    <style type="text/css">
+	body{word-break:break-all;}
+    /*图片尺寸修改后 必须改此尺寸  多平台时需要适配*/
+	 .container1 img{
+		width:304px;
+		height:80px;
+		margin:0px auto;
+	}
+	.container1 {
+		width:304px;
+		height:115px;
+		margin:0px auto;
+		text-align:center;
+	}
+    .pic-num1 {
+		margin: 0px auto;
+        text-align:right;
+    }
+    .pic-num1 li {
+		float: left;
+        display:inline-block;
+        padding: 0px 8px;
+        height:10px;
+        text-align:right;
+        background:url(images/html5/pagination.png) no-repeat right top;
+        width:10px;
+    }
+	.pic-num1 li.on {
+        background:url(images/html5/pagination.png) no-repeat right -10px;
+    }
+    .t_table{
+      height:130px;
+    }
+	.gonggao a{
+		color:red;
+		margin:2px 0 2px 10px;
+	}
+	.app a
+	{
+	    color:Black;
+	}
+    </style>
+    <div class="index-ads w" >
+	<div class="container1" id="idContainer2" ontouchmove="touchMove(event);" ontouchend="touchEnd(event);" style="text-align:center;">
+        <div style=" position:relative;height:100px;">
+            <table id="idSlider2" border="0" cellpadding="0" cellspacing="0" style="height: 100px;">
+                <tr>
+                    <td>
+                        <a href='javascript:voie(0);'><img src="images/html5/ad_1.jpg" alt="" style="box-shadow: -2px 2px 2px #999;" /></a>
+                    </td>
+                    <td>
+                         <a href='javascript:voie(0);'><img src="images/html5/ad_2.jpg" alt="" style="box-shadow: -2px 2px 2px #999;" /></a>
+                    </td>
+                    <td>
+                         <a href='javascript:voie(0);'><img src="images/html5/ad_3.jpg" alt="" style="box-shadow: -2px 2px 2px #999;" /></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <ul class="pic-num1" id="idNum"></ul>
+	</div>
+    </div>
+<div class="activities">
+    <div class="container">
+        <div class="list">
+            <ul style="height: 306px;">
+                <li class="one-img">
+                    <div class="app">
+                        <ul>
+                            <li>
+                                <a href="user/home">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_28.png"></dt><dd>我的账户</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/all.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/categorys.png"></dt><dd>商品分类</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/2544-000-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_08.png"></dt><dd>星辰U品</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/1022-000-000.html">
+                                <dl>
+                                    <dt><img width="46" height="46" alt="" src="images/html5/m365-_02.png"></dt>
+                                    <dd>营养保健</dd>
+                                </dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/1006-000-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_16.png"></dt><dd>性福生活</dd></dl>
+                                </a>
+                            </li>                            
+                            <li>
+                                <a href="category/1005-000-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_22.png"></dt><dd>医疗器械</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/1782-1804-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_13.png"></dt><dd>肌肤健康</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/1782-1812-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_27.png"></dt><dd>滋补用药</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/1782-1787-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_23.png"></dt><dd>感冒用药</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/1782-1783-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_03.png"></dt><dd>儿童用药</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/1782-1784-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_10.png"></dt><dd>妇科用药</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/1782-1809-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_24.png"></dt><dd>心脑血管</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/1782-2137-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_17.png"></dt><dd>男科用药</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/1782-1790-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_06.png"></dt><dd>筋骨疼痛</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/1782-1806-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_12.png"></dt><dd>胃肠用药</dd></dl>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="category/1782-1786-000.html">
+                                <dl><dt><img width="46" height="46" alt="" src="images/html5/m365-_19.png"></dt><dd>肝胆用药</dd></dl>
+                                </a>
+                            </li>                
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="activity" value="3">
+<script type="text/javascript">
+    $("#body").attr("style", "width: 320px; margin: 0px auto;");
+    var picCount = $("#activity").val();
+    $(".pic-num1").css("width", (picCount * 30) + "px");
+    var forEach = function (array, callback) {
+        for (var i = 0, len = array.length; i < len; i++) { callback.call(this, array[i], i); }
+    }
+    var st = createPicMove("idContainer2", "idSlider2", picCount); //图片数量更改后需更改此数值
+    var nums = [];
+    //插入数字
+    for (var i = 0, n = st._count - 1; i <= n; i++) {
+        //(nums[i] = $("idNum").appendChild(document.createElement("li"))).innerHTML = ++i;
+        nums[i] = document.getElementById("idNum").appendChild(document.createElement("li"));
+    }
+    //设置按钮样式
+    st.onStart = function () {
+        forEach(nums, function (o, i) { o.className = st.Index == i ? "on" : ""; })
+    }
+
+    var touchX = [];
+    var touchY = [];
+    function touchMove(event) {
+        var touches = event.touches;
+        var fristTouch = touches[0];
+        var lastX = $(window).scrollLeft();
+        var lastY = $(window).scrollTop();
+        touchX.push(fristTouch.pageX);
+        touchY.push(fristTouch.pageY);
+        if (touchY.length > 1) {
+            event.preventDefault();
+            var dis = touchY[touchY.length - 2] - touchY[touchY.length - 1];
+            if (Math.abs(dis) > 50) {
+                window.scrollTo(lastX, window.lastY + dis);
+            }
+        }
+    }
+    //触屏  离开屏幕事件
+    function touchEnd(event) {
+        var touches = event.touches;
+        var fristTouch = touches[0];
+
+        if (touchX != undefined && touchX.length > 1) {
+            var startX = parseInt(touchX.shift(), 10);
+            var endX = parseInt(touchX.pop(), 10);
+
+            var disValue = Math.abs(startX - endX);
+
+            if (touchY.length > 1) {
+                var lastX = $(window).scrollLeft();
+                event.preventDefault();
+                var dis = touchY[touchY.length - 2] - touchY[touchY.length - 1];
+                if (Math.abs(dis) > 50 && Math.abs(dis) > disValue) {
+                    window.scrollTo(lastX, window.lastY + dis);
+                } else {
+                    if (disValue > 50) {
+                        event.preventDefault();
+                        bindEvent(startX, endX);
+                    }
+                }
+            } else {
+                if (disValue > 50) {
+                    event.preventDefault();
+                    bindEvent(startX, endX);
+                }
+            }
+
+            touchX = [];
+            touchY = [];
+        }
+    }
+
+    /**
+    *  绑定触屏触发事件
+    * param start
+    * param end
+    */
+    function bindEvent(start, end) {
+        if (start >= end) {
+            st.Next();
+        } else {
+            st.Previous();
+        }
+    }
+    st.Run();
+</script>
+    <footer>
+         <div class="new-footer">
+    <div class="new-f-login">
+            <a href="user/login.html">登录</a>
+    <span style="margin: 0 10px;">|</span><a href="user/register.html">注册</a>
+
+
+        
+        <span class="new-back-top"><a href="#top">回到顶部</a></span>
+    </div>
+    <div class="new-f-section"><a class="on" href="javascript:void(0)">触屏版</a><a href="../www.star365.com/@pcsite">电脑版</a></div>
+    <div class="new-f-section2">            
+    互联网药品交易资格证：粤C20100004<br />
+    订购热线：400-6626-365<br />
+    Copyright &copy; 2013 m.star365.com</div>
+</div>
+    </footer>
+    <script type="text/javascript">
+        $("#unsupport").hide();
+        if (!testLocalStorage()) { //not support html5
+            if (0 != 0 && !$clearCart && !$teamId) {
+                $("#html5_cart_num").text(0 > 0 > 0);
+            }
+        } else {
+            updateToolBar('index');
+        }
+
+        $("#html5_cart").click(function () {
+            //	syncCart('',true);
+            location.href = 'cart/cart.html';
+        });
+
+        function reSearch() {
+            var depCity = window.sessionStorage.getItem("airline_depCityName");
+            if (testSessionStorage() && isNotBlank(depCity) && !/^\s*$/.test(depCity) && depCity != "") {
+                var airStr = '<form action="airline/list.action" method="post" id="reseach">'
+        + '<input type="hidden" name="sid"  value=""/>'
+        + '<input type="hidden" name="depCity" value="' + window.sessionStorage.getItem("airline_depCityName") + '"/>'
+        + '<input type="hidden" name="arrCity" value="' + window.sessionStorage.getItem("airline_arrCityName") + '"/>'
+        + '<input type="hidden" name="depDate" value="' + window.sessionStorage.getItem("airline_depDate") + '"/>'
+        + '<input type="hidden" name="depTime" value="' + window.sessionStorage.getItem("airline_depTime") + '"/>'
+        + '<input type="hidden" name="classNo" value="' + window.sessionStorage.getItem("airline_classNo") + '"/>'
+        + '</form>';
+                $("body").append(airStr);
+                $("#reseach").submit();
+            } else {
+                window.location.href = 'airline/index.action';
+            }
+        }
+        //banner 关闭点击
+        $('.div_banner_close').click(function () {
+            $('#div_banner_header').unbind('click');
+            jQuery.post('index/addClientCookieVal.json', function (d) {
+                $('#div_banner_header').slideUp(500);
+            });
+        });
+        //banner 下载点击
+        $('.div_banner_download').click(function () {
+            var downloadUrl = $(this).attr('url');
+            jQuery.post('index/addClientCookieVal.json', function (d) {
+                window.location.href = downloadUrl;
+            });
+        });
+    </script>
+</body>
+</html>

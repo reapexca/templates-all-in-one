@@ -1,0 +1,61 @@
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input, button, textarea, p, blockquote { margin:0; padding:0; }
+table { border-collapse: collapse; border-spacing: 0; }
+li { list-style: none; }
+img { border: 0; }
+a{ outline:none; color:#000; text-decoration:none;}
+.hide{ display:none;}
+/*content*/
+.squared li span,#return{ background:url(../images/sprite.png) no-repeat 0 0; background-size:129px 52px;}
+body{min-width:320px;font:12px/1.5 "Microsoft Yahei","Arial"; color:#000;-webkit-text-size-adjust:none}
+.main{width:100%;max-width:768px; min-height:250px; margin:0 auto; overflow:hidden; padding-bottom:15px;}
+.header{ height:44px; background:#ffae01; border-bottom:1px solid #ff9001; position:relative; color:#fff; font-size:20px; line-height:42px; text-align:center;}
+#menu{ float:right; cursor:pointer; padding:0 10px; height:44px; border-left:1px solid #ff9001;}
+#menu ins{ display:inline-block; margin-left:4px; width:0; height:0; border:6px solid #ffae01; border-top-color:#fff; vertical-align:middle}
+#guide{ position:absolute; left:0; top:45px; font-size:12px; color:#000; text-align:left; line-height:29px; width:100%;box-shadow: 0px 2px 2px #787878; background:#fff; z-index:100; overflow:hidden; display:none;}
+#guide dt{ font-size:14px; line-height:30px; margin:-1px 2% 0; border-top:1px solid #e1e1e1; padding-top:4px;}
+#guide dd{ line-height:24px; margin:0 2% 0 -1.6%; padding-bottom:6px; overflow:hidden;}
+#guide dd a{ float:left; margin-left:3.6%; color:#333;}
+#return{ float:left; width:29px; height:24px; text-indent:-9999px; overflow:hidden; padding:10px; border-right:1px solid #ff9001; background-position:-90px 9px;}
+.logo{ height:30px; margin:6px 0 0 10px; float:left;}
+.scroll_title{ height:38px; line-height:38px; border-top:1px solid #e1e1e1; border-bottom:1px solid #e1e1e1; background:#f5f5f5;}
+.scroll_title span{ float:left; font-size:16px; margin:0 3%; padding:0 3px; cursor:pointer;}
+.scroll_title .active{ border-bottom:2px solid #ff8401; line-height:37px;}
+.hd{ height:38px; line-height:36px; border-left:5px solid #ff8401; margin-top:2%;}
+.hd .all{ float:right; font-size:14px; color:#999; margin-right:10px;}
+.hd h3{ font-size:16px; border-bottom:1px solid #e1e1e1; border-top:1px solid #e1e1e1; background:#f5f5f5; font-weight:normal; padding-left:10px;}
+.squared{ overflow:hidden;}
+.squared li{ float:left; position:relative; margin:2% 0 0 2%;}
+.squared li span{ display:block; width:82px; padding-left:8px; height:52px; line-height:72px; font-size:16px; color:#fff; position:absolute; left:0; bottom:0;} 
+.squared li img{ display:block; border-radius:5px; width:100%;}
+.squared .s_xz{ width:64%;}
+.squared .s_xg,.squared .s_qc,.squared .s_sj,.squared .s_pg,.squared .s_zp{ width:31%;}
+.squared .s_ns{ width:97%;}
+.box{ float:left;}
+.box img{ display:block; width:100px;}
+.container{ overflow:hidden;}
+.items { float:left; width:31%; margin:8px 0 0 2%; position:relative;}
+.items p{ font-size:16px; line-height:20px; height:20px; margin-top:5px; overflow:hidden; padding:0 5%;}
+.items img { display:block; width:100%; border-radius:5px;}
+.items span{ display:block; padding:0 8px; height:20px; line-height:20px; text-align:center; font-size:14px; color:#fff; border-radius:5px; background:rgba(38,23,15, 0.5); position:absolute; bottom:35px; right:8px;}
+#images .items { display: none;}
+.silder{ text-align:center;}
+.silder .title{ padding:12px 0 10px; line-height:22px;}
+.silder .title h2,.silder .title p{ height:22px; overflow:hidden; font-size:16px;}
+.silder .title h2 em,.silder .title h2 i{ font-style:normal;}
+.silder .title p{ font-size:12px; color:#999; height:22px; overflow:hidden;}
+.silder .title p span{ float:left; width:33.33%; text-align:center;}
+.silder .wallpaper-container{ margin:0 4%;}
+.silder .wallpaper li{ display:none;}
+.silder .wallpaper-container img{ margin: 0 auto; width:100%; display:block;}
+.silder .wallpaper .liSelected{display:block;}
+.silder .action{ line-height:0; margin:0 4%;}
+.silder .action span{ display:inline-block; cursor:pointer; width:64px; line-height:26px; height:26px; overflow:hidden; border:1px solid #e1e1e1; border-radius:5px; margin:4% 5% 2%;}
+
+.gamelist{ overflow:hidden; margin:-1px 10px;}
+.gamelist li{ float:left; width:33.33%; text-align:center; padding:16px 0;}
+.gamelist li img{ display:block; margin:0 auto; border-radius:10px; width:75px; height:75px;}
+.gamelist li h3{ font-weight:normal; height:24px; line-height:24px; font-size:14px; margin-top:3px; overflow:hidden;}
+.gamelist li p{ line-height:18px; height:18px; overflow:hidden;}
+.btn_down { background:url(../images/sprite_newyx.png) no-repeat 0 0; background-size:60px 174px;}
+.gamelist li .btn_down{ display:block; width:54px; padding-left:21px; border-radius:3px; height:22px; line-height:22px; color:#fff; margin:6px auto 0; background-color:#FF8401; background-position:-44px -38px; text-align:left;}

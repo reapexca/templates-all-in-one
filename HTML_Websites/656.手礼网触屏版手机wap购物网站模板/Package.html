@@ -1,0 +1,138 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+    <link href="css/mygb.css" rel="stylesheet" type="text/css">
+
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<script type="text/javascript">    
+    var _winLocation = window.location.href.toLowerCase();//获得当前页面的路径，根据路径规则进行逐页替换
+    var _isWebKit = '__proto__' in {};//是否是webkit内核
+
+    if (_isWebKit) {//如果是webkit内核，则分模块使用zepto
+        //要使用zeptojs的路径列表，可以做为分模块替换的开关
+        var _locationList = new Array();
+        //活动模块
+        _locationList.push('register.html');
+        _locationList.push('forgetpwd.html');
+        _locationList.push('shoppingcart');
+        _locationList.push('orderinfo');
+        _locationList.push('myreviewinfo');
+        _locationList.push('myorderinfo');
+        _locationList.push('weixin');
+
+        var _needReplace = false;
+        //如果当前路径符合要使用的路径规则，则进行替换
+        for (var i = 0; i < _locationList.length; i++) {
+            if (_winLocation.indexOf(_locationList[i]) != -1) {
+                _needReplace = true;
+                break;
+            }
+        }
+        
+        if (isIE())
+            _needReplace = true;
+        
+        if (!_needReplace) {
+            document.write('<script src="js/zepto.min.js"><\/script>');
+            //document.write('<script src="js/touch.js"><\/script>');
+            document.write('<script type="text/javascript">window.jQuery=window.Zepto;<\/script>');
+        } else {
+            document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');
+            document.write('<script src="js/jquery.cookie.js"><\/script>');
+            document.write('<script src="js/giftport.js"><\/script>');
+        }
+    } else { //如果是非webkit内核直接使用jquery
+        document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');
+        document.write('<script src="js/jquery.cookie.js"><\/script>');
+        document.write('<script src="js/giftport.js"><\/script>');
+    }
+    
+    function isIE() { //ie?  
+        if (!!window.ActiveXObject || "ActiveXObject" in window)
+            return true;
+        else
+            return false;
+    }
+</script>
+   
+    
+    <link href="css/libao.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    
+ <a name="top"></a>
+     <title>手礼网触屏版手机wap购物网站模板礼包-懒人模板【http://www.lanrenmb.com/shenghuofuwu/gouwu/】</title>
+
+    
+<header>
+<div class="flex packj alignc cd44">
+      <a href="javascript:;" class="back fote db" onclick="pageBack()"></a>
+      <h2 class="tc it1 fenleix">
+          
+
+      </h2>
+      <a href="javascript:;" id="btnSLKey" class="sl_fl fote db"></a>
+   </div>
+   <div class="flex packj alignc cd60" id="divSLKey" style="display: none;">
+      <a href="default.html" class="it1 ljpro"><span class="icofenlei home"></span>首页</a>
+      <a href="AllCategory.html" class="it1 ljpro"><span class="icofenlei proserch "></span>分类搜索</a>
+      <a href="ShoppingCart.html" class="it1 ljpro"><span class="icofenlei progw"></span>购物车</a>
+      <a href="MyAccount.html" class="it1 ljpro"><span class="icofenlei mysl "></span>我的手礼</a>
+   </div>
+</header>
+    
+    
+
+    <!--礼品推荐-->
+<h2 class="pro_title">礼品推荐</h2>
+<div class="dib-wrap kbkd box-siz">
+    <article class="dib tl box-siz"> <a class="lbbox" href="Package4881.html"><p class="dtlb-pic"> <img src="http://pic.giftport.com.cn/giftimages/Promotion/Package/small64.jpg"> </p><h2 class="pro_tit1 cla">最闽台288伴手礼箱</h2><p class="wzinx"><strong>￥288.00</strong> <em>12.00</em></p><p class="goumai">购买</p></a> </article><article class="dib tl box-siz"> <a class="lbbox" href="Package4863.html"><p class="dtlb-pic"> <img src="http://pic.giftport.com.cn/giftimages/Promotion/Package/small3356.jpg"> </p><h2 class="pro_tit1 cla">最台湾分享大礼包168元</h2><p class="wzinx"><strong>￥168.00</strong> <em>12.00</em></p><p class="goumai">购买</p></a> </article><article class="dib tl box-siz"> <a class="lbbox" href="Package4889.html"><p class="dtlb-pic"> <img src="http://pic.giftport.com.cn/giftimages/Promotion/Package/small100.jpg"> </p><h2 class="pro_tit1 cla">最厦门特色礼袋 138元</h2><p class="wzinx"><strong>￥138.00</strong> <em>12.00</em></p><p class="goumai">购买</p></a> </article>
+</div>
+<h2 class="pro_title">商品筛选</h2>
+<nav class="lbsx box-siz">
+    <dl class="lbljxy dib-wrap tl"><dt class="dib">礼品分类：</dt><dd class="dib"><a class="xuand" href="packagelist.html">不限</a></dd><dd class="dib"><a href="packagelist83_0_0.html">厦门礼包</a></dd><dd class="dib"><a href="packagelist84_0_0.html">台湾礼包</a></dd><dd class="dib"><a href="packagelist85_0_0.html">闽台礼包</a></dd></dl><dl class="lbljxy dib-wrap tl"><dt class="dib">送礼对象：</dt><dd class="dib"><a class="xuand" href="packagelist.html">不限</a></dd><dd class="dib"><a href="packagelist8_0_0.html">送客户</a></dd><dd class="dib"><a href="packagelist10_0_0.html">送朋友/同事</a></dd><dd class="dib"><a href="packagelist12_0_0.html">送长辈</a></dd><dd class="dib"><a href="packagelist14_0_0.html">送孩子</a></dd></dl><dl class="lbljxy dib-wrap tl"><dt class="dib">礼包商品：</dt><dd class="dib"><a class="xuand" href="packagelist.html">不限</a></dd><dd class="dib"><a href="packagelist86_0_0.html">6个以下</a></dd><dd class="dib"><a href="packagelist87_0_0.html">6-8个</a></dd><dd class="dib"><a href="packagelist88_0_0.html">9-10个</a></dd><dd class="dib"><a href="packagelist89_0_0.html">11-12个</a></dd></dl><dl class="lbljxy dib-wrap tl"><dt class="dib">送礼价格：</dt><dd class="dib"><a class="xuand" href="packagelist_0_0">不限</a></dd><dd class="dib"><a href="packagelist_0_49.html">0-49元</a></dd><dd class="dib"><a href="packagelist_50_99.html">50-99元</a></dd><dd class="dib"><a href="packagelist_100_199.html">100-199元</a></dd><dd class="dib"><a href="packagelist_200_299.html">200-299元</a></dd><dd class="dib"><a href="packagelist_300_499.html">300-499元</a></dd><dd class="dib"><a href="packagelist_500_799.html">500-799元</a></dd><dd class="dib"><a href="packagelist_800_999.html">800-999元</a></dd><dd class="dib"><a href="packagelist_1000_0.html">1000元以上</a></dd></dl>
+</nav>
+
+   
+<!--页面底部-->
+
+<footer class="mt15">
+   <div class="login flex packj">
+       <div class="dlzc"><a href="login.html">登录</a>|<a href="register.html">注册</a></div>
+      <div class="dlzc"><a href="FaqList.html">帮助中心</a>|<a href="#top">回到顶部</a></div>
+   </div>
+   <div class="dib-wrap banb">
+   <a class="dib" href="app.html">APP版</a>
+   <a class="dib huangse" href="javascript:;">触屏版</a>
+   <a class="dib" href="../www.shouliwang.com/default.html@ismobile=1">电脑版</a>
+   </div>
+   <p class="cpl"><small>Copyright © 2010-2014 girfport 手礼网版权所有</small></p>
+</footer>
+ 
+
+<script src="js/common.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-28190571-7', 'shouliwang.com');
+        ga('send', 'pageview');
+
+</script> 
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb711c8c01c085d82dd3fc13201e1b45e' type='text/javascript'%3E%3C/script%3E"));
+    1
+</script>
+</body>
+</html>

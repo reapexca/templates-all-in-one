@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+    <!--<?php
+$GuideFid[$fid]=str_replace("<a href='$webdb[www_url]' class='guide_menu'>&gt;首页</a>","",$GuideFid[$fid]);
+$fupId=intval($fupId);
+$topMenu[$fupId]='ck';
+$bodyondblclick = (function_exists('label_array')&&$web_admin&&!$MakeIndex) ?"dblclick_label();":"";
+print <<<EOT
+-->
+<head>
+	<meta charset="gb2312" />
+	<title>仿诚信中国触屏版手机wap购物网站模板-懒人模板【http://www.lanrenmb.com/shenghuofuwu/gouwu/】</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="member/template/default/css/mobileAdmin.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<script type="text/javascript" src="javascript/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="javascript/mobile.js"></script>
+    <script type="text/javascript" src="javascript/mobileUtil.js"></script>
+    <script type="text/javascript" src="javascript/TouchSlide.1.0.js"></script>
+    <script type="text/javascript" src="javascript/cart.js" charset="GB2312"></script>
+
+
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="main area">
+			<div class="cf header">
+<!--
+
+-->
+				<a href="default.htm" class="logo left block"><img src="images/logo.png" /></a>
+                <p class="right"><a href="login.php" class="cRed">登录</a>|<a href="reg.php" class="cRed">注册</a></p>
+			</div>
+<!--
+EOT;
+}
+?>
+-->
+
+
+            <div class="topv2">
+                <div class="searchv2 cf">
+                    <span class="left" ><em  id="selectKey">直达</em>▼</span>
+                    <ul>
+                        <li >直达</li>
+                        <li >搜索</li>
+                    </ul>
+                    <input id="keyword" name="keyword" type="text" class="left" value="请输入要搜索的关键词"
+                           onFocus="this.value==this.defaultValue?this.value='':null;" >
+                </div>
+                <a href="javascript:;" class="camera" onclick="searchKey()"></a>
+            </div>
+<script type="text/javascript">
+$(function(){
+    $(".topv2 .searchv2 ul li:eq(0)").click(function(){
+       $(".topv2 .camera").css("background-image","url(images/zhida.png)");
+    });
+    $(".topv2 .searchv2 ul li:eq(1)").click(function(){
+       $(".topv2 .camera").css("background-image","url(images/seach.png)");
+    });
+});    
+</script>
+<div id="bannerv2" class="bannerv2">
+    <div class="hd">
+        <ul><li></li><li class="on"></li><li></li></ul>
+    </div>
+    <div class="bd">
+        <ul>
+            <li><a href="javascript:;"><img src="images/index_21.png"></a></li>
+            <li><a href="javascript:;"><img src="images/index_22.jpg"></a></li>
+            <li><a href="javascript:;"><img src="images/index_23.png"></a></li>
+        </ul>
+    </div>
+</div>
+<!-- 手机焦点图脚本 -->
+<script type="text/javascript">
+    TouchSlide({
+        slideCell:"#bannerv2",
+        titCell:".hd ul",
+        mainCell:".bd ul",
+        effect:"left",
+        autoPlay:true,
+        autoPage:true,
+        switchLoad:"_src"
+    });
+</script>
+<ul class="tool2">
+    <li class="l1"><a href="order.php@job=list"><span></span><em>订单查询</em></a></li>
+    <li class="l3"><a href="buy.php"><span></span><em>进货单</em></a></li>
+</ul>
+
+
+<ul class="itemsv2">
+        <li class="item1">
+        <a href="default.htm" class="left">
+            <span>服装服饰</span>
+            <em>秋装新品发布</em>
+            <img src="images/pic1v2.jpg" />
+        </a>
+        <div   class="right">
+            <!---->
+                        <a href="category.html" style="">女装</a>
+                        <a href="category.html" style="">童装</a>
+                        <a href="category.php@category_id=3806" style="">男装</a>
+                        <a href="category.php@category_id=3833" style="">内衣</a>
+                        <a href="category.php@category_id=3834" style="">鞋</a>
+                        <a href="category.php@category_id=3835" style="">箱包皮具</a>
+                        <a href="category.php@category_id=3836" style="">服饰配件</a>
+                        <a href="category.php@category_id=3837" style="">运动户外</a>
+                        <a href="category.php@category_id=3838" style="">其他</a>
+                    </div>
+    </li>
+        <li class="item2">
+        <a href="default.htm"  class="right">
+            <span>原材料</span>
+            <em>中国好钢管</em>
+            <img src="images/pic2v2.jpg" />
+        </a>
+        <div  class="left">
+            <!---->
+                        <a href="category.php@category_id=165" style="">橡塑</a>
+                        <a href="category.php@category_id=4719" style="">建材</a>
+                        <a href="category.php@category_id=172" style="">能源</a>
+                        <a href="category.php@category_id=171" style="">冶金</a>
+                        <a href="category.php@category_id=170" style="">农业</a>
+                        <a href="category.php@category_id=169" style="">包装</a>
+                        <a href="category.php@category_id=168" style="">纺织</a>
+                        <a href="category.php@category_id=167" style="">化工</a>
+                        <a href="category.php@category_id=166" style="">精细</a>
+                        <a href="category.php@category_id=4744" style="">轻工</a>
+                    </div>
+    </li>
+        <li class="item3">
+        <a href="default.htm" class="left">
+            <span>工业品</span>
+            <em>非接触红外温度计</em>
+            <img src="images/pic3v2.jpg" />
+        </a>
+        <div   class="right">
+            <!---->
+                        <a href="category.php@category_id=970" style="">机械</a>
+                        <a href="category.php@category_id=978" style="">仪器</a>
+                        <a href="category.php@category_id=977" style="">安防</a>
+                        <a href="category.php@category_id=976" style="">照明</a>
+                        <a href="category.php@category_id=975" style="">五金</a>
+                        <a href="category.php@category_id=974" style="">电子</a>
+                        <a href="category.php@category_id=973" style="">电工</a>
+                        <a href="category.php@category_id=972" style="">设备</a>
+                        <a href="category.php@category_id=971" style="">机床</a>
+                        <a href="category.php@category_id=4727" style="">陶瓷</a>
+                    </div>
+    </li>
+        <li class="item4">
+        <a href="default.htm"  class="right">
+            <span>家居百货</span>
+            <em>日式七格有盖</em>
+            <img src="images/pic4v2.jpg" />
+        </a>
+        <div  class="left">
+            <!---->
+                        <a href="category.php@category_id=1621" style="">日用百货</a>
+                        <a href="category.php@category_id=1622" style="">家纺</a>
+                        <a href="category.php@category_id=1623" style="">家具</a>
+                        <a href="category.php@category_id=1624" style="">美容护肤</a>
+                        <a href="category.php@category_id=1625" style="">日化清洁母婴</a>
+                        <a href="category.php@category_id=1626" style="">运动休闲</a>
+                        <a href="category.php@category_id=1627" style="">食品</a>
+                        <a href="category.php@category_id=1628" style="">建筑建材</a>
+                    </div>
+    </li>
+        <li class="item5">
+        <a href="default.htm" class="left">
+            <span>小商品</span>
+            <em>爆款太阳镜火热批发</em>
+            <img src="images/pic5v2.jpg" />
+        </a>
+        <div   class="right">
+            <!---->
+                        <a href="category.php@category_id=869" style="">饰品</a>
+                        <a href="category.php@category_id=870" style="">工艺品</a>
+                        <a href="category.php@category_id=871" style="">玩具</a>
+                        <a href="category.php@category_id=872" style="">办公文教</a>
+                        <a href="category.php@category_id=873" style="">数码电脑</a>
+                        <a href="category.php@category_id=874" style="">家用电器</a>
+                    </div>
+    </li>
+        <li class="item6">
+        <a href="default.htm"  class="right">
+            <span>商务服务</span>
+            <em>诚信通托管</em>
+            <img src="images/pic6v2.jpg" />
+        </a>
+        <div  class="left">
+            <!---->
+                        <a href="category.php@category_id=2927" style="">物流服务</a>
+                        <a href="category.php@category_id=2928" style="">展会广告</a>
+                        <a href="category.php@category_id=2929" style="">印刷服务</a>
+                        <a href="category.php@category_id=2930" style="">包装服务</a>
+                        <a href="category.php@category_id=2931" style="">相关服务</a>
+                        <a href="category.php@category_id=4714" style="">人才招聘</a>
+                        <a href="category.php@category_id=4752" style="">购物超市</a>
+                    </div>
+    </li>
+    
+</ul>
+
+
+			<script type="text/javascript">
+				//设置图片的长宽比例
+				window.onresize = window.onload = function(){
+					setImg("setImg", 211/156);
+				};
+			</script>
+        <div class="footer">
+            <div class="tool">
+                <p><a href="login.php">登录</a><a href="reg.php">注册</a><a href="index.php">回首页</a></p>
+                <a href="javascript:;" id="toTop"></a>
+            </div>
+            <div class="botNav">
+                <p><a href="default.htm">首页</a>  |   <a href="about.php">关于诚信中国</a>  |  <a href="contact.php">联系我们</a></p>
+                <p class="p2"><a href="../m.chengxin101.com/default.htm" class="cur">触屏版</a>  |  <a href="../www.cxzg.com/default.htm">电脑版</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    $(function(){
+        $(".searchv2 span").click(function(){
+            $(this).next("ul").show();
+        });
+        $(".searchv2 li").click(function(){
+            $(this).parent("ul").hide().prev("span").find("em").text($(this).text());
+        });
+
+
+
+        $(".itemsv2").find("li").each(function(){
+            $(this).find("div").css({
+                "height":$(this).children("a").height() + "px"
+            });
+        });
+
+    });
+    function searchKey (){
+        sub=$("#selectKey").text();
+        keyword = $("#keyword").val();
+        if(keyword=='请输入要搜索的关键词'){
+            alert("请输入要搜索的关键词");
+        }else{
+            window.location.href="search.php@sub="+sub+"&keyword="+keyword;
+        }
+        return false;
+    }
+    $("#keyword").keyup(function(event){
+        if(event.keyCode == 13){
+            searchKey ()
+        }
+    })
+</script>
+
+
+
+
+
+
+

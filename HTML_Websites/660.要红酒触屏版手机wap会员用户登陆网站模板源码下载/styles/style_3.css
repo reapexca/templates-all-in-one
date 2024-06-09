@@ -1,0 +1,317 @@
+@charset "utf-8";
+/* CSS Document */
+@media screen and (min-width: 320px){
+.spik_title{ width:320px; margin:0 auto}
+.show_con{ width:320px}
+.show_con img{ width:280px}
+.show_con h2{ font-size:14px}
+.spik_title .mszk{ left:125px}
+.spik_title{background-position:0 -57px; background-size:320px}
+.group_title{background-position:0 0;}
+.msQuestion{ width:320px}
+.msQuestion dt .QuestionTit i{ background-size:27px auto}
+.msQuestion .msA{ text-indent:-20px; padding-left:20px}
+.Construtips{  font-size:28px; height:120px}
+.Continue a{ display:none}
+.pro_list li{ height:100px}
+.pro_list li .pro img{ width:42px; height:70px}
+.carList{ font-size:12px}
+.cart_pro_title{ height:28px; overflow:hidden; font-size:14px}
+.Total{ padding-top:25px}
+.ordBtn{ font-size:14px}
+.cartBottom_r li{ width:auto}
+.cartBottom .Prefe a{ display:block}
+.carList .price{ font-size:16px;}
+.carList .cart_pro{ width:82px; height:82px;}
+.carList .cart_pro img{ width:51px; height:82px}
+.carList ul li a.dele{ background-size:25px auto}
+.loginBtn{ width:300px}
+.coopCon ul li{ display:block; margin:5px}
+.coopCon{ width:300px; margin:0 auto}
+.weekList {width:310px;}
+.category li .info .data { width: 210px;}
+.tab,.label,.J_cate_c,.brand { width: 300px;}
+.label .label1 { width: 149px;}
+.label .label2 { width: 150px;}
+.cateTop .topSearch{ width:210px; height:28px}
+.cateTop{ padding-left:50px; width:280px}
+.cateTop .topSearchBtn{ height:35px; background-position:10px -396px; width:40px}
+.cover{ top:46px}
+.label{ top:60px}
+.tab{ top:80px}
+.searchTit{font-size:20px; line-height:28px;}
+.searchTop{ width:100%; padding-left:0}
+.Filter{ width:310px}
+.LotteryCon{ width:320px; background-size:320px auto; height:350px}
+.LotteryCon .lottBtn{ top:220px; left:86px; width:148px; height:34px; }
+.RuleCon{ top:10px;}
+.RuleBtn{top:100px; left:164px; width:65px; height:20px;}
+.brank_logo li{ margin-left:9px}
+.FCLSlogan{ height:87px; background-size:auto 87px}
+.btnCon,.brandCon{ width:320px}
+.brandTxt{ width:300px;}
+.userMsg,.addInp{ width:294px; margin:0 auto; display:block}
+.mod h4,.mod .porduct_list{ width:330px}
+.ad_wrap .Collect{right:-40px}
+.aboutList li{ font-size:14px;}
+.brandTop,.QuickBuy,.QuickBuy li,.HotCon li,.GiftCon .gifTitle,.FCLwrap{ width:320px;}
+.QuickBuy{ background:#fff;}
+.HotCon,.GiftCon .gifList{ width:320px}
+.GiftCon .gifList li .pic{width:120px}
+.GiftCon .gifList li .pic img{width:120px;}
+.GiftCon .gifTitle li{ width:62px; font-size:14px}
+.QuickBuy li{ border-bottom:1px solid #9c9c9c; padding-bottom:10px;}
+.GiftCon .gifList li{ width:300px; height:200px; padding-top:30px;}
+.GiftCon .gifList li .info{width:160px}
+.GiftCon .gifList li .info h2{ font-size:16px;}
+.GiftCon .gifList li .info .slogan{ font-size:12px;line-height:15px; height:20px}
+.GiftCon .gifList li .info .priceCon{ width:100%}
+.GiftCon .gifList li .info .priceCon .cart{ background-size:50% auto; right:-15px}
+.tabSearch li{width:33%}
+.FCLwrap .FCLList li{ margin-left:10px;}
+.FCLwrap .title img{ width:200px}
+.FCLwrap .title2 img{ width:320px}
+.guarCon { padding:20px 0 100px;}
+.guarCon h1{ font-size:14px}
+.CouponWrap{width:256px; }
+.CommentCon .connavList li{ font-size:12px; font-weight:normal; width:24.6%}
+.funList li .txt{ width:100%;}
+.layer_c{ width:95%; margin:0 auto}
+.FeedbackCon{ width:320px;}
+.guarCon .gright{ width:320px; overflow:hidden}
+.guarCon .gright ul{ width:330px;}
+.guarCon .gright li{ width:106px; height:60px}
+.NmzWrap .NmzLayer,.GroupWrap{ width:320px; overflow:hidden}
+.forPassW,.GroupWrap .zhList li{ width:300px; }
+.GroupWrap .zhList li .proInfo{width:190px}
+.GroupWrap .zhList li .proInfo h2{font-size:16px; height:40px; line-height:20px; }
+.GroupWrap .pic img{ width:80px;}
+.GroupWrap .pic{padding:0; margin:0 10px}
+.GroupWrap .zhList li{ padding:10px 5px}
+.GroupWrap .proInfo .price_c,.GroupWrap .proInfo .price_c del{ font-size:12px}
+.GroupWrap .proInfo .price_c{ margin:15px 0 22px; }
+.GroupWrap .proInfo .price_c .price{ font-size:22px}
+.GroupWrap .proInfo .price_c .Discount{ font-size:16px}
+.GroupWrap .proInfo .inBto .num{width:92px;height:22px; }
+.GroupWrap .proInfo .inBto .num b{ height:22px;}
+.GroupWrap .proInfo .inBto .num span{ line-height:20px; font-size:14px}
+.GroupWrap .proInfo .inBto .right{ height:24px; font-size:14px; line-height:20px; width:60px}
+.AnnList li .name{ max-width:150px;}
+.ggleCon{ width:320px;}
+.ggl{ width:310px; height:55px;padding-top:135px; background-size:320px auto}
+.ggl .Integration{ font-size:14px;}
+.ggl .Integration img{ height:40px}
+.ggl .Integration .yellow{ font-size:16px}
+.ggl a{ font-size:14px; padding:5px 10px}
+.ggleCon .txt{ font-size:12px;padding-left:10px}
+.ggleCon h2,.ggleCon .jpList h2{font-size:14px; margin-bottom:5px}
+.ggleCon .jpList .info p{ font-size:12px; width:160px;}
+.ggleCon .jpList .info img{ width:100px}
+.ggleCon .winnerList h2,.ggleCon .myPrize li h2{ font-size:14px}
+.carList ul li{ padding-left:120px;}
+.userWrap{ width:320px;}
+.userInfo .pic{ width:50px;height:50px; margin:25px 0 0 10px}
+.userInfo .txt{ width:250px; margin-left:10px}
+.userInfo .txt .name{ font-size:12px}
+.userInfo .txt .Grade{width:100px}
+.userList li i{ top:8px}
+.userList li{ font-size:16px; height:50px; line-height:50px;}
+.userList li span{ top:12px}
+.userWrap .Collect li{ height:60px;padding-top:10px; font-size:14px}
+.userWrap .Collect li .icon1,.userWrap .Collect li .icon2{ background-size:50px auto; width:50px; height:50px; margin-right:5px;}
+.userWrap .Collect li .icon2{ background-position:0 -58px}
+}
+@media screen and (min-width: 640px){
+.pro_list li .pro{ width:80px; height:80px; left:0; top:12px}
+.pro_list li .pro img{ width:48px; height:80px}
+.pro_list li{ height:95px; position:relative; font-size:14px}
+.pro_list li .proInfo{ left:80px; margin-left:110px}
+.about{ font-size:14px; line-height:24px}
+.SpecialTop{ font-size:30px; height:60px; line-height:60px}
+.Spike .SpikePic img{ width:640px; height:372px}
+.group .SpikePic img{ width:640px; height:408px}
+.ms_pro_title{ font-size:28px; padding-right:150px}
+.SpecialTop i{ top:20px}
+.spi_con{ width:640px}
+.spi_price{ width:400px; font-size:24px; padding-bottom:20px; background-size:400px 1px}
+.spi_price span del{ font-size:26px;}
+.spi_price span{ line-height:26px}
+.spi_con .goupNum{ font-size:32px; font-weight:100}
+.spi_con .f4,.spi_group_time{ font-size:28px}
+.spi_con .f4{ margin:5px 0 15px}
+.spik_title{ width:640px; margin:0 auto}
+.spik_title,.group_title{background-size:640px auto; height:114px}
+.group_title .price,.spik_title .price{ line-height:114px; font-size:92px; padding-left:27px;}
+.group_title .price span,.spik_title .price span{ font-size:64px}
+.group_title .mszk,.spik_title .mszk{ font-size:26px; width:83px; height:45px;  text-align:center; line-height:45px; border-radius:8px; left:244px; top:25px}
+.spik_title .s_t_btn{ left:373px; top:20px;border:#b30026 1px solid; width:185px; font-size:36px; height:65px; line-height:60px; box-shadow:1px 2px 2px #f0527d; border-radius:10px;}
+.group_title .s_t_btn{ top:25px}
+.show_con{ width:640px; margin:0 auto; font-size:14px; line-height:24px}
+.show_con img{ width:458px}
+.show_con h2{ font-size:16px}
+.spik_title{background-position:0 -114px;}
+.group_title{background-position:0 0;}
+.cart_pro_title{ font-size:16px; padding:10px 0 5px}
+.carList .price{ font-size:24px;}
+.spi_ms_time{ font-size:33px}
+.msQuestion dt .QuestionTit{ font-size:26px; width:240px;}
+.msQuestion{ width:640px; }
+.msQuestion dd{ line-height:30px}
+.msQuestion .msQ{font-size:24px; font-weight:normal}
+.msQuestion .msA{font-size:22px}
+.msQuestion dt .QuestionTit i{ background-size:54px auto; width:54px; height:78px;}
+.msQuestion dt{ height:78px; background-position:left 35px}
+.msQuestion dt .QuestionTit{ line-height:78px}
+.Continue a{ display:inline}
+.msQuestion .msA{ text-indent:-38px; padding-left:38px}
+.login li{ width:600px}
+.login li input{ width:380px}
+.login li span{ width:125px; padding-left:15px}
+.Inquiry, .loginBtn{ width:600px; font-size:18px;}
+.errorTips{ font-size:16px}
+.login .yzm{ width:175px}
+.Construtips{ font-size:28px;width:265px; height:150px;}
+.ms_pro_title{ height:60px; line-height:60px}
+.userList li{ height:55px; line-height:55px}
+.welcomTxt{ height:32px; line-height:32px; font-size:14px}
+.userList li span{ top:20px}
+.Tlogin{ font-size:18px;}
+.Address, .Information{ width:640px}
+.Address li input,.inp{ width:500px}
+.Address li span,.Information li .titWidth{ margin-right:20px}
+.addList td{ padding:10px;}
+.addList{ margin-top:0}
+.Tlogin{ font-size:16px}
+.cartBottom_r{ font-size:14px;}
+.cartBottom_r li{ height:26px}
+/*.footer .f_nav{ height:80px}*/
+/*.footer .f_nav li a{ height:80px; font-size:16px}*/
+.footer .f_nav li i{ background-size:390px auto}
+
+.footer .f_nav li i{ display:inline-block; width:42px; height:42px;}
+.footer .f_nav li i.login{background-position:-24px -313px}
+.footer .f_nav li a:hover i.login{background-position:-24px -381px}
+.footer .f_nav li i.order{background-position:-124px -313px}
+.footer .f_nav li a:hover i.order{background-position:-124px -381px}
+.footer .f_nav li i.Viewed{background-position:-218px -313px}
+.footer .f_nav li a:hover i.Viewed{background-position:-218px -381px}
+.footer .f_nav li i.Iabout{background-position:-320px -313px}
+.footer .f_nav li a:hover i.Iabout{background-position:-320px -381px}
+.ord-suc-t{ width:420px}
+.ord-suc-txt{ font-weight:bold; font-size:14px; background-position:0 -25px; padding-bottom:10px}
+.cart_su_tab,.cart3_s_bottom{ width:91%; margin:0 auto}
+.c_su_add{width:89%; margin:0 auto; padding-left:32px}
+.cart_su_tab td img{ width:150px}
+
+.msgTelNum{ font-size:45px}
+.carList{ font-size:14px}
+.ordBtn{ font-size:22px;}
+
+.cartBottom_r .total_price{ font-size:20px}
+.cartBottom .Prefe a{ display:inline-block}
+.carList .cart_pro{ width:172px; height:172px;}
+.carList .cart_pro img{ width:105px; height:170px}
+.carList ul li{ padding-left:220px; height:180px;}
+.carList ul li p{ padding-top:10px}
+.carList ul li a.dele{ background-size:31px 31px}
+.coopCon ul li{ display:inline-block; width:auto; margin:0 5px}
+.coopCon{ width:100%}
+.weekList {width:640px;}
+.cateTop .topSearch{width:456px;}
+.tab,.label,.J_cate_c, .brand{width:600px}
+.label .label1{ width:299px}
+.label .label2{ width:300px}
+.category li .info { width: 507px;}
+.category li .info .data {width: 510px;font-size:14px}
+.cateTop{width:570px; padding-left:80px}
+.cateTopCon i{ top:20px; left:30px}
+.cover{ top:60px}
+.cateTop .topSearch{height:40px;}
+.cateTop .topSearchBtn{ background-position: 10px -390px; height:42px}
+.searchTit{line-height:40px; font-size:28px;}
+.searchTop{ width:100%; padding-left:0}
+.Filter{ width:600px}
+.LotteryCon{ width:640px; background-size:auto; height:705px}
+.LotteryCon .lottBtn{ top:435px; left:172px; width:297px; height:76px; }
+.RuleCon{ top:40%;}
+.RuleBtn{top:200px; left:328px; width:130px; height:40px;}
+.FCLSlogan{ height:174px; background-size:auto}
+.btnCon,.brandCon{ width:640px}
+.mod h4,.mod .porduct_list{ width:630px}
+.ad_wrap .Collect{right:-70px}
+.lfListSmall,.brandTxt{ width:490px;}
+.lfListSmall li{ float:left; margin-left:10px;}
+.aboutList li{ font-size:18px;}
+.brandTop,.QuickBuy,.HotCon,.GiftCon .gifList,.FCLwrap{ width:640px;}
+.brank_logo li{ margin-left:12px}
+.QuickBuy li,.HotCon li{ width:310px; margin-left:7px;}
+.QuickBuy{ background:#282828}
+.GiftCon .gifTitle{ width:620px}
+.GiftCon .gifList li{ width:600px; height:300px; padding-top:30px;}
+.GiftCon .gifList li .info .slogan{ width:260px; height:30px;font-size:16px; line-height:20px;}
+.GiftCon .gifList li .pic{ width:270px;}
+.GiftCon .gifTitle li{ width:122px; font-size:22px;}
+.GiftCon .gifList li .info h2{ font-size:22px}
+.GiftCon .gifList li .info{width:300px}
+.GiftCon .gifList li .info .send{font-size:20px}
+.GiftCon .gifList li .info .priceCon{ width:95%}
+.GiftCon .gifList li .info .priceCon .cart{ background-size:100% auto;right:20px;}
+.GiftCon .gifList li .pic img{width:auto}
+.tabSearch li{width:33.1%}
+.QuickBuy li{ border:none; padding-bottom:0;}
+.FCLwrap .FCLList li{ margin-left:12px}
+.FCLwrap .title img{ width:auto}
+.FCLwrap .title2 img{ width:640px}
+.guarCon { padding:30px 40px 100px;}
+.guarCon h1{ font-size:16px}
+.CouponWrap{width:530px; }
+.CommentCon .connavList li{ width:24.8%; font-size:14px; font-weight:bold}
+.funList li .txt{ width:90%;}
+.layer_c{ width:91%; margin:0 auto}
+.guarCon .gright{ width:465px; overflow:hidden}
+.guarCon .gright ul{ width:480px;}
+.guarCon .gright li{ width:155px; height:79px}
+.NmzWrap .NmzLayer,.GroupWrap{ width:640px; overflow:hidden}
+.forPassW,.GroupWrap .zhList li{ width:600px;}
+.GroupWrap zhList li { padding:20px 10px}
+.GroupWrap .zhList li .proInfo{ width:370px;}
+.GroupWrap .zhList li .proInfo h2{font-size:24px; line-height:32px; height:63px;}
+.GroupWrap .pic{padding:10px 30px;  margin:0 20px 0 10px; }
+.GroupWrap .pic img{ width:auto;}
+.GroupWrap .proInfo .price_c,.GroupWrap .proInfo .price_c .Discount{ font-size:24px}
+.GroupWrap .proInfo .price_c .price{ font-size:36px}
+.GroupWrap .proInfo .price_c del{ font-size:18px}
+.GroupWrap .proInfo .inBto .num{width:155px;height:32px; }
+.GroupWrap .proInfo .inBto .num b{ height:32px;}
+.GroupWrap .proInfo .inBto .num span{ line-height:30px; font-size:24px}
+.GroupWrap .proInfo .inBto .right{width:80px;height:32px;line-height:32px;font-size:20px}
+.GroupWrap .proInfo .price_c{ margin:22px 0 60px; }
+.AnnList li .name{ max-width:500px;}
+.userMsg,.addInp{width:618px}
+.FeedbackCon,.ggleCon{ width:640px;}
+.ggl{ width:600px; height:70px;padding:290px 20px 0 20px; background-size:auto}
+.ggl .Integration{ font-size:16px;}
+.ggl .Integration .yellow{ font-size:18px}
+.ggl .Integration img{ height:auto}
+.ggl a{ font-size:20px;padding:10px 15px; margin-left:30px}
+.ggleCon .txt{ font-size:16px; line-height:24px;padding-left:20px}
+.ggleCon h2,.ggleCon .jpList h2{font-size:20px; margin-bottom:10px; font-weight:normal}
+.ggleCon .jpList .info p{ font-size:16px; width:435px;}
+.ggleCon .jpList .info img{ width:auto}
+.ggleCon .winnerList h2,.ggleCon .myPrize li h2{ font-size:20px}
+.userWrap{ width:640px;}
+.userInfo .pic{ width:108px;height:108px; margin:0 0 0 25px;}
+.userInfo .txt{ width:330px; margin-left:34px}
+.userInfo .txt .name{ font-size:16px}
+.userInfo .txt .Grade{width:133px}
+.userList li{ height:80px; line-height:80px; font-size:24px;}
+.userList li i{ top:25px}
+.userWrap .Collect li{ height:75px; font-size:20px;padding-top:15px}
+.userWrap .Collect li .icon1,.userWrap .Collect li .icon2{ background-size:auto; width:68px; height:68px; margin-right:10px;}
+.userWrap .Collect li .icon2{ background-position:-3px -87px}
+}
+@media screen and (min-width: 990px){
+.pro_list li{ height:95px; position:relative; font-size:16px}
+.about{ font-size:14px;line-height:24px}
+}
+

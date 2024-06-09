@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)login.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/user.css">
+    <title>格林豪泰</title>
+    <script type="text/javascript">
+        function getCookie(name) {
+            var strCookie = document.cookie;
+            var arrCookie = strCookie.split("; ");
+            for (var i = 0; i < arrCookie.length; i++) {
+                var arr = arrCookie[i].split("=");
+                if (arr[0] == name) return arr[1];
+            }
+            return "";
+        }
+        //Author:lihld Time:2013/12/9 Modify:添加获取支付宝返回过来的字符
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+        if (GetQueryString("alipay_user_id") != null) {
+            //Author:lihld  Time:2013/12/11 Modify:每一个页面后面跟的url都需要变化
+            var url = "alipay_Pass.html" + window.location.search + "&url=center.html";
+            window.location.href = url;
+        }
+        //end
+    </script>
+</head>
+<body>
+    <div id="loading" style="-webkit-transform-origin: 0px 0px; opacity: 1; -webkit-transform: scale(1, 1); display: none; ">
+        <div class="loadingPanel">
+            <span class="loadingIcon"></span>
+            <p class="loadingLabel">
+                正在努力加载中...</p>
+        </div>
+    </div>
+    <header id="header">
+        <a class="header-home" href="index.html"><span class="header-icon header-icon-home">
+        </span><span class="header-name">主页</span></a><div class="header-title">
+            <span>登录</span></div>
+    </header><div id="content" style="min-height: 634px; ">
+        <div id="form-body">
+            <form id="form-login" action="/login.html#" method="post" onsubmit="return false;">
+            <p class="form-item">
+                <input type="text" name="customer" placeholder="手机号码/邮箱/用户名" maxlength="50" value=""></p>
+            <p class="form-item">
+                <input type="password" name="pw" placeholder="密码" maxlength="20" value=""></p>
+            <p class="form-item clearfix">
+                <label class="auto-login">
+                    <input type="checkbox" name="code" checked="checked">记住账号</label><a class="get-password" href="password.html" data-transition="none">忘记密码</a></p>
+            <p class="form-item form-action">
+                <input id="user-login" type="submit" value="登陆"></p>
+            </form>
+        </div>
+        <!--非会员订单查询并设置居中-->
+        <div id="action-bar" style="text-align: center">
+            <a href="register.html" data-transition="none">免费注册 </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="phone_order.html">非会员订单查询</a>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="phone">
+            <img class="phone-icon" alt="联系电话：" src="js/phone.png"><a href="tel:4006998998" class="title">4006-<span style="color:Red">998</span>-<span style="color:Red">998</span></a></div>
+        <div class="copyright">
+            <h1 class="copyright-info">
+                Copyright © 2013 格林豪泰</h1>
+            <ul>
+                <li><a href="about.html">关于我们</a></li><li style="border-right: 0;"><a href="applink.htm" target="_blank">App下载</a></li></ul>
+        </div>
+    </footer><script>                 var $CONFIG = {}; $CONFIG.load = "login";</script><script src="js/sea.js" data-main="./js/init"></script></body></html>

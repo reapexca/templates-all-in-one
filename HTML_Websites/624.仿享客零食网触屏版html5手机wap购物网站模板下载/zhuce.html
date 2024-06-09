@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon.png" />
+<link rel="apple-touch-startup-image" href="images/apple-touch-startup-image.png" />
+<meta name="author" content="FamousThemes" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<title>仿享客零食网触屏版html5手机wap购物网站模板加入会员-懒人模板【http://www.lanrenmb.com/shenghuofuwu/gouwu/】</title>
+
+<script src="js/common.js"></script>
+<script src="js/utils.js"></script>
+
+<link rel="stylesheet" href="templates/style.css" type="text/css" media="screen" />
+
+<link href='../fonts.googleapis.com/css@family=Niconne' rel='stylesheet' type='text/css' />
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/jquery.tabify.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+var $ = jQuery.noConflict();
+
+$(window).load(function() {
+	$('.images_slider').flexslider({
+	animation: "slide",
+	directionNav: false,
+	controlNav: true,
+	animationLoop: true,
+	animationDuration: 300, 
+	slideshow: false
+	});
+});
+
+$(function() {
+$('#tabsmenu').tabify();
+$(".toggle_container").hide(); 
+$(".trigger").click(function(){
+	$(this).toggleClass("active").next().slideToggle("slow");
+	return false;
+});
+});
+</script>
+
+<script src="js/effects.js"></script>
+
+<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+
+<script type="text/javascript">
+window.addEventListener("load",function() {
+// Set a timeout...
+setTimeout(function(){
+// Hide the address bar!
+window.scrollTo(0, 1);
+}, 0);
+});
+</script>
+</head>
+
+<body id="page">
+<div id="pagecontainer">
+	<section class="Fh_head">
+	 <div class="page_title"><a href="default.htm"><img src="images/logo.png"></a></div>
+         
+    <div style="float:right; padding-right:10px; padding-top:20px;">
+     
+        
+        <a href="index.php" class="Fh_hright btn_menu"><span></span></a>
+        <a href="user.php" class="Fh_hright btn_user"><span></span></a>
+        <a href="flow.php" class="Fh_hright btn_cart"><span></span></a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</section>    
+    <div class="content">
+    <blockquote style="height: 30px;"><h1>加入会员</h1></blockquote>
+        <form action="user.php?act=act_register" method="post" id="formUser" name="formUser" onsubmit="return submitMsgBoard(this)">
+    <label style="font-size: 17px;">会员帐号 </label>
+    <input type="text" name="username" id="username" class="form_input_login" />
+    <span id="username_notice" style="color:#FF0000"> *</span>
+    <div class="clear"></div>
+    
+    <label style="font-size: 17px;">电子邮件 </label>
+    <input type="text" name="mobile_email" id="mobile_email" class="form_input_login" />
+    <span id="email_notice" style="color:#FF0000"> *</span>
+    <div class="clear"></div>
+    
+    <label style="font-size: 17px;">会员密码 </label>
+    <input type="password" name="password" id="password1" class="form_input_login" />
+    <span style="color:#FF0000" id="password_notice"> *</span>
+    <div class="clear"></div>
+    
+    <label style="font-size: 17px;">密码确认 </label>
+    <input type="password" name="confirm_password" id="confirm_password" class="form_input_login" />
+    <span style="color:#FF0000" id="conform_password_notice"> *</span>
+    <div class="clear"></div>
+    
+        <div class="clear"></div>
+    <div class="form">
+       <ul class="lists">
+       <li><span style="color:#FF0000">请您在使用电脑(网页版)登入时，完善您的会员资料。</span></li>
+       </ul>
+    </div>
+    <div class="clear"></div>
+    <input name="act" type="hidden" value="act_register" />
+    <input type="hidden" name="back_act" value="" />
+    <input name="Submit" type="submit" value="加入会员" class="form_submit" />
+    </form>
+    <div class="clear"></div>
+    </div>
+   
+</div>
+  <div class="margb20"></div>
+<section class="Fh_bottom">
+<a href="index.php"><img src="images/logobott.png"></a></section>
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbc4525ac529334d19a9886f46cce7852' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+<script type="text/javascript">
+var msg_empty_email = "请输入您的电子邮件地址";
+var msg_error_email = "电子邮件地址格式不正确";
+var msg_title_empty = "留言标题为空";
+var msg_content_empty = "留言内容为空";
+var msg_captcha_empty = "验证码为空";
+var msg_title_limit = "留言标题不能超过200个字";
+
+/**
+ * 提交留言信息
+*/
+function submitMsgBoard(frm)
+{
+    var msg = new Object;
+
+     msg.username  = frm.elements['username'].value;
+     msg.user_email  = frm.elements['mobile_email'].value;
+     msg.password  = frm.elements['password'].value;
+     msg.confirm_password  = frm.elements['confirm_password'].value;
+     msg.sel_question  = frm.elements['sel_question'].value;
+     msg.passwd_answer  = frm.elements['passwd_answer'].value;
+     msg.extend_field5i  = frm.elements['extend_field5'].value;
+    
+    var msg_err = '';
+
+    
+    if (msg.username.length == 0)
+    {
+        msg_err += msg_username_empty + '\n';
+    }
+    if (msg.username.length < 3)
+    {
+        msg_err += msg_username_length + '\n';
+    }
+    if (msg.user_email.length > 0)
+    {
+       if (!(Utils.isEmail(msg.user_email)))
+       {
+          msg_err += msg_error_email + '\n';
+       }
+    }
+    else
+    {
+          msg_err += msg_empty_email + '\n';
+    }
+    if (msg.password.length > 0)
+    {
+        if (msg.password.length < 6)
+        {
+            msg_err += msg_password_length + '\n';
+        }
+    }
+    else
+    {
+        msg_err += msg_password_empty + '\n';
+    }
+    
+    if (msg.password != msg.confirm_password)
+    {
+        msg_err += msg_password_notmatch + '\n';
+    }
+    if (msg.sel_question == 0)
+    {
+        msg_err += msg_sel_question_empty + '\n';
+    }
+    if (msg.passwd_answer.length == 0)
+    {
+        msg_err += msg_passwd_answer_empty + '\n';
+    }
+    if (msg.extend_field5i.length > 0)
+    {
+        if (!(Utils.isTel(msg.extend_field5i)))
+        {
+           msg_err += msg_extend_field5i_error + '\n';
+        }
+    }
+    else
+    {
+        msg_err += msg_extend_field5i_empty + '\n';
+    }
+
+    if (msg_err.length > 0)
+    {
+        alert(msg_err);
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+</script>
+</html>

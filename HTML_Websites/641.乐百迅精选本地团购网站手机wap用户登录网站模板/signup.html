@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+	<title>乐百迅精选本地团购网站用户注册模板-懒人模板【http://www.lanrenmb.com/shenghuofuwu/gouwu/】</title>
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+<link href="css/cp_style20130306.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">var WEB_ROOT = '';</script>
+<script type="text/javascript">var LOGINUID= 0;</script>
+<style type="text/css">
+.n{border:1px solid #ffed00;background:#fffcaa}
+.t,.a,.stamp,#ft{color:#999;font-size:small}
+.page{padding:10px 0;}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+function change_logcode(){
+	var changetime =new Date().getTime();
+	$("#chkimg").attr('src',WEB_ROOT+'/captcha.php?'+changetime);
+}</script>
+<!--header-->
+
+<div class="header_d3 shadow"> <a href="javascript:history.back()" class="arrowleft atop">
+  <label>返回</label>
+  </a>
+  <h1>注册账号</h1>
+  <!----> 
+</div>
+<!--content-->
+<div class="content">
+          <!--article-->
+  <div class="login-box">
+    <form action="signup.php" method="post" id="register_form">
+      <dl class="login-tab">
+        <dd> 邮&nbsp;&nbsp;&nbsp;&nbsp;箱：
+          <input type="text" name="email" id="re_email" class="login-text" placeholder="" maxlength="32" value="">
+        </dd>
+        <dd> 用户名：
+          <input type="text" name="username" id="re_name" class="login-text" placeholder="" maxlength="32" value="">
+        </dd>
+        <dd> 密&nbsp;&nbsp;&nbsp;&nbsp;码：
+          <input type="password" name="password" id="re_pwd" class="login-text" placeholder="" autocomplete="off" maxlength="32">
+        </dd>
+        <dd> 确认密码：
+          <input type="password" name="password2" id="re_pwdok" class="login-text" placeholder="" autocomplete="off" maxlength="32">
+          <b></b> </dd>
+        <dd> 手机号码：
+          <input type="text" name="mobile" id="mobile" class="login-text" placeholder="" autocomplete="off" maxlength="11">
+        </dd>
+        <dd> 所在城市：
+          <select name="city_id">
+            <option value='57' >全国</option><option value='51' >北京</option><option value='26' >上海</option><option value='27' >广州</option><option value='1' >西安</option><option value='28' >深圳</option><option value='29' >杭州</option><option value='30' >长沙</option><option value='31' >苏州</option><option value='32' >天津</option><option value='33' >南京</option><option value='34' >青岛</option><option value='35' selected>武汉</option><option value='24' >郑州</option><option value='37' >济南</option><option value='38' >福州</option><option value='39' >沈阳</option><option value='40' >大连</option><option value='41' >石家庄</option><option value='42' >厦门</option><option value='43' >长春</option><option value='44' >包头</option><option value='45' >哈尔滨</option><option value='46' >太原</option><option value='47' >兰州</option><option value='36' >重庆</option><option value='371' >成都</option><option value='366' >巴彦淖尔</option><option value='305' >自贡</option><option value='304' >资阳</option><option value='303' >淄博</option><option value='302' >驻马店</option><option value='301' >珠海</option><option value='300' >株洲</option><option value='299' >舟山</option><option value='298' >周口</option><option value='297' >中山</option><option value='296' >镇江</option><option value='295' >肇庆</option><option value='294' >昭通</option><option value='293' >漳州</option><option value='292' >张家口</option><option value='291' >张家界</option><option value='290' >湛江</option><option value='289' >枣庄</option><option value='288' >运城</option><option value='287' >云浮</option><option value='286' >岳阳</option><option value='285' >玉溪</option><option value='284' >榆林</option><option value='283' >永州</option><option value='282' >营口</option><option value='281' >鹰潭</option><option value='280' >银川</option><option value='279' >益阳</option><option value='278' >宜昌</option><option value='277' >宜宾</option><option value='276' >宜春</option><option value='275' >阳泉</option><option value='274' >阳江</option><option value='273' >扬州</option><option value='272' >盐城</option><option value='271' >延吉</option><option value='270' >延安</option><option value='269' >烟台</option><option value='268' >雅安</option><option value='267' >宣武</option><option value='266' >许昌</option><option value='265' >徐州</option><option value='264' >邢台</option><option value='263' >信阳</option><option value='262' >新余</option><option value='261' >新乡</option><option value='260' >忻州</option><option value='259' >孝感</option><option value='258' >襄樊</option><option value='257' >湘潭</option><option value='256' >咸阳</option><option value='255' >咸宁</option><option value='254' >仙桃</option><option value='253' >西双版纳</option><option value='252' >西宁</option><option value='251' >武威</option><option value='250' >芜湖</option><option value='249' >无锡</option><option value='248' >温州</option><option value='247' >渭南</option><option value='246' >潍坊</option><option value='245' >威海</option><option value='244' >乌鲁木齐</option><option value='243' >吐鲁番</option><option value='242' >铜陵</option><option value='241' >铜川</option><option value='240' >通化</option><option value='239' >铁岭</option><option value='238' >天门</option><option value='237' >唐山</option><option value='236' >泰州</option><option value='235' >随州</option><option value='234' >遂宁</option><option value='233' >绥化</option><option value='232' >宿迁</option><option value='231' >松原</option><option value='230' >四平</option><option value='229' >朔州</option><option value='228' >双鸭山</option><option value='227' >十堰</option><option value='226' >神农架</option><option value='225' >邵阳</option><option value='224' >绍兴</option><option value='223' >韶关</option><option value='222' >上饶</option><option value='221' >商丘</option><option value='220' >商洛</option><option value='219' >汕头</option><option value='218' >三亚</option><option value='217' >三明</option><option value='216' >三门峡</option><option value='214' >日照</option><option value='213' >日喀则</option><option value='212' >泉州</option><option value='211' >曲靖</option><option value='210' >衢州</option><option value='209' >清远</option><option value='208' >秦皇岛</option><option value='207' >潜江</option><option value='206' >齐齐哈尔</option><option value='205' >七台河</option><option value='204' >濮阳</option><option value='203' >萍乡</option><option value='202' >平顶山</option><option value='201' >盘锦</option><option value='200' >攀枝花</option><option value='199' >莆田</option><option value='198' >宁德</option><option value='197' >内江</option><option value='196' >南阳</option><option value='195' >南通</option><option value='194' >南平</option><option value='193' >南充</option><option value='192' >南昌</option><option value='191' >宁波</option><option value='190' >南宁</option><option value='189' >牡丹江</option><option value='188' >绵阳</option><option value='187' >眉山</option><option value='186' >梅州</option><option value='185' >茂名</option><option value='184' >马鞍山</option><option value='183' >吕梁</option><option value='182' >洛阳</option><option value='181' >泸州</option><option value='180' >娄底</option><option value='179' >龙岩</option><option value='178' >六安</option><option value='177' >柳州</option><option value='176' >临沂</option><option value='175' >临汾</option><option value='174' >辽源</option><option value='173' >辽阳</option><option value='172' >聊城</option><option value='171' >连云港</option><option value='170' >丽水</option><option value='169' >漯河</option><option value='168' >乐山</option><option value='167' >廊坊</option><option value='166' >莱芜</option><option value='165' >拉萨</option><option value='164' >开封</option><option value='163' >酒泉</option><option value='162' >九江</option><option value='161' >景德镇</option><option value='160' >荆州</option><option value='159' >荆门</option><option value='158' >晋城</option><option value='157' >锦州</option><option value='156' >金华</option><option value='155' >金昌</option><option value='154' >揭阳</option><option value='153' >焦作</option><option value='152' >江门</option><option value='151' >佳木斯</option><option value='150' >济源</option><option value='149' >济宁</option><option value='148' >吉安</option><option value='147' >吉林</option><option value='146' >鸡西</option><option value='145' >嘉兴</option><option value='144' >惠州</option><option value='143' >黄石</option><option value='142' >黄山</option><option value='141' >黄冈</option><option value='140' >淮南</option><option value='139' >淮北</option><option value='138' >淮安</option><option value='137' >怀化</option><option value='136' >葫芦岛</option><option value='135' >湖州</option><option value='134' >衡阳</option><option value='133' >衡水</option><option value='132' >黑河</option><option value='131' >鹤岗</option><option value='130' >鹤壁</option><option value='129' >河源</option><option value='128' >河池</option><option value='127' >邯郸</option><option value='126' >海口</option><option value='125' >菏泽</option><option value='124' >合肥</option><option value='123' >汉中</option><option value='122' >呼和浩特</option><option value='121' >贵阳</option><option value='120' >桂林</option><option value='119' >广元</option><option value='118' >广安</option><option value='117' >赣州</option><option value='116' >阜阳</option><option value='115' >阜新</option><option value='114' >抚顺</option><option value='113' >防城港</option><option value='112' >佛山</option><option value='111' >抚州</option><option value='110' >恩施</option><option value='109' >鄂州</option><option value='108' >鄂尔多斯</option><option value='107' >东营</option><option value='106' >德州</option><option value='105' >德阳</option><option value='104' >丹东</option><option value='103' >大同</option><option value='102' >大庆</option><option value='101' >大理</option><option value='100' >达州</option><option value='99' >东莞</option><option value='98' >朝阳</option><option value='97' >滁州</option><option value='96' >赤峰</option><option value='95' >池州</option><option value='94' >承德</option><option value='93' >郴州</option><option value='92' >巢湖</option><option value='91' >长治</option><option value='90' >常州</option><option value='89' >常德</option><option value='88' >沧州</option><option value='87' >毫州</option><option value='86' >滨州</option><option value='85' >本溪</option><option value='84' >北海</option><option value='83' >宝鸡</option><option value='82' >保定</option><option value='81' >蚌埠</option><option value='80' >白银</option><option value='79' >白山</option><option value='78' >白城</option><option value='77' >巴中</option><option value='76' >鞍山</option><option value='75' >安阳</option><option value='74' >安庆</option><option value='73' >安康</option><option value='56' >昆明</option>            <option value='0'>其他</option>
+          </select>
+        </dd>
+      </dl>
+      <div class="deal-btn" style="margin-top:15px;">
+        <input type="submit" class="j_submit" name="doregister" value="注册">
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="footer_v3">
+  <div class="footer_nav">
+    <ul class="detail-footitem">
+      <li class="backhome"><a href="index.php"><span></span>回到首页</a></li>
+      <li class="myls">
+            <a id="login_foot" href="login.html" style="color: #3E71B9;">登录</a> <a id="register_foot" href="signup.html" style="color:#000;">注册</a>
+            </li>
+      <li class="goup"><a href="javascript:scroll(0,0)"><span></span>回到顶部</a></li>
+    </ul>
+  </div>
+  <div class="footer_nav footer-com">
+    <ul class="com-footitem">
+	  <li><a href="city.php">切换城市</a></li>
+      <li><a href="my.php"><span class="com_icon"></span>我的乐百迅</a></li>
+      <li><a href="../www.lbaix.com/index.php">电脑版</a></li>
+    </ul>
+    <p class="serve"> <span class="com_icon"></span> 客服（<b><a href="tel_3A400-999-3563">400-999-3563</a></b> 9:00-21:00） </p>
+    <div class="copyright"><span class="copyright">©2013 乐百迅</span>
+      <p></p>
+    </div>
+  </div>
+</footer>
+</body></html> 

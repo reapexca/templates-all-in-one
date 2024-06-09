@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)hotel_detail_style.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/m998.css">
+
+<!--Author:lihld Time:2013/7/4 Modify:附近酒店联合跳转，url带有微信放传过来的参数，不需要编码-->
+<script type="text/javascript">
+    ////////////////联合跳转///////////////////////////////////  //Author:lihld Time:2013/6/28 Modify:新增cookie设置过期时间用来验证用户身份，防止用户在同一手机上面登录两个不同的账号到时身份不匹配
+    localStorage.isfromweixin = false; //设置微信标示，判断是不是在微信里面打开 lihld 2013/6/13
+    var userAgent = navigator.userAgent;
+    if (userAgent.indexOf('MicroMessenger') > 0) {
+        localStorage.isfromweixin = true;
+        url = window.location.href;
+        if (getCookie("weixinFlag") != "") {
+            if (typeof (localStorage.M998_USER) == "undefined" || localStorage.M998_USER == "" || localStorage.M998_USER == null) {
+                location.href = "http://app.travel.qq.com/app-bin/wei/redirect.fcg?merchant=GreenTreeInn&url=" + url; //跳转到微旅游CGI
+            }
+        } else {
+            //Author:朱荣  Time：2014-01-21 Modify：去掉验证身份的弹框
+            //alert("请点击确定验证身份！");
+            location.href = "http://app.travel.qq.com/app-bin/wei/redirect.fcg?merchant=GreenTreeInn&url=" + url; //跳转到微旅游CGI
+        }
+    } else {
+        localStorage.isfromweixin = false;
+    }
+    ///////////////////////////////////////////////////////////
+
+    function getCookie(name) {
+        var strCookie = document.cookie;
+        var arrCookie = strCookie.split("; ");
+        for (var i = 0; i < arrCookie.length; i++) {
+            var arr = arrCookie[i].split("=");
+            if (arr[0] == name) return arr[1];
+        }
+        return "";
+    } 
+    </script>
+
+<title>格林豪泰</title> 
+</head>
+<body>
+	<div id="loading" style="-webkit-transform-origin: 0px 0px; opacity: 1; -webkit-transform: scale(1, 1); display: none; ">
+		<div class="loadingPanel">
+			<span class="loadingIcon"></span>
+			<p class="loadingLabel">正在努力加载中...</p>
+		</div>
+	</div>
+	<header id="header">
+        <a class="header-home" href="index.html">
+            <span class="header-icon header-icon-home"></span>
+            <span class="header-name">主页</span>
+        </a>
+        <div class="header-title">
+        	<span id="hotelName" class="hotel-name-show">格林豪泰上海市松江洞泾同乐路商务酒店</span>
+        	<script type="text/javascript">
+        		var hotelName = localStorage.getItem('M998_hotelName');
+        		document.getElementById('hotelName').innerHTML = hotelName;
+        	</script>
+        </div>
+	</header>
+
+	<div id="content" style="min-height: 611px; ">
+		<div class="detail-time-bar">
+			<img src="images/calendar.png" alt="">
+			<span class="detail-between-time"><span class="detail-time-start">5月16日</span> &gt; <span class="detail-time-end">5月17日</span></span>
+		</div>
+		<ul class="hotel-bar">
+			<li class="current-option"><span onclick="window.location.href=&#39;hotel_detail_style.html&#39;">房型</span><span style="width: 8px;height: 8px;left: 48%;" class="hotel-bar-deco"></span></li>
+			<li><span onclick="window.location.href=&#39;hotel_detail_inc.html&#39;">简介</span></li>
+			<li><span onclick="window.location.href=&#39;hotel_detail_map.html&#39;">周边</span></li>
+			<li><span onclick="window.location.href=&#39;hotel_detail_comment.html&#39;">评论</span></li>
+		</ul>
+		<ul class="hotel-detail">
+			
+			<li class="hotel-styles">
+				<div class="member-item">
+					<div class="member">
+						<span class="member-money">￥<em class="hotelStyle-price">199</em></span> 
+						
+					</div>
+					<div class="hotel-detail-title-group">
+						<h2 class="hotel-detail-title hotelStyle-name">1.8米大床房</h2>
+						
+						
+						<span style="height:18px;line-height:18px;vertial-align:top;float:left;border:1px solid #72c697;padding: 0 5px;">10</span>
+						
+					</div>
+					<div class="hotel-detail-reserve" roomid="1">
+						
+						<span class="reserve-action create-order">预订</span>
+						
+					</div>
+				</div>
+				<div class="hotel-detail-popup" style="left: 100px; bottom: -200px; opacity: 1; display: block; -webkit-transform: translate3d(-100px, -200px, 0px); ">
+					<p>房间18平米左右，1.8米/床，32寸液晶电视，20M光纤上网，无线覆盖</p>
+				</div>
+			</li>
+			
+			<li class="hotel-styles">
+				<div class="member-item">
+					<div class="member">
+						<span class="member-money">￥<em class="hotelStyle-price">209</em></span> 
+						
+					</div>
+					<div class="hotel-detail-title-group">
+						<h2 class="hotel-detail-title hotelStyle-name">标准房</h2>
+						
+						
+						<span style="height:18px;line-height:18px;vertial-align:top;float:left;border:1px solid #72c697;padding: 0 5px;">10</span>
+						
+					</div>
+					<div class="hotel-detail-reserve" roomid="2">
+						
+						<span class="reserve-action create-order">预订</span>
+						
+					</div>
+				</div>
+				<div class="hotel-detail-popup">
+					<p>房间25平米左右，1.2米/床2张，32寸液晶电视，20M光纤上网，无线覆盖</p>
+				</div>
+			</li>
+			
+			<li class="hotel-styles">
+				<div class="member-item">
+					<div class="member">
+						<span class="member-money">￥<em class="hotelStyle-price">219</em></span> 
+						
+					</div>
+					<div class="hotel-detail-title-group">
+						<h2 class="hotel-detail-title hotelStyle-name">1.8米豪华大床房</h2>
+						
+						
+						<span style="height:18px;line-height:18px;vertial-align:top;float:left;border:1px solid #72c697;padding: 0 5px;">10</span>
+						
+					</div>
+					<div class="hotel-detail-reserve" roomid="3">
+						
+						<span class="reserve-action create-order">预订</span>
+						
+					</div>
+				</div>
+				<div class="hotel-detail-popup">
+					<p>房间23平米左右，1.8米/床，40寸液晶电视，20M光纤上网，无线覆盖</p>
+				</div>
+			</li>
+			
+			<li class="hotel-styles">
+				<div class="member-item">
+					<div class="member">
+						<span class="member-money">￥<em class="hotelStyle-price">229</em></span> 
+						
+					</div>
+					<div class="hotel-detail-title-group">
+						<h2 class="hotel-detail-title hotelStyle-name">豪华标准房</h2>
+						
+						
+						<span style="height:18px;line-height:18px;vertial-align:top;float:left;border:1px solid #72c697;padding: 0 5px;">10</span>
+						
+					</div>
+					<div class="hotel-detail-reserve" roomid="9">
+						
+						<span class="reserve-action create-order">预订</span>
+						
+					</div>
+				</div>
+				<div class="hotel-detail-popup">
+					<p>房间30平米左右，2*1.2米床，40寸液晶电视，20M光纤上网，无线覆盖</p>
+				</div>
+			</li>
+			
+			<li class="hotel-styles">
+				<div class="member-item">
+					<div class="member">
+						<span class="member-money">￥<em class="hotelStyle-price">229</em></span> 
+						
+					</div>
+					<div class="hotel-detail-title-group">
+						<h2 class="hotel-detail-title hotelStyle-name">1.8米商务大床房</h2>
+						
+						
+						<span style="height:18px;line-height:18px;vertial-align:top;float:left;border:1px solid #72c697;padding: 0 5px;">10</span>
+						
+					</div>
+					<div class="hotel-detail-reserve" roomid="4">
+						
+						<span class="reserve-action create-order">预订</span>
+						
+					</div>
+				</div>
+				<div class="hotel-detail-popup">
+					<p>房间23平米左右，1.8米/床，40寸液晶电视，商务一体机电脑，20M光纤上网，无线覆盖</p>
+				</div>
+			</li>
+			
+			<li class="hotel-styles">
+				<div class="member-item">
+					<div class="member">
+						<span class="member-money">￥<em class="hotelStyle-price">269</em></span> 
+						
+					</div>
+					<div class="hotel-detail-title-group">
+						<h2 class="hotel-detail-title hotelStyle-name">1.8米景观大床房</h2>
+						
+						
+						<span style="height:18px;line-height:18px;vertial-align:top;float:left;border:1px solid #72c697;padding: 0 5px;">10/20/30</span>
+						
+					</div>
+					<div class="hotel-detail-reserve" roomid="6">
+						
+						<span class="reserve-action create-order">预订</span>
+						
+					</div>
+				</div>
+				<div class="hotel-detail-popup">
+					<p>房间35平米左右，1.8米/床，40寸液晶电视，商务一体机电脑，20M光纤上网，无线覆盖</p>
+				</div>
+			</li>
+			
+			<li class="hotel-styles">
+				<div class="member-item">
+					<div class="member">
+						<span class="member-money">￥<em class="hotelStyle-price">289</em></span> 
+						
+					</div>
+					<div class="hotel-detail-title-group">
+						<h2 class="hotel-detail-title hotelStyle-name">套房</h2>
+						
+						
+						<span style="height:18px;line-height:18px;vertial-align:top;float:left;border:1px solid #72c697;padding: 0 5px;">10/20/30</span>
+						
+					</div>
+					<div class="hotel-detail-reserve" roomid="7">
+						
+						<span class="reserve-action create-order">预订</span>
+						
+					</div>
+				</div>
+				<div class="hotel-detail-popup">
+					<p>房间45平米左右，1.8米/床，40寸液晶电视，20M光纤上网，无线覆盖</p>
+				</div>
+			</li>
+			
+			<li class="hotel-styles">
+				<div class="member-item">
+					<div class="member">
+						<span class="member-money">￥<em class="hotelStyle-price">369</em></span> 
+						
+					</div>
+					<div class="hotel-detail-title-group">
+						<h2 class="hotel-detail-title hotelStyle-name">豪华套房</h2>
+						
+						
+					</div>
+					<div class="hotel-detail-reserve" roomid="8">
+						
+						<span class="reserve-action has-reserve">已满</span>
+						
+					</div>
+				</div>
+				<div class="hotel-detail-popup">
+					<p>房间50平米左右，1.8米/床，40寸液晶电视，商务一体机电脑，激光打印机，20M光纤上网，无线覆盖</p>
+				</div>
+			</li>
+			
+		</ul>
+		<script id="hotelDetailTemplate" type="text/html">
+			<% for (var i = 0; i < data.length; i ++) { %>
+			<li class="hotel-styles">
+				<div class="member-item">
+					<div class="member">
+						<span class="member-money">￥<em class="hotelStyle-price"><%= data[i].CurrentDiscountPrice%></em></span> 
+						<%if(data[i].IsDiscount == false){%>
+						<span class="member-type">限会员</span>
+						<%}%>
+					</div>
+					<div class="hotel-detail-title-group">
+						<h2 class="hotel-detail-title hotelStyle-name"><%= data[i].RoomName%></h2>
+						<%if(data[i].HasBreakFast){%>
+						<span class="coupon1"></span>
+						<%}%>
+						<%if(data[i].CouponsInfo != ''){%>
+						<span style="height:18px;line-height:18px;vertial-align:top;float:left;border:1px solid #72c697;padding: 0 5px;"><%= data[i].CouponsInfo%></span>
+						<%}%>
+					</div>
+					<div class="hotel-detail-reserve" RoomId="<%= data[i].RoomId%>">
+						<%if(data[i].IsEnableBook){%>
+						<span class='reserve-action create-order'>预订</span>
+						<%} else {%>
+						<span class='reserve-action has-reserve'>已满</span>
+						<%}%>
+					</div>
+				</div>
+				<div class="hotel-detail-popup">
+					<p><%= data[i].RoomDescription%></p>
+				</div>
+			</li>
+			<%}%>
+		</script>
+
+        <!--Author:lihld Time:2013/7/9 Modify:特惠房展示页面 -->
+        <ul class="hotel-detail1"></ul>
+		<script id="hotelDetailTemplate1" type="text/html">
+			<% for (var i = 0; i < data.length; i ++) { %>
+			<li class="hotel-styles">
+				<div class="member-item">
+					<div class="member">
+						<span class="member-money">￥<em class="hotelStyle-price"><%= data[i].CurrentDiscountPrice%></em></span> 
+						<%if(data[i].IsDiscount == false){%>
+						<span class="member-type">限会员</span>
+						<%}%>
+					</div>
+					<div class="hotel-detail-title-group">
+						<h2 class="hotel-detail-title hotelStyle-name"><%= data[i].RoomName%></h2>
+						<%if(data[i].HasBreakFast){%>
+						<span class="coupon1"></span>
+						<%}%>
+						<%if(data[i].CouponsInfo != ''){%>
+						<span class="coupon2" style="vertial-align:top;"></span><span style="height:18px;line-height:18px;vertial-align:top;float:left;border:1px solid #72c697;padding: 0 5px;"><%= data[i].CouponsInfo%></span>
+						<%}%>
+					</div>
+					<div class="hotel-detail-reserve" RoomId="<%= data[i].RoomId%>">
+						<%if(data[i].IsEnableBook){%>
+						<span class='reserve-action create-order'>预订</span>
+						<%} else {%>
+						<span class='reserve-action has-reserve'>已满</span>
+						<%}%>
+					</div>
+				</div>
+				<div class="hotel-detail-popup">
+					<p><%= data[i].RoomDescription%></p>
+				</div>
+			</li>
+			<%}%>
+		</script>
+        <!-- end-->
+
+		<div class="hotel-prompt" style="-webkit-transform-origin: 0px 0px; opacity: 1; -webkit-transform: scale(1, 1); ">
+			<span class="hotel-prompt-title">特别提示</span>
+			<p>针对数字卡、贵宾卡本人入住赠送1份早餐，金卡、铂金卡本人入住赠送2份早餐。<br></p>
+		</div>
+		<div class="hotel-sales-info" style="display:none;">
+			<span class="hotel-sales-info-title">促销信息</span>
+			<p></p>
+		</div>
+	</div>
+
+	<footer id="footer">
+		<div class="phone">
+			<img class="phone-icon" alt="联系电话：" src="images/phone.png">
+            <a href="tel:4006998998" class="title">4006-<span style="color:Red">998</span>-<span style="color:Red">998</span></a>
+		</div>
+		<div class="copyright">
+			<h1 class="copyright-info">Copyright © 2013 格林豪泰</h1>
+			<ul>
+                <li><a href="about.html">关于我们</a></li>
+                <li style="border-right: 0;"><a href="applink.htm" target="_blank">App下载</a></li>
+            </ul>
+		</div>
+	</footer>
+	<script>
+		var $CONFIG = {};
+		$CONFIG['load'] = 'hotelDetail'; 
+		$CONFIG['module'] = 'hotelDetailStyle';
+	</script>
+	<script src="images/sea.js" data-main="./js/init"></script>
+
+</body></html>

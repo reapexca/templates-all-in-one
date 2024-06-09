@@ -1,0 +1,442 @@
+ 
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>仿京东触屏版html5手机wap购物网站模板下载热卖列表-懒人模板【http://www.lanrenmb.com/shenghuofuwu/gouwu/】</title>
+    	<meta name="author" content="m.jd.com">
+        			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	            <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+		
+	  				<link rel="stylesheet" type="text/css" href="../css/base2013.css" charset="gbk"/>
+		
+		
+							<link rel="stylesheet" type="text/css" href="../css/2013/sale/sale.css" charset="gbk"/>	
+				
+					
+		        								<link rel="apple-touch-icon-precomposed" href="../../m.jd.com/images/apple-touch-icon.png"/>
+						<script type="text/javascript">
+			var _winLocation=window.location.href;//获得当前页面的路径，根据路径规则进行逐页替换
+			var _isWebKit = '__proto__' in {};//是否是webkit内核
+			if(_isWebKit){//如果是webkit内核，则分模块使用zepto
+				//要使用zeptojs的路径列表，可以做为分模块替换的开关
+				var _locationList=new Array();
+				//活动模块
+				_locationList.push('../activity/proActList');
+				_locationList.push('../activity/proActWareList');
+				_locationList.push('../activity/list');
+				//商品分类模块
+				_locationList.push('../category/');
+				//京东快讯模块
+				_locationList.push('../newslist.html');
+				_locationList.push('../newslist/');
+				_locationList.push('../news/');
+				//机票模块
+				_locationList.push('../airline/');
+				//酒店模块
+				_locationList.push('../hotel/');
+				//团购模块
+				_locationList.push('../tuan/');
+				//首页相关
+				_locationList.push('../hotbrand.html');//品牌馆
+				//商品筛选相关
+				_locationList.push('../ware/expandSort.action');
+				_locationList.push('../ware/categoryFilter.action');
+				_locationList.push('../ware/search.action');
+				_locationList.push('../products/');
+				
+				_locationList.push('../notice/');//通告模块
+				_locationList.push('../coupons/');//随地惠模块
+				_locationList.push('../chongzhi/');//手机充值模块
+				_locationList.push('../comment/');//手机推荐模块
+				_locationList.push('../pay/');//支付
+				_locationList.push('../order/');//订单
+				var _needReplace = false;
+				//如果当前路径符合要使用的路径规则，则进行替换
+				for(var i=0;i<_locationList.length;i++){
+					if(_winLocation.indexOf(_locationList[i])!=-1){
+						_needReplace=true;
+						break;
+					}
+				}
+				//如果是首页的话，则使用zepto
+				var _tmp = _winLocation.replace(/(^http:\/\/)|(\/*$)/g,'');
+				if(_tmp.indexOf('/')<0 || (_tmp.split('/').length<=2 && _tmp.indexOf('/index')>=0)){
+					_needReplace=true;
+				}
+				//如果是商品详情页的话，则使用zepto
+                var _dlocationList=new Array();
+                _dlocationList.push(/\/product\/([0-9]+)\.html/);
+                _dlocationList.push(/\/orderComment\/([0-9]+)\.html/);
+                _dlocationList.push(/\/consultations\/([0-9]+)\.html/);
+                _dlocationList.push(/\/consultations\/([0-9]+)-([0-9]+)\.html/);
+                _dlocationList.push(/\/comments\/([0-9]+)\.html/);
+                for(var i=0,len=_dlocationList.length;i<len;i++){
+                	if(_dlocationList[i].test(_winLocation)){
+                		_needReplace=true;
+               			 break;
+               		 }
+                }
+				if(_needReplace){
+					document.write('<script src="../js/zepto.min.js"><\/script>');
+					document.write('<script type="text/javascript">window.jQuery=window.Zepto;<\/script>');
+				}else{
+					document.write('<script src="../js/jquery-1.6.2.min.js"><\/script>');
+				}
+			}else{//如果是非webkit内核直接使用jquery
+				document.write('<script src="../js/jquery-1.6.2.min.js"><\/script>');
+			}
+		</script>
+				        <script type="text/javascript" src="../js/html5/common.js"></script>
+        <script type="text/javascript" src="../js/html5/spin.min.js"></script>
+	</head>
+
+<body id="body">
+<a name="top"></a>
+<header>
+			<div class="new-header">
+        	<a href="javascript:pageBack();" class="new-a-back" id="backUrl"><span>返回</span></a>
+							<h2>热卖促销</h2>
+			            <a href="javascript:void(0)" id="btnJdkey" class="new-a-jd"><span>京东键</span></a>
+    	</div>
+		<div class="new-jd-tab" style="display:none" id="jdkey">
+        	<div class="new-tbl-type">
+                <a href="../index.html@sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-tbl-cell">
+                	<span class="icon">首页</span>
+					<p style="color:#6e6e6e;">首页</p>
+                </a>
+                <a href="../category/all.html@sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-tbl-cell">
+                	<span class="icon2">分类搜索</span>
+					<p style="color:#6e6e6e;">分类搜索</p>
+                </a>
+                <a href="javascript:void(0)" id="html5_cart" class="new-tbl-cell">
+                	<span class="icon3">购物车</span>
+					<p style="color:#6e6e6e;">购物车</p>
+                </a>
+                <a href="../user/home.action@sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-tbl-cell">
+                	<span class="icon4">我的京东</span>
+					<p style="color:#6e6e6e;">我的京东</p>
+                </a>
+            </div>
+        </div>
+	</header>
+<div class="new-ct">
+	<div class="new-sales">
+    	<div class="new-sales-section">
+        	<h3 class="new-h-h3">
+        		<span class="new-floor">1F</span><span class="new-tit">手机数码</span>
+            </h3>
+            <div class="new-fl-type">
+            	<div class="new-fl-tbl new-fl">
+                	<div class="new-tbl-section">
+                    	<a href="promotionActivity.action.html" class="new-b-category">
+                        	<span class="new-cate-img"><img src="../images/touch2013/_40img3.png" width="75" height="75" alt="img"></span>
+                            <span class="new-cate-txt">手机</span>
+                        </a>
+                    </div>
+                    <div class="new-tbl-section">
+                    	<a href="../ware/search.action@keyword=_25E4_25B8_2589_25E6_2598_259F&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">三星</a>
+                        <a href="../ware/search.action@keyword=_25E8_2581_2594_25E6_2583_25B3&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">联想</a>
+                        <a href="../ware/search.action@keyword=_25E5_258D_258E_25E4_25B8_25BA&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">华为</a>
+                        <a href="../ware/search.action@keyword=HTC&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">HTC</a>
+                    </div>
+                </div>
+                <div class="new-fl-tbl new-fr">
+                	<div class="new-tbl-section2">
+                        <div class="new-tbl-section">
+                            <a href="promotionActivity.action@promotionId=11&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-b-category new-b-category-v1">
+                                <span class="new-cate-img new-cate-img-v1"><img src="../images/touch2013/_40img48_2.png" width="48" height="50" alt="img"></span>
+                                <span class="new-cate-txt2">数码</span>
+                            </a>
+                        </div>
+                        <div class="new-tbl-section">
+                            <a href="../ware/search.action@keyword=_25E5_25B0_25BC_25E5_25BA_25B7&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">尼康</a>
+                            <a href="../ware/search.action@keyword=_25E4_25BD_25B3_25E8_2583_25BD&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">佳能</a>
+                        </div>
+                    </div>
+                    <div class="new-tbl-section2">
+                        <div class="new-tbl-section">
+                            <a href="promotionActivity.action@promotionId=12&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-b-category new-b-category-v1">
+                                <span class="new-cate-img new-cate-img-v1"><img src="../images/touch2013/_40img48_3.png" width="48" height="50" alt="img"></span>
+                                <span class="new-cate-txt2">电脑</span>
+                            </a>
+                        </div>
+                        <div class="new-tbl-section">
+                            <a href="../ware/search.action@keyword=_25E5_258D_258E_25E7_25A1_2595&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">华硕</a>
+                            <a href="../ware/search.action@keyword=_25E8_2581_2594_25E6_2583_25B3&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">联想</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="new-h-h3 new-mg-t15">
+        		<span class="new-floor">2F</span><span class="new-tit">家用电器</span>
+            </h3>
+            <div class="new-fl-type">
+            	<div class="new-fl-tbl new-fl-tbl2">
+                	<div class="new-tbl-section">
+                    	<a href="promotionActivity.action@promotionId=10&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-b-category">
+                        	<span class="new-cate-img"><img src="../images/touch2013/_40img5.png" width="75" height="75" alt="img"></span>
+                            <span class="new-cate-txt">   家用电器</span>
+                        </a>
+                    </div>
+                    <div class="new-tbl-section">
+                    	<div class="new-fl-chl-tbl">
+                        	<div class="new-fl-chl-cell">
+                            	<a href="../ware/search.action@keyword=_25E7_25BE_258E_25E7_259A_2584&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">美的</a>
+                                <a href="../ware/search.action@keyword=_25E7_25B4_25A2_25E5_25B0_25BC&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">索尼</a>
+                                <a href="../ware/search.action@keyword=_25E4_25B9_259D_25E9_2598_25B3&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">九阳</a>
+                                <a href="../ware/search.action@keyword=_25E5_25B0_258F_25E7_258B_2597&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">小狗</a>
+                            </div>
+                            <div class="new-fl-chl-cell">
+                            	<a href="../ware/search.action@keyword=_25E6_25A0_25BC_25E5_258A_259B&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">格力</a>
+                                <a href="../ware/search.action@keyword=_25E6_25B5_25B7_25E4_25BF_25A1&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">海信</a>
+                                <a href="../ware/search.action@keyword=_25E5_25A5_2594_25E8_2585_25BE&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">奔腾</a>
+                                <a href="../ware/search.action@keyword=_25E5_25BE_25B7_25E5_25B0_2594_25E7_258E_259B&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">德尔玛</a>
+                            </div>
+                            <div class="new-fl-chl-cell">
+                            	<a href="../ware/search.action@keyword=_25E6_25B5_25B7_25E5_25B0_2594&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">海尔</a>
+                                <a href="../ware/search.action@keyword=_25E5_2588_259B_25E7_25BB_25B4&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">创维</a>
+                                <a href="../ware/search.action@keyword=_25E6_25A0_25BC_25E5_2585_25B0_25E4_25BB_2595&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">格兰仕</a>
+                                <a href="../ware/search.action@keyword=_25E9_25A3_259E_25E5_2588_25A9_25E6_25B5_25A6&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">飞利浦</a>
+                            </div>
+                        </div>                  	
+                    </div>
+                </div>
+            </div>
+            <h3 class="new-h-h3 new-mg-t15">
+        		<span class="new-floor">3F</span><span class="new-tit">服装鞋包</span>
+            </h3>            
+            <div class="new-fl-type">
+            	<div class="new-fl-tbl new-fl">
+                	<div class="new-tbl-section">
+                    	<a href="promotionActivity.action@promotionId=14&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-b-category">
+                        	<span class="new-cate-img"><img src="../images/touch2013/_40img6.png" width="75" height="75" alt="img"></span>
+                            <span class="new-cate-txt">服装鞋帽</span>
+                        </a>
+                    </div>
+                    <div class="new-tbl-section">
+                    	<a href="../ware/search.action@keyword=_25E9_259F_25A9_25E9_2583_25BD_25E8_25A1_25A3_25E8_2588_258D&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">韩都衣舍</a>
+                        <a href="../ware/search.action@keyword=_25E6_259D_25B0_25E5_2585_258B_25E7_2590_25BC_25E6_2596_25AF&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">杰克琼斯</a>
+                        <a href="../ware/search.action@keyword=OSA&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">OSA</a>
+                        <a href="../ware/search.action@keyword=_25E6_259D_258E_25E5_25AE_2581&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">李宁</a>
+                    </div>
+                </div>
+                <div class="new-fl-tbl new-fr">
+                	<div class="new-tbl-section">
+                    	<a href="promotionActivity.action@promotionId=16&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-b-category">
+                        	<span class="new-cate-img"><img src="../images/touch2013/_40img13.png" width="75" height="75" alt="img"></span>
+                            <span class="new-cate-txt">礼品箱包</span>
+                        </a>
+                    </div>
+                    <div class="new-tbl-section">
+                    	<a href="../ware/search.action@keyword=ELLE&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">ELLE</a>
+                        <a href="../ware/search.action@keyword=NAWO&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">NAWO</a>
+                        <a href="../ware/search.action@keyword=_25E5_25A8_2581_25E6_2588_2588&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">威戈</a>
+                        <a href="../ware/search.action@keyword=_25E7_2591_259E_25E5_25A3_25AB_25E5_258D_2581_25E5_25AD_2597&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">瑞士十字</a>
+                    </div>
+                </div>
+            </div>
+        	<h3 class="new-h-h3 new-mg-t15">
+        		<span class="new-floor">4F</span><span class="new-tit">美容珠宝</span>
+            </h3>
+            <div class="new-fl-type">
+            	<div class="new-fl-tbl new-fl">
+                	<div class="new-tbl-section">
+                    	<a href="promotionActivity.action@promotionId=15&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-b-category">
+                        	<span class="new-cate-img"><img src="../images/touch2013/_40img7.png" width="75" height="75" alt="img"></span>
+                            <span class="new-cate-txt">个护化妆</span>
+                        </a>
+                    </div>
+                    <div class="new-tbl-section">
+                    	<a href="../ware/search.action@keyword=_25E4_25B8_259D_25E5_25A1_2594_25E8_258A_2599&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">丝塔芙</a>
+                        <a href="../ware/search.action@keyword=_25E6_25AC_25A7_25E7_258F_2580_25E8_258E_25B1&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">欧珀莱</a>
+                        <a href="../ware/search.action@keyword=_25E6_25AC_25A7_25E8_258E_25B1_25E9_259B_2585&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">欧莱雅</a>
+                        <a href="../ware/search.action@keyword=_25E9_259B_2585_25E8_25AF_2597_25E5_2585_25B0_25E9_25BB_259B&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">雅诗兰黛</a>
+                    </div>
+                </div>
+                
+                <div class="new-fl-tbl new-fr">
+                	<div class="new-tbl-section2">
+                        <div class="new-tbl-section">
+                            <a href="promotionActivity.action@promotionId=22&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-b-category new-b-category-v1">
+                                <span class="new-cate-img new-cate-img-v1"><img src="../images/touch2013/_40img48_1.png" width="48" height="50" alt="img"></span>
+                                <span class="new-cate-txt2">钟表</span>
+                            </a>
+                        </div>
+                        <div class="new-tbl-section">
+                            <a href="../ware/search.action@keyword=_25E5_25A4_25A9_25E6_25A2_25AD&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">天梭</a>
+                            <a href="../ware/search.action@keyword=_25E5_258D_25A1_25E8_25A5_25BF_25E6_25AC_25A7&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">卡西欧</a>
+                        </div>
+                    </div>
+                    <div class="new-tbl-section2">
+                        <div class="new-tbl-section">
+                            <a href="promotionActivity.action@promotionId=23&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-b-category new-b-category-v1">
+                                <span class="new-cate-img new-cate-img-v1"><img src="../images/touch2013/_40img48.png" width="48" height="50" alt="img"></span>
+                                <span class="new-cate-txt2">珠宝</span>
+                            </a>
+                        </div>
+                        <div class="new-tbl-section">
+                            <a href="../ware/search.action@keyword=_25E6_2596_25BD_25E5_258D_258E_25E6_25B4_259B_25E4_25B8_2596_25E5_25A5_2587&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">施华洛世奇</a>
+                            <a href="../ware/search.action@keyword=_25E5_2591_25A8_25E7_2594_259F_25E7_2594_259F&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">周生生</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="new-fl-type3">
+            	<span class="new-floor">5F</span>
+            	<div class="new-fl-chl-tbl">
+                	<a href="promotionActivity.action@promotionId=24&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-fl-chl-cell new-bg1">厨具</a><a href="promotionActivity.action@promotionId=18&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-fl-chl-cell new-bg2">汽车用品</a><a href="promotionActivity.action@promotionId=33&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-fl-chl-cell new-bg1">家具</a>
+                </div>
+                <div class="new-fl-chl-tbl">
+                	<a href="promotionActivity.action@promotionId=13&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-fl-chl-cell new-bg3">家居家装</a><a href="promotionActivity.action@promotionId=34&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-fl-chl-cell new-bg4">家装建材</a><a href="promotionActivity.action@promotionId=26&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-fl-chl-cell new-bg3">宠物生活</a>
+                </div>
+            </div>
+        	<h3 class="new-h-h3 new-mg-t15">
+        		<span class="new-floor">6F</span><span class="new-tit">母婴玩具</span>
+            </h3>
+            <div class="new-fl-type">
+            	<div class="new-fl-tbl new-fl">
+                	<div class="new-tbl-section">
+                    	<a href="promotionActivity.action@promotionId=31&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-b-category">
+                        	<span class="new-cate-img"><img src="../images/touch2013/_40img12.png" width="75" height="75" alt="img"></span>
+                            <span class="new-cate-txt">母婴</span>
+                        </a>
+                    </div>
+                    <div class="new-tbl-section">
+                    	<a href="../ware/search.action@keyword=_25E5_25A4_259A_25E7_25BE_258E_25E6_25BB_258B&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">多美滋</a>
+                        <a href="../ware/search.action@keyword=_25E6_2583_25A0_25E6_25B0_258F&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">惠氏</a>
+                        <a href="../ware/search.action@keyword=_25E5_25A5_25BD_25E5_25A5_2587&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">好奇</a>
+                        <a href="../ware/search.action@keyword=_25E5_25B8_25AE_25E5_25AE_259D_25E9_2580_2582&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">帮宝适</a>
+                    </div>
+                </div>
+                <div class="new-fl-tbl new-fr">
+                	<div class="new-tbl-section">
+                    	<a href="promotionActivity.action@promotionId=25&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-b-category">
+                        	<span class="new-cate-img"><img src="../images/touch2013/_40img9.png" width="75" height="75" alt="img"></span>
+                            <span class="new-cate-txt">玩具</span>
+                        </a>
+                    </div>
+                    <div class="new-tbl-section">
+                    	<a href="../ware/search.action@keyword=_25E6_25BE_25B3_25E8_25B4_259D&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">澳贝</a>
+                        <a href="../ware/search.action@keyword=_25E8_25B4_259D_25E5_258D_259A_25E6_25B0_258F&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">贝博氏</a>
+                        <a href="../ware/search.action@keyword=_25E5_25B0_258F_25E5_25B8_2583_25E5_258F_25AE&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">小布叮</a>
+                        <a href="../ware/search.action@keyword=_25E6_2599_25BA_25E7_25AB_258B_25E6_2596_25B9&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">智立方</a>
+                    </div>
+                </div>
+            </div>
+            <!--[D] //6F -->
+            <!--[D] 7F -->
+        	<h3 class="new-h-h3 new-mg-t15">
+        		<span class="new-floor">7F</span><span class="new-tit">食品保健</span>
+            </h3>
+            <div class="new-fl-type">
+            	<div class="new-fl-tbl new-fl">
+                	<div class="new-tbl-section">
+                    	<a href="promotionActivity.action@promotionId=20&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-b-category">
+                        	<span class="new-cate-img"><img src="../images/touch2013/_40img11.png" width="75" height="75" alt="img"></span>
+                            <span class="new-cate-txt">食品保健</span>
+                        </a>
+                    </div>
+                    <div class="new-tbl-section">
+                    	<a href="../ware/search.action@keyword=_25E4_25BC_2591_25E9_2597_25B2_25E9_25A3_259F_25E5_2593_2581&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">休闲食品</a>
+                        <a href="../ware/search.action@keyword=_25E9_25A5_25BC_25E5_25B9_25B2_25E8_259B_258B_25E7_25B3_2595&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">饼干蛋糕</a>
+                        <a href="../ware/search.action@keyword=_25E6_2596_25B0_25E7_2596_2586_25E5_25A4_25A7_25E6_259E_25A3&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">新疆大枣</a>
+                        <a href="../ware/search.action@keyword=_25E6_25B1_25A4_25E8_2587_25A3_25E5_2580_258D_25E5_2581_25A5&resourceType=index_promotion&resourceValue=f3 &sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">汤臣倍健 </a>
+                    </div>
+                </div>
+                
+                <div class="new-fl-tbl new-fr">
+                	<div class="new-tbl-section">
+                    	<a href="promotionActivity.action@promotionId=17&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-b-category">
+                        	<span class="new-cate-img"><img src="../images/touch2013/_40img10.png" width="75" height="75" alt="img"></span>
+                            <span class="new-cate-txt">运动健康</span>
+                        </a>
+                    </div>
+                    <div class="new-tbl-section">
+                    	<a href="../ware/search.action@keyword=_25E6_258E_25A2_25E8_25B7_25AF_25E8_2580_2585&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">探路者</a>
+                        <a href="../ware/search.action@keyword=_25E7_259A_25AE_25E5_25B0_2594_25E7_2591_259C_25E4_25BC_25BD&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">皮尔瑜伽</a>
+                        <a href="../ware/search.action@keyword=_25E7_258B_25BC_25E7_2588_25AA&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">狼爪</a>
+                        <a href="../ware/search.action@keyword=_25E5_2593_2588_25E4_25BB_2596_25E7_2591_259C_25E4_25BC_25BD&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-s-category">哈他瑜伽</a>
+                    </div>
+                </div>
+            </div>
+            <div class="new-fl-type4 new-f8 new-mg-b15">
+            	<span class="new-floor">8F</span>
+                <div class="new-fl-chl-tbl" >
+                    <div class="new-fl-chl-cell"  style="text-indent:0;text-align:center;">
+                        <a href="promotionActivity.action@promotionId=8&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-bg4">图书</a><a href="promotionActivity.action@promotionId=9&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-bg3">音乐</a>
+                    </div>
+                    <div class="new-fl-chl-cell"  style="text-indent:0;text-align:center;">
+                        <a href="promotionActivity.action@promotionId=28&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-bg3">教育</a><a href="promotionActivity.action@promotionId=27&resourceType=index_promotion&resourceValue=f3&sid=e0d0f025d6d3e8e8d7be5428c43ef911" class="new-bg4">音像</a>
+                    </div>
+                </div>
+            </div>
+            <!--[D] //8F -->
+        </div>
+    </div>
+</div>
+	
+   
+	<div class="login-area" id="footer">
+        	<div class="login">
+									    					<a href="../user/login.action@sid=e0d0f025d6d3e8e8d7be5428c43ef911">登录</a><span class="lg-bar">|</span><a href="../user/mobileRegister.action@sid=e0d0f025d6d3e8e8d7be5428c43ef911">注册</a>
+    												<span  class="new-fr"><a href="../showvote.html@sid=e0d0f025d6d3e8e8d7be5428c43ef911">反馈</a><span class="lg-bar">|</span><a href="#top">回到顶部</a></span>
+            </div>
+        	<div class="version"><a href="../index.html@v=w&sid=e0d0f025d6d3e8e8d7be5428c43ef911">标准版</a><a href="javascript:void(0)" class="on">触屏版</a><a href="../index/pcsite.action" id="toPcHome">电脑版</a></div>
+            <div class="copyright">&copy; m.jd.com </div>
+        </div>
+
+    <div style="display:none;">
+    					<img src="../ja.jsp@&utmn=911631867&utmr=-&utmp=_252Fpromotion_252Findex.action_253Fsid_253De0d0f025d6d3e8e8d7be5428c43ef911%26066F1C01C6" />
+			    </div>
+<script type="text/javascript">
+$("#unsupport").hide();
+if(!testLocalStorage()){ //not support html5
+    if(0!=0 && !$clearCart && !$teamId){
+		$("#html5_cart_num").text(0>0>0);
+	}
+}else{
+	updateToolBar('');
+}
+
+$("#html5_cart").click(function(){
+//	syncCart('e0d0f025d6d3e8e8d7be5428c43ef911',true);
+	location.href='../cart/cart.action';
+});
+
+function reSearch(){
+var depCity = window.sessionStorage.getItem("airline_depCityName");
+	if(testSessionStorage() && isNotBlank(depCity) && !/^\s*$/.test(depCity) && depCity!=""){
+    	var airStr = '<form action="../airline/list.action" method="post" id="reseach">'
+        +'<input type="hidden" name="sid"  value="e0d0f025d6d3e8e8d7be5428c43ef911"/>'
+        +'<input type="hidden" name="depCity" value="'+ window.sessionStorage.getItem("airline_depCityName") +'"/>'
+        +'<input type="hidden" name="arrCity" value="'+ window.sessionStorage.getItem("airline_arrCityName") +'"/>'
+        +'<input type="hidden" name="depDate" value="'+ window.sessionStorage.getItem("airline_depDate") +'"/>'
+        +'<input type="hidden" name="depTime" value="'+ window.sessionStorage.getItem("airline_depTime") +'"/>'
+        +'<input type="hidden" name="classNo" value="'+ window.sessionStorage.getItem("airline_classNo") +'"/>'
+        +'</form>';
+    	$("body").append(airStr);
+    	$("#reseach").submit();
+	}else{
+    	window.location.href='../airline/index.action@sid=e0d0f025d6d3e8e8d7be5428c43ef911';
+	}
+}
+ //banner 关闭点击
+    $('.div_banner_close').click(function(){
+        $('#div_banner_header').unbind('click');
+        jQuery.post('../index/addClientCookieVal.json',function(d){
+              $('#div_banner_header').slideUp(500);
+        });
+    });
+    //banner 下载点击
+    $('.div_banner_download').click(function(){
+         var downloadUrl = $(this).attr('url');
+         jQuery.post('../index/addClientCookieVal.json',function(d){
+               window.location.href=downloadUrl;
+        });
+    });
+	
+</script>
+</body>
+</html>

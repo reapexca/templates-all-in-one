@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- saved from url=(0017) -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/m998.css">
+<link rel="stylesheet" href="css/calendar.css">
+<link rel="Stylesheet" href="css/add.css">
+<script type="text/javascript">
+    ////////////////联合跳转///////////////////////////////////  //Author:lihld Time:2013/6/28 Modify:新增cookie设置过期时间用来验证用户身份，防止用户在同一手机上面登录两个不同的账号到时身份不匹配
+    localStorage.isfromweixin = false; //设置微信标示，判断是不是在微信里面打开 lihld 2013/6/13
+    var userAgent = navigator.userAgent;
+    if (userAgent.indexOf('MicroMessenger') > 0) {
+        localStorage.isfromweixin = true;
+        if (getCookie("weixinFlag") != "") {
+            if (typeof (localStorage.M998_USER) == "undefined" || localStorage.M998_USER == "" || localStorage.M998_USER == null) {
+                var url = encodeURI("http://m.998.com");
+                location.href = "http://app.travel.qq.com/app-bin/wei/redirect.fcg?merchant=GreenTreeInn&url=" + url; //跳转到微旅游CGI
+            }
+        } else {
+               //Author:朱荣  Time：2014-01-21 Modify：去掉验证身份的弹框
+               // alert("请点击确定验证身份！");
+                var url = encodeURI("http://m.998.com");
+                location.href = "http://app.travel.qq.com/app-bin/wei/redirect.fcg?merchant=GreenTreeInn&url=" + url; //跳转到微旅游CGI
+        }
+    } else {
+        localStorage.isfromweixin = false;
+    }
+    ///////////////////////////////////////////////////////////
+
+    function getCookie(name){ 
+        var strCookie=document.cookie; 
+        var arrCookie=strCookie.split("; "); 
+        for(var i=0;i<arrCookie.length;i++){ 
+            var arr=arrCookie[i].split("="); 
+            if(arr[0]==name)return arr[1]; 
+        } 
+        return "";
+    }
+
+    //Author:lihld Time:2013/12/9 Modify:添加获取支付宝返回过来的字符
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+    if (GetQueryString("alipay_user_id") != null) {
+        //Author:lihld  Time:2013/12/11 Modify:每一个页面后面跟的url都需要变化
+        var url = "alipay_Pass.html" + window.location.search + "&url=index.html";
+        window.location.href = url;
+    }
+    //end
+</script>
+<title>格林豪泰</title>
+<link id="1400212546090238" href="chrome-extension://cncghdiabkkfokmldbdcchmaojiijgke/css/webElePet.css" rel="stylesheet" type="text/css"></head>
+<body>
+  <noscript>您的浏览器不支持Javascript或Javascript已被禁用&lt;br/&gt;&lt;a href='http://211.152.60.227:9806'&gt;点此访问普版&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+  &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+  </noscript>
+	<div id="loading" style="-webkit-transform-origin: 0px 0px; opacity: 1; -webkit-transform: scale(1, 1); display: none; ">
+		<div class="loadingPanel">
+			<span class="loadingIcon"></span>
+			<p class="loadingLabel">正在努力加载中...</p>
+		</div>
+	</div>
+
+	<header id="header" class="home">
+        <div style=" position: absolute;left: 0;padding:13px  0px;cursor: pointer;display: block;">
+            <a href="applink.htm"><img src="./images/khd_download.png"></a>
+        </div>
+        <a class="header-operate" href="login.html">
+            <span class="header-icon header-icon-login"></span>
+            <span class="header-name">登录/注册</span>
+        </a>
+        <div class="header-title header-home-title"><span>&nbsp;</span></div>
+	</header>
+
+	<div id="content" style="min-height: 619px; ">
+		<div class="wrap-content" style="padding-top: 10px;">
+			<ul class="search-group">
+				<li class="location-search">
+					<nav class="location-search-div">
+						<span class="search-icon location-icon"></span>
+						<span id="location-search-value">上海市</span><img class="arrow-icon" src="./images/arrow.png" alt="">
+					</nav>
+					<div class="location-search-list-div hide-popup">
+						<div class="index-search-bar">
+							<div class="search-body">
+								<span class="search-icon location-icon"></span> <input type="text" id="location-search-input" value="请输入城市名称">
+							</div>
+							<span class="search-button">取消</span>
+						</div>
+
+						<div class="location-select-list">
+							<ul id="city-list"></ul>
+							<script id="cityListTemplate" type="text/html">
+							<% for (var i = 0; i < data.length; i ++) { %>
+								<li class="cityname-li" CityId="<%= data[i].HotCity.CityId%>"><span><%= data[i].HotCity.CityName%></span></li>
+							<%}%>
+							<li class="more-city" style="color:#027160;font-weight:bold;">其他</li>
+							</script>
+						</div>
+					</div>
+				</li>
+				<li class="name-search">
+					<nav class="name-search-div">
+						<span class="search-icon name-icon"></span> <span id="name-search-value">酒店名称/行政区/热门位置</span> <img class="arrow-icon" src="./images/arrow.png" alt="">
+					</nav>
+					<div class="name-search-list-div">
+						<div class="index-search-bar">
+							<div class="search-body">
+								<span class="search-icon name-icon"></span> <input type="text" id="name-search-input" value="酒店名称">
+							</div>
+							<span class="search-button">取消</span>
+						</div>
+
+						<div id="search-by"></div>
+						<script id="hotPointTemplate" type="text/html">
+						<div class="div-select cityXZlist">
+							<select id="region-list" name="region-select" class="select-options"></select>
+							<div class="arrow-right">
+								<img class="arrow-icon" src="images/arrow.png" alt="" />
+							</div>
+							<a>行政区</a>
+						</div>
+						<% for (var i = 0; i < data.length; i ++) { %>
+							<%if(data[i].HotPointList.length > 0){%>
+							<div class="div-select">
+								<select HotPointClassId="<%= data[i].HotPointClass.HotPointClassId%>" id="hotpointid-<%= data[i].HotPointClass.HotPointClassId%>" name="region-select" class="select-options hotpoint-select-options"></select>
+								<div class="arrow-right">
+									<img class="arrow-icon" src="images/arrow.png" alt="" />
+								</div>
+								<a class="class-name"><%= data[i].HotPointClass.HotPointClassName%></a>
+							</div>
+							<%}%>
+						<%}%>
+						</script>
+						<script id="ZXTemplate" type="text/html">
+						<% for (var i = 0; i < XZId.length; i ++) { %>
+							<option value="<%= XZId[i]%>"><%= XZName[i]%></option>
+						<%}%>
+						</script>
+						<script id="hotPointByCityIdTemplate" type="text/html">
+						<% for (var i = 0; i < HotPointClassId.length; i ++) { %>
+							<option value="<%= HotPointId[i]%>"><%= HotPointName[i]%></option>
+						<%}%>
+						</script>
+					</div>
+				</li>
+				<li class="time-search">
+					<span class="search-icon time-icon"></span>
+					<nav class="time-between-container">
+						<div class="time-table">
+							<div id="time-enter" class="time-between time-start">
+								<h3>入住时间</h3>
+								<p class="day startDay">5月16日</p>
+								<p class="day-of-week">星期<span class="startDayName">五</span></p>
+							</div>
+							<div class="time-icon-arrow">
+								<img src="./images/arrow.png" alt="">
+							</div>
+							<div id="time-leave" class="time-between time-end">
+								<h3>离店时间</h3>
+								<p class="day endDay">5月17日</p>
+								<p class="day-of-week">星期<span class="endDayName">六</span></p>
+							</div>
+						</div>
+					</nav>
+					<div class="time-select-body">
+						<div class="Calendar-bar">
+							<h2 class="Calendar-bar-title">入住日期</h2>
+							<span class="Calendar-cancel">取消</span>
+						</div>
+						<div class="Calendar">
+							<div id="idCalendarPre"><img src="./images/p2.png"></div>
+							<div id="idCalendarNext"><img src="./images/n2.png"></div>
+							<div id="idCalendarShow">
+								<span id="idCalendarYear"></span>年<span id="idCalendarMonth"></span>月
+							</div>
+							<table cellspacing="0">
+								<thead>
+									<tr>
+										<td>日</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td>
+									</tr>
+								</thead>
+								<tbody id="idCalendar">
+								</tbody>
+							</table>
+						</div>
+						<div class="Calendar-bottom-bar">
+							<span class="Calendar-stay Calendar-bar-select">入住</span>
+							<span class="Calendar-leave">离店</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div id="search">
+				<span class="find" src="images/find.png" alt="查找"></span><span class="nearly" src="images/nearly.png" alt="附近酒店"></span>
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer">
+		<div class="phone">
+			<img class="phone-icon" alt="联系电话：" src="./images/phone.png">
+            <a href="tel:4006998998" class="title">4006-<span style="color:Red">998</span>-<span style="color:Red">998</span></a>
+		</div>
+		<div class="copyright">
+			<h1 class="copyright-info">Copyright © 2013 格林豪泰</h1>
+			<ul>               
+                <li><a href="http://211.152.60.227:9806/">普版</a></li>
+                <li><a href="http://www.998.com/">桌面版</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li style="border-right: 0;"><a href="applink.htm" target="_blank">App下载</a></li>
+            </ul>
+		</div>
+	</footer>
+	<script>
+		var $CONFIG = {};
+		$CONFIG['load'] = 'home'; 
+	</script>
+	<script src="js/sea.js" data-main="js/init"></script>
+    <!--<script>
+    	    window.onload = function () {
+    	        var isAndroid = (/android/gi).test(navigator.appVersion)
+    	        var isIDevice = (/iphone|ipad/gi).test(navigator.appVersion)
+    	        var isPlaybook = (/playbook/gi).test(navigator.appVersion)
+    	        var isTouchPad = (/hp-tablet/gi).test(navigator.appVersion)
+    	        var isWindowsPhone = (/windows phone/gi).test(navigator.appVersion)
+    	        var isHasLinux = (/linux/gi).test(navigator.appVersion)
+    	        var isGecko = (/gecko/gi).test(navigator.appVersion)
+    	        if (isAndroid || isIDevice || isPlaybook || isTouchPad || isGecko) {
+    	           // location.href = '/index.html';
+    	        } else {
+    	            location.href = 'http://211.152.60.227:9806';
+    	        }
+    	    }
+	</script> -->
+
+<div id="webElementsPet"><img src="chrome-extension://cncghdiabkkfokmldbdcchmaojiijgke/img/logo_48.png" width="32" height="32/"><b id="webElementsImgCount"></b><a id="webElementsImgTab">图片</a><a id="webElementsTextTab" class="enable">正文</a><a id="webElementsLinkTab" class="enable">链接</a></div></body></html>

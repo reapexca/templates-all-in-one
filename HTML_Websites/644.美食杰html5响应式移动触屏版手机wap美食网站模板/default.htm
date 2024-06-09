@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html manifest="msj_m.manifest">
+<meta charset="utf-8">
+<title>美食杰html5响应式移动触屏版手机wap美食网站模板-懒人模板【http://www.lanrenmb.com/HTML5/】</title>
+<meta content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection" />
+<meta name="apple-itunes-app" content="app-id=399423833"/>
+<link href="wap/css/ss_base2.css" rel="stylesheet" />
+<link href="wap/css/msj_m.css" rel="stylesheet" />
+<script src="js/jquery-1.6.4.min.js"></script>
+<script>setTimeout(scrollTo,0,0,0);</script>
+<script>
+$(function(){
+	var mhw = $("#m_header").width();
+	var mhmw = 640;
+	var realw = mhw>640?640:mhw;
+	$("#m_header").css("maxHeight",realw+"px");
+	$("#m_search").height($(this).width());
+	var hh = $("#m_search").height();
+	$("#m_search_w").css("top",hh*0.80+"px");
+	$("#m_search_w").height(hh*0.125);
+	var hhw = $("#m_search_w").height();
+	$("#m_search_w").css("borderRadius",hh*0.125*0.5+"px");
+	$("#m_search_submit").width(hhw);
+	$("#m_footer_searchicon").css({"height":hhw,"width":hhw});
+	$(".m_index_menuitem_title").css({"height":hhw+"px","lineHeight":hhw+"px"});
+	var mindex_flag = 0;
+	$(".m_index_menuitem_title").click(function(){
+		if(mindex_flag == 0){
+			$(this).parent().addClass("current");
+			mindex_flag = 1;
+		}else if($(this).parent().hasClass("current")){
+			$(this).parent().removeClass("current");
+			mindex_flag = 0;
+		}else{
+			$(this).parent().siblings().removeClass("current");
+			$(this).parent().addClass("current");
+		}
+	});
+	$("#mad1_close").click(function(){
+		$("#mad1").remove();
+	});
+});
+</script>
+<body><img style="display:none;" src="../../hm.baidu.com/hm.gif@si=01dd6a7c493607e115255b7e72de5f40&et=0&nv=1&st=3&lt=0&su=&v=wap-0-0.2&rnd=8823254673" width="0" height="0" /><div class="m_wrap" id="m_wrap"><div class="ad11" id="mad1">
+	<a href="app.php"><img style="margin-left:10px;" src="http://static.meishij.net/wap/images/msj_72.png"/><img src="http://static.meishij.net/wap/images/yt_72.png"/>下载美食杰手机客户端</a><span id="mad1_close"></span>
+</div>
+<header class="m_header" id="m_header">
+	<h1 style="display:none;">美食杰</h1><p style="display:none;">让中国人吃的更健康</p>
+	<form class="m_search" id="m_search" action="http://m.meishij.net/html5/list.php">
+		<div class="m_search_w" id="m_search_w"><input type="text" id="m_search_text" name="q" placeholder="输入食材/菜谱名"><input type="submit" value="" id="m_search_submit"></div>
+	</form>
+</header>
+<div class="m_index_main">
+	<nav>
+			<div class="m_index_menuitem current" id="m_menu_1">
+		<h2 class="m_index_menuitem_title"><a href="#m_menu_1">家常菜谱大全<strong></strong></a></h2>
+		<div class="m_index_menuitem_list">
+			<ul><li><a href="list.html">家常菜</a></li><li><a href="list.html">私家菜</a></li><li><a href="list.html">凉菜</a></li><li><a href="list.html">海鲜</a></li><li><a href="list.html">热菜</a></li><li><a href="list.php@cid=7">汤粥</a></li><li><a href="list.php@cid=74">素食</a></li><li><a href="list.php@cid=343">酱料沾料</a></li><li><a href="list.php@cid=11">微波炉</a></li><li><a href="list.php@cid=59">火锅底料</a></li><li><a href="list.php@cid=272">甜品点心</a></li><li><a href="list.php@cid=8">糕点主食</a></li><li><a href="list.php@cid=77">干果制作</a></li><li><a href="list.php@cid=273">卤酱</a></li><li><a href="list.php@cid=57">时尚饮品</a></li><li><a href="list.php@cid=9">食疗</a></li><li><a href="list.php@cid=60">药膳偏方</a></li><li><a href="list.php@cid=73">老年人</a></li><li><a href="list.php@cid=72">产妇</a></li><li><a href="list.php@cid=62">孕妇</a></li><li><a href="list.php@cid=12">宝宝食谱-婴儿食谱</a></li><li><a href="list.php@cid=58">美容</a></li><li><a href="list.php@cid=61">瘦身</a></li><li><a href="list.php@cid=365">早餐</a></li><li><a href="list.php@cid=366">午餐</a></li><li><a href="list.php@cid=367">晚餐</a></li></ul>
+		</div>
+	</div>
+			<div class="m_index_menuitem" id="m_menu_2">
+		<h2 class="m_index_menuitem_title"><a href="#m_menu_2">中华菜系<strong></strong></a></h2>
+		<div class="m_index_menuitem_list">
+			<ul><li><a href="list.php@cid=41">川菜</a></li><li><a href="list.php@cid=44">湘菜</a></li><li><a href="list.php@cid=43">粤菜</a></li><li><a href="list.php@cid=53">东北菜</a></li><li><a href="list.php@cid=42">鲁菜</a></li><li><a href="list.php@cid=46">浙菜</a></li><li><a href="list.php@cid=47">苏菜</a></li><li><a href="list.php@cid=56">清真菜</a></li><li><a href="list.php@cid=45">闽菜</a></li><li><a href="list.php@cid=50">沪菜</a></li><li><a href="list.php@cid=49">京菜</a></li><li><a href="list.php@cid=52">湖北菜</a></li><li><a href="list.php@cid=48">徽菜</a></li><li><a href="list.php@cid=51">豫菜</a></li><li><a href="list.php@cid=54">西北菜</a></li><li><a href="list.php@cid=55">云贵菜</a></li><li><a href="list.php@cid=269">江西菜</a></li><li><a href="list.php@cid=268">山西菜</a></li><li><a href="list.php@cid=154">港台菜</a></li><li><a href="list.php@cid=155">其它菜</a></li></ul>
+		</div>
+	</div>
+			<div class="m_index_menuitem" id="m_menu_3">
+		<h2 class="m_index_menuitem_title"><a href="#m_menu_3">烘焙<strong></strong></a></h2>
+		<div class="m_index_menuitem_list">
+			<ul><li><a href="list.php@cid=373">蛋糕面包</a></li><li><a href="list.php@cid=374">饼干配方</a></li><li><a href="list.php@cid=375">甜品点心</a></li><li><a href="list.php@cid=371">烘焙工具</a></li><li><a href="list.php@cid=370">烘焙常识</a></li><li><a href="list.php@cid=372">烘焙原料</a></li></ul>
+		</div>
+	</div>
+			<div class="m_index_menuitem" id="m_menu_4">
+		<h2 class="m_index_menuitem_title"><a href="#m_menu_4">外国菜谱<strong></strong></a></h2>
+		<div class="m_index_menuitem_list">
+			<ul><li><a href="list.php@cid=64">韩国料理</a></li><li><a href="list.php@cid=63">日本料理</a></li><li><a href="list.php@cid=156">西餐面点</a></li><li><a href="list.php@cid=67">法国菜</a></li><li><a href="list.php@cid=66">意大利餐</a></li><li><a href="list.php@cid=65">美国家常菜</a></li><li><a href="list.php@cid=69">东南亚菜</a></li><li><a href="list.php@cid=68">墨西哥菜</a></li><li><a href="list.php@cid=70">澳大利亚菜</a></li><li><a href="list.php@cid=382">甜点</a></li><li><a href="list.php@cid=381">主食</a></li><li><a href="list.php@cid=380">主菜</a></li><li><a href="list.php@cid=379">汤品</a></li><li><a href="list.php@cid=378">餐前小吃</a></li><li><a href="list.php@cid=383">饮品</a></li><li><a href="list.php@cid=71">其他国家</a></li></ul>
+		</div>
+	</div>
+			<div class="m_index_menuitem" id="m_menu_5">
+		<h2 class="m_index_menuitem_title"><a href="#m_menu_5">各地小吃<strong></strong></a></h2>
+		<div class="m_index_menuitem_list">
+			<ul><li><a href="list.php@cid=101">四川小吃</a></li><li><a href="list.php@cid=105">广东小吃</a></li><li><a href="list.php@cid=78">北京小吃</a></li><li><a href="list.php@cid=91">陕西小吃</a></li><li><a href="list.php@cid=84">山东小吃</a></li><li><a href="list.php@cid=81">山西小吃</a></li><li><a href="list.php@cid=97">湖南小吃</a></li><li><a href="list.php@cid=98">河南小吃</a></li><li><a href="list.php@cid=83">上海小吃</a></li><li><a href="list.php@cid=85">江苏小吃</a></li><li><a href="list.php@cid=96">湖北小吃</a></li><li><a href="list.php@cid=100">重庆小吃</a></li><li><a href="list.php@cid=79">天津小吃</a></li><li><a href="list.php@cid=80">河北小吃</a></li><li><a href="list.php@cid=86">浙江小吃</a></li><li><a href="list.php@cid=92">新疆小吃</a></li><li><a href="list.php@cid=99">江西小吃</a></li><li><a href="list.php@cid=106">福建小吃</a></li><li><a href="list.php@cid=107">广西小吃</a></li><li><a href="list.php@cid=102">云南小吃</a></li><li><a href="list.php@cid=90">辽宁小吃</a></li><li><a href="list.php@cid=89">吉林小吃</a></li><li><a href="list.php@cid=103">贵州小吃</a></li><li><a href="list.php@cid=87">安徽小吃</a></li><li><a href="list.php@cid=110">台湾小吃</a></li><li><a href="list.php@cid=94">甘肃小吃</a></li><li><a href="list.php@cid=109">香港小吃</a></li><li><a href="list.php@cid=82">蒙古小吃</a></li><li><a href="list.php@cid=93">宁夏小吃</a></li><li><a href="list.php@cid=95">青海小吃</a></li><li><a href="list.php@cid=108">海南小吃</a></li><li><a href="list.php@cid=104">西藏小吃</a></li><li><a href="list.php@cid=344">成都小吃</a></li><li><a href="list.php@cid=88">黑龙江小吃</a></li></ul>
+		</div>
+	</div>
+			<div class="m_index_menuitem" id="m_menu_6">
+		<h2 class="m_index_menuitem_title"><a href="#m_menu_6">时间、难度<strong></strong></a></h2>
+		<div class="m_index_menuitem_list">
+			<ul><li><a href="list.php@mt=1"><5分钟</a></li><li><a href="list.php@mt=2"><10分钟</a></li><li><a href="list.php@mt=3"><15分钟</a></li><li><a href="list.php@mt=4"><30分钟</a></li><li><a href="list.php@mt=5"><60分钟</a></li><li><a href="list.php@mt=6"><90分钟</a></li><li><a href="list.php@mt=7"><2小时</a></li><li><a href="list.php@mt=8"><数小时</a></li><li><a href="list.php@mt=9"><一天</a></li><li><a href="list.php@mt=10"><数天</a></li><li><a href="list.php@md=1">新手尝试</a></li><li><a href="list.php@md=2">初级入门</a></li><li><a href="list.php@md=3">初中水平</a></li><li><a href="list.php@md=4">中级掌勺</a></li><li><a href="list.php@md=5">高级厨师</a></li><li><a href="list.php@md=6">厨神级</a></li></ul>
+		</div>
+	</div>
+		<div class="m_index_menuitem" id="m_menu_7">
+		<h2 class="m_index_menuitem_title"><a href="#m_menu_7">厨房百科<strong></strong></a></h2>
+		<div class="m_index_menuitem_list">
+			<ul><li><a href="list.php@cid=348">食材的选购及保存</a></li><li><a href="list.php@cid=349">生活妙招</a></li><li><a href="list.php@cid=351">食材创意</a></li><li><a href="list.php@cid=352">摆盘围边</a></li><li><a href="list.php@cid=153">烹饪技巧</a></li><li><a href="list.php@cid=29">美食专题</a></li></ul>
+		</div>
+	</div>
+			<div class="m_index_menuitem" id="m_menu_8">
+		<h2 class="m_index_menuitem_title"><a href="#m_menu_8">饮食资讯<strong></strong></a></h2>
+		<div class="m_index_menuitem_list">
+			<ul><li><a href="list.php@cid=376">饮食新闻</a></li><li><a href="list.php@cid=350">食品安全</a></li></ul>
+		</div>
+	</div>
+			<div class="m_index_menuitem" id="m_menu_9">
+		<h2 class="m_index_menuitem_title"><a href="#m_menu_9">健康指南<strong></strong></a></h2>
+		<div class="m_index_menuitem_list">
+			<ul><li><a href="list.php@cid=19">饮食小常识</a></li><li><a href="list.php@cid=25">饮食禁忌</a></li><li><a href="list.php@cid=347">养生妙方</a></li><li><a href="list.php@cid=346">中医保健</a></li><li><a href="list.php@cid=20">美容瘦身</a></li><li><a href="list.php@cid=21">母婴健康饮食</a></li></ul>
+		</div>
+	</div>
+			<div class="m_index_menuitem" id="m_menu_10">
+		<h2 class="m_index_menuitem_title"><a href="#m_menu_10">饮食文化<strong></strong></a></h2>
+		<div class="m_index_menuitem_list">
+			<ul><li><a href="list.php@cid=31">美食典故</a></li><li><a href="list.php@cid=32">茶文化</a></li><li><a href="list.php@cid=33">外国饮食文化</a></li><li><a href="list.php@cid=34">酒文化</a></li><li><a href="list.php@cid=36">中西餐礼仪</a></li></ul>
+		</div>
+	</div>
+		</nav>
+		<div class="m_copyright"><a href="../set_show.php@st=1">Wap版</a><a style="color:#9D0000;" href="../set_show.php@st=3">Html5版</a><a href="../set_show.php@st=4">Html5无图版</a><a href="../../www.meishij.net/default.htm">网页版</a><a href="app.php" style="color:#c00000">手机客户端</a><span>Copyright 2003-2012 技术支持：<a href="http://www.lanrenmb.com/HTML5/">懒人模板</a></span></div></div>
+</div><div style="display:none;"><script language="javascript" type="text/javascript" src="../../js.users.51.la/2139665.js"></script><noscript><a href="../../www.51.la/@2139665" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="../../img.users.51.la/2139665.asp" style="border:none" /></a></noscript></div></body></html>

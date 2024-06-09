@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	min-height:100%;
+	position:relative;
+}
+.sideMenu {
+	margin:0;
+	-webkit-transform:none;
+	transform:none;
+}
+#sideToggle {
+	display:none;
+}
+#sideToggle:checked + .sbl {
+	z-index:999;
+	-webkit-transform-origin: 0px 0px;
+	opacity: 1;
+	-webkit-transform: scale(1, 1);
+	overflow:hidden;
+}
+#sideToggle:checked + .sbl .weiyi {
+	transform:translate(10px, 0);
+	-webkit-transform:translate(10px, 0);
+	position:absolute;
+	z-index:55;
+	right:0;
+}
+#sideToggle:checked ~ .leftmask {
+display:block;
+}
+.leftmask {
+	position:absolute;
+	width:100%;
+	background:rgba(0,0,0,.6) url(../images/icon_slid.png) no-repeat right 230px;
+	display:none;
+	height:100%;
+	z-index:800;
+}
+.sbl {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	width:190px;
+	overflow:hidden;
+	opacity:0;
+	z-index:-1;
+	
+}
+.weiyi {
+	top:0;
+	transform:translate(190px, 0);
+	-webkit-transform:translate(190px, 0);
+	min-height:100%;
+	width:170px;
+	right:0;
+	padding-left:10px;
+	background-color:#666;
+	transition:0.25s ease-out;
+	-webkit-transition:0.2s ease-out;
+	-webkit-box-shadow: -5px 0 5px rgba(0,0,0,.15);
+	-moz-box-shadow: -5px 0 5px rgba(0,0,0,.15);
+	box-shadow: -5px 0 5px rgba(0,0,0,.15);
+	position:absolute;
+	z-index:55;
+	right:0;
+}
+#wrap {
+	transition:0.25s ease-out;
+	-webkit-transition:0.25s ease-out;
+}
+.msgList1 { 
+}
+.msgHead1 {
+	padding: 5px 10px;
+	font-size:14px;
+	cursor: pointer;
+	position: relative;
+	border-bottom:1px solid #fff;
+	color:#fff;
+	background:none;
+	font-weight:normal;
+}
+.slideUp1, .slideDown1 {
+	position: absolute;
+	width:20px;
+	height:20px;
+	right:5px;
+	top:50%;
+	margin-top:-14px;
+	font-family: "fontello";
+	font-style: normal;
+	font-weight:normal;
+	speak: none;
+	font-size:20px;
+	color:#c4c4c4;
+	text-align:center;
+}
+.slideDown1:before {
+	content: '\e803';
+}
+.slideUp1:before {
+	content: '\e802';
+}
+.slideUp1 {
+	top:50%;
+	right:5px;
+	margin-top:-14px;
+}
+.msgBody1 {
+	padding:15px 0 15px 0px;
+	text-align:left;
+	height:217px;
+	overflow-y:scroll;
+	background:none;
+	border-bottom:1px solid #fff;
+}
+.msgBody1 > a {
+	text-align:left;
+	line-height:26px;
+	height:26px;
+	color:#fff;
+	padding-left:20px;
+}
+.onxz {
+	background:#a09f9f url(../images/gou.png) no-repeat 8px center;
+	background-size:7px 7px;
+}
+.close {
+	background:#f48024;
+	padding:0 10px;
+	line-height:30px;
+	height:30px;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	display:inline-block;
+	color:#fff;
+	border-radius:3px;
+}

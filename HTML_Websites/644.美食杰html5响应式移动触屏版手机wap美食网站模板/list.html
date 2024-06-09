@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html manifest="msj_m.manifest">
+<meta charset="utf-8">
+<title>美食杰html5响应式移动触屏版手机wap美食网站模板-懒人模板【http://www.lanrenmb.com/HTML5/】</title>
+<meta content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection" />
+<meta name="apple-itunes-app" content="app-id=399423833"/>
+<link href="wap/css/ss_base2.css" rel="stylesheet" />
+<link href="wap/css/msj_m.css" rel="stylesheet" />
+<script src="js/jquery-1.6.4.min.js"></script>
+<script>setTimeout(scrollTo,0,0,0);</script>
+<script>
+var flag_for_fixedsearch = 0;
+$(function(){
+	var mhw = $("#m_header").width();
+	var mhmw = 640;
+	var realw = mhw>640?640:mhw;
+	$("#m_header").css("maxHeight",realw+"px");
+	$("#m_search").height($(this).width());
+	var hh = $("#m_search").height();
+	$("#m_search_w").css("top",hh*0.80+"px");
+	$("#m_search_w").height(hh*0.125);
+	var hhw = $("#m_search_w").height();
+	$("#m_search_w").css("borderRadius",hh*0.125*0.5+"px");
+	$("#m_search_submit").width(hhw);
+	$("#m_footer_searchicon").css({"height":hhw,"width":hhw});
+	$(".m_index_menuitem_title").css({"height":hhw+"px","lineHeight":hhw+"px"});
+	$("#m_searchbtn").click(function(){
+		var hh = $("#m_search").height();
+		if(flag_for_fixedsearch == 0){
+			scroll(0,0);
+			var w = $("#m_header").width();
+			$("#m_list_header").css("position","relative");
+			$("#m_list_header").css("top","0px");
+			$("#ad11_w").css("position","relative");
+			$("#m_header").animate({"height":"100%"},"normal",function(){
+				$("#m_list_main").css("paddingTop","0px");
+			});
+			$(this).css("backgroundImage","url(http://static.meishij.net/wap/images/m_slideupbtn.png)");
+			flag_for_fixedsearch = 1;
+		}else{
+			$("#m_header").animate({"height":"0px"},"normal",function(){
+				$("#m_list_header").css("position","fixed");
+				$("#m_list_header").css("top","44px");
+				$("#ad11_w").css("position","fixed");
+				$("#m_list_main").css("paddingTop","94px");
+			});
+			$(this).css("backgroundImage","url(http://static.meishij.net/wap/images/m_searchbtn.png)");
+			flag_for_fixedsearch = 0;
+		}
+	});
+	var M_LIST_PAGE = 2;
+	$("#m_list_more a.more").click(function(){
+		if(M_LIST_PAGE < 4){
+			$(this).hide();
+			$("#m_list_more span").show();
+			show(M_LIST_PAGE);
+			M_LIST_PAGE++;
+		}else{
+			return;
+		}
+	});
+		$("#mad1_close").click(function(){
+		$("#ad11_w").remove();
+		$("#m_list_header").css("top","0px");
+		$("#m_list_main").css("paddingTop","4em");
+		$("#m_searchbtn").unbind("click");
+		rebind();
+	});
+});
+function rebind(){
+	$("#m_searchbtn").click(function(){
+		var hh = $("#m_search").height();
+		if(flag_for_fixedsearch == 0){
+			scroll(0,0);
+			var w = $("#m_header").width();
+			$("#m_list_header").css("position","relative");
+			$("#m_list_header").css("top","0px");
+			$("#m_header").animate({"height":"100%"},"normal",function(){
+				$("#m_list_main").css("paddingTop","0px");
+			});
+			$(this).css("backgroundImage","url(http://static.meishij.net/wap/images/m_slideupbtn.png)");
+			flag_for_fixedsearch = 1;
+		}else{
+			$("#m_header").animate({"height":"0px"},"normal",function(){
+				$("#m_list_header").css("position","fixed");
+				$("#m_list_header").css("top","0px");
+				$("#m_list_main").css("paddingTop","4em");
+			});
+			$(this).css("backgroundImage","url(http://static.meishij.net/wap/images/m_searchbtn.png)");
+			flag_for_fixedsearch = 0;
+		}
+	});
+}
+function show(page){
+	$.get("list.php@cid=270&sort=click&ajax=1&page=" + page,function(data){
+		if(data != ''){
+			var arr=[];
+			eval('var result = '+data+';');
+			for(var i_con in result){
+				if(result[i_con]!==undefined){
+					arr.push(result[i_con]);
+				}
+			}
+			$.each(arr,function(i,n){
+				$("#m_list_main_list").append(n);
+			});
+			if(page==3){
+				$("#m_list_more a.more").hide();
+				$("#m_list_more span").hide();
+				$("#m_list_more a.next").css("display","block");
+			}else{
+				$("#m_list_more span").hide();
+				$("#m_list_more a.more").css("display","block");
+			}
+		}else{
+			$("#m_list_more").hide();
+		}
+	});
+}
+</script>
+<body><img style="display:none;" src="../../hm.baidu.com/hm.gif@si=01dd6a7c493607e115255b7e72de5f40&et=0&nv=1&st=3&lt=1402795132&su=&v=wap-0-0.2&rnd=1710776621" width="0" height="0" /><div class="m_wrap" id="m_wrap"><header class="m_header m_header_hide" id="m_header">
+	<h1 style="display:none;">美食杰</h1><p style="display:none;">让中国人吃的更健康</p>
+	<form class="m_search" id="m_search" action="http://m.meishij.net/html5/list.php">
+		<div class="m_search_w" id="m_search_w"><input type="text" value="" id="m_search_text" name="q" placeholder="输入食材/菜谱名"><input type="submit" value="" id="m_search_submit"></div>
+	</form>
+</header>
+<div class="ad11_w" id="ad11_w"><div class="ad11" id="mad1">
+	<a href="app.php"><img style="margin-left:10px;" src="http://static.meishij.net/wap/images/msj_72.png"/><img src="http://static.meishij.net/wap/images/yt_72.png"/>下载美食杰手机客户端</a><span id="mad1_close"></span>
+</div></div>
+<header class="m_list_header" id="m_list_header">
+	<div class="m_list_header_w">
+		<h1>家常菜</h1>
+		<a href="javascript:history.go(-1);" class="m_backbtn" id="m_backbtn"></a>
+		<a href="default.htm" class="m_homebtn" id="m_homebtn"></a>
+		<a href="javascript:void(0);" class="m_searchbtn" id="m_searchbtn"></a>
+	</div>
+</header>
+<div class="m_list_main" id="m_list_main">
+	<div class="m_list_main_list" id="m_list_main_list">
+		<section class="m_list_item">
+		<a href="news.html" class="w"><img src="http://images.meishij.net/p/20100322/aa9d0292e70f9da964859e36222aaf38_160x160_95x95.jpg" /><h2>家常烧茄子</h2><span>工艺：烧</span><span>口味：咸鲜味</span><span>难度：初级入门</span><span>时间：<10分钟</span></a>
+	</section>
+		<section class="m_list_item">
+		<a href="news.html" class="w"><img src="http://images.meishij.net/p/20100802/9446c84577316aeec22748c9f3bb16bc_95x95.jpg" /><h2>红烧排骨</h2><span>工艺：烧</span><span>口味：家常味</span><span>难度：初中水平</span><span>时间：<60分钟</span></a>
+	</section>
+		<section class="m_list_item">
+		<a href="news.html" class="w"><img src="http://images.meishij.net/p/20100914/8a2b1b2e2066339afd7da25246bc0c5f_95x95.jpg" /><h2>鸡蛋羹</h2><span>工艺：蒸</span><span>口味：咸鲜味</span><span>难度：新手尝试</span><span>时间：<10分钟</span></a>
+	</section>
+		<section class="m_list_item">
+		<a href="news.html" class="w"><img src="http://images.meishij.net/p/20100710/213f667f5674bfa75a81599b8c55e560_95x95.jpg" /><h2>红烧豆腐</h2><span>工艺：烧</span><span>口味：家常味</span><span>难度：初级入门</span><span>时间：<10分钟</span></a>
+	</section>
+		<section class="m_list_item">
+		<a href="news.php@id=156348" class="w"><img src="http://images.meishij.net/p/20100407/6606c584c183a10b63fb1eb9f3c5d4e7_95x95.jpg" /><h2>清蒸鱼</h2><span>工艺：蒸</span><span>口味：咸鲜味</span><span>难度：初中水平</span><span>时间：<10分钟</span></a>
+	</section>
+		<section class="m_list_item">
+		<a href="news.php@id=182368" class="w"><img src="http://images.meishij.net/p/20100430/21bce3beb75bbe71a2be48565ee1d9d3_95x95.jpg" /><h2>红烧肉</h2><span>工艺：炖</span><span>口味：家常味</span><span>难度：中级掌勺</span><span>时间：<30分钟</span></a>
+	</section>
+		<section class="m_list_item">
+		<a href="news.php@id=180989" class="w"><img src="http://images.meishij.net/p/20100721/602a7afd35bab0594822ac65b60ca676_95x95.jpg" /><h2>红烧牛肉</h2><span>工艺：炖</span><span>口味：家常味</span><span>难度：初中水平</span><span>时间：<2小时</span></a>
+	</section>
+		<section class="m_list_item">
+		<a href="news.php@id=157179" class="w"><img src="http://images.meishij.net/p/20100710/3d10b53ab64651ef5d35df087c9c4035_95x95.jpg" /><h2>土豆炖牛肉</h2><span>工艺：炖</span><span>口味：五香味</span><span>难度：初中水平</span><span>时间：<60分钟</span></a>
+	</section>
+		<section class="m_list_item">
+		<a href="news.php@id=161551" class="w"><img src="http://images.meishij.net/p/20100318/6fb0a99ac6625aef1153982727f33aec_160x160_95x95.jpg" /><h2>麻辣土豆丝饼</h2><span>工艺：煎</span><span>口味：麻辣味</span><span>难度：初中水平</span><span>时间：<15分钟</span></a>
+	</section>
+		<section class="m_list_item">
+		<a href="news.php@id=169200" class="w"><img src="http://images.meishij.net/p/20101019/bdfc4791eb2f7b5b66f62bc1c82d3d44_95x95.jpg" /><h2>地三鲜</h2><span>工艺：炒</span><span>口味：家常味</span><span>难度：初级入门</span><span>时间：<15分钟</span></a>
+	</section>
+		</div>
+	<div class="m_list_more" id="m_list_more"><a href="javascript:void(0);" class="more">点击加载更多</a><a href="list.php@cid=270&sort=click&page=4" class="next">当前第3页，点击进入下一页</a><span>加载中...</span></div>    <div class="m_copyright"><a href="../set_show.php@st=1">Wap版</a><a style="color:#9D0000;" href="../set_show.php@st=3">Html5版</a><a href="../set_show.php@st=4">Html5无图版</a><a href="../../www.meishij.net/chufang/diy/jiangchangcaipu/default.htm">网页版</a><a href="app.php" style="color:#c00000">手机客户端</a><span>Copyright 2003-2012 技术支持：<a href="http://www.lanrenmb.com/HTML5/">懒人模板</a></span></div></div>
+</div><div style="display:none;"><script language="javascript" type="text/javascript" src="../../js.users.51.la/2139665.js"></script><noscript><a href="../../www.51.la/@2139665" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="../../img.users.51.la/2139665.asp" style="border:none" /></a></noscript></div></body></html>

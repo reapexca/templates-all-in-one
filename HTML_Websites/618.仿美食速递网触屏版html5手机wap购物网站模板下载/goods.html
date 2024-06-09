@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta charset="utf-8" />
+<title>仿美食速递网触屏版html5手机wap购物网站模板下载商品正文页-懒人模板【http://www.lanrenmb.com/shenghuofuwu/gouwu/】</title>
+<meta
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+	name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link href="../a.tbcdn.cn/mw/s/hi/tbtouch/images/touch-icon.png"
+	rel="apple-touch-icon-precomposed" />
+<link href="touch.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="utils.js"></script>
+<script type="text/javascript" src="transport.js"></script>
+</head>
+<body>
+	<div class="content">
+		<header id="header">
+			<div class="c-inav">
+				<section>
+					<button class="back">
+						<span><em></em></span> <a href="index.php">首页</a>
+					</button>
+				</section>
+				<section>
+					<span>产品详情</span>
+				</section>
+				<section></section>
+			</div>
+		</header>
+		
+		<section id="J_detailCont" class="innercontent">
+			<section id="J_slide" style="text-align: center;padding-bottom:5px;">			
+					<img src="http://www.cookex.cn/images/201308/thumb_img/277_thumb_G_1376353995771.jpg">
+			</section>
+			<section class="d-info">
+				<h1>外婆家醉鱼 120g</h1>
+				<ul class="d-cul">
+										   <li><label>商品品牌:</label>外婆家</li> 
+										<li><label>商品类别:</label>
+											<a href='search.php@category=1'>海鲜水产</a>->
+											<a href='search.php@category=36'>鱼类</a>->
+					外婆家醉鱼 120g					</li>
+					<li><label>商品编号:</label>13900329</li>
+					<li style="text-decoration:line-through;"><label>市场价格:</label>¥11.76</li> 
+					<li><label>价格:</label><ins class="dc-origin red">¥9.80</ins>
+					</li>
+					<li><label>产品规格:</label></li>
+					<li><label>浏览次数:</label>286</li>
+					<li><label>商品简介:</label></li>
+				</ul>
+			</section>
+			<section class="d-sure">
+				<div class="ds-action">
+					<input name="goods_count" style="width:150px" type="text" class="c-form-txt-normal1"  id="goods_count" value="1" />
+					<a href="javascript:addToCart(277)" class="c-btn-oran immbuy"><span>加入购物车</span></a> 
+					
+				</div>
+			</section>
+
+			<section class="d-master">
+				<p class="dm-cp" dv="comment">
+					<a href="comment.php@g_id=277">用户评论（0）</a><b class="aw right"></b>
+				</p>
+			</section>
+
+		</section>
+
+<script type="text/javascript">
+function addToCart(goodsId)
+{
+	var goods_count = document.getElementById("goods_count").value;
+	if(!Utils.isNumber(goods_count))
+	{
+		alert("请输入正确订购数量");exit;
+	}
+	window.location.href = "user.html";
+}
+</script>
+		<footer class="footer">
+			<section class="footer-t">
+				<p class="user-info">
+					<span>  [<a
+						href='user.php@act=login'>登录</a>]&nbsp;[<a
+						href='user.php@act=register'>免费注册</a>]<br /> 					</span>
+				</p>
+				<p class="gotop">
+					<a href="javascript:scroll(0,0)" id="J_GoTop">top<b> </b></a>
+				</p>
+			</section>
+			<nav class="footer-l">
+				<a href="#" title="">标准版</a><a href="#" title="">电脑版</a>
+			</nav>
+			<p class="copyright">
+				订购热线：400-088-1777 <br> © 2011-2013 【美食速递网】 版权所有
+				<script src="../s21.cnzz.com/stat.php@id=4961651&web_id=4961651&show=pic" language="JavaScript"></script>
+				
+			</p>
+		</footer>
+	</div>
+</body>
+</html>

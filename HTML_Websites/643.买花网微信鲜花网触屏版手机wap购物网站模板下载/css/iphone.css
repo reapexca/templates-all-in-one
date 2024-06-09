@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* iphoneTips */
+.iphoneTips{width:240px;height:80px;background:#252525;position:fixed;left:50%;bottom:0;margin-left:-120px;border-radius: 10px;margin-bottom:10px;}
+.iphoneTips .bd{position:relative;}
+.iphoneTips .img{width:50px;height:50px;background:url("../images/iphoneTips.png") no-repeat;background-size:50px 103px;float:left;margin:15px 0 0 20px;}
+.iphoneTips .txt{width:150px;color:#fff;font-size:14px;line-height:18px;float:left;margin:15px 0 0 5px;text-align:left;}
+.iphoneTips .txt span {width:19px;height:15px;background:url("../images/iphoneTips.png") 0 -82px no-repeat;background-size:50px 103px;display:inline-block;margin:0 2px;}
+.iphoneTips .close{width:29px;height:28px;background:url("../images/iphoneTips.png") 0 -51px no-repeat;background-size:50px 103px;position:absolute;right:-9px;top:-9px;}
+.iphoneTips i{
+	width:20px;
+	height:10px;
+	background:url("../images/iphoneTips.png") -30px -51px no-repeat;
+	background-size:50px 103px;
+	display:block;
+	position:absolute;
+	left:50%;
+	top:80px;
+	margin-left:-8px;
+	overflow:hidden;
+}

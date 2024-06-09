@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html manifest="msj_m.manifest">
+<meta charset="utf-8">
+<title>美食杰html5响应式移动触屏版手机wap美食网站模板-懒人模板【http://www.lanrenmb.com/HTML5/】</title>
+<meta content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection" />
+<meta name="apple-itunes-app" content="app-id=399423833"/>
+<link href="wap/css/ss_base2.css" rel="stylesheet" />
+<link href="wap/css/msj_m.css" rel="stylesheet" />
+<script src="js/jquery-1.6.4.min.js"></script>
+<script>setTimeout(scrollTo,0,0,0);</script>
+<script>
+var flag_for_fixedsearch = 0;
+$(function(){
+	var mhw = $("#m_header").width();
+	var mhmw = 640;
+	var realw = mhw>640?640:mhw;
+	$("#m_header").css("maxHeight",realw+"px");
+	$("#m_search").height($(this).width());
+	var hh = $("#m_search").height();
+	$("#m_search_w").css("top",hh*0.80+"px");
+	$("#m_search_w").height(hh*0.125);
+	var hhw = $("#m_search_w").height();
+	$("#m_search_w").css("borderRadius",hh*0.125*0.5+"px");
+	$("#m_search_submit").width(hhw);
+	$("#m_footer_searchicon").css({"height":hhw,"width":hhw});
+	$(".m_index_menuitem_title").css({"height":hhw+"px","lineHeight":hhw+"px"});
+	$("#m_searchbtn").click(function(){
+		var hh = $("#m_search").height();
+		if(flag_for_fixedsearch == 0){
+			scroll(0,0);
+			var w = $("#m_header").width();
+			$("#m_list_header").css("position","relative");
+			$("#m_list_header").css("top","0px");
+			$("#ad11_w").css("position","relative");
+			$("#m_header").animate({"height":"100%"},"normal",function(){
+				$("#m_content_main").css("paddingTop","0px");
+			});
+			$(this).css("backgroundImage","url(http://static.meishij.net/wap/images/m_slideupbtn.png)");
+			flag_for_fixedsearch = 1;
+		}else{
+			$("#m_header").animate({"height":"0px"},"normal",function(){
+				$("#m_list_header").css("position","fixed");
+				$("#m_list_header").css("top","44px");
+				$("#ad11_w").css("position","fixed");
+				$("#m_content_main").css("paddingTop","94px");
+			});
+			$(this).css("backgroundImage","url(http://static.meishij.net/wap/images/m_searchbtn.png)");
+			flag_for_fixedsearch = 0;
+		}
+	});
+	$("#m_comment_btn").toggle(function(){
+		$("#m_comment_textarea_w").slideDown("600",function(){
+			$("#m_comment_btn").html("收起评论 ∧");
+			var c = window.document.body.scrollHeight;
+			$("html,body").animate({scrollTop:c});
+		});
+	},function(){
+		$("#m_comment_textarea_w").slideUp("600",function(){
+			$("#m_comment_btn").html("我要评论 ∨");
+		});
+	});
+	$("#m_comment_cancel").click(function(){
+		$("#m_comment_btn").click();
+	});
+		$("#mad1_close").click(function(){
+		$("#ad11_w").remove();
+		$("#m_list_header").css("top","0px");
+		$("#m_content_main").css("paddingTop","4em");
+		$("#m_searchbtn").unbind("click");
+		rebind();
+	});
+});
+function rebind(){
+	$("#m_searchbtn").click(function(){
+		var hh = $("#m_search").height();
+		if(flag_for_fixedsearch == 0){
+			scroll(0,0);
+			var w = $("#m_header").width();
+			$("#m_list_header").css("position","relative");
+			$("#m_list_header").css("top","0px");
+			$("#m_header").animate({"height":"100%"},"normal",function(){
+				$("#m_list_main").css("paddingTop","0px");
+			});
+			$(this).css("backgroundImage","url(http://static.meishij.net/wap/images/m_slideupbtn.png)");
+			flag_for_fixedsearch = 1;
+		}else{
+			$("#m_header").animate({"height":"0px"},"normal",function(){
+				$("#m_list_header").css("position","fixed");
+				$("#m_list_header").css("top","0px");
+				$("#m_list_main").css("paddingTop","4em");
+			});
+			$(this).css("backgroundImage","url(http://static.meishij.net/wap/images/m_searchbtn.png)");
+			flag_for_fixedsearch = 0;
+		}
+	});
+}
+</script>
+<body><img style="display:none;" src="../../hm.baidu.com/hm.gif@si=01dd6a7c493607e115255b7e72de5f40&et=0&nv=1&st=3&lt=1402795167&su=&v=wap-0-0.2&rnd=3932403498" width="0" height="0" /><div class="m_wrap" id="m_wrap"><header class="m_header m_header_hide" id="m_header">
+	<h1 style="display:none;">美食杰</h1><p style="display:none;">让中国人吃的更健康</p>
+	<form class="m_search" id="m_search" action="http://m.meishij.net/html5/list.php">
+		<div class="m_search_w" id="m_search_w"><input type="text" value="" id="m_search_text" name="q" placeholder="输入食材/菜谱名"><input type="submit" value="" id="m_search_submit"></div>
+	</form>
+</header>
+<div class="ad11_w" id="ad11_w"><div class="ad11" id="mad1">
+	<a href="app.php"><img style="margin-left:10px;" src="http://static.meishij.net/wap/images/msj_72.png"/><img src="http://static.meishij.net/wap/images/yt_72.png"/>下载美食杰手机客户端</a><span id="mad1_close"></span>
+</div></div>
+<header class="m_list_header" id="m_list_header">
+	<div class="m_list_header_w">
+		<h1>家常烧茄子</h1>
+		<a href="javascript:history.go(-1);" class="m_backbtn" id="m_backbtn"></a>
+		<a href="default.htm" class="m_homebtn" id="m_homebtn"></a>
+		<a href="javascript:void(0);" class="m_searchbtn" id="m_searchbtn" style="color:#ffffff;"></a>
+	</div>
+</header>
+<div class="m_content_main" id="m_content_main">
+	<article>
+		<h1 style="display:none;">家常烧茄子</h1>
+		<img src="http://images.meishij.net/p/20100720/08f15a64f7e8b21bbf5f1efabaf0ccd3.jpg" class="m_con_topimg">		<div class="m_con_w">
+			<p class="author"><strong>文怡</strong>发布</p>			<section class="m_con_sec">
+				<h2><img src="http://static.meishij.net/wap/images/icon_jian_55x57.png" class="con_icon"/></h2>
+				<ul class="clearfix">
+					<li>做法：<a href="#">烧</a></li>					<li>口味：<a href="#">咸鲜味</a></li>					<li>难度：<a href="#">初级入门</a></li>					<li>人数：<a href="#">2人份</a></li>					<li>准备时间：<a href="#">10分钟</a></li>					<li>烹饪时间：<a href="#"><10分钟</a></li>				</ul>
+			</section>			<section class="m_con_sec">
+				<h2><img src="http://static.meishij.net/wap/images/icon_liao_55x57.png" class="con_icon"/></h2>
+				<dl class="clearfix">
+				                <dt>主料</dt>
+                				<dd><strong>茄子：</strong>1个</dd>
+								                <dt>辅料</dt>
+                				<dd><strong>红椒：</strong>1根</dd>
+								<dd><strong>柿子椒：</strong>1根</dd>
+								                <dt>调料</dt>
+                				<dd><strong>水：</strong>45毫升</dd>
+								<dd><strong>食盐：</strong>1克</dd>
+								<dd><strong>味精：</strong>1克</dd>
+								<dd><strong>香油：</strong>3毫升</dd>
+								<dd><strong>葱：</strong>20克</dd>
+								<dd><strong>蒜：</strong>4瓣</dd>
+								<dd><strong>生抽：</strong>1汤匙15毫升</dd>
+								<dd><strong>老抽：</strong>半茶匙3毫升</dd>
+								<dd><strong>米醋：</strong>1汤匙15毫升</dd>
+								<dd><strong>白糖：</strong>15克</dd>
+								<dd><strong>水淀粉：</strong>30毫升</dd>
+								<dd><strong>植物油：</strong>适量</dd>
+								</dl>
+			</section>			<section class="edit"><h2 style="display:none">家常烧茄子的做法</h2><p><img class='step' alt='第1步' src='http://static.meishij.net/images/stepnum6/1.gif' border=0 />茄子去皮切成菱形块。青红椒去蒂去籽切块。葱和大蒜切成碎末</p><br />
+<p><img class='step' alt='第2步' src='http://static.meishij.net/images/stepnum6/2.gif' border=0 />将生抽，老抽，米醋，清水，盐，糖，味精，香油和水淀粉倒入小碗中，搅拌均匀备用</p><br />
+<p><img class='step' alt='第3步' src='http://static.meishij.net/images/stepnum6/3.gif' border=0 />锅中倒入油，大火加热至7成热时，放入茄子块，炸成金黄色后捞出，充分沥干（锅中的油过滤后还可以用）</p><br />
+<p><img class="conimg" border="0" alt="家常烧茄子Mj.jpg" src="http://images.meishij.net/p/20100720/0205e1e2897240211874f1f9a44aa398.jpg" /></p><br />
+<p><img class='step' alt='第4步' src='http://static.meishij.net/images/stepnum6/4.gif' border=0 />锅中留少许的底油大火加热，放入葱末，和一半的蒜末炒香，然后放入炸好的茄子，和青红椒块，翻炒20秒</p><br />
+<p><img class='step' alt='第5步' src='http://static.meishij.net/images/stepnum6/5.gif' border=0 />将碗里的料汁用筷子再搅几下，以免淀粉沉底。然后将料汁倒入锅中，翻炒均匀</p><br />
+<p><img class='step' alt='第6步' src='http://static.meishij.net/images/stepnum6/6.gif' border=0 />出锅前，撒上另一半蒜末即可</p><br />
+<p><img class="conimg" border="0" alt="家常烧茄子uE.jpg" src="http://images.meishij.net/p/20100720/726b06456ac0244de4d54552c780c243.jpg" /></p><br />
+<p><img class="conimg" border="0" alt="家常烧茄子LW.jpg" src="http://images.meishij.net/p/20100720/1a56afdb3523af89b4b467f127b199a5.jpg" /></p><br />
+<p><img class="icon" alt="烹饪技巧" src="http://static.meishij.net/images/prxjq.gif" /></p><br />
+<p>1、茄子是比较吃油的菜，用油煎炸过的茄子，做出来的口感会比较好吃。如果觉得麻烦，想简便一些，有2种方法可供选择：</p><br />
+<p>（1）将茄子切块，放在案板上，置阳光下晾晒3小时左右，待茄子中的水分蒸发一部分，再用来做菜，吃油会比较少。</p><br />
+<p>（2）茄子切块放入碗中，撒一些盐，将茄子中的水分杀出来。做菜前，用手将茄子的水分攥出来，在炒制过程中，也可以吃油少些。</p><br />
+<p>2、在茄子的挑选上，大家可以尝试一下，茄子表面发乌的，要比表面泛着光泽的，味道和口感更好。</p><br />
+<p>3、提前调好料汁，比较方便，节省时间，免得因为过烹饪时间过长，茄子变得软塌塌的。</p><br />
+<p>4、起锅时放一半蒜，出锅前再放一半蒜，会让这道菜的味道更鲜美，信不信由你哈。</p></section>
+			<section class="m_con_sec">
+				<h2><img src="http://static.meishij.net/wap/images/icon_ping_55x57.png" class="con_icon"/></h2>
+				<div class="m_comment_w">
+					<a href="comment.php@id=176699" class="m_comment_link">
+						<h3>大家说<span>查看所有1059条评论</span></h3>
+						<div class="m_comment_w_con">       												<img src="http://static.meishij.net/q/images/p/80x80.png" class="avatar"/><h4><strong>上海网友</strong>的评论</h4><p>此法操做、茄子吸不进味汁、难吃！<br />茄子过完油后捞出来、再炝锅放八角和酱同炒香加糖放水茄子入锅；大火烧十分钟收汁勾芡加蒜末出锅；此素烧茄子绝对好</p>
+												</div>
+					</a>					<a href="javascript:void(0);" class="m_comment_btn" id="m_comment_btn">我要评论 ∨</a>
+				</div>
+			</section>
+		</div>
+	</article>
+    <section class="m_comment_textarea_w" id="m_comment_textarea_w">
+		<form name="m_comment_form" class="m_comment_form" id="m_comment_comment" action="http://reply.meishij.net/pl/add.php" method="POST">
+			<input name="id" type="hidden" id="news_id" value="176699" />
+			<input type="hidden" name='user_id' value="" />
+			<input type='hidden' name='ecmsfrom' value="http://m.meishij.net/html5/news.php?id=176699" />
+			<input name="classid" type="hidden" id="classid" value="270" />
+			<input name="enews" type="hidden" id="enews" value="AddPl" />
+			<input name="repid" type="hidden" id="repid" value="0" />
+			<input name="create_source" type="hidden" value="5" />
+			<div class="textarea_w"><textarea id="m_comment_textarea" name="saytext" placeholder="说点什么吧~"></textarea></div>
+			<div class="submit_w" id="newspls"><a class="cancel" id="m_comment_cancel" href="javascript:void(0);">取 消</a><input type="submit" value="提 交"/></div>
+		</form>
+	</section>
+	<div class="m_copyright"><a href="../set_show.php@st=1">Wap版</a><a style="color:#9D0000;" href="../set_show.php@st=3">Html5版</a><a href="../set_show.php@st=4">Html5无图版</a><a href="../../www.meishij.net/chufang/diy/jiangchangcaipu/176699.html">网页版</a><a href="app.php" style="color:#c00000">手机客户端</a><span>Copyright 2003-2012 技术支持：<a href="http://www.lanrenmb.com/HTML5/">懒人模板</a></span></div></div>
+</div><div style="display:none;"><script language="javascript" type="text/javascript" src="../../js.users.51.la/2139665.js"></script><noscript><a href="../../www.51.la/@2139665" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="../../img.users.51.la/2139665.asp" style="border:none" /></a></noscript></div></body></html>

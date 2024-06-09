@@ -1,0 +1,71 @@
+/* search */
+.new-header .new-srch-box{top:6px}
+.new-search{padding:5px 12px}
+.new-search .new-mu_l2 .new-mu_tmb{width:100px;height:100px;margin:0 10px 0 0}
+.new-search .new-mu_l2a{padding:0}
+.new-search .new-mu_l2w{margin:0;border:none}
+.new-search .new-mu_l2{padding:5px 0;border-bottom:1px solid #e8e5e5}
+.new-search .new-mu_l2h{overflow:hidden;max-height:40px}
+.new-search .new-mu_l2h .new-txt-rd2{min-width:186px;font-size:14px;color:#e4393c}
+.new-search .new-mu_l2c{display:block}
+.new-search .new-mu_l2c .new-txt{font-size:12px}
+.new-search .new-mu_l2c .new-sale-icon{position:absolute;right:0}
+.new-search .new-mu_l2c .new-add,.new-search .new-mu_l2c .new-del,.new-search .new-mu_l2c .new-add2,.new-search .new-mu_l2c .new-del2{display:inline-block;width:18px;height:18px;margin-left:5px;background-color:#fd9d00;line-height:18px;font-size:12px;color:#fff;text-align:center}
+.new-search .new-mu_l2c .new-del{margin-left:5px;background-color:#25b504}
+.new-search .new-mu_l2c .new-add2{margin-left:5px;background-color:#e4393c}
+.new-search .new-mu_l2c .new-del2{margin-left:5px;background-color:#b87404}
+.new-err-message{padding:5px 10px;background-color:#fd9d00;font-size:12px;color:#fff}
+.new-tab-type{border-bottom:1px solid #d0cece}
+.new-tab-type .new-tbl-cell,.new-tab-type2 .new-tbl-cell,.new-tab-type3 .new-tbl-cell,.new-tab-type4 .new-tbl-cell{width:25%;padding:6px 0;font-size:14px;color:#6e6e6e;text-align:center}
+.new-tab-type .new-tbl-cell.on{color:#d60303}
+.new-tab-type .new-tbl-cell.on .new-icon-down{position:absolute;left:8px;bottom:-9px;width:12px;height:7px;background:url(../../../images/touch2013/icon.png) 0 -2018px no-repeat;color:#d60303}
+.new-tab-type .new-tbl-cell:first-child .new-bar{border:none;background:none}
+.new-tab-type .new-tbl-cell .icon span{display:inline-block;width:10px;height:20px;margin-left:7px;background:url(../../../images/touch2013/icon2b.png) -143px -1px no-repeat;background-size:180px 180px; vertical-align:middle}
+.new-tab-type2,.new-tab-type3,.new-tab-type4{margin-top:-1px;border-top:1px solid #d0cece;background-color:#e6e3e3}
+.new-tab-type2{padding:0 45px}
+.new-tab-type2 .new-tbl-cell{padding:4px 0}
+.new-tab-type2 .new-tbl-cell .on{display:inline-block;padding:3px 0;border-bottom:2px solid #d60303}
+.new-tab-type3 .new-tbl-cell{width:50%;padding:7px 0;font-size:12px;color:#333}
+.new-tab-type4 .new-tbl-cell{padding:8px 0 5px;font-size:12px;color:#333}
+.new-online-rd{display:block;padding-left:20px;background:url(../../../images/touch2013/icon.png) 0 -1751px no-repeat;font-size:12px;color:#6e6e6e}
+.new-search .new-chk-default{color:#a6a6a6}
+.new-tab-type2 .new-tbl-cell.w60{width:15%}
+.new-tab-type2 .new-tbl-type{width:auto;margin:0 auto}
+
+/* search pop */
+.new-srch-pop{position:absolute;top:28px;right:0;z-index:50;width:190px;min-height:100%;padding-bottom:50px;background-color:#666;color:#fff}
+.new-pop-option{padding:0 10px;border-bottom:1px solid #fff}
+.new-pop-option .new-tbl-cell{font-size:14px;color:#fff}
+.new-pop-option .new-tbl-cell.on{border-bottom:2px solid #fff;color:#fff}
+.new-pop-ul{padding:0 10px}
+.new-ul-lst .new-ul-li .new-li-a{display:block;padding:8px 5px;border-bottom:1px solid #fff;background:url(../../../images/touch2013/icon.png) 100% -1519px no-repeat;font-size:14px;color:#fff}
+.new-ul-lst .new-ul-li .new-li-a.on{background-position:100% -1553px}
+.new-pop-sel{overflow-y:scroll;height:217px;padding:5px 10px 5px 3px;border-bottom:1px solid #fff;font-size:12px}
+.new-pop-sel li a{display:block;padding:6px 0 6px 20px;color:#fff}
+.new-pop-sel li a span{padding-left:3px}
+.new-pop-sel li a.on{background:url(../../../images/touch2013/icon.png) 0 -1579px no-repeat}
+.new-pop-sel li a.on span{display:block;background-color:#a09f9f}
+.new-abtn-reset{position:absolute;left:10px;bottom:-70px;width:168px;height:28px;border:1px solid #878787;border-radius:2px;background-color:#474747;line-height:28px;font-size:14px;color:#fff;text-align:center}
+.new-abtn-reset.on{background-color:#898787;color:#474747}
+.new-abtn-slid{position:absolute;top:40%;left:12px;width:58px;height:50px;background:url(../../../images/touch2013/icon_slid.png) 0 0 no-repeat}
+
+/* relevance search */
+.new-relevance-srch{padding:10px 12px}
+.new-relevance-srch .new-rele-tit{font-size:14px;color:#333}
+.new-relevance-srch .new-rele-cont{font-size:14px;color:#333}
+.new-relevance-srch .new-rele-cont a{margin-right:10px;color:#00f}
+.new-relevance-srch .new-rele-cont a:last-child{margin-right:0}
+
+/* jshop */
+.shop-into{margin:10px 0;padding:5px 18px 5px 5px;border:1px solid #e8e5e5}
+.shop-into img{vertical-align:top}
+.shop-into .new-arr{position:absolute;top:40px;right:10px;width:20px;height:20px;background:url(../../../images/touch2013/icon.png) -47px -806px no-repeat}
+.shop-into .new-mu_l2{border-bottom:none}
+.shop-into .new-mu_l2 .new-mu_tmb{height:auto;margin:5px 5px 0 0}
+.shop-into .new-mu_l2 .new-mu_l2h{margin:0;font-size:16px;font-family:'Î¢ÈíÑÅºÚ'}
+.shop-into .new-txt{font-size:12px;color:#6e6e6e}
+.new-mu-heart{display:inline-block;overflow:hidden;width:87px;height:15px;background:url(../../../images/touch2013/icon_heart.png) repeat-x 0 -12px;background-size:18px 25px;font-size:0;vertical-align:-3px}
+.new-mu-heartv{display:inline-block;height:15px;background:url(../../../images/touch2013/icon_heart.png) repeat-x 0 2px;background-size:18px 25px}
+.new-btn-shop,.new-btn-shop2{display:block;height:36px;padding:0 8px;border-radius:2px;background-color:#e4393c;line-height:36px;font-size:14px;color:#fff;text-align:center}
+.new-btn-shop span{display:inline-block;padding-left:43px;background:#e4393c url(../../../images/touch2013/icon_dianpu.png) 0 10px no-repeat;background-size:31px 25px}
+.new-btn-shop2 span{display:inline-block;padding-left:43px;background:#e4393c url(../../../images/touch2013/icon_dianpu2.png) 0 10px no-repeat;background-size:31px 25px}

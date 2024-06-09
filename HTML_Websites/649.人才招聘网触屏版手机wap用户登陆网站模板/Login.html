@@ -1,0 +1,68 @@
+
+
+<!doctype html>
+<html>
+<head><title>
+	九博人才网触屏版手机wap用户登陆网站模板
+</title><meta name="keywords" content="郑州招聘,河南招聘,郑州人才网,九博人才网,求职触屏版,找工作触屏版,人才网触屏版,招聘,求职。" /><meta name="description" content="九博人才网触屏版,手机找工作。" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" /><meta name="apple-mobile-web-app-capable" content="yes" /><link rel="apple-touch-icon" href="images/touch-icon-iphone.png" /><link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png" /><link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png" /><link rel="allpe-touch-iocn" sizes="152x152" href="images/touch-icon-ipad-retina.png" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+</head>
+<body>
+    <div>
+        
+
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+    <form method="post" action="/PubHandler/LoginHandler.ashx?action=mylogin" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTA5NjU1MzM2MGRkoQL+54AKWWmqg9oshtdij9J8m/zZh9UChKVnBo/BF0M=" />
+</div>
+
+    <header id="title">
+	  <div class="back">
+      </div>
+    个人登录
+</header>
+    <section id="login">
+        <div>
+            <span>
+                <img src="images/icon_user.png" width="24" height="24" alt="用户名图标"></span>
+            <input type="text" id="txtuser" name="txtuser" placeholder="请输入用户名"></div>
+        <div>
+            <span>
+                <img src="images/icon_password.png" width="24" height="24" alt="密码图标">
+            </span>
+            <input id="txtpwd" name="txtpwd" type="password" placeholder="请输入密码"></div>
+        
+         <input  type="hidden" name="openid" value="" />
+        <a id="asubmit" class="btnLogin">登录</a>
+        <a href="Register.html"   class="btnRegister">注册</a>
+    </section>
+    <script type="text/javascript" src="js/mobile.js"></script>
+    </form>
+
+    <script>
+        $('#asubmit').click(function () {
+            $("#form1").submit();
+        });
+    </script>
+ 
+    </div>
+    <footer>
+        <div id="loginstate">
+        <a href="default.htm">首页</a><a href="Login.html">登录</a><a href="Register.html">注册</a><span id="toTop">↑ TOP</span></div> 
+        <p><a href="../www.jjoobb.cn/default.htm" onclick="setMobileCookie()">电脑版</a>|<a href="index.html" target="_blank">客户端</a>
+         |<a href="about.html">关于九博</a><p>
+        <p>
+            &copy;2014 JJOOBB.CN All Rights Reserved</p>
+    </footer>
+    <script type="text/javascript" src="js/mobile.js"></script>
+    <script>
+        $.cookie("mobile", 1, { domain: "jjoobb.cn" });
+        function setMobileCookie() {
+            $.cookie("mobile", 0, { domain: "jjoobb.cn" });
+        }
+    </script>
+    
+    <img src="../c.cnzz.com/wapstat.php@siteid=3661127&r=&rnd=386175067" width="0" height="0" />
+</body>
+</html>
